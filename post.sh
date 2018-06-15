@@ -6,7 +6,9 @@ bash -c 'debconf-set-selections <<< "mysql-server mysql-server/root_password pas
 bash -c 'debconf-set-selections <<< "mysql-server mysql-server/root_password_again password mysql"'
 apt-get -y install mysql-server
 
-apt-get -yq install wget git python-pip
+apt-get -yq install wget python-pip libfuse2
+wget ftp://ftp.renci.org/pub/irods/releases/4.1.9/ubuntu14/irods-icommands-4.1.9-ubuntu14-x86_64.deb
+dpkg -i irods-icommands-4.1.9-ubuntu14-x86_64.deb
 chmod 777 /tmp
 
 mkdir /var/run/mysqld
@@ -18,6 +20,7 @@ chown -R mysql:mysql /var/lib/mysql
 chmod 700 /var/lib/mysql
 
 mkdir /misc
-mkdir /opt/GO-MAP
+mkdir -p /opt/GO-MAP/data
+mkdir /workdir
 
 echo "Completed Post"
