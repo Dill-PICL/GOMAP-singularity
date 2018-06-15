@@ -1,0 +1,3 @@
+[submodule "GO-MAP-container"]
+	path = GO-MAP-container
+	url = git@gitlab.com:maize-GAMER/GO-MAP-container.git
