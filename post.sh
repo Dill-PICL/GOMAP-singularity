@@ -6,10 +6,12 @@ bash -c 'debconf-set-selections <<< "mysql-server mysql-server/root_password pas
 bash -c 'debconf-set-selections <<< "mysql-server mysql-server/root_password_again password mysql"'
 apt-get -y install mysql-server
 
-apt-get -yq install wget python-pip libfuse2
-wget ftp://ftp.renci.org/pub/irods/releases/4.1.9/ubuntu14/irods-icommands-4.1.9-ubuntu14-x86_64.deb
-dpkg -i irods-icommands-4.1.9-ubuntu14-x86_64.deb
-chmod 777 /tmp
+apt-get -yq install wget python-pip libfuse2 r-base openjdk-8-jdk
+R -e 'install.packages(c("data.table","futile.logger","ggplot2","ontologyIndex","reshape2","scales","jsonlite","yaml"))'
+
+# wget ftp://ftp.renci.org/pub/irods/releases/4.1.9/ubuntu14/irods-icommands-4.1.9-ubuntu14-x86_64.deb
+# dpkg -i irods-icommands-4.1.9-ubuntu14-x86_64.deb
+# chmod 777 /tmp
 
 mkdir /var/run/mysqld
 chown -R mysql:mysql /var/run/mysqld
