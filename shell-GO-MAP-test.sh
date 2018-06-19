@@ -5,8 +5,8 @@ if [ -n "$instance_running" ]
 then
 	echo sudo singularity instance.stop $instance_name
 	sudo singularity shell -c -w instance://$instance_name
-fi
-sudo singularity instance.start \
+else
+	sudo singularity instance.start \
  	-c -w \
 	--bind $PWD/GO-MAP-data/mysql/lib:/var/lib/mysql \
 	--bind $PWD/GO-MAP-data/mysql/run:/var/run/mysqld \
@@ -15,6 +15,8 @@ sudo singularity instance.start \
 	--bind /tmp:/tmp \
 	--bind $PWD/test:/workdir \
 	 $instance_name $instance_name && \
-sudo singularity shell -c -w instance://$instance_name
+	 sudo singularity shell -c -w instance://$instance_name
+fi
+
 
 #	--bind GO-MAP-data/mysql/log:/var/log/mysql \

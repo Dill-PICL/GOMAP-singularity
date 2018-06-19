@@ -4,7 +4,7 @@ apt-get -q -y update
 apt-get -q -y install debconf-utils
 bash -c 'debconf-set-selections <<< "mysql-server mysql-server/root_password password mysql"'
 bash -c 'debconf-set-selections <<< "mysql-server mysql-server/root_password_again password mysql"'
-apt-get -y install mysql-server
+apt-get -y install mysql-server libmysqlclient-dev
 
 apt-get -yq install wget python-pip libfuse2 r-base openjdk-8-jdk
 R -e 'install.packages(c("data.table","futile.logger","ggplot2","ontologyIndex","reshape2","scales","jsonlite","yaml"))'
