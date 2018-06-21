@@ -4,7 +4,11 @@ GO_MAP_test
 tmp
 mysql.txt
 GO-MAP-data
-test
+test*/
 rpkgs.txt
 temp
 *workspace
+.*GO-MAP*
+.*mysql*
+mysql-help.txt
+GOMAP

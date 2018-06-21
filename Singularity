@@ -1,5 +1,5 @@
-Bootstrap: docker
-From: ubuntu:bionic
+Bootstrap: shub
+From: wkpalan/GOMAP-base
 
 %labels
 MAINTAINER Kokulapalan Wimalanathan
@@ -13,7 +13,9 @@ Version 0.2
 	export DEBIAN_FRONTEND=noninteractive
 
 %files
-	post.sh /root/	
+	post.sh /root/
+	requirements.txt /root/
+	mysqld.cnf /root/
 
 %post
 	echo "Running post.sh"
@@ -21,9 +23,9 @@ Version 0.2
 	/root/post.sh
 
 %startscript
-	echo 'show databases;'
 	chmod 777 /tmp
-	nohup mysqld -P 9999 > /dev/null 2>&1 < /dev/null &
+	nohup mysqld --user=$USER > /dev/null 2>&1 < /dev/null &
 
 %runscript
-	/opt/GO-MAP/gomap.py "$@"
+	cd /opt/GO-MAP/
+	./gomap.py "$@"
