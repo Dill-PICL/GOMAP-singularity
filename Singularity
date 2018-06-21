@@ -26,4 +26,4 @@ Version 0.2
 	nohup mysqld -P 9999 > /dev/null 2>&1 < /dev/null &
 
 %runscript
-	/opt/GO-MAP/run_gomap.py
+	/opt/GO-MAP/gomap.py "$@"
