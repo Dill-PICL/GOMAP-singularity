@@ -29,3 +29,4 @@ Version 0.2
 %runscript
 	cd /opt/GO-MAP/
 	./gomap.py "$@"
+ 
