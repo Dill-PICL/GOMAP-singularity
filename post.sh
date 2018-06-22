@@ -17,7 +17,7 @@
 
 # wget ftp://ftp.renci.org/pub/irods/releases/4.1.9/ubuntu14/irods-icommands-4.1.9-ubuntu14-x86_64.deb
 # dpkg -i irods-icommands-4.1.9-ubuntu14-x86_64.deb
-# chmod 777 /tmp
+
 
 # mkdir /var/run/mysqld
 # # chown -R mysql:mysql /var/run/mysqld
