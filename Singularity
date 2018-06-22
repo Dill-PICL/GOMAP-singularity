@@ -27,6 +27,6 @@ Version 0.2
 	nohup mysqld --user=$USER > /dev/null 2>&1 < /dev/null &
 
 %runscript
-	cd /opt/GO-MAP/
+	cd /opt/GO-MAP/ 
 	./gomap.py "$@"
  

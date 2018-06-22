@@ -15,8 +15,8 @@
 # bash -c 'debconf-set-selections <<< "mysql-server mysql-server/root_password_again password mysql"'
 # apt-get -y install mysql-server
 
-# wget ftp://ftp.renci.org/pub/irods/releases/4.1.9/ubuntu14/irods-icommands-4.1.9-ubuntu14-x86_64.deb
-# dpkg -i irods-icommands-4.1.9-ubuntu14-x86_64.deb
+wget ftp://ftp.renci.org/pub/irods/releases/4.1.9/ubuntu14/irods-icommands-4.1.9-ubuntu14-x86_64.deb
+dpkg -i irods-icommands-4.1.9-ubuntu14-x86_64.deb
 
 
 # mkdir /var/run/mysqld
