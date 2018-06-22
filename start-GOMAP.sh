@@ -1,13 +1,14 @@
 instance_name="GOMAP"
+img_loc="/mnt/raid/lab_data/go_annotation/GOMAP-singularity/$instance_name"
 
 singularity instance.start \
-	--bind $PWD/GO-MAP-data/mysql/lib:/var/lib/mysql \
-	--bind $PWD/GO-MAP-data/mysql/log:/var/log/mysql \
-	--bind $PWD/GO-MAP-container:/opt/GO-MAP \
-	--bind $PWD/GO-MAP-data:/opt/GO-MAP/data \
-	--bind $PWD/test3:/workdir \
+	--bind $PWD/GOMAP-data/mysql/lib:/var/lib/mysql \
+	--bind $PWD/GOMAP-data/mysql/log:/var/log/mysql \
+	--bind $PWD/GOMAP-container:/opt/GOMAP \
+	--bind $PWD/GOMAP-data:/opt/GOMAP/data \
+    --bind $PWD:/workdir \
 	-W $PWD/tmp \
-	-c $instance_name $instance_name 
+	-c $img_loc $instance_name
 	
 #&& \
 

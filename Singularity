@@ -1,5 +1,5 @@
-Bootstrap: shub
-From: wkpalan/GOMAP-base
+Bootstrap: localimage
+From: /home/gokul/lab_data/singularity/GOMAP-base/GOMAP-base.simg
 
 %labels
 MAINTAINER Kokulapalan Wimalanathan
@@ -13,20 +13,21 @@ Version 0.2
 	export DEBIAN_FRONTEND=noninteractive
 
 %files
-	post.sh /root/
-	requirements.txt /root/
 	mysqld.cnf /root/
 
 %post
 	echo "Running post.sh"
-	ls /root/
-	/root/post.sh
+	mv /root/mysqld.cnf /etc/mysql/mysql.conf.d/
+	mkdir /var/lib/mysql-files
+	mkdir -p /opt/GOMAP/data
+	mkdir /workdir
+	echo "Completed Post"
 
 %startscript
 	chmod 777 /tmp
 	nohup mysqld --user=$USER > /dev/null 2>&1 < /dev/null &
 
 %runscript
-	cd /opt/GO-MAP/ 
+	cd /opt/GOMAP/ 
 	./gomap.py "$@"
  
