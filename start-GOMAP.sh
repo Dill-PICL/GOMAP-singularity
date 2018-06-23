@@ -1,5 +1,6 @@
 instance_name="GOMAP"
 img_loc="/mnt/raid/lab_data/go_annotation/GOMAP-singularity/$instance_name"
+mkdir -p $PWD/tmp
 
 singularity instance.start \
 	--bind $PWD/GOMAP-data/mysql/lib:/var/lib/mysql \

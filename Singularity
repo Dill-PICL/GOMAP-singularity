@@ -7,19 +7,21 @@ Version 0.2
 
 %environment
     export LC_ALL=C
-    export MYSQL_USER=pannzer
+	export DEBIAN_FRONTEND=noninteractive
+	export MYSQL_USER=pannzer
     export MYSQL_DATABASE=pannzer
     export MYSQL_ROOT_PASSWORD=mysql
-	export DEBIAN_FRONTEND=noninteractive
+
 
 %files
-	mysqld.cnf /root/
+	mysqld.cnf
+	my.cnf
 
 %post
-	echo "Running post.sh"
-	mv /root/mysqld.cnf /etc/mysql/mysql.conf.d/
-	mkdir /var/lib/mysql-files
-	mkdir -p /opt/GOMAP/data
+	echo "Running post"
+	#mv mysqld.cnf /etc/mysql/mysql.conf.d/
+	#mv my.cnf /etc/mysql/
+	mkdir /opt/GOMAP/
 	mkdir /workdir
 	echo "Completed Post"
 
