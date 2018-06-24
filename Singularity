@@ -12,17 +12,14 @@ Version 0.2
     export MYSQL_DATABASE=pannzer
     export MYSQL_ROOT_PASSWORD=mysql
 
-
 %files
-	mysqld.cnf
-	my.cnf
+	irods_environment.json
 
 %post
 	echo "Running post"
-	#mv mysqld.cnf /etc/mysql/mysql.conf.d/
-	#mv my.cnf /etc/mysql/
 	mkdir /opt/GOMAP/
 	mkdir /workdir
+	mv irods_environment.json .irods/
 	echo "Completed Post"
 
 %startscript
