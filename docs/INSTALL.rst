@@ -11,10 +11,6 @@ The GOMAP-Singularity **container**
 
 The GOMAP-Singularity conainer can be obtained from multiple sources. 
 
-1. `Singularity Hub <https://singularity-hub.org>`_
-2. `CyVerse <http://datacommons.cyverse.org/browse/iplant/home/shared/terraref>`_
-3. `MaizeGDB <https://ftp.maizegdb.org/MaizeGDB/FTP/maize-GAMER/>`_
-
 Singularity Hub
 ***************
 
@@ -23,11 +19,10 @@ Singularity Hub would be the easiest way obtain the `GOMAP-singularity <https://
 .. code-block:: bash
     :linenos:
 
-    singularity pull --name GOMAP-singularity.img shub://Dill-PICL/GOMAP-singularity
+    singularity pull --name GOMAP.simg shub://Dill-PICL/GOMAP-singularity
 
 
-
-
+asdsa dsadsad sad sa
 
 Ad reprehenderit eu excepteur enim dolore deserunt incididunt sit dolor deserunt ipsum ullamco nostrud. Fugiat cillum aute proident nisi magna. Irure id quis cillum cillum ipsum id sint dolore et proident ea labore occaecat ullamco. Reprehenderit laborum enim amet cupidatat commodo eiusmod in voluptate magna magna aute sit id. Cupidatat laboris anim ut esse eu. Sunt fugiat id tempor mollit elit aliquip ad ex exercitation id consequat irure veniam excepteur. Officia officia cillum duis tempor anim adipisicing mollit laborum pariatur non aliquip.
 
@@ -40,6 +35,14 @@ Non adipisicing proident consectetur aliquip elit nostrud. Mollit proident proid
 Laboris non enim adipisicing est occaecat duis ad nulla ut voluptate. Non laborum dolor Lorem adipisicing exercitation adipisicing nulla esse pariatur amet eu esse excepteur incididunt. Tempor magna in Lorem eu labore qui. Amet eu nulla labore qui proident eiusmod incididunt do.
 
 Commodo et voluptate nulla esse qui et consequat Lorem ipsum excepteur cupidatat pariatur. Officia ipsum magna nisi officia nostrud Lorem sunt do qui laboris et Lorem laborum. Consectetur est irure exercitation sit nulla dolor do velit labore occaecat esse exercitation. Adipisicing voluptate ad exercitation elit quis ullamco consequat aliquip magna culpa esse. Ea nisi tempor do sint eiusmod et fugiat consequat labore do veniam incididunt eu. Fugiat in commodo consectetur culpa ad commodo duis voluptate ad.
+
+CyVerse
+*******
+
+
+MaizeGDB
+********
+
 
 The **data and tools** needed to run GOMAP-Singularity
 ------------------------------------------------------

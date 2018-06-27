@@ -12,17 +12,10 @@ Version 0.2
     export MYSQL_DATABASE=pannzer
     export MYSQL_ROOT_PASSWORD=mysql
 
-%files
-	irods_environment.json
-	.passwd
-
 %post
 	echo "Running post"
 	mkdir /opt/GOMAP/
 	mkdir /workdir
-	mv irods_environment.json /root/.irods/
-	cat .passwd | iinit
-	ils
 	echo "Completed Post"
 
 %startscript
