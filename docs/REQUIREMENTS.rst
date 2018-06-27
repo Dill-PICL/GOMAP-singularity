@@ -6,9 +6,7 @@ As the name suggests **GOMAP-Singularity** is a `Singularity <http://singularity
 .. note::
 
    It is highly recommended to use the GOMAP-Singularity container in the linux system. GOMAP-Singularity has been tested **Ubuntu** as standalone and **RHEL??** in an HPC environment
-   
-
-
+  
 
 Installing Singularity on Debian/Ubuntu
 ---------------------------------------
