@@ -20,7 +20,7 @@ Singularity Hub
 
 Singularity Hub would be the easiest way obtain the GOMAP-singularity container
 
-`GOMAP-singularity <asd>`_
+`GOMAP-singularity <https://www.singularity-hub.org/collections/1176>`_
 
 .. code-block:: bash
     :linenos:
