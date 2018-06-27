@@ -15,3 +15,6 @@ GOMAP
 GOMAP-data*
 *job
 old
+*vscode
+*.simg
+.passwd

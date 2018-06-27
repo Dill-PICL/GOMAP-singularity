@@ -1,5 +1,5 @@
-Bootstrap: localimage
-From: /home/gokul/lab_data/singularity/GOMAP-base/GOMAP-base.simg
+Bootstrap: shub
+From: wkpalan/GOMAP-base
 
 %labels
 MAINTAINER Kokulapalan Wimalanathan
@@ -14,12 +14,15 @@ Version 0.2
 
 %files
 	irods_environment.json
+	.passwd
 
 %post
 	echo "Running post"
 	mkdir /opt/GOMAP/
 	mkdir /workdir
-	mv irods_environment.json .irods/
+	mv irods_environment.json /root/.irods/
+	cat .passwd | iinit
+	ils
 	echo "Completed Post"
 
 %startscript
