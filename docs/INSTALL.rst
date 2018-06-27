@@ -18,12 +18,12 @@ The GOMAP-Singularity conainer can be obtained from multiple sources.
 Singularity Hub
 ***************
 
-Singularity Hub would be the easiest way obtain the GOMAP-singularity container
-
-`GOMAP-singularity <https://www.singularity-hub.org/collections/1176>`_
+Singularity Hub would be the easiest way obtain the `GOMAP-singularity <https://www.singularity-hub.org/collections/1176>`_ container
 
 .. code-block:: bash
     :linenos:
+
+    singularity pull --name GOMAP-singularity.img shub://Dill-PICL/GOMAP-singularity
 
 
 
