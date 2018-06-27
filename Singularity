@@ -16,7 +16,7 @@ Version 0.2
 	echo "Running post"
 	mkdir /opt/GOMAP/
 	mkdir /workdir
-	echo "Completed Post"
+	echo "Completed Post" 
 
 %startscript
 	chmod 777 /tmp
