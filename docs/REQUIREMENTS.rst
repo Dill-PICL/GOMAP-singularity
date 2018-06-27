@@ -1,3 +1,5 @@
+.. _REQUIREMENTS:
+
 Requirements
 ============
 
@@ -16,9 +18,9 @@ Installing Singularity on Debian/Ubuntu
 Steps for Debian/Ubuntu based systems are given below. Check `here <http://singularity.lbl.gov/install-linux>`_  for instructions to install for other systems.
 
 .. code-block:: bash
-    :linenos:
 
-    sudo wget -O- http://neuro.debian.net/lists/xenial.us-ca.full | sudo tee /etc/apt/sources.list.d/neurodebian.sources.list
+    sudo wget -O- http://neuro.debian.net/lists/xenial.us-ca.full | \ 
+    sudo tee /etc/apt/sources.list.d/neurodebian.sources.list
     sudo apt-key adv --recv-keys --keyserver hkp://pool.sks-keyservers.net:80 0xA5D32F012649A5A9
     sudo apt-get update
     sudo apt-get install -y singularity-container
@@ -26,11 +28,9 @@ Steps for Debian/Ubuntu based systems are given below. Check `here <http://singu
 
 Using Singularity in HPC
 ------------------------
-Most HPC systems have singularity installed and ready to use. You can check if singularity is available by checking  in Spack based environment modules by using the command in line 1. If singularity is installed then it can be loaded by runnig the line 2.
+Most HPC systems have singularity installed and ready to use. You can check if singularity is available by checking  in Spack based environment modules by using the command in line 1. If singularity is installed then it can be loaded by runisssng the line 2.
 
 .. code-block:: bash
-    :linenos:
 
     module avail singularity
-    module load singularity
-    
+    module load singularity    
