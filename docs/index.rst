@@ -8,13 +8,11 @@ Welcome to GOMAP-Singularity's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
+    SETUP
+    RUN
 
 
 Indices and tables
 ==================
-
-* :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
