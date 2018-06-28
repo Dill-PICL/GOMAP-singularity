@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 instance_name="GOMAP"
-img_loc="/mnt/raid/lab_data/go_annotation/GOMAP-singularity/$instance_name.simg"
+img_loc="$instance_name.simg"
 mkdir -p $PWD/tmp
 
 singularity instance.start \

@@ -17,7 +17,6 @@ else
 	echo "Using $HOME/.irods/irods_environment.json for icommands"
 fi
 
-
 mkdir -p $PWD/tmp $PWD/GOMAP-data
 
 singularity instance.start \
