@@ -126,11 +126,11 @@ htmlhelp_basename = 'GOMAP-Singularitydoc'
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
-    # 'papersize': 'letterpaper',
+     'papersize': 'letterpaper',
 
     # The font size ('10pt', '11pt' or '12pt').
     #
-    # 'pointsize': '10pt',
+     'pointsize': '11pt',
 
     # Additional stuff for the LaTeX preamble.
     #
@@ -138,7 +138,7 @@ latex_elements = {
 
     # Latex figure (float) alignment
     #
-    # 'figure_align': 'htbp',
+     'figure_align': 'htbp',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
