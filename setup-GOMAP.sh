@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 instance_name="GOMAP"
 img_loc="$instance_name.simg"
 mkdir -p $PWD/tmp $PWD/GOMAP-data
