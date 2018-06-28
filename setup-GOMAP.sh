@@ -1,6 +1,6 @@
 instance_name="GOMAP"
-img_loc="/mnt/raid/lab_data/go_annotation/GOMAP-singularity/$instance_name.simg"
-mkdir -p $PWD/tmp
+img_loc="$instance_name.simg"
+mkdir -p $PWD/tmp $PWD/GOMAP-data
 
 singularity instance.start \
 	--bind $PWD/GOMAP-container:/opt/GOMAP \
@@ -10,4 +10,9 @@ singularity instance.start \
 	$img_loc $instance_name &&
 singularity run  \
 		instance://$instance_name --step=setup --config=test/config.yml
-./stop-GOMAP.sh
+
+instance_running=`singularity instance.list | grep $instance_name`
+if [ -n "$instance_running" ]
+then
+	singularity instance.stop $instance_name
+fi

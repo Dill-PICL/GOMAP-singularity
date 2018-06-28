@@ -3,7 +3,47 @@
 Requirements
 ============
 
-As the name suggests **GOMAP-Singularity** is a `Singularity <http://singularity.lbl.gov>`_ container. The container itself has all the  requirements for GOMAP installed and can be used with a single command as long as the singularity container system is installed in the system used.
+1. `Python3 and Pip3`_ 
+2. `Git`_ 
+3. `Singularity`_
+4. `singularity-cli`_
+
+Python3 and Pip3
+****************
+
+.. attention::
+
+    The Python3 will be be installed by default on most unix/linux systems.
+
+If pip3 is not available please use the following commands depending on the system you work in.
+
+.. code-block:: bash
+
+    #CentOS or RHEL
+    sudo yum install epel-release
+    sudo yum -y install python36u-pip
+
+    #Debian/Ubuntu
+    sudo apt install python3 python3-dev python3-pip
+
+Git
+***
+
+Git can be installed via the following commands in different linux systems
+
+.. code-block:: bash
+
+    #CentOS or RHEL
+    sudo yum install epel-release
+    sudo yum -y install git
+
+    #Debian/Ubuntu
+    sudo apt install git
+
+Singularity
+***********
+
+As the name suggests **GOMAP-Singularity** is a Singularity container (`http://singularity.lbl.gov <http://singularity.lbl.gov>`_). The container itself has all the  requirements for GOMAP installed and can be used with a single command as long as the singularity container system is installed in the system used.
 
 .. note::
 
@@ -33,4 +73,20 @@ Most HPC systems have singularity installed and ready to use. You can check if s
 .. code-block:: bash
 
     module avail singularity
+    module spider singularity
     module load singularity    
+
+singularity-cli
+***************
+
+Quickest way to get the latest code would be to install it via PyPi
+
+.. code-block:: bash
+
+    # Install for the current user
+    pip3 install --user spython
+
+    # Install system-wide
+    sudo pip3 install spython
+
+Please check `https://singularityhub.github.io/singularity-cli/install <https://singularityhub.github.io/singularity-cli/install>`_ for more detailed instuctions and other ways to install singularity-cli
