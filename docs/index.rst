@@ -18,6 +18,7 @@ How to use GOMAP-Singularity
    :maxdepth: 2
    :numbered:
    
+   QUICKSTART
    REQUIREMENTS
    INSTALL
    RUN

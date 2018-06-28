@@ -3,28 +3,8 @@
 Requirements
 ============
 
-1. `Python3 and Pip3`_ 
-2. `Git`_ 
-3. `Singularity`_
-4. `singularity-cli`_
-
-Python3 and Pip3
-****************
-
-.. attention::
-
-    The Python3 will be be installed by default on most unix/linux systems.
-
-If pip3 is not available please use the following commands depending on the system you work in.
-
-.. code-block:: bash
-
-    #CentOS or RHEL
-    sudo yum install epel-release
-    sudo yum -y install python36u-pip
-
-    #Debian/Ubuntu
-    sudo apt install python3 python3-dev python3-pip
+1. `Git`_ 
+2. `Singularity`_
 
 Git
 ***
@@ -55,7 +35,7 @@ Installing Singularity on Debian/Ubuntu
 
 **Singularity** can be installed in standalone linux systems via the instructions provided `here <http://singularity.lbl.gov/install-linux>`_. 
 
-Steps for Debian/Ubuntu based systems are given below. Check `here <http://singularity.lbl.gov/install-linux>`_  for instructions to install for other systems.
+Steps to install singularity on Debian/Ubuntu based systems are given below. Check `here <http://singularity.lbl.gov/install-linux>`_  for instructions to install for other systems.
 
 .. code-block:: bash
 
@@ -74,19 +54,4 @@ Most HPC systems have singularity installed and ready to use. You can check if s
 
     module avail singularity
     module spider singularity
-    module load singularity    
-
-singularity-cli
-***************
-
-Quickest way to get the latest code would be to install it via PyPi
-
-.. code-block:: bash
-
-    # Install for the current user
-    pip3 install --user spython
-
-    # Install system-wide
-    sudo pip3 install spython
-
-Please check `https://singularityhub.github.io/singularity-cli/install <https://singularityhub.github.io/singularity-cli/install>`_ for more detailed instuctions and other ways to install singularity-cli
+    module load singularity
