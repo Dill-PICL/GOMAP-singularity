@@ -1,6 +1,7 @@
-!*.gitignore
-!*config.yml
-!*test.fa
-!*test.tsv
-!GOMAP-test/tmp/mixed-meth/argot2.5/results/tsv/*
 *
+
+!/*
+!*/
+!GOMAP-test/tmp/mixed-meth/argot2.5/**
+
+
