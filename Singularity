@@ -1,5 +1,5 @@
 Bootstrap: shub
-From: wkpalan/GOMAP-base
+From: Dill-PICL/GOMAP-base
 
 %labels
 MAINTAINER Kokulapalan Wimalanathan
