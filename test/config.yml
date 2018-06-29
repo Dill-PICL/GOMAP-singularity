@@ -3,3 +3,10 @@ input:
   basename: test
   fasta: test.fa
   taxon: "4577"
+data:
+  mixed-method:
+      preprocess:
+        num_seqs: '25'
+software:
+  blast:
+    num_threads: 8

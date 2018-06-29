@@ -22,7 +22,8 @@ Run
 
 1. setup [optional]
 2. preprocess 
-3. annotate
+3. annotate 
+4. test
 
 setup
 -----
