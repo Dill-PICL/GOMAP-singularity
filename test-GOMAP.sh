@@ -3,12 +3,8 @@ instance_name="GOMAP"
 img_loc="$instance_name.simg"
 mkdir -p $PWD/tmp
 
-if [ ! -f "$img_loc" ]
-then
-	singularity pull --name "$img_loc" shub://Dill-PICL/GOMAP-singularity
-fi
-
 ./stop-GOMAP.sh
+
 singularity instance.start \
 	--bind $PWD/GOMAP-data/mysql/lib:/var/lib/mysql \
 	--bind $PWD/GOMAP-data/mysql/log:/var/log/mysql \
@@ -18,9 +14,8 @@ singularity instance.start \
 	-W $PWD/tmp \
 	$img_loc $instance_name && \
 singularity run  \
-	instance://$instance_name --step=preprocess --config=test/config.yml #&&
-#singularity run  \
-#	instance://$instance_name --step=aggregate --config=test/config.yml
+	instance://$instance_name --step=preprocess --config=test/config.yml &&
+singularity run  \
+	instance://$instance_name --step=aggregate --config=test/config.yml
+
 ./stop-GOMAP.sh
-# sudo singularity instance.stop $instance_name
-# --bind $PWD/GO-MAP-data/mysql/run:/var/run/mysqld \
