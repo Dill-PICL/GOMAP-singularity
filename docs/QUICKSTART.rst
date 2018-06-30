@@ -26,3 +26,29 @@ Quick Start
 
 .. attention::
     This has to be perfomed from the GOMAP-singularity install location because the test directory location is fixed.
+
+4. Make Necessary Changes to run-GOMAP.sh. Especially change the ``$gomap_loc`` if necessary
+    
+.. literalinclude:: ../run-GOMAP.sh
+    :language: bash
+    :emphasize-lines: 4 
+    :linenos:
+ 
+5. Copy the ``config.yml`` file from test directory and make necessary Changes
+
+    .. literalinclude:: ../test/config.yml
+        :language: yaml
+        :emphasize-lines: 4,6,8 
+        :linenos:
+
+6. Run the pipeline
+    i). Run the preprocess step
+
+        .. code-block:: bash
+        
+            ./run-GOMAP.sh --step=preprocess --config=test/config.yml
+
+    ii). Submit Batch jobs to Argot2.5 Web Server
+
+        Follow the instructions from {TODO}  file to get the file locations
+

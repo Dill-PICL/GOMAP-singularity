@@ -14,8 +14,8 @@ singularity instance.start \
 	-W $PWD/tmp \
 	$img_loc $instance_name && \
 singularity run  \
-	instance://$instance_name --step=preprocess --config=test/config.yml &&
+	instance://$instance_name --step=preprocess --config=test/config.yml #&&
 singularity run  \
-	instance://$instance_name --step=aggregate --config=test/config.yml
+ 	instance://$instance_name --step=aggregate --config=test/config.yml
 
 ./stop-GOMAP.sh
