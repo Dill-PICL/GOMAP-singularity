@@ -39,7 +39,7 @@ Quick Start
 
     .. literalinclude:: ../test/config.yml
         :language: yaml
-        :emphasize-lines: 4,6,8,12 
+        :emphasize-lines: 4,6,8,12,14 
         :linenos:
 
 6. Run the pipeline

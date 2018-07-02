@@ -19,9 +19,9 @@ How to use GOMAP-Singularity
    :numbered:
    
    QUICKSTART
-   REQUIREMENTS
-   INSTALL
-   RUN
+   ..  REQUIREMENTS
+   .. INSTALL
+   .. RUN
 
 
 Indices and tables
