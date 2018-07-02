@@ -3,6 +3,11 @@ instance_name="GOMAP"
 img_loc="$instance_name.simg"
 mkdir -p $PWD/tmp
 
+if [ ! -f "$img_loc" ]
+then
+	singularity pull --name "$img_loc" shub://Dill-PICL/GOMAP-singularity
+fi
+
 ./stop-GOMAP.sh
 
 singularity instance.start \
