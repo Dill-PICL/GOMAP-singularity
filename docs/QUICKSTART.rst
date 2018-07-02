@@ -29,16 +29,17 @@ Quick Start
 
 4. Make Necessary Changes to run-GOMAP.sh. Especially change the ``$gomap_loc`` if necessary
     
-.. literalinclude:: ../run-GOMAP.sh
-    :language: bash
-    :emphasize-lines: 4 
-    :linenos:
+    .. literalinclude:: ../run-GOMAP.sh
+        :language: bash
+        :emphasize-lines: 4 
+        :linenos:
  
 5. Copy the ``config.yml`` file from test directory and make necessary Changes
+    Change the 
 
     .. literalinclude:: ../test/config.yml
         :language: yaml
-        :emphasize-lines: 4,6,8 
+        :emphasize-lines: 4,6,8,12 
         :linenos:
 
 6. Run the pipeline
@@ -48,7 +49,17 @@ Quick Start
         
             ./run-GOMAP.sh --step=preprocess --config=test/config.yml
 
-    ii). Submit Batch jobs to Argot2.5 Web Server
+        At the end of preprocess step batch jobs are submitted to the Argot2.5 Webserver. The server will send you emails when these jobs are completed. Please wait for the job completion emails befor running the next step.
 
-        Follow the instructions from {TODO}  file to get the file locations
+    ii). Run the aggregate step
+
+        .. code-block:: bash
+        
+            ./run-GOMAP.sh --step=aggregate --config=test/config.yml
+
+        This step will take all the preprocessed data and create GAF 2.0 files. The GAF files will be cleaned and aggregated and the aggregate dataset will be generated in the agg directory.
+
+
+
+
 

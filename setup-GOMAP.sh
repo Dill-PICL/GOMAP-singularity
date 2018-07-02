@@ -11,7 +11,7 @@ fi
 
 if [ ! -f "$HOME/.irods/irods_environment.json" ]
 then
-	echo "File not found"
+	echo "irods environment file not found"
 	mkdir -p $HOME/.irods/ && cp irods_environment.json $HOME/.irods/
 else
 	echo "Using $HOME/.irods/irods_environment.json for icommands"
@@ -28,8 +28,4 @@ singularity instance.start \
 singularity run  \
 		instance://$instance_name --step=setup --config=test/config.yml
 
-instance_running=`singularity instance.list | grep $instance_name`
-if [ -n "$instance_running" ]
-then
-	singularity instance.stop $instance_name
-fi
+./stop-GOMAP.sh
