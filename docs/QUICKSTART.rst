@@ -18,6 +18,9 @@ Quick Start
     
     ./setup-GOMAP.sh
 
+.. attention::
+    The pipeline download is huge and would require ~150GB free during the setup step.
+
 3. [optional] Test whether the container and the data files are working as intended. 
 
 .. code-block:: bash
