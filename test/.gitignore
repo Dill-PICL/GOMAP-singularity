@@ -1,5 +1,7 @@
 *
+
+!*/
+!GOMAP-test/tmp/mixed-meth/argot2.5/results/**
 !.gitignore
 !config.yml
-!test.fa
-
+!./test.fa
