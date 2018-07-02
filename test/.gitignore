@@ -2,4 +2,4 @@
 !.gitignore
 !config.yml
 !test.fa
-
+!GOMAP-test/tmp/mixed-meth/argot2.5/results/*tsv
