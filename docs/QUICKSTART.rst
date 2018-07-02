@@ -8,7 +8,7 @@ Quick Start
 .. code-block:: bash
 
     mkdir -p /path/to/GOMAP-singularity/install/location
-    git clone https://github.com/Dill-PICL/GOMAP-singularity.git /path/to/GOMAP-singularity/install/location
+    git clone --recursive https://github.com/Dill-PICL/GOMAP-singularity.git /path/to/GOMAP-singularity/install/location
     cd /path/to/GOMAP-singularity/install/location
     
 
