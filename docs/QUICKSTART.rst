@@ -61,8 +61,3 @@ Quick Start
             ./run-GOMAP.sh --step=aggregate --config=test/config.yml
 
         This step will take all the preprocessed data and create GAF 2.0 files. The GAF files will be cleaned and aggregated and the aggregate dataset will be generated in the agg directory.
-
-
-
-
-
