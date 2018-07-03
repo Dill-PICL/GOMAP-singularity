@@ -24,6 +24,4 @@ How to use GOMAP-Singularity
    .. RUN
 
 
-Indices and tables
-==================
-* :ref:`search`
+**Detailed documentation coming soon.**

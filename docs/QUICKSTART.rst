@@ -49,11 +49,10 @@ Quick Start
         :linenos:
  
 5. Copy the ``config.yml`` file from test directory and make necessary Changes
-    Change the 
 
-    .. literalinclude:: ../test/config.yml
+    .. literalinclude:: _static/config.yml
         :language: yaml
-        :emphasize-lines: 4,6,8,12,14 
+        :emphasize-lines: 4,6,8,10,12,14 
         :linenos:
 
 6. Run the pipeline
