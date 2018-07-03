@@ -3,32 +3,43 @@
 Quick Start
 ===========
 
-1. Clone the git repository
+1. Install (local) or load (HPC) `Singularity <http://singularity.lbl.gov>`_ container
 
-.. code-block:: bash
+    .. code-block:: bash
+        
+        #On HPC Systems
+        module load singularity
 
-    mkdir -p /path/to/GOMAP-singularity/install/location
-    git clone --recursive https://github.com/Dill-PICL/GOMAP-singularity.git /path/to/GOMAP-singularity/install/location
-    cd /path/to/GOMAP-singularity/install/location
+2. Clone the git repository
+
+    .. code-block:: bash
+
+        mkdir -p /path/to/GOMAP-singularity/install/location
+        git clone --recursive https://github.com/Dill-PICL/GOMAP-singularity.git /path/to/GOMAP-singularity/install/location
+        cd /path/to/GOMAP-singularity/install/location
+        
+
+3. Run the setup script to make necesary directories and download data files from Cyverse
+
+    .. code-block:: bash
+        
+        ./setup-GOMAP.sh
+
+    .. attention::
+        The pipeline download is huge and would require ~150GB free during the setup step.
+
+4. [optional] Test whether the container and the data files are working as intended.
+
+    i) Add your email to the ``test/config.yml``. This is necessary to submit jobs to Argot2.5.
     
+    ii) Run the test using following command.
 
-2. Run the setup script to make necesary directories and download data files from Cyverse
+    .. code-block:: bash
+        
+        ./test-GOMAP.sh
 
-.. code-block:: bash
-    
-    ./setup-GOMAP.sh
-
-.. attention::
-    The pipeline download is huge and would require ~150GB free during the setup step.
-
-3. [optional] Test whether the container and the data files are working as intended. 
-
-.. code-block:: bash
-    
-    ./test-GOMAP.sh
-
-.. attention::
-    This has to be perfomed from the GOMAP-singularity install location because the test directory location is fixed.
+    .. attention::
+        This has to be perfomed from the GOMAP-singularity install location because the test directory location is fixed.
 
 4. Make Necessary Changes to run-GOMAP.sh. Especially change the ``$gomap_loc`` if necessary
     
