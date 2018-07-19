@@ -1,4 +1,4 @@
-.. QUICKSTART:
+.. _QUICKSTART:
 
 Quick Start
 ===========
@@ -43,14 +43,14 @@ Quick Start
 
 4. Make Necessary Changes to run-GOMAP.sh. Especially change the ``$gomap_loc`` if necessary
     
-    .. literalinclude:: ../run-GOMAP.sh
+    .. literalinclude:: _static/run-GOMAP.sh
         :language: bash
         :emphasize-lines: 4 
         :linenos:
  
 5. Copy the ``config.yml`` file from test directory and make necessary Changes
 
-    .. literalinclude:: _static/config.yml
+    .. literalinclude:: _static/min-config.yml
         :language: yaml
         :emphasize-lines: 4,6,8,10,12,14 
         :linenos:

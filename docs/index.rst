@@ -5,6 +5,8 @@
 
 .. _index:
 
+.. image:: _static/gomap.png
+
 Welcome to GOMAP-Singularity's documentation!
 =============================================
 
@@ -14,14 +16,14 @@ Welcome to GOMAP-Singularity's documentation!
 How to use GOMAP-Singularity
 ----------------------------
 
-.. toctree::
-   :maxdepth: 2
+.. toctree:: 
+   :maxdepth: 1
    :numbered:
    
    QUICKSTART
-   ..  REQUIREMENTS
-   .. INSTALL
-   .. RUN
+   REQUIREMENTS
+   INSTALL
+   RUN
 
 
 **Detailed documentation coming soon.**

@@ -1,12 +1,10 @@
 .. _INSTALL:
 
-.. role:: red
-
 Install
 =======
 
-Installing via GOMAP-singularity scripts
-````````````````````````````````````````
+Installing via GOMAP-singularity scripts (Recommended)
+``````````````````````````````````````````````````````
 
 Obtaining and installing GOMAP-Singularity can be done with the set of scripts which can be obtained from `https://github.com/Dill-PICL/GOMAP-singularity <https://github.com/Dill-PICL/GOMAP-singularity>`_
 
@@ -16,7 +14,7 @@ Obtaining and installing GOMAP-Singularity can be done with the set of scripts w
 
     mkdir -p /path/to/GOMAP-singularity/install/location
     git clone https://github.com/Dill-PICL/GOMAP-singularity.git /path/to/GOMAP-singularity/install/location
-    cd /path/to/GOMAP-singularity/install/location
+    cd /path/to/GOMAP-singularity/install/location 
     
 
 2. Run the setup script to make necesary directories and download data files from Cyverse
@@ -30,6 +28,18 @@ Obtaining and installing GOMAP-Singularity can be done with the set of scripts w
 .. code-block:: bash
     
     ./test-GOMAP.sh
+
+4. Make Necessary Changes to run-GOMAP.sh.
+    
+    Change the ``gmap_loc`` to ``/path/to/GOMAP-singularity/install/location``
+    
+    .. literalinclude:: _static/run-GOMAP.sh
+        :language: bash
+        :emphasize-lines: 4
+        :linenos:
+
+    .. tip::
+        To make the GOMAP-singularity scripts available from any location add the ``/path/to/GOMAP-singularity/install/location`` to the ``$PATH`` variable
 
 Manual Install
 ``````````````
@@ -123,7 +133,7 @@ We have added a setup step within the GOMAP-singularity container to enable easy
         -W $PWD/tmp \
         /path/to/image/GOMAP.simg GOMAP
 
-3. Run the setup step with a temporary config.yml file that can be downloaded from `TODO <http://wkpalan.github.io>`_
+3. Run the setup step with a temporary config.yml file that can be downloaded from `here <_static/config.yml>`_
 
 .. code-block:: bash
 

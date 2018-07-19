@@ -16,7 +16,6 @@ Version 0.2
 	echo "Running post"
 	mkdir /opt/GOMAP/
 	mkdir /workdir
-	pip install requests requests-toolbelt 
 	echo "Completed Post"
 
 %startscript

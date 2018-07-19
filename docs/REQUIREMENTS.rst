@@ -23,11 +23,11 @@ Git can be installed via the following commands in different linux systems
 Singularity
 ***********
 
-As the name suggests **GOMAP-Singularity** is a Singularity container (`http://singularity.lbl.gov <http://singularity.lbl.gov>`_). The container itself has all the  requirements for GOMAP installed and can be used with a single command as long as the singularity container system is installed in the system used.
+As the name suggests **GOMAP-Singularity** is a Singularity container (`http://singularity.lbl.gov <http://singularity.lbl.gov>`_). The container itself has all the  requirements for GOMAP installed and can be used with a simple commands as long as the singularity container system is installed in the system used.
 
 .. note::
 
-   It is highly recommended to use the GOMAP-Singularity container in the linux system. GOMAP-Singularity has been tested **Ubuntu** as standalone and **RHEL??** in an HPC environment
+   It is highly recommended to use the GOMAP-Singularity container in the linux system. GOMAP-Singularity has been tested **Ubuntu** as standalone and **RHEL** in an HPC environment
   
 
 Installing Singularity on Debian/Ubuntu
@@ -52,6 +52,9 @@ Most HPC systems have singularity installed and ready to use. You can check if s
 
 .. code-block:: bash
 
+    #Check if singularity is installed
     module avail singularity
     module spider singularity
+
+    #Load singularity
     module load singularity

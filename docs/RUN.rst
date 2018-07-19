@@ -3,10 +3,18 @@
 Run
 ===
 
+Running GOMAP
+-------------
+
+1. GOMAP can be run using the 
+
+.. attention::
+    Please make sure you have installed the necessary :ref:`REQUIREMENTS` and run the :ref:`INSTALL` steps to install GOMAP-singularity and the necessary data 
+
 .. code-block:: bash
 
     instance_name="GOMAP"
-    img_loc="/mnt/raid/lab_data/go_annotation/GOMAP-singularity/$instance_name.simg"
+    img_loc="/path/to/GOMAP-singularity/install/location/$instance_name.simg"
     mkdir -p $PWD/tmp
 
     singularity instance.start \
@@ -19,17 +27,3 @@ Run
         $img_loc $instance_name && \
     singularity run  \
         instance://$instance_name $@
-
-1. setup [optional]
-2. preprocess 
-3. annotate
-
-setup
------
-
-The GOMAP-Singularity **container**
------------------------------------
-
-The GOMAP-Singularity **container**
------------------------------------
-
