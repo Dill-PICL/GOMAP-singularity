@@ -13,7 +13,6 @@ fi
 singularity instance.start \
 	--bind $PWD/GOMAP-data/mysql/lib:/var/lib/mysql \
 	--bind $PWD/GOMAP-data/mysql/log:/var/log/mysql \
-	--bind $PWD/GOMAP-container:/opt/GOMAP \
 	--bind $PWD/GOMAP-data:/opt/GOMAP/data \
     --bind $PWD:/workdir \
 	-W $PWD/tmp \

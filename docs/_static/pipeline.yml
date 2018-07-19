@@ -1,0 +1,132 @@
+data:
+  seq-sim:
+    TAIR:
+      basename:     At.TAIR10
+      basedir:      data/data/seq-sim/tair
+      tmpdir:       tmp/seq-sim/tair
+      gaf:          gaf/At.TAIR10
+      metadata:
+        date:       ''
+        version:    TAIR10
+        species:    arabidopsis
+    uniprot:
+      basename:     Plant.UniProt.hc
+      basedir:      data/data/seq-sim/uniprot
+      tmpdir:       tmp/seq-sim/uniprot
+      cleaning:
+        sel_tax:
+          - '15368'
+          - '29760'
+          - '3055'
+          - '3218'
+          - '3694'
+          - '3702'
+          - '3847'
+          - '39947'
+          - '4081'
+          - '4558'
+        omit_tax:
+        - '4577'
+      metadata:
+        version:    '2017-07-26'
+        species:    uniprot
+  domain:
+    tmpdir:         tmp/domain/iprs
+    tool:
+        name:       Interproscan5
+        version:    5.25-64.0
+  mixed-method:
+      preprocess:
+        hmmerdb:    data/data/mixed-meth/pfamdb/Pfam-A.hmm
+        num_seqs: '40'
+        blast_out: tmp/mixed-meth/preprocess/blast
+        uniprot_db: data/data/mixed-meth/uniprot/uniprot_2017_07.sel
+        fa_path: tmp/mixed-meth/preprocess/fa
+        blast_opts: ["-evalue","10e-10"]
+      argot2:
+        preprocess:
+          blast: tmp/mixed-meth/argot2.5/blast
+          hmmer: tmp/mixed-meth/argot2.5/hmmer
+          html: tmp/mixed-meth/argot2.5/html
+        result_dir: tmp/mixed-meth/argot2.5/results
+        score_th:
+          P: 0.15
+          C: 0.05
+          F: 0.15
+        batch_url: "http://www.medcomp.medicina.unipd.it/Argot2-5/insert_batch.php"
+        baseurl: "http://www.medcomp.medicina.unipd.it/Argot2-5/"
+        payload:
+          blast_file: None
+          hmmer_file: None
+          filtra: checked
+#          scient_name: None
+          tax_id: None
+          rule_system: both
+          w_hypoth: open_world
+          email: None
+          descr: None
+          inf_content: "0"
+          int_confidence: "0"
+          totalScore: "0"
+          measure: simgic
+      pannzer:
+        preprocess:
+          blast: tmp/mixed-meth/pannzer/blast
+        conf_dir: tmp/mixed-meth/pannzer/conf
+        result_dir: tmp/mixed-meth/pannzer/results
+        score_th:
+          P: 0.4
+          C: 0.2
+          F: 0.55
+  gaf:
+    raw_dir:          gaf/raw
+    non_red_dir:      gaf/non_red
+    agg_dir:          gaf/agg
+    uniq_dir:         gaf/uniq
+    mixed_method_dir: gaf/mixed-method
+  go:
+    gaf_cols:       data/data/cols/gaf_cols.txt
+    obo:            data/data/go/go.obo
+    evidence_codes:
+      omitted:
+      - IEA
+      - ND
+      - NAS
+software:
+  blast:
+    bin:            data/software/blast-2.6.0+/bin
+#    num_threads:    4
+    evalue:         10e-10
+    opt_params: ["-max_target_seqs", '10']
+    cols:           data/data/cols/blast_cols.txt
+  iprs:
+    path:           data/software/interproscan-5.25-64.0
+    cols:           data/data/cols/iprs_cols.txt
+    options: []
+#      - -cpu 4
+  hmmer:
+    path:           data/software/hmmer-3.1b2-linux-intel-x86_64/binaries
+#    cpu:            4
+  pannzer:
+    database:
+      SQL_DB: pannzer
+      SQL_DB_PASSWORD: ""
+      SQL_DB_USER: pannzer
+      SQL_DB_HOST: localhost
+      SQL_DB_PORT: ""
+    path: data/software/PANNZER
+    conf_template: template.conf
+logging:
+  format:           "%(levelname)s [%(asctime)s] %(message)s"
+  formatTime:       "%Y-%m-%d %H:%M"
+  level:            DEBUG
+pipeline:
+  config_file:      pipeline.json
+  version:          '0.2'
+  name:             GO-MAP
+  pipeline_loc:     "/opt/GOMAP"
+  dir_struct:       "config/dirs.yml"
+input:
+  workdir:          "/workdir"
+  cpus: 4
+
