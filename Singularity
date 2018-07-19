@@ -5,9 +5,6 @@ From: Dill-PICL/GOMAP-base
 MAINTAINER Kokulapalan Wimalanathan
 Version 0.2
 
-%files
-	GOMAP-container
-
 %environment
     export LC_ALL=C
 	export DEBIAN_FRONTEND=noninteractive
@@ -18,8 +15,9 @@ Version 0.2
 %post
 	echo "Running post"
 	mkdir /opt/GOMAP/
+	git clone https://github.com/Dill-PICL/GOMAP-container.git /opt/GOMAP/
 	mkdir /workdir
-	mv GOMAP-container/* /opt/GOMAP/
+	
 	echo "Completed Post"
 
 %startscript
