@@ -25,6 +25,3 @@ How to use GOMAP-Singularity
    INSTALL
    RUN
    CONFIG
-
-
-**Detailed documentation coming soon.**
