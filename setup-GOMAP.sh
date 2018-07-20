@@ -20,7 +20,6 @@ fi
 mkdir -p $PWD/tmp $PWD/GOMAP-data
 
 singularity instance.start \
-	--bind $PWD/GOMAP-container:/opt/GOMAP \
 	--bind $PWD/GOMAP-data:/opt/GOMAP/data \
     --bind $PWD:/workdir \
 	-W $PWD/tmp \
