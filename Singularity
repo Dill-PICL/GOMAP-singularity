@@ -15,7 +15,7 @@ Version 0.2
 %post
 	echo "Running post"
 	mkdir /opt/GOMAP/
-	git clone https://github.com/Dill-PICL/GOMAP-container.git /opt/GOMAP/
+	git clone https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	mkdir /workdir
 	
 	echo "Completed Post"
