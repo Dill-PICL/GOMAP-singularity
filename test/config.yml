@@ -9,7 +9,7 @@ input:
   # Name of the species
   species: "Zea mays"
   # Email is mandatory
-  email: kokulapalan@gmail.com
+  email: 
   #Number of CPUs used for tools
   cpus: 4
 #data section for additional options. 
