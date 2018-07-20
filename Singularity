@@ -3,7 +3,7 @@ From: Dill-PICL/GOMAP-base
 
 %labels
 MAINTAINER Kokulapalan Wimalanathan
-Version 0.2
+Version 1.0.1
 
 %environment
     export LC_ALL=C
@@ -15,9 +15,8 @@ Version 0.2
 %post
 	echo "Running post"
 	mkdir /opt/GOMAP/
-	git clone https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
+	git clone --branch=v1.0.0 https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	mkdir /workdir
-	
 	echo "Completed Post"
 
 %startscript
