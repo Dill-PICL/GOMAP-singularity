@@ -24,6 +24,7 @@ How to use GOMAP-Singularity
    REQUIREMENTS
    INSTALL
    RUN
+   CONFIG
 
 
 **Detailed documentation coming soon.**

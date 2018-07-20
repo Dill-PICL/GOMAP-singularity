@@ -12,9 +12,3 @@ input:
   email: 
   #Number of CPUs used for tools
   cpus: 4
-#data section for additional options. 
-# Change Only if you know what you are doing
-data:
-  mixed-method:
-      preprocess:
-        num_seqs: '25'
