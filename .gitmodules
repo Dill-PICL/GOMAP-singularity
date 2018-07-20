@@ -1,3 +1,3 @@
-[submodule "GOMAP-container"]
-	path = GOMAP-container
-	url = https://github.com/Dill-PICL/GOMAP-container.git
+[submodule "GOMAP"]
+	path = GOMAP
+	url = https://github.com/Dill-PICL/GOMAP.git
