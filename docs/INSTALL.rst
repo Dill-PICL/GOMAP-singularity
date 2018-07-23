@@ -96,7 +96,7 @@ The compressed dataset and the associated tools are available at `CyVerse <http:
     The data file download size is ~37GB and the extracted version is ~110GB. So please make sure the download location has at least ~160 GB free space to download and extract the data
 
 The compressed tar file is available to download at the following location but it can only be downloaded via icommands
-`http://datacommons.cyverse.org/browse/iplant/home/shared/dillpicl/GOMAP/GOMAP-data.tar.gz <http://datacommons.cyverse.org/browse/iplant/home/shared/dillpicl/GOMAP/GOMAP-data.tar.gz>`_
+`http://datacommons.cyverse.org/browse/iplant/home/shared/dillpicl/gomap/GOMAP-data.tar.gz <http://datacommons.cyverse.org/browse/iplant/home/shared/dillpicl/gomap/GOMAP-data.tar.gz>`_
 
 Download with icommands
 ***********************
@@ -104,10 +104,10 @@ Download with icommands
 .. code-block:: bash
 
     #you can use irsync tool to download the image
-    irsync i:/iplant/home/shared/dillpicl/GOMAP/GOMAP-data.tar.gz /path/to/download
+    irsync i:/iplant/home/shared/dillpicl/gomap/GOMAP-data.tar.gz /path/to/download
 
     #or you can use the iget tool to download the image
-    iget /iplant/home/shared/dillpicl/GOMAP/GOMAP-data.tar.gz /path/to/download
+    iget /iplant/home/shared/dillpicl/gomap/GOMAP-data.tar.gz /path/to/download
 
 Run the setup step from the container
 *************************************
