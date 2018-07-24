@@ -54,9 +54,6 @@ The GOMAP-Singularity **container**
 
 The GOMAP-Singularity conainer can be obtained from `Singularity Hub`_.
 
-Singularity Hub
-***************
-
 This options requires you to have singulaity-container tools installed if not check  :ref:`REQUIREMENTS` on steps about how to install singularity.
 
 The GOMAP-singularity container is available at the following location. 
