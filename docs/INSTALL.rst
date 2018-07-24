@@ -65,7 +65,6 @@ The GOMAP-singularity container is available at the following location.
 .. code-block:: bash
 
     singularity pull --name GOMAP.simg shub://Dill-PICL/GOMAP-singularity
-    
 
 The **data and tools** needed to run GOMAP-Singularity
 ------------------------------------------------------
