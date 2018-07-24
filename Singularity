@@ -15,7 +15,7 @@ Version 1.0.1
 %post
 	echo "Running post"
 	mkdir /opt/GOMAP/
-	git clone --branch=v1.0.0 https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
+	git clone --branch=v1.0.2 https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	mkdir /workdir
 	echo "Completed Post"
 

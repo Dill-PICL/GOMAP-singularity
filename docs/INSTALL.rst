@@ -66,26 +66,7 @@ The GOMAP-singularity container is available at the following location.
 
     singularity pull --name GOMAP.simg shub://Dill-PICL/GOMAP-singularity
 
-CyVerse
-*******
 
-GOMAP-Singularity container can be obtained using the iget or irsync from the `http://datacommons.cyverse.org/browse/iplant/home/shared/dillpicl/GOMAP/ <http://datacommons.cyverse.org/browse/iplant/home/shared/dillpicl/GOMAP/>`_ 
-
-.. code-block:: bash
-
-    #you can use irsync tool to download the image
-    irsync i:/iplant/home/shared/dillpicl/GOMAP/GOMAP.simg /path/to/download
-
-    #or you can use the iget tool to download the image
-    iget /iplant/home/shared/dillpicl/GOMAP/GOMAP.simg /path/to/download
-
-
-.. comment
-    MaizeGDB
-    ********
-    code-block:: bash
-     wget https://ftp.maizegdb.org/MaizeGDB/FTP/GOMAP/GOMAP.simg
-    
 
 The **data and tools** needed to run GOMAP-Singularity
 ------------------------------------------------------
