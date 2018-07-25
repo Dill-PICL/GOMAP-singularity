@@ -25,9 +25,18 @@ Obtaining and installing GOMAP-Singularity can be done with the set of scripts w
 
 3. Test whether the container and the data files are working as intended. This has to be perfomed from the GOMAP-singularity install location because the test directory location is fixed.
 
-.. code-block:: bash
+    3.1. Add a valid email address to the ``test/config.yml``
     
-    ./test-GOMAP.sh
+        .. literalinclude:: ../test/config.yml
+            :language: yaml 
+            :emphasize-lines: 12
+            :linenos:
+
+    3.2.Run the test using the ``test-GOMAP.sh`` script
+
+        .. code-block:: bash
+            
+            ./test-GOMAP.sh
 
 4. Make Necessary Changes to run-GOMAP.sh.
     
@@ -121,9 +130,21 @@ We have added a setup step within the GOMAP-singularity container to enable easy
     singularity run  \
             instance://$instance_name --step=setup --config=test/config.yml
 
+
+
+
 4. [Optional] Run GOMAP-Singularity with the test data to see if the container and data work well together.
 
- .. code-block:: bash
+    4.1. Add a valid email address to the ``test/config.yml``
+    
+        .. literalinclude:: ../test/config.yml
+            :language: yaml 
+            :emphasize-lines: 12
+            :linenos:
 
-    singularity run  \
-            instance://GOMAP --step=setup --config=test/config.yml
+    3.2.Run the test using the following command
+
+        .. code-block:: bash
+
+            singularity run  \
+                instance://GOMAP --step=setup --config=test/config.yml
