@@ -1,4 +1,5 @@
 .. _INSTALL:
+.. _Singularity Hub: https://www.singularity-hub.org
 
 Install
 =======
