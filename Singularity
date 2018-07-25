@@ -16,7 +16,7 @@ Version 1.0.1
 	echo "Running post"
 	mkdir /opt/GOMAP/
 	git clone --branch=v1.0.2 https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
-	mkdir /workdir
+	mkdir /workdir 
 	echo "Completed Post"
 
 %startscript
