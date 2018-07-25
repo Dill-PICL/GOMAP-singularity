@@ -114,7 +114,7 @@ We have added a setup step within the GOMAP-singularity container to enable easy
         -W $PWD/tmp \
         /path/to/image/GOMAP.simg GOMAP
 
-3. Run the setup step with a temporary config.yml file that can be downloaded from `here <_static/config.yml>`_
+3. Run the setup step with a temporary ``min-config.yml`` file that can be downloaded from `here <_static/min-config.yml>`_
 
 .. code-block:: bash
 
