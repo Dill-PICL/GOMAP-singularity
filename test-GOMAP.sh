@@ -13,6 +13,7 @@ fi
 singularity instance.start \
 	--bind $PWD/GOMAP-data/mysql/lib:/var/lib/mysql \
 	--bind $PWD/GOMAP-data/mysql/log:/var/log/mysql \
+	--bind $PWD/GOMAP:/opt/GOMAP \
 	--bind $PWD/GOMAP-data:/opt/GOMAP/data \
     --bind $PWD:/workdir \
 	-W $PWD/tmp \
@@ -21,4 +22,4 @@ singularity run  \
 	instance://$instance_name --step=preprocess --config=test/config.yml &&
 singularity run  \
 	instance://$instance_name --step=aggregate --config=test/config.yml
-./stop-GOMAP.sh
+#./stop-GOMAP.sh
