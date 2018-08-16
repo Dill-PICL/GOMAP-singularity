@@ -16,10 +16,11 @@ singularity instance.start \
 	--bind $PWD/GOMAP:/opt/GOMAP \
 	--bind $PWD/GOMAP-data:/opt/GOMAP/data \
     --bind $PWD:/workdir \
+	--bind $TMPDIR:/tmpdir \
 	-W $PWD/tmp \
 	$img_loc $instance_name && \
 singularity run  \
 	instance://$instance_name --step=preprocess --config=test/config.yml &&
 singularity run  \
 	instance://$instance_name --step=aggregate --config=test/config.yml
-#./stop-GOMAP.sh
+./stop-GOMAP.sh

@@ -5,6 +5,8 @@ From: Dill-PICL/GOMAP-base
 MAINTAINER Kokulapalan Wimalanathan
 Version 1.0.1
 
+%files
+
 %environment
     export LC_ALL=C
 	export DEBIAN_FRONTEND=noninteractive
@@ -14,9 +16,12 @@ Version 1.0.1
 
 %post
 	echo "Running post"
+	apt-get install -y libopenmpi-dev libopenmpi2 openmpi-bin openmpi-common
+	pip install mpi4py
 	mkdir /opt/GOMAP/
 	git clone --branch=dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	mkdir /workdir 
+	mkdir /tmpdir
 	echo "Completed Post"
 
 %startscript
@@ -26,4 +31,3 @@ Version 1.0.1
 %runscript
 	cd /opt/GOMAP/ 
 	./gomap.py "$@"
- 
