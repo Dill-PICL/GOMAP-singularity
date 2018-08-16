@@ -4,5 +4,9 @@ temp
 *vscode
 *.simg
 GOMAP-data
-GOMAP*
+GOMAP
 hostfile
+mindmap
+*.ipynb*
+*venv*
+os

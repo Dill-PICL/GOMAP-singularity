@@ -10,8 +10,8 @@ mkdir -p $PWD/tmp
 singularity instance.start \
 	--bind $gomap_loc/GOMAP-data/mysql/lib:/var/lib/mysql \
 	--bind $gomap_loc/GOMAP-data/mysql/log:/var/log/mysql \
-	--bind $gomap_loc/GOMAP-container:/opt/GOMAP \
 	--bind $gomap_loc/GOMAP-data:/opt/GOMAP/data \
+	--bind $HOME/tmpdir:/tmpdir \
     --bind $PWD:/workdir \
 	-W $PWD/tmp \
 	$img_loc $instance_name && \
