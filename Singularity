@@ -16,7 +16,6 @@ Version 1.0.1
 
 %post
 	echo "Running post"
-	apt-get install -y libopenmpi-dev libopenmpi2 openmpi-bin openmpi-common
 	pip install mpi4py
 	mkdir /opt/GOMAP/
 	git clone --branch=hpc-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
