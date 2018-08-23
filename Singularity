@@ -16,7 +16,7 @@ Version 1.0.1
 
 %post
 	echo "Running post"
-	pip install mpi4py
+	pip install mpi4py scipy
 	mkdir /opt/GOMAP/
 	git clone --branch=hpc-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	mkdir /workdir 

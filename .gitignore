@@ -10,3 +10,6 @@ mindmap
 *.ipynb*
 *venv*
 os
+image.py
+instance.py
+tmp.txt
