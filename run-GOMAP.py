@@ -44,4 +44,4 @@ if str(args.step) == "mixmeth":
     result = Client.run(gomap_instance,args=["--config",str(args.config),"--step",str(args.step)])
     gomap_instance.stop()
 else:
-    result = Client.run(image=image_loc,args=["--config",str(args.config),"--step",str(args.step)],bind=binds)   
+    result = Client.run(image=image_loc,args=["--config",str(args.config),"--step",str(args.step)],bind=binds)
