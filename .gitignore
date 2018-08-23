@@ -13,3 +13,4 @@ os
 image.py
 instance.py
 tmp.txt
+SBATCH*
