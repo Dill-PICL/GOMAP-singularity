@@ -21,8 +21,9 @@ Version 1.0.1
 	pip install mpi4py 
 	mkdir /opt/GOMAP/
 	git clone --branch=hpc-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
-	mkdir /workdir 
-	mkdir /tmpdir
+	mkdir -p /workdir 
+	mkdir -p /tmpdir 
+	mkdir -p /var/log/mysql
 	echo "Completed Post"
 
 %startscript
