@@ -18,7 +18,8 @@ Version 1.0.1
 	echo "Running post"
 	wget http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz && tar -xvf mpich-3.2.tar.gz && cd mpich-3.2 &&  \
 	./configure && make -j4 && make install && cd ..
-	pip install mpi4py 
+	git clone https://bitbucket.org/mpi4py/mpi4py.git && cd mpi4py && python setup.py install
+	#pip install mpi4py
 	mkdir /opt/GOMAP/
 	git clone --branch=hpc-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	mkdir -p /workdir 
