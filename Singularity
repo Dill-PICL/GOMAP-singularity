@@ -22,9 +22,10 @@ Version 1.1.0
     tar -xf  mpich-3.2.tar.gz && \
     cd mpich-3.2 &&  \
     ./configure && make -j4 && make install && \
-    cd ..
+    cd .. 
 
-    pip install mpi4py==3.0.0
+    
+	pip install mpi4py==3.0.0
 
 	mkdir /opt/GOMAP/
 	git clone --branch=hpc-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
