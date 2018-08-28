@@ -3,8 +3,7 @@
 step=$1
 config=$2
 nodes=$3
-echo -e "
-#!/bin/bash
+echo -e "#!/bin/bash
 #SBATCH -N $nodes
 #SBATCH --ntasks-per-node 28
 #SBATCH -p RM
