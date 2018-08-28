@@ -4,7 +4,7 @@ From: Dill-PICL/GOMAP-base
 %labels
 MAINTAINER Kokulapalan Wimalanathan
 Version 1.1.0
-Branch PSC-Bridges
+BRanch PSC-Bridges
 
 %files
 
@@ -17,15 +17,6 @@ Branch PSC-Bridges
 
 %post
 	echo "Running post"
-
-    #Installing mpich
-    wget http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz && \
-    tar -xf  mpich-3.2.tar.gz && \
-    cd mpich-3.2 &&  \
-    ./configure && make -j4 && make install && \
-    cd .. 
-    
-	pip install mpi4py==3.0.0 
 
 	mkdir /opt/GOMAP/ 
 	git clone --branch=hpc-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
