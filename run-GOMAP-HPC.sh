@@ -32,8 +32,9 @@ echo -e "#!/bin/bash
 #SBATCH -e %j.err
 #SBATCH -C EGRESS
 
+tmpdir=$RAMDISK
 module load mpi/gcc_mvapich  singularity/2.6.0
-mpiexec -n $nodes source ~/.bashrc && \\
+mpiexec -n \\
 singularity run   \\
     --bind $GOMAP_DATA_LOC/GOMAP-data/mysql/lib:/var/lib/mysql  \\
     --bind $GOMAP_DATA_LOC/GOMAP-data/mysql/log:/var/log/mysql  \\
