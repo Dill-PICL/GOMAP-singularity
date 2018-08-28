@@ -9,12 +9,17 @@ input:
   # Name of the species
   species: "Zea mays"
   # Email is mandatory
-  email: 
+  email: kokulapalan@gmail.com
   #Number of CPUs used for tools
-  cpus: 4
+  cpus: 28
+  #Whether openmpi should be used
+  mpi: True
+  #what the name of the 
+  tmpdir: "/tmpdir"
 #data section for additional options. 
 # Change Only if you know what you are doing
 data:
   mixed-method:
       preprocess:
         num_seqs: '25'
+        small_seqs: '5'

@@ -4,4 +4,14 @@ temp
 *vscode
 *.simg
 GOMAP-data
-GOMAP*
+GOMAP
+hostfile
+mindmap
+*.ipynb*
+*venv*
+os
+image.py
+instance.py
+tmp.txt
+SBATCH*
+test.sh
