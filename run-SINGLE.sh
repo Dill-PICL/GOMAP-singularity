@@ -11,8 +11,8 @@ echo -e "#!/bin/bash
 #SBATCH --job-name=GOMAP-$step
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=kokul@iastate.edu
-#SBATCH -o SBATCH_OUTPUT
-#SBATCH -e SBATCH_ERRORS
+#SBATCH -o %j.out
+#SBATCH -e %j.err
 #SBATCH -C EGRESS
 
 module load mpi/gcc_mvapich  singularity/2.6.0
