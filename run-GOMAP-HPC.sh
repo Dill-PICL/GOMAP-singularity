@@ -11,7 +11,7 @@ fi
 if [ ! -f "$GOMAP_LOC" ]
 then
     module load singularity/2.6.0 && \
-    SINGULARITY_PULLFOLDER=`dirname $GOMAP_LOC`
+    SINGULARITY_PULLFOLDER=`dirname $GOMAP_LOC` \ 
     singularity pull --name `basename $GOMAP_LOC` shub://Dill-PICL/GOMAP-singularity:bridges
 fi
 
@@ -19,7 +19,7 @@ config=$1
 step=$2
 nodes=$3
 name=`cat $config | grep -v "#" | fgrep basename | cut -f 2 -d ":" | tr -d ' '`
-
+tmpdir="\$RAMDISK"
 echo -e "#!/bin/bash
 #SBATCH -N $nodes
 #SBATCH --ntasks-per-node 28
@@ -32,7 +32,7 @@ echo -e "#!/bin/bash
 #SBATCH -e %j.err
 #SBATCH -C EGRESS
 
-tmpdir=$RAMDISK
+
 module load mpi/gcc_mvapich  singularity/2.6.0
 mpiexec -n \\
 singularity run   \\
