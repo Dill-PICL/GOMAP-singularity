@@ -28,9 +28,11 @@ Version 1.1.0
 
 	mkdir /opt/GOMAP/
 	git clone --branch=hpc-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
+	
 	mkdir -p /workdir
 	mkdir -p /tmpdir
 	mkdir -p /var/log/mysql
+	
 	echo "Completed Post"
 
 %startscript
