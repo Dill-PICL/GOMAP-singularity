@@ -17,7 +17,7 @@ echo -e "#!/bin/bash
 
 module load mpi/gcc_mvapich  singularity/2.6.0
 
-singularity run  \n\
+singularity run  \n \
     --bind $GOMAP_DATA_LOC/GOMAP-data/mysql/lib:/var/lib/mysql \n\
     --bind $GOMAP_DATA_LOC/GOMAP-data/mysql/log:/var/log/mysql \n\
     --bind $GOMAP_DATA_LOC/GOMAP-data:/opt/GOMAP/data \n\
