@@ -25,7 +25,7 @@ Version 1.1.0
     cd .. 
 
     
-	pip install mpi4py==3.0.0
+	pip install mpi4py==3.0.0 
 
 	mkdir /opt/GOMAP/
 	git clone --branch=hpc-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
