@@ -34,7 +34,7 @@ echo -e "#!/bin/bash
 
 
 module load mpi/gcc_mvapich  singularity/2.6.0
-mpiexec -n \\
+mpiexec -n $nodes \\
 singularity run   \\
     --bind $GOMAP_DATA_LOC/GOMAP-data/mysql/lib:/var/lib/mysql  \\
     --bind $GOMAP_DATA_LOC/GOMAP-data/mysql/log:/var/log/mysql  \\
