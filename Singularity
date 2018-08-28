@@ -24,11 +24,10 @@ Version 1.1.0
     ./configure && make -j4 && make install && \
     cd .. 
     
-	pip install mpi4py==3.0.0 
+	pip install mpi4py==3.0.0
 
 	mkdir /opt/GOMAP/
 	git clone --branch=hpc-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
-	
 	mkdir -p /workdir
 	mkdir -p /tmpdir
 	mkdir -p /var/log/mysql
