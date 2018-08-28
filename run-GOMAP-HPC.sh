@@ -36,9 +36,9 @@ echo -e "#!/bin/bash
 module load mpi/gcc_mvapich  singularity/2.6.0
 mpiexec -n $nodes \\
 singularity run   \\
-    --bind $GOMAP_DATA_LOC/GOMAP-data/mysql/lib:/var/lib/mysql  \\
-    --bind $GOMAP_DATA_LOC/GOMAP-data/mysql/log:/var/log/mysql  \\
-    --bind $GOMAP_DATA_LOC/GOMAP-data:/opt/GOMAP/data \\
+    --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \\
+    --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \\
+    --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \\
     --bind $PWD:/workdir  \\
     --bind $tmpdir:/tmpdir  \\
     -W $PWD/tmp \\
