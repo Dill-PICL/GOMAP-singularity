@@ -23,7 +23,6 @@ Version 1.1.0
     cd mpich-3.2 &&  \
     ./configure && make -j4 && make install && \
     cd .. 
-
     
 	pip install mpi4py==3.0.0 
 
