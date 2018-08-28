@@ -43,3 +43,5 @@ singularity run   \\
     --bind $tmpdir:/tmpdir  \\
     -W $PWD/tmp \\
     $GOMAP_LOC --step=$step --config=$config" > "$name-GOMAP-$step.job"
+
+sbatch  "$name-GOMAP-$step.job"
