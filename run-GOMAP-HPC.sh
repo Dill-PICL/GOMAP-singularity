@@ -22,7 +22,7 @@ name=`cat $config | grep -v "#" | fgrep basename | cut -f 2 -d ":" | tr -d ' '`
 tmpdir="\$RAMDISK"
 echo -e "#!/bin/bash
 #SBATCH -N $nodes
-#SBATCH --ntasks-per-node 28
+#SBATCH --ntasks-per-node 1
 #SBATCH -p RM
 #SBATCH -t 48:00:00
 #SBATCH --job-name=$name-GOMAP-$step
