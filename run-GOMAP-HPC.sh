@@ -17,13 +17,13 @@ config=$1
 step=$2
 nodes=$3
 name=`cat $config | grep -v "#" | fgrep basename | cut -f 2 -d ":" | tr -d ' '`
-echo $name
+
 echo -e "#!/bin/bash
 #SBATCH -N $nodes
 #SBATCH --ntasks-per-node 28
 #SBATCH -p RM
 #SBATCH -t 48:00:00
-#SBATCH --job-name=GOMAP-$name-$step
+#SBATCH --job-name=$name-GOMAP-$step
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=kokul@iastate.edu
 #SBATCH -o %j.out
@@ -39,4 +39,4 @@ singularity run   \\
     --bind $PWD:/workdir  \\
     --bind $tmpdir:/tmpdir  \\
     -W $PWD/tmp \\
-    $GOMAP_LOC --step=$step --config=$config" > "GOMAP-$name-$step.job"
+    $GOMAP_LOC --step=$step --config=$config" > "$name-GOMAP-$step.job"
