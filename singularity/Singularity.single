@@ -19,7 +19,7 @@ BRanch PSC-Bridges
 	echo "Running post"
 
 	mkdir /opt/GOMAP/
-	git clone --branch=HPC-v1 https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
+	git clone --branch=HPC-v1  https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	mkdir -p /workdir
 	mkdir -p /tmpdir
 	mkdir -p /var/log/mysql
