@@ -10,7 +10,7 @@ fi
 
 if [ ! -f "$GOMAP_LOC" ]
 then
-singularity pull --name "$GOMAP_LOC" shub://Dill-PICL/GOMAP-singularity:bridges
+    singularity pull --name "$GOMAP_LOC" shub://Dill-PICL/GOMAP-singularity:bridges
 fi
 
 config=$1
@@ -31,7 +31,7 @@ echo -e "#!/bin/bash
 #SBATCH -C EGRESS
 
 module load mpi/gcc_mvapich  singularity/2.6.0
-mpiexec -n $node source ~/.bashrc && \\
+mpiexec -n $nodes source ~/.bashrc && \\
 singularity run   \\
     --bind $GOMAP_DATA_LOC/GOMAP-data/mysql/lib:/var/lib/mysql  \\
     --bind $GOMAP_DATA_LOC/GOMAP-data/mysql/log:/var/log/mysql  \\
