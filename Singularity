@@ -12,7 +12,7 @@ Version 1.1.0
 	export DEBIAN_FRONTEND=noninteractive
 	export MYSQL_USER=pannzer
     export MYSQL_DATABASE=pannzer
-    export MYSQL_ROOT_PASSWORD=mysql
+    export MYSQL_ROOT_PASSWORD=mysql 
 
 %post
 	echo "Running post"
