@@ -19,12 +19,10 @@ fi
 
 mkdir -p $PWD/tmp $PWD/GOMAP-data
 
-singularity instance.start \
+singularity run \
 	--bind $PWD/GOMAP-data:/opt/GOMAP/data \
     --bind $PWD:/workdir \
 	-W $PWD/tmp \
-	$img_loc $instance_name &&
-singularity run  \
-		instance://$instance_name --step=setup --config=test/config.yml
+	$img_loc --step=setup --config=test/config.yml
 
 ./stop-GOMAP.sh

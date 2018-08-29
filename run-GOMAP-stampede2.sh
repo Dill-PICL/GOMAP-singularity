@@ -20,6 +20,7 @@ step=$2
 nodes=$3
 name=`cat $config | grep -v "#" | fgrep basename | cut -f 2 -d ":" | tr -d ' '`
 tmpdir="/tmp"
+
 echo -e "#!/bin/bash
 #SBATCH -N $nodes
 #SBATCH --ntasks-per-node 1
