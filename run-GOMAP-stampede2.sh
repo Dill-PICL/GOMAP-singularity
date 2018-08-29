@@ -12,7 +12,7 @@ if [ ! -f "$GOMAP_LOC" ]
 then
     module load singularity/2.6.0 && \
     SINGULARITY_PULLFOLDER=`dirname $GOMAP_LOC` \ 
-    singularity pull --name `basename $GOMAP_LOC` shub://Dill-PICL/GOMAP-singularity:bridges
+    singularity pull --name `basename $GOMAP_LOC` shub://Dill-PICL/GOMAP-singularity:stampede2
 fi
 
 config=$1
@@ -34,6 +34,24 @@ echo -e "#!/bin/bash
 
 
 module load mvapich2  singularity
+
+" > "$name-GOMAP-$step.job"
+
+if [ "$step" == "mixmeth" ]
+then
+echo "
+singularity instance.start   \\
+    --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \\
+    --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \\
+    --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \\
+    --bind $PWD:/workdir  \\
+    --bind $tmpdir:/tmpdir  \\
+    -W $PWD/tmp \\
+    $GOMAP_LOC GOMAP && \\
+singularity run \\
+    instance://GOMAP --step=$step --config=$config" >> "$name-GOMAP-$step.job"
+else
+echo "
 mpiexec -n $nodes \\
 singularity run   \\
     --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \\
@@ -42,6 +60,7 @@ singularity run   \\
     --bind $PWD:/workdir  \\
     --bind $tmpdir:/tmpdir  \\
     -W $PWD/tmp \\
-    $GOMAP_LOC --step=$step --config=$config" > "$name-GOMAP-$step.job"
+    $GOMAP_LOC --step=$step --config=$config" >> "$name-GOMAP-$step.job"
+fi
 
 sbatch  "$name-GOMAP-$step.job"
