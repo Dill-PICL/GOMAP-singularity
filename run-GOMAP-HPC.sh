@@ -34,14 +34,33 @@ echo -e "#!/bin/bash
 
 
 module load mpi/gcc_mvapich  singularity/2.6.0
-mpiexec -n $nodes \\
-singularity run   \\
-    --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \\
-    --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \\
-    --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \\
-    --bind $PWD:/workdir  \\
-    --bind $tmpdir:/tmpdir  \\
-    -W $PWD/tmp \\
-    $GOMAP_LOC --step=$step --config=$config" > "$name-GOMAP-$step.job"
+" > "$name-GOMAP-$step.job"
 
-sbatch  "$name-GOMAP-$step.job"
+if [ "$step" == "mixmeth" ]
+then
+echo "
+    singularity instance.start   \\
+        --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \\
+        --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \\
+        --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \\
+        --bind $PWD:/workdir  \\
+        --bind $tmpdir:/tmpdir  \\
+        -W $PWD/tmp \\
+        $GOMAP_LOC GOMAP && \\
+    singularity run \\
+        instance://GOMAP --step=$step --config=$config" >> "$name-GOMAP-$step.job"
+else
+then
+echo "
+    mpiexec -n $nodes \\
+    singularity run   \\
+        --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \\
+        --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \\
+        --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \\
+        --bind $PWD:/workdir  \\
+        --bind $tmpdir:/tmpdir  \\
+        -W $PWD/tmp \\
+        $GOMAP_LOC --step=$step --config=$config" >> "$name-GOMAP-$step.job"
+fi
+
+#sbatch  "$name-GOMAP-$step.job"

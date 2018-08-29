@@ -20,8 +20,8 @@ BRanch PSC-Bridges
 
     #Installing mpich
     wget http://www.mpich.org/static/downloads/3.2.1/mpich-3.2.1.tar.gz && \
-    tar -xf  mpich-3.2.tar.gz && \
-    cd mpich-3.2 &&  \
+    tar -xf  mpich-3.2.1.tar.gz && \
+    cd mpich-3.2.1 &&  \
     ./configure && make && make install && \
     cd .. 
     
