@@ -34,6 +34,7 @@ echo -e "#!/bin/bash
 
 
 module load mpi/gcc_mvapich  singularity/2.6.0
+
 " > "$name-GOMAP-$step.job"
 
 if [ "$step" == "mixmeth" ]
@@ -62,4 +63,4 @@ singularity run   \\
     $GOMAP_LOC --step=$step --config=$config" >> "$name-GOMAP-$step.job"
 fi
 
-#sbatch  "$name-GOMAP-$step.job"
+sbatch  "$name-GOMAP-$step.job"

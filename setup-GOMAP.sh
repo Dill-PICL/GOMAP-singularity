@@ -21,8 +21,6 @@ mkdir -p $PWD/tmp $PWD/GOMAP-data
 
 singularity run \
 	--bind $PWD/GOMAP-data:/opt/GOMAP/data \
-    --bind $PWD:/workdir \
-	-W $PWD/tmp \
 	$img_loc --step=setup --config=test/config.yml
 
 ./stop-GOMAP.sh

@@ -26,6 +26,7 @@ BRanch PSC-Bridges
     cd .. 
     
 	pip install mpi4py==3.0.0 
+	pip install joblib==0.12.2
 
 	mkdir /opt/GOMAP/ 
 	git clone --branch=HPC-v1 https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/

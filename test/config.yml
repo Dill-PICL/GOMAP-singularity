@@ -11,9 +11,9 @@ input:
   # Email is mandatory
   email: kokulapalan@gmail.com
   #Number of CPUs used for tools
-  cpus: 28
+  cpus: 4
   #Whether openmpi should be used
-  mpi: True
+  mpi: False
   #what the name of the 
   tmpdir: "/tmpdir"
 #data section for additional options. 
