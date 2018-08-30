@@ -52,7 +52,6 @@ singularity instance.start   \\
     sleep 15 && \\
 singularity run \\
     instance://GOMAP --step=$step --config=$config
-stop-GOMAP.sh
 " >> "$name-GOMAP-$step.job"
 else
 echo "
@@ -63,7 +62,7 @@ singularity run   \\
     --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \\
     --bind $PWD:/workdir  \\
     --bind $tmpdir:/tmpdir  \\
-    -W $PWD/tmp \\
+    -W /tmp \\
     $GOMAP_LOC --step=$step --config=$config" >> "$name-GOMAP-$step.job"
 fi
 
