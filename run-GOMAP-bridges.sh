@@ -47,7 +47,7 @@ singularity instance.start   \\
     --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \\
     --bind $PWD:/workdir  \\
     --bind $tmpdir:/tmpdir  \\
-    -W $PWD/tmp \\
+    -W /tmp \\
     $GOMAP_LOC GOMAP && \\
     sleep 15 && \\
 singularity run \\
