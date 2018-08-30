@@ -40,10 +40,11 @@ module load mpi/gcc_mvapich  singularity/2.6.0
 if [ "$step" == "mixmeth" ]
 then
 echo "
+rsync -a $GOMAP_DATA_LOC/mysql \$RAMDISK
 stop-GOMAP.sh
 singularity instance.start   \\
-    --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \\
-    --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \\
+    --bind \$RAMDISK/mysql/lib:/var/lib/mysql  \\
+    --bind \$RAMDISK/mysql/log:/var/log/mysql  \\
     --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \\
     --bind $PWD:/workdir  \\
     --bind $tmpdir:/tmpdir  \\
