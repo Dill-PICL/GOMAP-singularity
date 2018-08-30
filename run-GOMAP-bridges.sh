@@ -52,6 +52,7 @@ singularity instance.start   \\
     sleep 15 && \\
 singularity run \\
     instance://GOMAP --step=$step --config=$config
+stop-GOMAP.sh
 " >> "$name-GOMAP-$step.job"
 else
 echo "
