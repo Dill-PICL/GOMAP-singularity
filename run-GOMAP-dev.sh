@@ -18,7 +18,7 @@ tmpdir="$HOME/tmpdir"
 
 if [ "$step" == "mixmeth" ]
 then
-    ./stop-GOMAP.sh
+    
     singularity instance.start   \
         --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
         --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
@@ -27,9 +27,10 @@ then
         --bind $tmpdir:/tmpdir  \
         -W $PWD/tmp \
         $GOMAP_LOC GOMAP && \
+        sleep 15 && \
     singularity run \
         instance://GOMAP --step=$step --config=$config
-    #./stop-GOMAP.sh
+    ./stop-GOMAP.sh
 else
 singularity run   \
     --bind GOMAP:/opt/GOMAP/ \

@@ -40,7 +40,7 @@ module load mpi/gcc_mvapich  singularity/2.6.0
 if [ "$step" == "mixmeth" ]
 then
 echo "
-singularity instance.stop GOMAP
+stop-GOMAP.sh
 singularity instance.start   \\
     --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \\
     --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \\
@@ -49,9 +49,9 @@ singularity instance.start   \\
     --bind $tmpdir:/tmpdir  \\
     -W $PWD/tmp \\
     $GOMAP_LOC GOMAP && \\
+    sleep 15 && \\
 singularity run \\
     instance://GOMAP --step=$step --config=$config
-singularity instance.stop GOMAP
 " >> "$name-GOMAP-$step.job"
 else
 echo "
