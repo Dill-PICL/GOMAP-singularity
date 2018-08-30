@@ -16,6 +16,21 @@ step=$2
 name=`cat $config | grep -v "#" | fgrep basename | cut -f 2 -d ":" | tr -d ' '`
 tmpdir="$HOME/tmpdir"
 
+if [ "$step" == "mixmeth" ]
+then
+    ./stop-GOMAP.sh
+    singularity instance.start   \
+        --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
+        --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
+        --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
+        --bind $PWD:/workdir  \
+        --bind $tmpdir:/tmpdir  \
+        -W $PWD/tmp \
+        $GOMAP_LOC GOMAP && \
+    singularity run \
+        instance://GOMAP --step=$step --config=$config
+    #./stop-GOMAP.sh
+else
 singularity run   \
     --bind GOMAP:/opt/GOMAP/ \
     --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
@@ -25,3 +40,4 @@ singularity run   \
     --bind $tmpdir:/tmpdir  \
     -W $PWD/tmp \
     $GOMAP_LOC --step=$step --config=$config
+fi
