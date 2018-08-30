@@ -28,8 +28,8 @@ echo -e "#!/bin/bash
 #SBATCH --job-name=$name-GOMAP-$step
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=kokul@iastate.edu
-#SBATCH -o %j.out
-#SBATCH -e %j.err
+#SBATCH -o %x.out
+#SBATCH -e %x.err
 #SBATCH -C EGRESS
 
 
