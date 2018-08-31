@@ -9,9 +9,9 @@ BRanch PSC-Bridges
 %files
 
 %environment
-    export LC_ALL=C
-	export DEBIAN_FRONTEND=noninteractive
-	export MYSQL_USER=pannzer
+    export LC_ALL=C 
+    export DEBIAN_FRONTEND=noninteractive
+    export MYSQL_USER=pannzer
     export MYSQL_DATABASE=pannzer
     export MYSQL_ROOT_PASSWORD=mysql 
 
