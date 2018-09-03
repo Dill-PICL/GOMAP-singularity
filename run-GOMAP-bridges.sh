@@ -32,7 +32,6 @@ echo -e "#!/bin/bash
 #SBATCH -e %x.err
 #SBATCH -C EGRESS
 
-
 module load mpi/gcc_mvapich  singularity/2.6.0
 
 " > "$name-GOMAP-$step.job"

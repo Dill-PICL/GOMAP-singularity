@@ -31,12 +31,12 @@ then
         instance://GOMAP --step=$step --config=$config
     ./stop-GOMAP.sh
 else
-mpiexec -n $3 -hosts master,master,slave singularity run   \
-    --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
-    --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
-    --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
-    --bind $PWD:/workdir  \
-    --bind $tmpdir:/tmpdir  \
-    -W $PWD/tmp \
-    $GOMAP_LOC --step=$step --config=$config
+    singularity run   \
+        --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
+        --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
+        --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
+        --bind $PWD:/workdir  \
+        --bind $tmpdir:/tmpdir  \
+        -W $PWD/tmp \
+        $GOMAP_LOC --step=$step --config=$config
 fi
