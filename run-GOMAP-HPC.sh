@@ -49,6 +49,17 @@ singularity instance.start   \\
     $GOMAP_LOC GOMAP && \\
 singularity run \\
     instance://GOMAP --step=$step --config=$config"
+elif [ "$step" == "mixmeth" ]
+echo "
+mpiexec -n $((nodes+1)) \\
+singularity run   \\
+    --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \\
+    --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \\
+    --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \\
+    --bind $PWD:/workdir  \\
+    --bind $tmpdir:/tmpdir  \\
+    -W $PWD/tmp \\
+    $GOMAP_LOC --step=$step --config=$config"
 else
 echo "
 mpiexec -n $nodes \\
