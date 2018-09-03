@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ $# -ne 3 ]
+if [ $# -lt 3 ]
 then
     echo "Please check the number of input arguments"
     echo "run-SINGLE.sh config_file step number_of_nodes"
@@ -16,8 +16,11 @@ then
 fi
 
 config=$1
+shift
 step=$2
+shift
 nodes=$3
+shift
 name=`cat $config | grep -v "#" | fgrep basename | cut -f 2 -d ":" | tr -d ' '`
 
 echo -e "#!/bin/bash
@@ -47,7 +50,7 @@ singularity instance.start   \\
     -W $PWD/tmp \\
     \$GOMAP_LOC GOMAP && \\
 singularity run \\
-    instance://GOMAP --step=$step --config=$config"
+    instance://GOMAP --step=$step --config=$config $@"
 elif [ "$step" == "mixmeth-blast" ]
 then
 echo "
@@ -59,7 +62,7 @@ singularity run   \\
     --bind $PWD:/workdir  \\
     --bind $tmpdir:/tmpdir  \\
     -W $PWD/tmp \\
-    \$GOMAP_LOC --step=$step --config=$config"
+    \$GOMAP_LOC --step=$step --config=$config $@"
 else
 echo "
 mpiexec -n $nodes \\
@@ -70,5 +73,5 @@ singularity run   \\
     --bind $PWD:/workdir  \\
     --bind $tmpdir:/tmpdir  \\
     -W $PWD/tmp \\
-    \$GOMAP_LOC --step=$step --config=$config"
+    \$GOMAP_LOC --step=$step --config=$config $@"
 fi
