@@ -18,8 +18,8 @@ tmpdir="$HOME/tmpdir"
 
 if [ "$step" == "mixmeth" ]
 then
-    
     singularity instance.start   \
+        --bind GOMAP:/opt/GOMAP/ \
         --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
         --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
         --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \

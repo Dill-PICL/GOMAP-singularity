@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 
-if [ $# -ne 2 ]
-then
-    echo "Please check the number of input arguments"
-    echo "run-SINGLE.sh config_file step"
-    echo "run-SINGLE.sh test/config.yml seqsim"
-    exit
-fi
+GOMAP_LOC="$PWD/GOMAP.simg"
+GOMAP_DATA_LOC="$PWD/GOMAP-data"
 
 if [ ! -f "$GOMAP_LOC" ]
 then
@@ -17,31 +12,31 @@ fi
 
 config=$1
 step=$2
-nodes=1
+
 name=`cat $config | grep -v "#" | fgrep basename | cut -f 2 -d ":" | tr -d ' '`
-tmpdir="\$RAMDISK"
-echo -e "#!/bin/bash
-#SBATCH -N $nodes
-#SBATCH --ntasks-per-node 1
-#SBATCH -p RM
-#SBATCH -t 48:00:00
-#SBATCH --job-name=$name-GOMAP-$step
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user=kokul@iastate.edu
-#SBATCH -o %j.out
-#SBATCH -e %j.err
-#SBATCH -C EGRESS
+tmpdir="$HOME/tmpdir"
 
-
-module load mpi/gcc_mvapich  singularity/2.6.0
-
-singularity run   \\
-    --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \\
-    --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \\
-    --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \\
-    --bind $PWD:/workdir  \\
-    --bind $tmpdir:/tmpdir  \\
-    -W $PWD/tmp \\
-    $GOMAP_LOC --step=$step --config=$config" > "$name-GOMAP-$step.job"
-
-sbatch  "$name-GOMAP-$step.job"
+if [ "$step" == "mixmeth" ]
+then
+    singularity instance.start   \
+        --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
+        --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
+        --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
+        --bind $PWD:/workdir  \
+        --bind $tmpdir:/tmpdir  \
+        -W $PWD/tmp \
+        $GOMAP_LOC GOMAP && \
+        sleep 15 && \
+    singularity run \
+        instance://GOMAP --step=$step --config=$config
+    ./stop-GOMAP.sh
+else
+mpiexec -n $3 -hosts master,master,slave singularity run   \
+    --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
+    --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
+    --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
+    --bind $PWD:/workdir  \
+    --bind $tmpdir:/tmpdir  \
+    -W $PWD/tmp \
+    $GOMAP_LOC --step=$step --config=$config
+fi
