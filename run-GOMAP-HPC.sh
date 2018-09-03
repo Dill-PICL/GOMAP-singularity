@@ -50,6 +50,7 @@ singularity instance.start   \\
 singularity run \\
     instance://GOMAP --step=$step --config=$config"
 elif [ "$step" == "mixmeth-blast" ]
+then
 echo "
 mpiexec -n $((nodes+1)) \\
 singularity run   \\
