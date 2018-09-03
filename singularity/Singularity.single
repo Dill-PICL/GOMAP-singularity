@@ -19,6 +19,7 @@ BRanch PSC-Bridges
 	echo "Running post"
 	pip install joblib==0.12.2
 	pip install natsort==5.3.3
+	
 	mkdir /opt/GOMAP/
 	git clone --branch=HPC-v1  https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	mkdir -p /workdir
