@@ -19,7 +19,7 @@ config=$1
 step=$2
 nodes=$3
 name=`cat $config | grep -v "#" | fgrep basename | cut -f 2 -d ":" | tr -d ' '`
-tmpdir="\$RAMDISK"
+
 echo -e "#!/bin/bash
 #SBATCH -N $nodes
 #SBATCH --ntasks-per-node 1
@@ -33,20 +33,19 @@ echo -e "#!/bin/bash
 
 
 module load mpi/gcc_mvapich  singularity/2.6.0
-
 "
 
 if [ "$step" == "mixmeth" ]
 then
 echo "
 singularity instance.start   \\
-    --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \\
-    --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \\
-    --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \\
+    --bind \$GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \\
+    --bind \$GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \\
+    --bind \$GOMAP_DATA_LOC:/opt/GOMAP/data \\
     --bind $PWD:/workdir  \\
     --bind $tmpdir:/tmpdir  \\
     -W $PWD/tmp \\
-    $GOMAP_LOC GOMAP && \\
+    \$GOMAP_LOC GOMAP && \\
 singularity run \\
     instance://GOMAP --step=$step --config=$config"
 elif [ "$step" == "mixmeth-blast" ]
@@ -54,22 +53,22 @@ then
 echo "
 mpiexec -n $((nodes+1)) \\
 singularity run   \\
-    --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \\
-    --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \\
-    --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \\
+    --bind \$GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \\
+    --bind \$GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \\
+    --bind \$GOMAP_DATA_LOC:/opt/GOMAP/data \\
     --bind $PWD:/workdir  \\
     --bind $tmpdir:/tmpdir  \\
     -W $PWD/tmp \\
-    $GOMAP_LOC --step=$step --config=$config"
+    \$GOMAP_LOC --step=$step --config=$config"
 else
 echo "
 mpiexec -n $nodes \\
 singularity run   \\
-    --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \\
-    --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \\
-    --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \\
+    --bind \$GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \\
+    --bind \$GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \\
+    --bind \$GOMAP_DATA_LOC:/opt/GOMAP/data \\
     --bind $PWD:/workdir  \\
     --bind $tmpdir:/tmpdir  \\
     -W $PWD/tmp \\
-    $GOMAP_LOC --step=$step --config=$config"
+    \$GOMAP_LOC --step=$step --config=$config"
 fi
