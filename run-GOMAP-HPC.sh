@@ -49,7 +49,7 @@ singularity instance.start   \\
     $GOMAP_LOC GOMAP && \\
 singularity run \\
     instance://GOMAP --step=$step --config=$config"
-elif [ "$step" == "mixmeth" ]
+elif [ "$step" == "mixmeth-blast" ]
 echo "
 mpiexec -n $((nodes+1)) \\
 singularity run   \\
