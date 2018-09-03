@@ -34,7 +34,7 @@ echo -e "#!/bin/bash
 
 module load mpi/gcc_mvapich  singularity/2.6.0
 
-" > "$name-GOMAP-$step.job"
+"
 
 if [ "$step" == "mixmeth" ]
 then
@@ -48,7 +48,7 @@ singularity instance.start   \\
     -W $PWD/tmp \\
     $GOMAP_LOC GOMAP && \\
 singularity run \\
-    instance://GOMAP --step=$step --config=$config" >> "$name-GOMAP-$step.job"
+    instance://GOMAP --step=$step --config=$config"
 else
 echo "
 mpiexec -n $nodes \\
@@ -59,7 +59,5 @@ singularity run   \\
     --bind $PWD:/workdir  \\
     --bind $tmpdir:/tmpdir  \\
     -W $PWD/tmp \\
-    $GOMAP_LOC --step=$step --config=$config" >> "$name-GOMAP-$step.job"
+    $GOMAP_LOC --step=$step --config=$config"
 fi
-
-sbatch  "$name-GOMAP-$step.job"
