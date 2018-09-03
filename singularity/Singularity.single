@@ -26,6 +26,7 @@ BRanch PSC-Bridges
 	mkdir -p /tmpdir
 	mkdir -p /var/log/mysql
 	
+	
 	echo "Completed Post"
 
 %startscript
