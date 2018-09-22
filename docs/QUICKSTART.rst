@@ -15,7 +15,7 @@ Quick Start
     .. code-block:: bash
 
         mkdir -p /path/to/GOMAP-singularity/install/location
-        git clone --recursive https://github.com/Dill-PICL/GOMAP-singularity.git /path/to/GOMAP-singularity/install/location
+        git clone https://github.com/Dill-PICL/GOMAP-singularity.git /path/to/GOMAP-singularity/install/location
         cd /path/to/GOMAP-singularity/install/location
         
 
@@ -27,6 +27,15 @@ Quick Start
 
     .. attention::
         The pipeline download is huge and would require ~150GB free during the setup step.
+    
+    .. literalinclude:: ../setup-GOMAP.sh
+        :language: bash
+        :lines: 1-8
+        :emphasize-lines: 8
+        :linenos:
+
+    .. attention::
+        Line number 8 which is highlighted can be edited to change the tag after ':' symbol. This would allow images built for differnt HPC clusters and MPI version to be downloaded. The default tag used is single and MPI is disabled.
 
 4. [optional] Test whether the container and the data files are working as intended.
 
@@ -43,9 +52,9 @@ Quick Start
 
 4. Make Necessary Changes to run-GOMAP.sh. Especially change the ``$gomap_loc`` if necessary
     
-    .. literalinclude:: _static/run-GOMAP.sh
+    .. literalinclude:: ../run-GOMAP-SINGLE.sh
         :language: bash
-        :emphasize-lines: 4 
+        :emphasize-lines: 4,5 
         :linenos:
  
 5. Copy the ``config.yml`` file from test directory and make necessary Changes

@@ -12,3 +12,7 @@ input:
   email: 
   #Number of CPUs used for tools
   cpus: 4
+  #Whether openmpi should be used
+  mpi: False
+  #what the name of the temporary directory is
+  tmpdir: "/tmpdir"

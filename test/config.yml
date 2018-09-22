@@ -9,12 +9,12 @@ input:
   # Name of the species
   species: "Zea mays"
   # Email is mandatory
-  email: kokulapalan@gmail.com
+  email: 
   #Number of CPUs used for tools
   cpus: 4
   #Whether openmpi should be used
-  mpi: True
-  #what the name of the 
+  mpi: False
+  #what the name of the temporary directory is
   tmpdir: "/tmpdir"
 #data section for additional options. 
 # Change Only if you know what you are doing
