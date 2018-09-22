@@ -67,41 +67,47 @@ Quick Start
 6. Run the pipeline
     GOMAP has 6 distinct steps for running the pipeline after setup. The steps are as follows seqsim, domain, mixmeth-blast, mixmeth-preproc, mixmeth and aggregate.
     
-    1. seqsim
+    1) seqsim
 
-    .. code-block:: bash
+        .. code-block:: bash
 
-        ./run-GOMAP.sh --step=seqsim --config=test/config.yml
-    
-    2. domain
-
-    .. code-block:: bash
-    
-        ./run-GOMAP.sh --step=domain --config=test/config.yml
-
-    3. mixmeth-blast 
-
-    .. code-block:: bash
-
-        ./run-GOMAP.sh --step=mixmeth-blast --config=test/config.yml
-    
-    .. tip::
-        Steps 1-3 can be run at the same time to each other, because they do not depend on each other. 
-
-    4. mixmeth-preproc
-
-    .. code-block:: bash
+            ./run-GOMAP.sh --step=seqsim --config=test/config.yml
         
-        ./run-GOMAP.sh --step=mixmeth-preproc --config=test/config.yml
+    #) domain
 
-    5. mixmeth
-
-    .. code-block:: bash
+        .. code-block:: bash
         
-        ./run-GOMAP.sh --step=mixmeth --config=test/config.yml
+            ./run-GOMAP.sh --step=domain --config=test/config.yml
 
-    6. aggregate
+    #) mixmeth-blast 
 
-    .. code-block:: bash
+        .. attention ::
         
-        ./run-GOMAP.sh --step=aggregate --config=test/config.yml
+            Depending on the tag used when downloading the image, this step can be spedup using MPI. MPI version should match the version installed on the HPC cluster.
+
+        .. code-block:: bash
+
+            ./run-GOMAP.sh --step=mixmeth-blast --config=test/config.yml
+        
+        .. tip::
+            Steps 1-3 can be run at the same time, because they do not depend on each other. Subsequent steps do depend on each other so they can be run only one step at a time.
+
+    #) mixmeth-preproc
+
+        .. code-block:: bash
+            
+            ./run-GOMAP.sh --step=mixmeth-preproc --config=test/config.yml
+    
+    #) mixmeth
+
+        .. code-block:: bash
+            
+            ./run-GOMAP.sh --step=mixmeth --config=test/config.yml
+
+    #) aggregate
+
+        .. code-block:: bash
+            
+            ./run-GOMAP.sh --step=aggregate --config=test/config.yml
+
+6. Final dataset will be available in the ``GOMAP-[basename]/gaf/aggregate/basename-aggregate.gaf``. **[basename]** will be defined in the config.yml file that was used as the input

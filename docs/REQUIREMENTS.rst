@@ -3,11 +3,13 @@
 Requirements
 ============
 
-1. `Git`_ 
+1. `Git`_ [optional] 
 2. `Singularity`_
 
 Git
 ***
+
+Git is a highly recommended optional requirement, it will allow cloing the github repository, which contains helper scripts which make running the container much easier.
 
 Git can be installed via the following commands in different linux systems
 
@@ -27,7 +29,7 @@ As the name suggests **GOMAP-Singularity** is a Singularity container (`http://s
 
 .. note::
 
-   It is highly recommended to use the GOMAP-Singularity container in the linux system. GOMAP-Singularity has been tested **Ubuntu** as standalone and **RHEL** in an HPC environment
+   It is highly recommended to use the GOMAP-Singularity container in the linux system. GOMAP-Singularity has been tested **Ubuntu** as standalone and **RHEL** & **CentOS** in an HPC environment
   
 
 Installing Singularity on Debian/Ubuntu
