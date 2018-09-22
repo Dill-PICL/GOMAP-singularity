@@ -28,8 +28,8 @@ A cofiguration file in `YAML`_ format is required to run GOMAP-singularity. The 
 
 You can optimize the GOMAP pipeline with addional paramters that are explained in :ref:`CONFIG` section.
 
-Plant Proteins
-``````````````
+Plant Proteins Sequences
+````````````````````````
 
 The plant protein seeuences should be given as a fasta file. The sequences should have unique headers within a given fasta file. 
 
@@ -48,9 +48,9 @@ There are 6 discrete steps that need to be run to complete a single GOMAP run. T
 1. `seqsim`_
 2. `domain`_
 3. `mixmeth-blast`_
-4. mixmeth-preproc
-5. mixmeth
-6. aggregate
+4. `mixmeth-preproc`_
+5. `mixmeth`_
+6. `aggregate`_
 
 seqsim
 ``````
@@ -82,36 +82,44 @@ mixmeth-blast
 
         ./run-GOMAP-SINGLE.sh --step=mixmeth-blast --config=test/config.yml
 
-.. attention::
-    This step takes the longest time, and can take about 10-12 days. 
+    .. attention::
+        This step takes the longest time, and can take about 10-12 days. 
 
-If you have installed the MPI version of the container then this step can be split across using multiple nodes and completed quickly. 
+    If you have installed the MPI version of the container then this step can be split across using multiple nodes and completed quickly. 
 
+**Documentation Coming soon**
 
+mixmeth-preproc
+```````````````
+This step should be run only after `mixmeth-blast`_ step is completed. This is required to complete two additional steps shown below before mixmethod pipelines can be run.
 
-3. Mixed-method Component Methods
-    i.   Run the Preprocessing step for mixed-methods
-        a. split input sequences by every 10000
-        b. Run BLASTP against UniProt database
-        c. Run HMMER against UniProt database
-        d. Convert BLASTP and HMMER to Argot2.5 submission format
-    ii.  Submit Argot2.5 jobs
-    iii. Run PANNZER on UniProt BLAST outputs
+1. Run HMMER against UniProt database
+2. Convert BLASTP and HMMER to Argot2.5 submission format
+
+    .. code-block:: bash    
+
+        ./run-GOMAP-SINGLE.sh --step=mixmeth-preproc --config=test/config.yml
+
+mixmeth
+```````
+
+This step will complete the following substeps
+
+    i.  Submit Argot2.5 jobs
+    ii. Run PANNZER on UniProt BLAST outputs
 
 Preprocessing step can be run using the following command
 
 .. code-block:: bash
 
-    ./run-GOMAP-SINGLE.sh --step=preprocess --config=path/to/config.yml
-
-At the end of preprocess step batch jobs are submitted to the Argot2.5 Webserver. The server will send you emails when these jobs are completed.
+    ./run-GOMAP-SINGLE.sh --step=mixmeth --config=path/to/config.yml
 
 .. attention::
     Please wait for the Argot2.5 job completion emails befor running the next step.
 
-Aggregating
-```````````
-Aggregating runs the following steps of GOMAP
+aggregate
+`````````
+This step runs the following substeps of GOMAP
 
 1. Convert output from Sequence-Similarity Component Methods to GAF format
 2. Covert output from Domain-presence Component method  to GAF format
@@ -120,9 +128,6 @@ Aggregating runs the following steps of GOMAP
 5. Aggregate the annotations from all the clean datasets
 6. Clean the aggregate dataset by removing duplication and redundancy
 
-
-
-Aggregating step can be run using the following command
 
 .. code-block:: bash
 
