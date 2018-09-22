@@ -24,6 +24,4 @@ singularity run instance://$instance_name --step=mixmeth-preproc --config=test/c
 singularity run instance://$instance_name --step=mixmeth --config=test/config.yml && \
 singularity run instance://$instance_name --step=aggregate --config=test/config.yml
 
-
-
 ./stop-GOMAP.sh

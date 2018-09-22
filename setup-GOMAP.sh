@@ -5,7 +5,7 @@ img_loc="$instance_name.simg"
 
 if [ ! -f "$img_loc" ]
 then
-	singularity pull --name "$img_loc" shub://Dill-PICL/GOMAP-singularity:single 
+	singularity pull --name "$img_loc" shub://Dill-PICL/GOMAP-singularity 
 fi
 
 

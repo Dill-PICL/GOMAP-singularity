@@ -35,7 +35,7 @@ Quick Start
         :linenos:
 
     .. attention::
-        Line number 8 which is highlighted can be edited to change the tag after ':' symbol. This would allow images built for differnt HPC clusters and MPI version to be downloaded. The default tag used is single and MPI is disabled.
+        Line number 8 which is highlighted can be edited to add a tag at the end of the line (e.g. :condo, :bridges, :comet). This would allow images built for differnt HPC clusters and MPI version to be downloaded. If no tag is used then the image downloaded will have MPI is disabled.
 
 4. [optional] Test whether the container and the data files are working as intended.
 

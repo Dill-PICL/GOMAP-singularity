@@ -7,7 +7,7 @@ if [ ! -f "$GOMAP_LOC" ]
 then
     module load singularity/2.6.0 && \
     SINGULARITY_PULLFOLDER=`dirname $GOMAP_LOC` \ 
-    singularity pull --name `basename $GOMAP_LOC` shub://Dill-PICL/GOMAP-singularity:bridges
+    singularity pull --name `basename $GOMAP_LOC` shub://Dill-PICL/GOMAP-singularity
 fi
 
 config=$1
