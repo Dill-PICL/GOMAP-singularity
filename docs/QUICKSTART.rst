@@ -39,7 +39,7 @@ Quick Start
 
 4. [optional] Test whether the container and the data files are working as intended.
 
-    i) Add your email to the ``test/config.yml``. This is necessary to submit jobs to Argot2.5.
+    i) Add your **email** to the ``test/config.yml``. This is necessary to submit jobs to Argot2.5.
     
     ii) Run the test using following command.
 
@@ -65,18 +65,43 @@ Quick Start
         :linenos:
 
 6. Run the pipeline
-    i). Run the preprocess step
+    GOMAP has 6 distinct steps for running the pipeline after setup. The steps are as follows seqsim, domain, mixmeth-blast, mixmeth-preproc, mixmeth and aggregate.
+    
+    1. seqsim
 
-        .. code-block:: bash
+    .. code-block:: bash
+
+        ./run-GOMAP.sh --step=seqsim --config=test/config.yml
+    
+    2. domain
+
+    .. code-block:: bash
+    
+        ./run-GOMAP.sh --step=domain --config=test/config.yml
+
+    3. mixmeth-blast 
+
+    .. code-block:: bash
+
+        ./run-GOMAP.sh --step=mixmeth-blast --config=test/config.yml
+    
+    .. tip::
+        Steps 1-3 can be run at the same time to each other, because they do not depend on each other. 
+
+    4. mixmeth-preproc
+
+    .. code-block:: bash
         
-            ./run-GOMAP.sh --step=preprocess --config=test/config.yml
+        ./run-GOMAP.sh --step=mixmeth-preproc --config=test/config.yml
 
-        At the end of preprocess step batch jobs are submitted to the Argot2.5 Webserver. The server will send you emails when these jobs are completed. Please wait for the job completion emails befor running the next step.
+    5. mixmeth
 
-    ii). Run the aggregate step
-
-        .. code-block:: bash
+    .. code-block:: bash
         
-            ./run-GOMAP.sh --step=aggregate --config=test/config.yml
+        ./run-GOMAP.sh --step=mixmeth --config=test/config.yml
 
-        This step will take all the preprocessed data and create GAF 2.0 files. The GAF files will be cleaned and aggregated and the aggregate dataset will be generated in the agg directory.
+    6. aggregate
+
+    .. code-block:: bash
+        
+        ./run-GOMAP.sh --step=aggregate --config=test/config.yml
