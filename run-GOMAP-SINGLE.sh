@@ -11,8 +11,12 @@ fi
 
 args="$@"
 
-name=`cat $config | grep -v "#" | fgrep basename | cut -f 2 -d ":" | tr -d ' '`
-#tmpdir="$HOME/tmpdir"
+if [[ "$SLURM_CLUSTER_NAME" = "condo2017" ]]
+    tmpdir="\$TMPDIR"
+else
+    tmpdir="/tmp"
+fi
+
 
 if [[ "$args" = *"mixmeth"* ]]
 then
