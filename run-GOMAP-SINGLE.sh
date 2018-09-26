@@ -16,6 +16,7 @@ name=`cat $config | grep -v "#" | fgrep basename | cut -f 2 -d ":" | tr -d ' '`
 
 if [[ "$args" = *"mixmeth"* ]]
 then
+    echo "Starting GOMAP instance"
     singularity instance.start   \
         --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
         --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
@@ -29,6 +30,7 @@ then
         instance://GOMAP $@
     ./stop-GOMAP.sh
 else
+    echo "Running GOMAP $@"
     singularity run   \
         --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
         --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
