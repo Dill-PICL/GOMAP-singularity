@@ -5,18 +5,16 @@ GOMAP_DATA_LOC="$PWD/GOMAP-data"
 
 if [ ! -f "$GOMAP_LOC" ]
 then
-    module load singularity/2.6.0 && \
     SINGULARITY_PULLFOLDER=`dirname $GOMAP_LOC` \ 
     singularity pull --name `basename $GOMAP_LOC` shub://Dill-PICL/GOMAP-singularity
 fi
 
-config=$1
-step=$2
+args="$@"
 
 name=`cat $config | grep -v "#" | fgrep basename | cut -f 2 -d ":" | tr -d ' '`
-tmpdir="$HOME/tmpdir"
+#tmpdir="$HOME/tmpdir"
 
-if [ "$step" == "mixmeth" ]
+if [[ "$args" = *"mixmeth"* ]]
 then
     singularity instance.start   \
         --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
@@ -26,9 +24,9 @@ then
         --bind $tmpdir:/tmpdir  \
         -W $PWD/tmp \
         $GOMAP_LOC GOMAP && \
-        sleep 15 && \
+        sleep 10 && \
     singularity run \
-        instance://GOMAP --step=$step --config=$config
+        instance://GOMAP $@
     ./stop-GOMAP.sh
 else
     singularity run   \
@@ -38,5 +36,5 @@ else
         --bind $PWD:/workdir  \
         --bind $tmpdir:/tmpdir  \
         -W $PWD/tmp \
-        $GOMAP_LOC --step=$step --config=$config
+        $GOMAP_LOC $@
 fi

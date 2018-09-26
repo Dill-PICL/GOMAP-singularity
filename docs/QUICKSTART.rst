@@ -50,13 +50,13 @@ Quick Start
     .. attention::
         This has to be perfomed from the GOMAP-singularity install location because the test directory location is fixed.
 
-4. Make Necessary Changes to run-GOMAP.sh. Especially change the ``$gomap_loc`` if necessary
+4. Make Necessary Changes to run-GOMAP-SINGLE.sh. Especially change the ``$gomap_loc`` if necessary
     
     .. literalinclude:: ../run-GOMAP-SINGLE.sh
         :language: bash
-        :emphasize-lines: 4,5 
+        :emphasize-lines: 3,4 
         :linenos:
- 
+
 5. Copy the ``config.yml`` file from test directory and make necessary Changes
 
     .. literalinclude:: _static/min-config.yml
@@ -71,13 +71,13 @@ Quick Start
 
         .. code-block:: bash
 
-            ./run-GOMAP.sh --step=seqsim --config=test/config.yml
+            ./run-GOMAP-SINGLE.sh --step=seqsim --config=test/config.yml
         
     #) domain
 
         .. code-block:: bash
         
-            ./run-GOMAP.sh --step=domain --config=test/config.yml
+            ./run-GOMAP-SINGLE.sh --step=domain --config=test/config.yml
 
     #) mixmeth-blast 
 
@@ -87,7 +87,7 @@ Quick Start
 
         .. code-block:: bash
 
-            ./run-GOMAP.sh --step=mixmeth-blast --config=test/config.yml
+            ./run-GOMAP-SINGLE.sh --step=mixmeth-blast --config=test/config.yml
         
         .. tip::
             Steps 1-3 can be run at the same time, because they do not depend on each other. Subsequent steps do depend on each other so they can be run only one step at a time.
@@ -96,18 +96,18 @@ Quick Start
 
         .. code-block:: bash
             
-            ./run-GOMAP.sh --step=mixmeth-preproc --config=test/config.yml
+            ./run-GOMAP-SINGLE.sh --step=mixmeth-preproc --config=test/config.yml
     
     #) mixmeth
 
         .. code-block:: bash
             
-            ./run-GOMAP.sh --step=mixmeth --config=test/config.yml
+            ./run-GOMAP-SINGLE.sh --step=mixmeth --config=test/config.yml
 
     #) aggregate
 
         .. code-block:: bash
             
-            ./run-GOMAP.sh --step=aggregate --config=test/config.yml
+            ./run-GOMAP-SINGLE.sh --step=aggregate --config=test/config.yml
 
 6. Final dataset will be available in the ``GOMAP-[basename]/gaf/aggregate/basename-aggregate.gaf``. **[basename]** will be defined in the config.yml file that was used as the input
