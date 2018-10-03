@@ -12,7 +12,8 @@ fi
 args="$@"
 
 if [[ "$SLURM_CLUSTER_NAME" = "condo2017" ]]
-    tmpdir="\$TMPDIR"
+then
+    tmpdir="$TMPDIR"
 else
     tmpdir="/tmp"
 fi
