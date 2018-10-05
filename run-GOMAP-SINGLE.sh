@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-GOMAP_LOC="$PWD"
+if [ -z $GOMAP_LOC ]
+then
+    GOMAP_LOC="$PWD"
+fi
 GOMAP_IMG="$GOMAP_LOC/GOMAP.simg"
 GOMAP_DATA_LOC="$PWD/GOMAP-data"
 
