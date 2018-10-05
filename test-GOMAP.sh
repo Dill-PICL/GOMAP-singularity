@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 instance_name="GOMAP"
 img_loc="$PWD/$instance_name.simg"
 mkdir -p $PWD/tmp
@@ -18,12 +19,12 @@ singularity instance.start \
 	--bind $TMPDIR:/tmpdir \
 	-W $PWD/tmp \
 	$img_loc $instance_name && \
-sleep 10 && \
-singularity run instance://$instance_name --step=seqsim --config=test/config.yml && \
-singularity run instance://$instance_name --step=domain --config=test/config.yml && \
-singularity run instance://$instance_name --step=mixmeth-blast --config=test/config.yml && \
-singularity run instance://$instance_name --step=mixmeth-preproc --config=test/config.yml && \
-singularity run instance://$instance_name --step=mixmeth --config=test/config.yml && \
-singularity run instance://$instance_name --step=aggregate --config=test/config.yml
+	sleep 10 && \
+	singularity run instance://$instance_name --step=seqsim --config=test/config.yml && \
+	singularity run instance://$instance_name --step=domain --config=test/config.yml && \
+	singularity run instance://$instance_name --step=mixmeth-blast --config=test/config.yml && \
+	singularity run instance://$instance_name --step=mixmeth-preproc --config=test/config.yml && \
+	singularity run instance://$instance_name --step=mixmeth --config=test/config.yml && \
+	singularity run instance://$instance_name --step=aggregate --config=test/config.yml
 
 ./stop-GOMAP.sh

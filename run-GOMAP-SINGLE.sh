@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 
-GOMAP_LOC="$PWD/GOMAP.simg"
+GOMAP_LOC="$PWD"
+GOMAP_IMG="$GOMAP_LOC/GOMAP.simg"
 GOMAP_DATA_LOC="$PWD/GOMAP-data"
 
 if [ ! -f "$GOMAP_LOC" ]
 then
-    SINGULARITY_PULLFOLDER=`dirname $GOMAP_LOC` \ 
     singularity pull --name `basename $GOMAP_LOC` shub://Dill-PICL/GOMAP-singularity
 fi
 
 args="$@"
+mixmeth=`echo $@ | grep mixmeth | grep -v mixmeth-blast`
 
 if [[ "$SLURM_CLUSTER_NAME" = "condo2017" ]]
 then
@@ -19,7 +20,7 @@ else
 fi
 
 
-if [[ "$args" = *"mixmeth"* ]]
+if [ ! -z $mixmeth ]
 then
     echo "Starting GOMAP instance"
     singularity instance.start   \
@@ -29,7 +30,7 @@ then
         --bind $PWD:/workdir  \
         --bind $tmpdir:/tmpdir  \
         -W $PWD/tmp \
-        $GOMAP_LOC GOMAP && \
+        $GOMAP_IMG GOMAP && \
         sleep 10 && \
     singularity run \
         instance://GOMAP $@
@@ -43,5 +44,5 @@ else
         --bind $PWD:/workdir  \
         --bind $tmpdir:/tmpdir  \
         -W $PWD/tmp \
-        $GOMAP_LOC $@
+        $GOMAP_IMG $@
 fi
