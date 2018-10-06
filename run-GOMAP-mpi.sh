@@ -22,8 +22,6 @@ else
     tmpdir="/tmp"
 fi
 
-echo "SLURM_JOB_NUM_NODES = $SLURM_JOB_NUM_NODES"
-
 if [ ! -z $SLURM_JOB_NUM_NODES ]
 then
     nodes=$((SLURM_JOB_NUM_NODES + 1))
@@ -48,7 +46,7 @@ then
     ./stop-GOMAP.sh
 else
     echo "Running GOMAP $@"
-    echo "using $nodes for the process"
+    echo "using $SLURM_JOB_NUM_NODES for the process"
     mpiexec -np $nodes singularity run   \
         --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
         --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
