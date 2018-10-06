@@ -55,17 +55,20 @@ Obtaining and installing GOMAP-Singularity can be done with the set of scripts w
             
             ./test-GOMAP.sh
 
-4. Make Necessary Changes to run-GOMAP-SINGLE.sh
-    
-    Change the ``gmap_loc`` to ``/path/to/GOMAP-singularity/install/location``
-    
-    .. literalinclude:: ../run-GOMAP-SINGLE.sh
-        :language: bash
-        :emphasize-lines: 3-4
-        :linenos:
+4. Add the necesary variables for the installation
+    a. Add ``/path/to/GOMAP-singularity/install/location`` to your ``$PATH`` variable.
 
-    .. tip::
-        To make the GOMAP-singularity scripts available from any location add the ``/path/to/GOMAP-singularity/install/location`` to the ``$PATH`` variable
+        .. code-block:: bash
+
+            # Add this to your ~/.basrc
+            export PATH="$PATH:/path/to/GOMAP-singularity/install/location
+
+    b. Declare export ``GOMAP_LOC`` environment variable
+
+        .. code-block:: bash
+
+            # Add this to your ~/.basrc or run the line in the terminal
+            export GOMAP_LOC="/work/dillpicl/kokul/GOMAP/GOMAP-singularity"
 
 Manual Install
 ``````````````

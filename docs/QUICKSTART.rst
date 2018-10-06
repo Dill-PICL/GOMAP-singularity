@@ -50,12 +50,20 @@ Quick Start
     .. attention::
         This has to be perfomed from the GOMAP-singularity install location because the test directory location is fixed.
 
-4. Make Necessary Changes to run-GOMAP-SINGLE.sh. Especially change the ``$gomap_loc`` if necessary
-    
-    .. literalinclude:: ../run-GOMAP-SINGLE.sh
-        :language: bash
-        :emphasize-lines: 3,4 
-        :linenos:
+4. Add the necesary variables for the installation
+    a. Add ``/path/to/GOMAP-singularity/install/location`` to your ``$PATH`` variable.
+
+        .. code-block:: bash
+
+            # Add this to your ~/.basrc
+            export PATH="$PATH:/path/to/GOMAP-singularity/install/location
+
+    b. Declare export ``GOMAP_LOC`` environment variable
+
+        .. code-block:: bash
+
+            # Add this to your ~/.basrc or run the line in the terminal
+            export GOMAP_LOC="/work/dillpicl/kokul/GOMAP/GOMAP-singularity"
 
 5. Copy the ``config.yml`` file from test directory and make necessary Changes
 
@@ -79,18 +87,37 @@ Quick Start
         
             ./run-GOMAP-SINGLE.sh --step=domain --config=test/config.yml
 
-    #) mixmeth-blast 
+    #) mixmeth-blast
 
-        .. attention ::
-        
-            Depending on the tag used when downloading the image, this step can be spedup using MPI. MPI version should match the version installed on the HPC cluster.
+        **Running on a Single node**
 
         .. code-block:: bash
 
             ./run-GOMAP-SINGLE.sh --step=mixmeth-blast --config=test/config.yml
+
+        **Running on a multiple nodes (MPI)**
+
+        .. warning ::
+
+            Slurm job scheduler will be requires to use mpi to work with the scripts provided. This will also require the correct version of the container to be downloaded (condo, bridges, comet)
+
+        .. code-block:: bash
+
+            ./run-GOMAP-mpi.sh --step=mixmeth-blast --config=test/config.yml
+
+
+        **Slurm commands needed for successful sbat submission**
+
+        .. code-block:: bash
+
+            #SBATCH -N 2
+            #SBATCH --ntasks-per-node=1
+            #SBATCH --cpus-per-task=16
         
-        .. tip::
-            Steps 1-3 can be run at the same time, because they do not depend on each other. Subsequent steps do depend on each other so they can be run only one step at a time.
+        The ``--nodes`` and ``--cpus-per-task`` can be optimized based on the cluster
+
+    .. tip::
+        Steps 1-3 can be run at the same time, because they do not depend on each other. Subsequent steps do depend on each other so they can be run only one step at a time.
 
     #) mixmeth-preproc
 
