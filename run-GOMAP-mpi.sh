@@ -22,6 +22,11 @@ else
     tmpdir="/tmp"
 fi
 
+if [ -z $SLURM_JOB_NUM_NODES ]
+then
+    nodes=$((SLURM_JOB_NUM_NODES + 1))
+fi
+
 if [ ! -z $mixmeth ]
 then
     echo "Starting GOMAP instance"
@@ -39,7 +44,7 @@ then
     ./stop-GOMAP.sh
 else
     echo "Running GOMAP $@"
-    mpiexec -n $SLURM_JOB_NUM_NODES singularity run   \
+    mpiexec -n $nodes singularity run   \
         --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
         --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
         --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
