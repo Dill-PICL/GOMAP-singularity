@@ -5,9 +5,9 @@ then
     GOMAP_LOC="$PWD"
 fi
 GOMAP_IMG="$GOMAP_LOC/GOMAP.simg"
-GOMAP_DATA_LOC="$PWD/GOMAP-data"
+GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP-data"
 
-if [ ! -f "$GOMAP_LOC" ]
+if [ ! -f "$GOMAP_IMG" ]
 then
     singularity pull --name `basename $GOMAP_LOC` shub://Dill-PICL/GOMAP-singularity
 fi
