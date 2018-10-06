@@ -63,7 +63,7 @@ Quick Start
         .. code-block:: bash
 
             # Add this to your ~/.basrc or run the line in the terminal
-            export GOMAP_LOC="/work/dillpicl/kokul/GOMAP/GOMAP-singularity"
+            export GOMAP_LOC="/path/to/GOMAP-singularity/install/location"
 
 5. Copy the ``config.yml`` file from test directory and make necessary Changes
 
