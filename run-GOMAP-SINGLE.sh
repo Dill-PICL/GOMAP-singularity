@@ -9,7 +9,7 @@ GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP-data"
 
 if [ ! -f "$GOMAP_IMG" ]
 then
-    singularity pull --name `basename $GOMAP_LOC` shub://Dill-PICL/GOMAP-singularity
+    singularity pull --name `$GOMAP_LOC` shub://Dill-PICL/GOMAP-singularity
 fi
 
 args="$@"

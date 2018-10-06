@@ -9,7 +9,7 @@ GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP-data"
 
 if [ ! -f "$GOMAP_IMG" ]
 then
-    singularity pull --name `basename $GOMAP_LOC` shub://Dill-PICL/GOMAP-singularity:bridges
+    singularity pull --name `$GOMAP_IMG` shub://Dill-PICL/GOMAP-singularity:bridges
 fi
 
 args="$@"
@@ -39,7 +39,7 @@ then
     ./stop-GOMAP.sh
 else
     echo "Running GOMAP $@"
-    mpiexec -n $SLURM_JOB_NUM_NODES singularity run   \
+    mpirun -n $SLURM_JOB_NUM_NODES singularity run   \
         --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
         --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
         --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
