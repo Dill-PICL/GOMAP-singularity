@@ -49,7 +49,7 @@ then
 else
     echo "Running GOMAP $@"
     echo "using $nodes for the process"
-    mpiexec -n $nodes singularity run   \
+    mpiexec -np $nodes singularity run   \
         --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
         --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
         --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
