@@ -39,7 +39,7 @@ then
     ./stop-GOMAP.sh
 else
     echo "Running GOMAP $@"
-    mpirun -n $SLURM_JOB_NUM_NODES singularity run   \
+    mpiexec -n $SLURM_JOB_NUM_NODES singularity run   \
         --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
         --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
         --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
