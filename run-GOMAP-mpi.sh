@@ -22,6 +22,8 @@ else
     tmpdir="/tmp"
 fi
 
+echo "SLURM_JOB_NUM_NODES = $SLURM_JOB_NUM_NODES"
+
 if [ -z $SLURM_JOB_NUM_NODES ]
 then
     nodes=$((SLURM_JOB_NUM_NODES + 1))
