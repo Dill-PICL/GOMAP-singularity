@@ -100,6 +100,17 @@ Quick Start
         .. warning ::
 
             Slurm job scheduler will be requires to use mpi to work with the scripts provided. This will also require the correct version of the container to be downloaded (condo, bridges, comet)
+        
+        .. attention ::
+
+            The line 16 from the config file should be changed to true enable mpi. If this is set to false then the mpi will not be enabled
+
+        .. literalinclude:: _static/min-config-mpi.yml
+            :language: yaml
+            :emphasize-lines: 16 
+            :linenos: 
+
+            
 
         .. code-block:: bash
 
