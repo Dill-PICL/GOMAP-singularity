@@ -26,17 +26,18 @@ fi
 if [ ! -z "$mixmeth" ]
 then
     echo "Starting GOMAP instance"
+    $GOMAP_LOC/stop-GOMAP.sh
+    rsync -aP $GOMAP_LOC/GOMAP-data/mysql $tmpdir/
     singularity instance.start   \
-        --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
-        --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
+        --bind $tmpdir/mysql/lib:/var/lib/mysql  \
+        --bind $tmpdir/mysql/log:/var/log/mysql  \
         --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
         --bind $PWD:/workdir  \
         --bind $tmpdir:/tmpdir  \
         -W $PWD/tmp \
         $GOMAP_IMG GOMAP && \
-        sleep 10 && \
     singularity run \
-        instance://GOMAP $@
+        instance://GOMAP $@ &&
     $GOMAP_LOC/stop-GOMAP.sh
 else
     echo "Running GOMAP $@"
