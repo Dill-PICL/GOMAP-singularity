@@ -13,7 +13,7 @@ then
 fi
 
 args="$@"
-mixmeth=`echo $@ | grep mixmeth | grep -v mixmeth-blast`
+mixmeth=`echo $@ | grep mixmeth | grep -v mixmeth-blast | grep -v mixmeth-preproc`
 
 if [[ "$SLURM_CLUSTER_NAME" = "condo2017" ]]
 then
@@ -23,7 +23,7 @@ else
 fi
 
 
-if [ ! -z $mixmeth ]
+if [ ! -z "$mixmeth" ]
 then
     echo "Starting GOMAP instance"
     singularity instance.start   \
@@ -37,7 +37,7 @@ then
         sleep 10 && \
     singularity run \
         instance://GOMAP $@
-    ./stop-GOMAP.sh
+    $GOMAP_LOC/stop-GOMAP.sh
 else
     echo "Running GOMAP $@"
     singularity run   \
