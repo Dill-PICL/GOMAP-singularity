@@ -17,9 +17,9 @@ singularity instance.start \
 	--bind $PWD/GOMAP-data:/opt/GOMAP/data \
 	--bind $PWD:/workdir \
 	--bind $TMPDIR:/tmpdir \
+	sleep 10 && \
 	-W $PWD/tmp \
 	$img_loc $instance_name && \
-	sleep 10 && \
 	singularity run instance://$instance_name --step=seqsim --config=test/config.yml && \
 	singularity run instance://$instance_name --step=domain --config=test/config.yml && \
 	singularity run instance://$instance_name --step=mixmeth-blast --config=test/config.yml && \
