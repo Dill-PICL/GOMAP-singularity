@@ -1,9 +1,9 @@
 #Input section 
 input:
   #input fasta file name
-  fasta: test.fa
+  fasta: IWGSC_v1.1_HC_20170706_pep_only_longest_splice_variant.fa
   # output file basename
-  basename: test
+  basename: IWGSC_v1.1_HC_20170706-mpi
   #input NCBI taxonomy id
   taxon: "4577"
   # Name of the species
@@ -16,11 +16,6 @@ input:
   mpi: False
   #what the name of the temporary directory is
   tmpdir: "/tmpdir"
-#data section for additional options. 
-# Change Only if you know what you are doing
-data:
-  mixed-method:
-      preprocess:
-        # num_seqs has to be multiples of small seqs
-        num_seqs: '25'
-        small_seqs: '5'
+  num_seqs: 30
+  small_seqs: 30
+
