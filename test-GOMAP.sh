@@ -17,7 +17,6 @@ singularity instance.start \
 	--bind $PWD/GOMAP-data:/opt/GOMAP/data \
 	--bind $PWD:/workdir \
 	--bind $TMPDIR:/tmpdir \
-	sleep 10 && \
 	-W $PWD/tmp \
 	$img_loc $instance_name && \
 	singularity run instance://$instance_name --step=seqsim --config=test/config.yml && \
