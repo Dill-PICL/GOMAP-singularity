@@ -16,6 +16,8 @@ input:
   mpi: False
   #what the name of the temporary directory is
   tmpdir: "/tmpdir"
+  # These are for testing purposes only. Remove them for running on a genome dataset
+  # These chnunks are too small for annotations when the number of genes exceed 500
   num_seqs: 30
   small_seqs: 30
 
