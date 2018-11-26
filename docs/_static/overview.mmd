@@ -1,0 +1,46 @@
+graph TD;
+    
+    input["Input Sequences"]
+    
+    
+    arab["Sequence Similarity - Arabidopsis"]
+    arab1[TAIR GO annotations]
+    uniprot["Sequence Similarity - UniProt"]
+    uniprot1[UniProt GO annotations]
+    input --> arab
+    arab --> arab1
+    input --> uniprot
+    uniprot --> uniprot1
+    class arab,arab1,uniprot,uniprot1 seqsim
+
+    iprs["InterProScan5"]
+    iprs1["IPRS GO Annotations"]
+    input --> iprs
+    iprs --> iprs1
+    class iprs,iprs1 domain
+
+    mm1[Preprocessing]
+    argot["Argot2.5"]
+    argot1["Argot GO Annotations"]
+    pannzer["PANNZER"]
+    pannzer1["PANNZER GO Annotations"]
+    class argot,argot1,pannzer,pannzer1 mixmeth
+
+    input --> mm1
+    mm1 --> argot
+    argot --> argot1
+    mm1 --> pannzer
+    pannzer --> pannzer1
+    
+    aggregate1["Combine Annotations"]
+    argot1 --> aggregate1
+    pannzer1 --> aggregate1
+    iprs1 --> aggregate1
+    arab1 --> aggregate1
+    uniprot1 --> aggregate1
+    
+    aggregate2[Remove Duplciation and Redundancy]
+    aggregate3[GOMAP Aggregate GO Annotations]
+
+    aggregate1 --> aggregate2
+    aggregate2 --> aggregate3

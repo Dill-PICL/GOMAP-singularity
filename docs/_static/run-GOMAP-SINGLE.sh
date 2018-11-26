@@ -4,15 +4,12 @@ if [ -z $GOMAP_LOC ]
 then
     GOMAP_LOC="$PWD"
 fi
-
-GOMAP_URL="shub://Dill-PICL/GOMAP-singularity"
-
 GOMAP_IMG="$GOMAP_LOC/GOMAP.simg"
 GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP-data"
 
 if [ ! -f "$GOMAP_IMG" ]
 then
-    singularity pull --name `basename $GOMAP_IMG` "$GOMAP_URL"
+    singularity pull --name `basename $GOMAP_IMG` "shub://Dill-PICL/GOMAP-singularity"
     mv  `basename $GOMAP_IMG` `dirname $GOMAP_IMG`
 fi
 

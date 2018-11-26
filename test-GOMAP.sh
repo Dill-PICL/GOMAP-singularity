@@ -12,9 +12,9 @@ fi
 ./stop-GOMAP.sh
 
 singularity instance.start \
+	--bind $PWD/GOMAP-data:/opt/GOMAP/data \
 	--bind $PWD/GOMAP-data/mysql/lib:/var/lib/mysql \
 	--bind $PWD/GOMAP-data/mysql/log:/var/log/mysql \
-	--bind $PWD/GOMAP-data:/opt/GOMAP/data \
 	--bind $PWD:/workdir \
 	--bind $TMPDIR:/tmpdir \
 	-W $PWD/tmp \

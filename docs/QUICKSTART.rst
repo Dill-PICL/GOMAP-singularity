@@ -19,23 +19,23 @@ Quick Start
         cd /path/to/GOMAP-singularity/install/location
         
 
-3. Run the setup script to make necesary directories and download data files from Cyverse
+3. Run the setup script to make necessary directories and download data files from CyVerse
 
     .. code-block:: bash
         
-        ./setup-GOMAP.sh
+        ./run-GOMAP-SINGLE.sh --config=test/config.yml --step=setup
 
     .. attention::
-        The pipeline download is huge and would require ~150GB free during the setup step.
+        The pipeline download is large and would require ~150GB free during the **setup**.
     
-    .. literalinclude:: ../setup-GOMAP.sh
+    .. literalinclude:: ../run-GOMAP-SINGLE.sh
         :language: bash
         :lines: 1-8
         :emphasize-lines: 8
         :linenos:
 
     .. attention::
-        Line number 8 which is highlighted can be edited to add a tag at the end of the line (e.g. :condo, :bridges, :comet). This would allow images built for differnt HPC clusters and MPI version to be downloaded. If no tag is used then the image downloaded will have MPI is disabled.
+        Line number 8 which is highlighted can be edited to add a tag at the end of the line (e.g. :condo, :bridges, :comet). This would allow images built for different HPC clusters and MPI version to be downloaded. If no tag is used then the image downloaded will have MPI is disabled.
 
 4. [optional] Test whether the container and the data files are working as intended.
 
@@ -48,24 +48,27 @@ Quick Start
         ./test-GOMAP.sh
 
     .. attention::
-        This has to be perfomed from the GOMAP-singularity install location because the test directory location is fixed.
+        This has to be performed from the GOMAP-singularity install location because the test directory location is fixed.
 
-4. Add the necesary variables for the installation
+4. Add the necessary variables for the installation
+
     a. Add ``/path/to/GOMAP-singularity/install/location`` to your ``$PATH`` variable.
 
         .. code-block:: bash
 
-            # Add this to your ~/.basrc
+            # Add this to your ~/.bashrc
             export PATH="$PATH:/path/to/GOMAP-singularity/install/location
 
     b. Declare export ``GOMAP_LOC`` environment variable
 
         .. code-block:: bash
 
-            # Add this to your ~/.basrc or run the line in the terminal
+            # Add this to your ~/.bashrc or run the line in the terminal
             export GOMAP_LOC="/path/to/GOMAP-singularity/install/location"
 
-5. Copy the ``config.yml`` file from test directory and make necessary Changes
+5. Edit the config file
+
+    Copy the ``config.yml`` file from test directory and make necessary changes
 
     .. literalinclude:: _static/min-config.yml
         :language: yaml
@@ -73,7 +76,21 @@ Quick Start
         :linenos:
 
 6. Run the pipeline
-    GOMAP has 6 distinct steps for running the pipeline after setup. The steps are as follows seqsim, domain, mixmeth-blast, mixmeth-preproc, mixmeth and aggregate.
+
+    GOMAP has 6 distinct steps for running the pipeline after setup. The steps are listed in the table below.
+
+    ======= ================== =========== =========== ============
+    Number     Step            Single       Parallel   Concurrent
+    ------- ------------------ ----------- ----------- ------------
+       1     seqsim              Y           N           Y
+       2     domain              Y           Y           Y
+       3     mixmeth-blast       Y           Y           Y
+       4     mixmeth-preproc     Y           N           N
+       5     mixmeth             Y           N           N
+       6     aggregate           Y           N           N
+    ======= ================== =========== =========== ============
+
+    First three steps seqsim, domain, and mixmeth-blast can be run concurrently. This will allow the pipline to complete faster. Susequent steps mixmeth-preproc, mixmeth and aggregate steps depend on the  
     
     1) seqsim
 
@@ -83,17 +100,11 @@ Quick Start
         
     #) domain
 
-        .. code-block:: bash
-        
-            ./run-GOMAP-SINGLE.sh --step=domain --config=test/config.yml
-
-    #) mixmeth-blast
-
         **Running on a Single node**
 
         .. code-block:: bash
-
-            ./run-GOMAP-SINGLE.sh --step=mixmeth-blast --config=test/config.yml
+        
+            ./run-GOMAP-SINGLE.sh --step=domain --config=test/config.yml
 
         **Running on a multiple nodes (MPI)**
 
@@ -110,27 +121,41 @@ Quick Start
             :emphasize-lines: 16 
             :linenos: 
 
-            
+        **Slurm commands needed for successful sbatch submission**
+
+        .. code-block:: bash
+
+            #SBATCH -N 10
+            #SBATCH --ntasks-per-node=1
+            #SBATCH --cpus-per-task=16
+
+        .. code-block:: bash
+
+            ./run-GOMAP-mpi.sh --step=domain --config=test/config.yml
+
+    #) mixmeth-blast
+
+        **Running on a Single node**
+
+        .. code-block:: bash
+
+            ./run-GOMAP-SINGLE.sh --step=mixmeth-blast --config=test/config.yml
+    
+        **Running on a multiple nodes (MPI)**
 
         .. code-block:: bash
 
             ./run-GOMAP-mpi.sh --step=mixmeth-blast --config=test/config.yml
 
 
-        **Slurm commands needed for successful sbat submission**
-
-        .. code-block:: bash
-
-            #SBATCH -N 2
-            #SBATCH --ntasks-per-node=1
-            #SBATCH --cpus-per-task=16
+        
         
         The ``--nodes`` and ``--cpus-per-task`` can be optimized based on the cluster
 
     .. tip::
         Steps 1-3 can be run at the same time, because they do not depend on each other. Subsequent steps do depend on each other so they can be run only one step at a time.
 
-    #) mixmeth-preproc
+    4) mixmeth-preproc
 
         .. code-block:: bash
             
