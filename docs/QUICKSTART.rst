@@ -72,7 +72,12 @@ Quick Start
 
             # Add this to your ~/.bashrc or run the line in the terminal
             export MATLAB_LOC="/path/to/MATLAB/R201xa/"
+            # An example location is given below. This will change for each cluster
             export MATLAB_LOC="/usr/local/MATLAB/R2017a/"
+        
+        .. attention ::
+
+            The matlab location is automatically bound by the run-GOMAP-SINGLE.sh script. This is only necessary for running the FANN-GO step. Please check with the cluster to identify if MATLAB is available for use and the exact location MATLAB is installed in.
 
 5. Edit the config file
 
@@ -93,14 +98,23 @@ Quick Start
     ------- ------------------ ----------- ----------- ------------
        1     seqsim              Y           N           Y
        2     domain              Y           Y           Y
-       3     fanngo              Y           Y           Y
+       3     fanngo              Y           N           Y
        4     mixmeth-blast       Y           Y           Y
        5     mixmeth-preproc     Y           N           N
        6     mixmeth             Y           N           N
        7     aggregate           Y           N           N
     ======= ================== =========== =========== ============
 
-    First three steps seqsim, domain, and mixmeth-blast can be run concurrently. This will allow the pipeline to complete faster. Susequent steps mixmeth-preproc, mixmeth and aggregate steps depend on the output from the first three steps.
+    First four steps seqsim, domain, fanngo, and mixmeth-blast can be run concurrently. This will allow the pipeline to complete faster. Susequent steps mixmeth-preproc, mixmeth and aggregate steps depend on the output from the first three steps.
+
+    **GOMAP-singularity helper scripts**
+
+        GOMAP-singularity git repository has several helper scripts
+
+        1. run-GOMAP-SINGLE.sh
+        1. run-GOMAP-mpi.sh
+        1. stop-GOMAP.sh
+
     
     1) seqsim
 
@@ -145,6 +159,12 @@ Quick Start
 
             ./run-GOMAP-mpi.sh --step=domain --config=test/config.yml
 
+    #) fanngo
+
+        .. code-block:: bash
+
+            ./run-GOMAP-SINGLE.sh --step=fanngo --config=test/config.yml 
+
     #) mixmeth-blast
 
         **Running on a Single node**
@@ -165,7 +185,7 @@ Quick Start
         The ``--nodes`` and ``--cpus-per-task`` can be optimized based on the cluster
 
     .. tip::
-        Steps 1-3 can be run at the same time, because they do not depend on each other. Subsequent steps do depend on each other so they can be run only one step at a time.
+        Steps 1-4 can be run at the same time, because they do not depend on each other. Subsequent steps do depend on each other so they can be run only one step at a time.
 
     4) mixmeth-preproc
 
