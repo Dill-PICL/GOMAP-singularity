@@ -19,7 +19,7 @@ BRanch PSC-Bridges
 	echo "Running post"
 	
 	mkdir /opt/GOMAP/
-	git clone --branch=master  https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
+	git clone --branch=master   https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	chmod -R 777 /opt/GOMAP/
 	mkdir -p /workdir
 	mkdir -p /tmpdir 
