@@ -109,13 +109,26 @@ Quick Start
 
     **GOMAP-singularity helper scripts**
 
-        GOMAP-singularity git repository has several helper scripts
+        GOMAP-singularity git repository has two helper scripts.
 
         1. run-GOMAP-SINGLE.sh
-        1. run-GOMAP-mpi.sh
-        1. stop-GOMAP.sh
+            
+            This scipt can be used to run GOMAP steps 1-7 on a single machine or a single node on the cluster
 
+        #. run-GOMAP-mpi.sh
+
+            This scipt can be used to run GOMAP steps 2 and 4 on a multiple nodes on the SLURM cluster. This uses mpich for parallelization of the domain and mixmeth-blast steps
+        
+        .. tip :: 
+
+            If you are familiar with singularity then you can directly run the GOMAP-singularity container with the necessary binds, but it will be much easier to use the helper scripts
+        
+        .. attention ::
+            
+            Steps 1-4 can be run at the same time, because they do not depend on each other. Subsequent steps do depend on each other so they can be run only one step at a time.
     
+    **The details of how to run the GOMAP steps are below**  
+
     1) seqsim
 
         .. code-block:: bash
@@ -178,16 +191,10 @@ Quick Start
         .. code-block:: bash
 
             ./run-GOMAP-mpi.sh --step=mixmeth-blast --config=test/config.yml
-
-
-        
         
         The ``--nodes`` and ``--cpus-per-task`` can be optimized based on the cluster
 
-    .. tip::
-        Steps 1-4 can be run at the same time, because they do not depend on each other. Subsequent steps do depend on each other so they can be run only one step at a time.
-
-    4) mixmeth-preproc
+    #) mixmeth-preproc
 
         .. code-block:: bash
             
@@ -205,4 +212,4 @@ Quick Start
             
             ./run-GOMAP-SINGLE.sh --step=aggregate --config=test/config.yml
 
-6. Final dataset will be available in the ``GOMAP-[basename]/gaf/aggregate/basename-aggregate.gaf``. **[basename]** will be defined in the config.yml file that was used as the input
+6. Final dataset will be available at ``GOMAP-[basename]/gaf/aggregate/[basename]-aggregate.gaf``. **[basename]** is be defined in the config.yml file that was used
