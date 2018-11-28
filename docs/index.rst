@@ -21,7 +21,7 @@ How to use GOMAP-singularity
    
    OVERVIEW
    QUICKSTART
-   REQUIREMENTS
-   INSTALL
-   RUN
-   CONFIG
+..   #REQUIREMENTS
+..   #INSTALL
+..   #RUN
+..   CONFIG

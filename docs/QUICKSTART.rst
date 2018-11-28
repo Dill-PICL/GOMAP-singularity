@@ -19,7 +19,7 @@ Quick Start
         cd /path/to/GOMAP-singularity/install/location
         
 
-3. Run the setup script to make necessary directories and download data files from CyVerse
+3. Run the setup step to make necessary directories and download data files from CyVerse
 
     .. code-block:: bash
         
@@ -66,37 +66,47 @@ Quick Start
             # Add this to your ~/.bashrc or run the line in the terminal
             export GOMAP_LOC="/path/to/GOMAP-singularity/install/location"
 
+    c. Declare export ``MATLAB_LOC`` environment variable
+
+        .. code-block:: bash
+
+            # Add this to your ~/.bashrc or run the line in the terminal
+            export MATLAB_LOC="/path/to/MATLAB/R201xa/"
+            export MATLAB_LOC="/usr/local/MATLAB/R2017a/"
+
 5. Edit the config file
 
-    Copy the ``config.yml`` file from test directory and make necessary changes
+    Download the `config.yml <_static/min-config.yml>`_  file and make necessary changes. Change the highlighted lines to fit your input data
+
 
     .. literalinclude:: _static/min-config.yml
         :language: yaml
         :emphasize-lines: 4,6,8,10,12,14 
-        :linenos:
+        :linenos:            
 
 6. Run the pipeline
 
-    GOMAP has 6 distinct steps for running the pipeline after setup. The steps are listed in the table below.
+    GOMAP has 7 distinct steps for running the pipeline after setup. The steps are listed in the table below.
 
     ======= ================== =========== =========== ============
     Number     Step            Single       Parallel   Concurrent
     ------- ------------------ ----------- ----------- ------------
        1     seqsim              Y           N           Y
        2     domain              Y           Y           Y
-       3     mixmeth-blast       Y           Y           Y
-       4     mixmeth-preproc     Y           N           N
-       5     mixmeth             Y           N           N
-       6     aggregate           Y           N           N
+       3     fanngo              Y           Y           Y
+       4     mixmeth-blast       Y           Y           Y
+       5     mixmeth-preproc     Y           N           N
+       6     mixmeth             Y           N           N
+       7     aggregate           Y           N           N
     ======= ================== =========== =========== ============
 
-    First three steps seqsim, domain, and mixmeth-blast can be run concurrently. This will allow the pipline to complete faster. Susequent steps mixmeth-preproc, mixmeth and aggregate steps depend on the  
+    First three steps seqsim, domain, and mixmeth-blast can be run concurrently. This will allow the pipeline to complete faster. Susequent steps mixmeth-preproc, mixmeth and aggregate steps depend on the output from the first three steps.
     
     1) seqsim
 
         .. code-block:: bash
 
-            ./run-GOMAP-SINGLE.sh --step=seqsim --config=test/config.yml
+            ./run-GOMAP-SINGLE.sh --step=seqsim --config=test/config.yml 
         
     #) domain
 
@@ -125,7 +135,9 @@ Quick Start
 
         .. code-block:: bash
 
+            # This can be 
             #SBATCH -N 10
+
             #SBATCH --ntasks-per-node=1
             #SBATCH --cpus-per-task=16
 

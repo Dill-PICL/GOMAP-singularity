@@ -19,16 +19,17 @@ Obtaining and installing GOMAP-Singularity can be done with the set of scripts w
         cd /path/to/GOMAP-singularity/install/location
     
 
-2. Run the setup script to make necesary directories and download data files from Cyverse
+2. Run the setup setup to make necesary directories and download data files from Cyverse
 
     .. code-block:: bash
         
-        ./setup-GOMAP.sh
+        ./run-GOMAP-SINGLE.sh --step=setup --config=test/config.yml
+        # The --config=test/config.yml is necessary but none of the test steps are run
 
     .. attention::
-        The pipeline download is huge and would require ~150GB free during the setup step.
+        The pipeline download is large and would require ~150GB free during the setup step.
     
-    .. literalinclude:: ../setup-GOMAP.sh
+    .. literalinclude:: ../run-GOMAP-SINGLE.sh
         :language: bash
         :lines: 1-8
         :emphasize-lines: 8
@@ -46,7 +47,7 @@ Obtaining and installing GOMAP-Singularity can be done with the set of scripts w
     
         .. literalinclude:: ../test/config.yml
             :language: yaml 
-            :emphasize-lines: 12
+            :emphasize-lines: 12,14
             :linenos:
             :lines: 1-18
 

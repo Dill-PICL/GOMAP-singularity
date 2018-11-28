@@ -1,0 +1,58 @@
+graph TD;
+    input["Input Sequences"]
+    
+
+    subgraph Preprocessing
+        uniprot1["UniProt BLAST DB"]
+        uniprot2["BLASTP"]
+        uniprot3["BLAST XML"]
+    
+
+        uniprot1 --> uniprot2
+
+        uniprot2 --> uniprot3
+
+    
+        pfam["Pfam DB"]
+        pfam1["HMMER"]
+        pfam2["Pfam hits"]
+        input --split-->uniprot2
+        input --split-->pfam2
+        pfam --> pfam1
+        pfam1 --> pfam2
+    end
+    
+    
+    
+    
+    subgraph Argot2.5 
+        argot1[BLAST csv]
+        argot2[Submit to Batch Processing]
+        argot3[Download and Merge Results]
+        argot4[Quality Filters]
+        argot5[Argot GO annotations]
+    end
+    uniprot3 --convert to--> argot1
+    argot1 --> argot2
+    pfam2 --> argot2
+    argot2 --> argot3
+    argot3 --> argot4
+    argot4 --> argot5
+    
+
+    subgraph PANNZER
+        pannzer1[Run PANNZER]
+        pannzer2[Quality Filters]
+        pannzer3[Merge Annotations]
+        pannzer4[PANNZER Annotations]
+    end
+
+    uniprot3 --> pannzer1
+    pannzer1 --> pannzer2
+    pannzer2 --> pannzer3
+    pannzer3 --> pannzer4
+
+    
+
+
+    
