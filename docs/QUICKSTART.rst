@@ -98,7 +98,7 @@ Quick Start
     ------- ------------------ ----------- ----------- ------------
        1     seqsim              Y           N           Y
        2     domain              Y           Y           Y
-       3     fanngo              Y           N           Y
+       3     fanngo*             Y           N           Y
        4     mixmeth-blast       Y           Y           Y
        5     mixmeth-preproc     Y           N           N
        6     mixmeth             Y           N           N
@@ -106,6 +106,7 @@ Quick Start
     ======= ================== =========== =========== ============
 
     First four steps seqsim, domain, fanngo, and mixmeth-blast can be run concurrently. This will allow the pipeline to complete faster. Susequent steps mixmeth-preproc, mixmeth and aggregate steps depend on the output from the first three steps.
+
 
     **GOMAP-singularity helper scripts**
 
@@ -126,6 +127,8 @@ Quick Start
         .. attention ::
             
             Steps 1-4 can be run at the same time, because they do not depend on each other. Subsequent steps do depend on each other so they can be run only one step at a time.
+
+            ***fanngo** step depends on matlab, and is optional if the step is not run then the annotations will not contain FANNGO predictions
     
     **The details of how to run the GOMAP steps are below**  
 
