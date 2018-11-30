@@ -1,9 +1,9 @@
 #Input section 
 input:
   #input fasta file name
-  fasta: IWGSC_v1.1_HC_20170706_pep_only_longest_splice_variant.fa
+  fasta: test.fa
   # output file basename
-  basename: IWGSC_v1.1_HC_20170706-mpi
+  basename: test
   #input NCBI taxonomy id
   taxon: "4577"
   # Name of the species

@@ -132,13 +132,13 @@ Quick Start
     
     **The details of how to run the GOMAP steps are below**  
 
-    1) seqsim
+    i. seqsim
 
         .. code-block:: bash
 
             ./run-GOMAP-SINGLE.sh --step=seqsim --config=test/config.yml 
         
-    #) domain
+    #. domain
 
         **Running on a Single node**
 
@@ -175,13 +175,13 @@ Quick Start
 
             ./run-GOMAP-mpi.sh --step=domain --config=test/config.yml
 
-    #) fanngo
+    #. fanngo
 
         .. code-block:: bash
 
             ./run-GOMAP-SINGLE.sh --step=fanngo --config=test/config.yml 
 
-    #) mixmeth-blast
+    #. mixmeth-blast
 
         **Running on a Single node**
 
@@ -197,19 +197,19 @@ Quick Start
         
         The ``--nodes`` and ``--cpus-per-task`` can be optimized based on the cluster
 
-    #) mixmeth-preproc
+    #. mixmeth-preproc
 
         .. code-block:: bash
             
             ./run-GOMAP-SINGLE.sh --step=mixmeth-preproc --config=test/config.yml
     
-    #) mixmeth
+    #. mixmeth
 
         .. code-block:: bash
             
             ./run-GOMAP-SINGLE.sh --step=mixmeth --config=test/config.yml
 
-    #) aggregate
+    #. aggregate
 
         .. code-block:: bash
             
