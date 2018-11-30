@@ -25,7 +25,7 @@ Branch non-mpich
 	mkdir -p /tmpdir 
 	mkdir -p /var/log/mysql
 	
-	echo "Completed Post"
+	echo "Completed Post" 
 
 %startscript
 	chmod 777 /tmp
