@@ -13,7 +13,7 @@ Branch ISU-condo
     export DEBIAN_FRONTEND=noninteractive
     export MYSQL_USER=pannzer
     export MYSQL_DATABASE=pannzer
-    export MYSQL_ROOT_PASSWORD=mysql 
+    export MYSQL_ROOT_PASSWORD=mysql  
 
 %post
 	echo "Running post"
@@ -34,8 +34,8 @@ Branch ISU-condo
 	mkdir -p /tmpdir 
 	mkdir -p /work
 	mkdir -p /scratch
-	mkdir -p /home1
-	mkdir -p /var/log/mysql
+	mkdir -p /home1 
+	mkdir -p /var/log/mysql 
 	
 	echo "Completed Post"
 
