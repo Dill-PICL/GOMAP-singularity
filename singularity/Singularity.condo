@@ -32,9 +32,8 @@ Branch ISU-condo
 	chmod -R 777 /opt/GOMAP/
 	mkdir -p /workdir 
 	mkdir -p /tmpdir 
-	mkdir -p /work 
-	mkdir -p /scratch
-	mkdir -p /home1 
+	mkdir -p /work
+	mkdir -p /scratch 
 	mkdir -p /var/log/mysql 
 	
 	echo "Completed Post"
