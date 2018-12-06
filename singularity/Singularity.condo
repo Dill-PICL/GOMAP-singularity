@@ -30,8 +30,8 @@ Branch ISU-condo
 	mkdir /opt/GOMAP/ 
 	git clone --branch=master   https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	chmod -R 777 /opt/GOMAP/
-	mkdir -p /workdir
-	mkdir -p /tmpdir
+	mkdir -p /workdir 
+	mkdir -p /tmpdir 
 	mkdir -p /work
 	mkdir -p /scratch 
 	mkdir -p /var/log/mysql 
