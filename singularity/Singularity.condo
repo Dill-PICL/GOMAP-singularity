@@ -14,7 +14,7 @@ Branch ISU-condo
     export MYSQL_USER=pannzer
     export MYSQL_DATABASE=pannzer
     export MYSQL_ROOT_PASSWORD=mysql
-
+ 
 %post
 	echo "Running post"
 
@@ -28,7 +28,7 @@ Branch ISU-condo
 	pip install mpi4py==3.0.0
 
 	mkdir /opt/GOMAP/ 
-	git clone --branch=master   https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
+	git clone --branch=master https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	chmod -R 777 /opt/GOMAP/
 	mkdir -p /workdir 
 	mkdir -p /tmpdir 
