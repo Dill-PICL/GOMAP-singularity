@@ -1,7 +1,7 @@
 #Input section 
 input:
   #input fasta file name
-  fasta: test.fa
+  fasta: test2.fa
   # output file basename
   basename: test
   #input NCBI taxonomy id
