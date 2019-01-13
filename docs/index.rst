@@ -1,4 +1,4 @@
-.. GOMAP-Singularity documentation master file, created by
+.. GOMAP-singularity documentation master file, created by
    sphinx-quickstart on Wed Jun 27 10:33:50 2018.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
@@ -7,21 +7,21 @@
 
 .. image:: _static/gomap.png
 
-Welcome to GOMAP-Singularity's documentation!
+Welcome to GOMAP-singularity's documentation!
 =============================================
 
-**GOMAP-Singularity** is the containerized version of the Gene Ontology Meta Annotator for Plants (**GOMAP**) pipeline. **GOMAP** is a high-throughput pipeline to annotate GO terms to plant protein sequences. The pipeline uses three different approaches to annotate GO terms to plant protein sequences, and compile the annotations together to generate an aggregated dataset. GOMAP uses Python code to run the component tools to generate the GO annotations, and R code to clean and aggregate the GO annotations from the component tools.
+**GOMAP-singularity** is the containerized version of the Gene Ontology Meta Annotator for Plants (**GOMAP**) pipeline. **GOMAP** is a high-throughput pipeline to annotate GO terms to plant protein sequences.
 
-
-How to use GOMAP-Singularity
+How to use GOMAP-singularity
 ----------------------------
 
 .. toctree:: 
    :maxdepth: 1
    :numbered:
    
+   OVERVIEW
    QUICKSTART
-   REQUIREMENTS
-   INSTALL
-   RUN
-   CONFIG
+..   #REQUIREMENTS
+..   #INSTALL
+..   #RUN
+..   CONFIG

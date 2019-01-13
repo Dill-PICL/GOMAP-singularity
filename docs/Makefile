@@ -2,7 +2,7 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    =
+SPHINXOPTS    = -H 0.0.0.0
 SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = GOMAP-Singularity
 SOURCEDIR     = .
@@ -20,4 +20,4 @@ help:
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 livehtml:
-	sphinx-autobuild $(ALLSPHINXOPTS) . $(BUILDDIR)
+	sphinx-autobuild $(SPHINXOPTS) . $(BUILDDIR)

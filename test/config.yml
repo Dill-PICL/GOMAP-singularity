@@ -1,7 +1,7 @@
 #Input section 
 input:
   #input fasta file name
-  fasta: test.fa
+  fasta: test2.fa
   # output file basename
   basename: test
   #input NCBI taxonomy id
@@ -9,18 +9,15 @@ input:
   # Name of the species
   species: "Zea mays"
   # Email is mandatory
-  email: kokulapalan@gmail.com
+  email: 
   #Number of CPUs used for tools
   cpus: 4
   #Whether openmpi should be used
-  mpi: True
-  #what the name of the 
+  mpi: False
+  #what the name of the temporary directory is
   tmpdir: "/tmpdir"
-#data section for additional options. 
-# Change Only if you know what you are doing
-data:
-  mixed-method:
-      preprocess:
-        # num_seqs has to be multiples of small seqs
-        num_seqs: '25'
-        small_seqs: '5'
+  # These are for testing purposes only. Remove them for running on a genome dataset
+  # These chnunks are too small for annotations when the number of genes exceed 500
+  num_seqs: 30
+  small_seqs: 30
+

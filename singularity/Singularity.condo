@@ -4,7 +4,7 @@ From: Dill-PICL/GOMAP-base:bionic
 %labels
 MAINTAINER Kokulapalan Wimalanathan
 Version 1.1.0
-BRanch PSC-Bridges
+Branch ISU-condo
 
 %files
 
@@ -13,8 +13,8 @@ BRanch PSC-Bridges
     export DEBIAN_FRONTEND=noninteractive
     export MYSQL_USER=pannzer
     export MYSQL_DATABASE=pannzer
-    export MYSQL_ROOT_PASSWORD=mysql 
-
+    export MYSQL_ROOT_PASSWORD=mysql
+ 
 %post
 	echo "Running post"
 
@@ -25,17 +25,16 @@ BRanch PSC-Bridges
     ./configure && make -j4 && make install && \
     cd .. 
     
-	pip install mpi4py==3.0.0	
+	pip install mpi4py==3.0.0
 
 	mkdir /opt/GOMAP/ 
-	git clone --branch=HPC-v1 https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
+	git clone --branch=master https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	chmod -R 777 /opt/GOMAP/
 	mkdir -p /workdir 
 	mkdir -p /tmpdir 
 	mkdir -p /work
-	mkdir -p /scratch
-	mkdir -p /home1   
-	mkdir -p /var/log/mysql
+	mkdir -p /scratch 
+	mkdir -p /var/log/mysql 
 	
 	echo "Completed Post"
 

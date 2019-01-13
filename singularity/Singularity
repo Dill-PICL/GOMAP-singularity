@@ -4,7 +4,7 @@ From: Dill-PICL/GOMAP-base:bionic
 %labels
 MAINTAINER Kokulapalan Wimalanathan
 Version 1.1.0
-BRanch PSC-Bridges
+Branch non-mpich
 
 %files
 
@@ -19,13 +19,13 @@ BRanch PSC-Bridges
 	echo "Running post"
 	
 	mkdir /opt/GOMAP/
-	git clone --branch=HPC-v1  https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
+	git clone --branch=master   https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	chmod -R 777 /opt/GOMAP/
 	mkdir -p /workdir
-	mkdir -p /tmpdir
-	mkdir -p /var/log/mysql	
+	mkdir -p /tmpdir 
+	mkdir -p /var/log/mysql
 	
-	echo "Completed Post"
+	echo "Completed Post"  
 
 %startscript
 	chmod 777 /tmp

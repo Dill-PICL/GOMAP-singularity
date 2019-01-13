@@ -1,0 +1,26 @@
+graph TD;
+    input["Input Plant"]
+    arab["Arabidopsis"]
+
+    input --> input1["Protein sequences"]
+    input1 --> input2.1["fasta"]
+    input1 --build--> input2.2["BLAST DB"]
+
+    arab --> arab1["Protein sequences"]
+    arab1 --> arab3.1["fasta"]
+    arab1 --> arab3.2["BLAST DB"]
+    arab1 --> arab3.3["Curated GO annotations"]
+
+    arab3.1 --align--> align1["Input vs Arabidopsis"]
+    input2.1 --> align1
+
+    arab3.2 --align--> align2["Arabidopsis vs Input"]
+    input2.2 --> align2
+
+    align1 --> rbh1["RBH"]
+    align2 --> rbh1["RBH"]
+
+    rbh1 --> predict1["Predicted GO"]
+    arab3.3 --inherit--> predict1
+
+    

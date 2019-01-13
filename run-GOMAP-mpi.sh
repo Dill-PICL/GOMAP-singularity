@@ -4,21 +4,13 @@ if [ -z $GOMAP_LOC ]
 then
     GOMAP_LOC="$PWD"
 fi
-
-GOMAP_URL="shub://Dill-PICL/GOMAP-singularity"
-
 GOMAP_IMG="$GOMAP_LOC/GOMAP.simg"
 GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP-data"
 
-if [ -z $MATLAB_LOC ]
-then
-    MATLAB_LOC="/shared/hpc/matlab/R2017a"
-fi
-
 if [ ! -f "$GOMAP_IMG" ]
 then
-    singularity pull --name `basename $GOMAP_IMG` "$GOMAP_URL"
-    mv  `basename $GOMAP_IMG` `dirname $GOMAP_IMG`
+    singularity pull --name `basename $GOMAP_IMG` shub://Dill-PICL/GOMAP-singularity:condo
+    mv `basename $GOMAP_IMG` `dirname $GOMAP_IMG`
 fi
 
 args="$@"
@@ -31,6 +23,18 @@ then
     tmpdir="$TMPDIR"
 else
     tmpdir="/tmp"
+fi
+
+if [ -z $SLURM_JOB_NUM_NODES ]
+then
+    nodes=1
+else
+	if [ ! -z "$mixmeth_blast" ]
+	then
+    		nodes=$((SLURM_JOB_NUM_NODES + 1))
+	else
+		nodes=$((SLURM_JOB_NUM_NODES))
+	fi
 fi
 
 if [ ! -z "$mixmeth" ]
@@ -47,7 +51,7 @@ then
         -W $PWD/tmp \
         $GOMAP_IMG GOMAP && \
     singularity run \
-        instance://GOMAP $@ && \
+        instance://GOMAP $@ &&
     $GOMAP_LOC/stop-GOMAP.sh
 elif [ ! -z "$setup" ]
 then
@@ -62,11 +66,10 @@ then
 else
     echo "Running GOMAP $@"
     echo "using $SLURM_JOB_NUM_NODES for the process"
-    singularity run   \
+    mpiexec -np $nodes singularity run   \
         --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
         --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
         --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
-        --bind $MATLAB_LOC:/matlab \
         --bind $PWD:/workdir  \
         --bind $tmpdir:/tmpdir  \
         -W $PWD/tmp \
