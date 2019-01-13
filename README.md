@@ -1,5 +1,4 @@
 # Introduction
----
 
 ## What is GOMAP-Singularity?
 
