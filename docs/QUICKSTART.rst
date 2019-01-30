@@ -21,21 +21,31 @@ Quick Start
 
 3. Run the setup step to make necessary directories and download data files from CyVerse
 
-    .. code-block:: bash
-        
-        ./run-GOMAP-SINGLE.sh --config=test/config.yml --step=setup
-
-    .. attention::
-        The pipeline download is large and would require ~150GB free during the **setup**.
+    1. [Optional] Configure the irods environment
+        The setup step requires the use of icommands and if you have used icommands then no configuration is necessary if not configured  
     
-    .. literalinclude:: ../run-GOMAP-SINGLE.sh
-        :language: bash
-        :lines: 1-8
-        :emphasize-lines: 8
-        :linenos:
+        .. code-block:: bash
 
-    .. attention::
-        Line number 8 which is highlighted can be edited to add a tag at the end of the line (e.g. :condo, :bridges, :comet). This would allow images built for different HPC clusters and MPI version to be downloaded. If no tag is used then the image downloaded will have MPI is disabled.
+            cd /path/to/GOMAP-singularity/install/location
+            mkdir -p $HOME/.irods && cp irods_environment.json $HOME/.irods
+    
+    2. Run the setup step
+
+        .. code-block:: bash
+            
+            ./run-GOMAP-SINGLE.sh --config=test/config.yml --step=setup
+
+        .. attention::
+            The pipeline download is large and would require ~150GB free during the **setup**.
+        
+        .. literalinclude:: ../run-GOMAP-SINGLE.sh
+            :language: bash
+            :lines: 1-8
+            :emphasize-lines: 8
+            :linenos:
+
+        .. attention::
+            Line number 8 which is highlighted can be edited to add a tag at the end of the line (e.g. :condo, :bridges, :comet). This would allow images built for different HPC clusters and MPI version to be downloaded. If no tag is used then the image downloaded will have MPI is disabled.
 
 4. [optional] Test whether the container and the data files are working as intended.
 

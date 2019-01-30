@@ -62,3 +62,41 @@ Mixed-methods
 
 
     The main step common to both tools is the mixmeth-blast. This runs the BLASTP search against UniprotDB and creates the XML output for chunked input. The XML files from the mixmeth-blast are used for annotation with PANNZER tool. The XML files are converted to CSV for Argot2.5. The Argot2.5 also requires Pfam hits for the input sequences from HMMER. These two files are submitted to Argot2.5 webserver for annotation. The annotations are retrieved after job completion emails are sent by Argot2.5.
+
+
+Datasets used in GOMAP
+----------------------
+
+    Public datasets used in GOMAP
+
+    ============== =================== ========= =================== ======================
+    Database       Type                Format    Version             Species
+    ============== =================== ========= =================== ======================
+    TAIR           Protein Sequences   fasta     TAIR 10             Arabidopsis thaliana
+    TAIR           GO Annotations      gaf 2.0   TAIR 10 (20170410)  Arabidopsis thaliana
+    Gramene 49     Gene Annotations    gff3      5b+                 Zea mays
+    Gramene 49     GO Annotations      gaf 2.0   5b+                 Zea mays
+    Phytozome 11   GO Annotations      tsv       5b+                 Zea mays
+    Uniprot        Protein sequences   fasta     20170410            All species
+    Uniprot        Protein sequences   fasta     20170410            All plants
+    Uniprot        GO Annotations      gaf 2.0   20170410            All plants
+    Pfam           HMMs                hmm       27.0                All species
+    PANTHER        HMMs                hmm       10.0                All species
+    ============== =================== ========= =================== ======================
+
+    Software tools used in GOMAP
+
+    =============== ===================== ============== =================================================
+    Software        Type                  Version        Citation
+    =============== ===================== ============== =================================================
+    NCBI-BLAST      Sequence similarity   2.6.0          :cite:`altschul_1990`
+    HMMER           HMM scanning          3.1b1          (Finn et al., 2011)
+    InterProScan5   GO Annotation         5.15-55.0      (Jones et al., 2014)
+    PANNZER         GO Annotation         1.1            (Koskinen et al., 2015)
+    Argot2          GO Annotation         2.5 (Server)   (Falda et al., 2012)
+    FANN-GO         GO Annotation         1 version      (Clark & Radivojac, 2011)
+    AIGO            GO Evaluations        0.1.0          (Defoin-Platel et al., 2011)
+    =============== ===================== ============== =================================================
+  
+
+.. bibliography:: _static/main.bib
