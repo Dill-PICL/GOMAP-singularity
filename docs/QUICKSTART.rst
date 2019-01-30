@@ -1,7 +1,7 @@
-.. _QUICKSTART:
+.. _RUNNING:
 
-Quick Start
-===========
+Running GOMAP
+=============
 
 1. Install (local) or load (HPC) `Singularity <http://singularity.lbl.gov>`_ container
 
@@ -36,7 +36,7 @@ Quick Start
             ./run-GOMAP-SINGLE.sh --config=test/config.yml --step=setup
 
         .. attention::
-            The pipeline download is large and would require ~150GB free during the **setup**.
+            The pipeline download is large and would require ~150GB of free hard drive space during the **setup**.
         
         .. literalinclude:: ../run-GOMAP-SINGLE.sh
             :language: bash
@@ -132,13 +132,13 @@ Quick Start
         
         .. tip :: 
 
-            If you are familiar with singularity then you can directly run the GOMAP-singularity container with the necessary binds, but it will be much easier to use the helper scripts
+            If you are familiar with singularity then you can directly run the GOMAP-singularity container with the necessary binds, but it will be easier to use the helper scripts
         
         .. attention ::
             
             Steps 1-4 can be run at the same time, because they do not depend on each other. Subsequent steps do depend on each other so they can be run only one step at a time.
 
-            ***fanngo** step depends on matlab, and is optional if the step is not run then the annotations will not contain FANNGO predictions
+            ***fanngo** step depends on matlab, and is optional if the step is not run then the annotations will not contain FANN-GO predictions
     
     **The details of how to run the GOMAP steps are below**  
 

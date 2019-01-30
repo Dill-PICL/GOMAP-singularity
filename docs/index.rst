@@ -20,7 +20,7 @@ How to use GOMAP-singularity
    :numbered:
    
    OVERVIEW
-   QUICKSTART
+   RUNNING
 ..   #REQUIREMENTS
 ..   #INSTALL
 ..   #RUN
