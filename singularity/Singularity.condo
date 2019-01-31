@@ -19,7 +19,7 @@ Branch ISU-condo
 	echo "Running post"
 
     #Installing mpich
-    wget http://www.mpich.org/static/downloads/3.2.1/mpich-3.2.1.tar.gz && \
+    wget http://www.mpich.org/static/downloads/3.2.1/mpich-3.2.1.tar.gz  && \
     tar -xf  mpich-3.2.1.tar.gz && \
     cd mpich-3.2.1 &&  \
     ./configure && make -j4 && make install && \

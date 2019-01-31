@@ -19,7 +19,7 @@ Branch Comet
 	echo "Running post"
 
     #Installing mpich
-    wget http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz && \
+    wget http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz &&  \
     tar -xf  mpich-3.2.tar.gz && \
     cd mpich-3.2 &&  \
     ./configure && make -j4 && make install && \
