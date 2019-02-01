@@ -15,10 +15,11 @@ fi
 
 args="$@"
 mixmeth=`echo $@ | grep mixmeth | grep -v mixmeth-blast | grep -v mixmeth-preproc`
+domain=`echo $@ | grep domain`
 mixmeth_blast=`echo $@ | grep mixmeth-blast`
 setup=`echo $@ | grep setup`
 
-if [ -z tmpdir ]
+if [ -z "$tmpdir" ]
 then
     tmpdir=${TMPDIR:-/tmp}
 fi
@@ -29,9 +30,9 @@ then
 else
 	if [ ! -z "$mixmeth_blast" ]
 	then
-    		nodes=$((SLURM_JOB_NUM_NODES + 1))
+        nodes=$((SLURM_JOB_NUM_NODES + 1))
 	else
-		nodes=$((SLURM_JOB_NUM_NODES))
+		nodes=$((SLURM_JOB_NUM_NODES + 1))
 	fi
 fi
 

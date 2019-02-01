@@ -26,7 +26,7 @@ mixmeth=`echo $@ | grep mixmeth | grep -v mixmeth-blast | grep -v mixmeth-prepro
 mixmeth_blast=`echo $@ | grep mixmeth-blast`
 setup=`echo $@ | grep setup`
 
-if [ -z tmpdir ]
+if [ -z $tmpdir ]
 then
     tmpdir=${TMPDIR:-/tmp}
 fi
