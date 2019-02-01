@@ -225,4 +225,4 @@ Running GOMAP
             
             ./run-GOMAP-SINGLE.sh --step=aggregate --config=test/config.yml
 
-6. Final dataset will be available at ``GOMAP-[basename]/gaf/aggregate/[basename]-aggregate.gaf``. **[basename]** is be defined in the config.yml file that was used
+6. Final dataset will be available at ``GOMAP-[basename]/gaf/agg/[basename].aggregate.gaf``. **[basename]** is be defined in the config.yml file that was used
