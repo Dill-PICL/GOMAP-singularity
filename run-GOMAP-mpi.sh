@@ -18,7 +18,10 @@ mixmeth=`echo $@ | grep mixmeth | grep -v mixmeth-blast | grep -v mixmeth-prepro
 mixmeth_blast=`echo $@ | grep mixmeth-blast`
 setup=`echo $@ | grep setup`
 
-tmpdir=${TMPDIR:-/tmp}
+if [ -z tmpdir ]
+then
+    tmpdir=${TMPDIR:-/tmp}
+fi
 
 if [ -z $SLURM_JOB_NUM_NODES ]
 then
