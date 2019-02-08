@@ -12,11 +12,6 @@ GOMAP_URL="shub://Dill-PICL/GOMAP-singularity"
 GOMAP_IMG="$GOMAP_LOC/GOMAP.simg"
 GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP-data"
 
-if [ -z $MATLAB_LOC ]
-then
-    MATLAB_LOC="/shared/hpc/matlab/R2017a"
-fi
-
 if [ ! -f "$GOMAP_IMG" ]
 then
     singularity pull --name `basename $GOMAP_IMG` "$GOMAP_URL"
@@ -55,7 +50,7 @@ then
     singularity run   \
         $GOMAP_IMG $@
 else
-    export SINGULARITY_BINDPATH="$GOMAP_DATA_LOC:/opt/GOMAP/data,$PWD:/workdir,$tmpdir:/tmpdir,$MATLAB_LOC:/matlab"
+    export SINGULARITY_BINDPATH="$GOMAP_DATA_LOC:/opt/GOMAP/data,$PWD:/workdir,$tmpdir:/tmpdir"
     echo "Running GOMAP $@"
     echo "using $SLURM_JOB_NUM_NODES for the process"
     singularity run   \
