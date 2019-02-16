@@ -31,44 +31,31 @@ then
     tmpdir=${TMPDIR:-/tmp}
 fi
 
+#chown -R $USER $tmpdir/ && \
+
 if [ ! -z "$mixmeth" ]
 then
+    export SINGULARITY_BINDPATH="$GOMAP_DATA_LOC:/opt/GOMAP/data,$GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql,$GOMAP_DATA_LOC/mysql/log:/var/log/mysql,$PWD:/workdir,$tmpdir:/tmpdir"
     echo "Starting GOMAP instance"
     $GOMAP_LOC/stop-GOMAP.sh && \
     rsync -avu $GOMAP_LOC/GOMAP-data/mysql $tmpdir/ && \
-    sleep 30 && \
     singularity instance.start   \
-        --bind $tmpdir/mysql/lib:/var/lib/mysql  \
-        --bind $tmpdir/mysql/log:/var/log/mysql  \
-        --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
-        --bind $PWD:/workdir  \
-        --bind $tmpdir:/tmpdir  \
-        -W $PWD/tmp \
         $GOMAP_IMG GOMAP && \
 	sleep 30 && \
     singularity run \
-        instance://GOMAP $@ #&& \
-    #$GOMAP_LOC/stop-GOMAP.sh
+        instance://GOMAP $@ && \
+    $GOMAP_LOC/stop-GOMAP.sh
 elif [ ! -z "$setup" ]
 then
+    export SINGULARITY_BINDPATH="$GOMAP_DATA_LOC:/opt/GOMAP/data,$PWD:/workdir,$tmpdir:/tmpdir"
     echo "Running GOMAP $@"
     mkdir -p $GOMAP_DATA_LOC
     singularity run   \
-        --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
-        --bind $PWD:/workdir  \
-        --bind $tmpdir:/tmpdir  \
-        -W $PWD/tmp \
         $GOMAP_IMG $@
 else
+    export SINGULARITY_BINDPATH="$GOMAP_DATA_LOC:/opt/GOMAP/data,$PWD:/workdir,$tmpdir:/tmpdir,$MATLAB_LOC:/matlab"
     echo "Running GOMAP $@"
     echo "using $SLURM_JOB_NUM_NODES for the process"
     singularity run   \
-        --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
-        --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
-        --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
-        --bind $MATLAB_LOC:/matlab \
-        --bind $PWD:/workdir  \
-        --bind $tmpdir:/tmpdir  \
-        -W $PWD/tmp \
         $GOMAP_IMG $@
 fi

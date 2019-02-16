@@ -18,3 +18,4 @@ test.sh
 *out
 *err
 tmp
+GOMAP-data-old
