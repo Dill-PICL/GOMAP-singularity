@@ -31,7 +31,7 @@ Branch ISU-condo
 	git clone --branch=master https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	chmod -R 777 /opt/GOMAP/
 	mkdir -p /workdir 
-	mkdir -p /tmpdir 
+	mkdir -p /tmpdir
 	mkdir -p /work
 	mkdir -p /scratch 
 	mkdir -p /var/log/mysql 
@@ -39,8 +39,6 @@ Branch ISU-condo
 	echo "Completed Post"
 
 %startscript
-	#chmod 777 /tmp
-	#nohup mysqld --user=$USER > /dev/null 2>&1 < /dev/null &
 	nohup mysqld --user=$USER > /workdir/tmp/mysql.log 2> /workdir/tmp/mysql.err < /dev/null &
 
 %runscript

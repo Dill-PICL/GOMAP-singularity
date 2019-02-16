@@ -3,7 +3,7 @@
 Running GOMAP
 =============
 
-1. Install (local) or load (HPC) `Singularity <http://singularity.lbl.gov>`_ container
+1. Install (local) or load (HPC) `Singularity <https://www.sylabs.io/guides/2.6/user-guide/index.html>`_ container (version 2.6.0).
 
     .. code-block:: bash
         
@@ -219,7 +219,13 @@ Running GOMAP
             
             ./run-GOMAP-SINGLE.sh --step=mixmeth --config=test/config.yml
 
+         
+        .. attention ::
+
+            The mixmeth step sumbits annotation jobs to Argot2.5 webserver. Please wait till you have received the job completion emails before you run the next step
+
     #. aggregate
+
 
         .. code-block:: bash
             
