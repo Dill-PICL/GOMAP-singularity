@@ -28,11 +28,11 @@ if [ -z $SLURM_JOB_NUM_NODES ]
 then
     nodes=1
 else
-	if [ ! -z "$mixmeth_blast" ]
+	if [ ! -z "$mixmeth_blast" ] || [ ! -z "$domain" ]
 	then
         nodes=$((SLURM_JOB_NUM_NODES + 1))
 	else
-		nodes=$((SLURM_JOB_NUM_NODES + 1))
+		nodes=$((SLURM_JOB_NUM_NODES))
 	fi
 fi
 

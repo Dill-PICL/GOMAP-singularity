@@ -39,8 +39,9 @@ Branch ISU-condo
 	echo "Completed Post"
 
 %startscript
-	chmod 777 /tmp
-	nohup mysqld --user=$USER > /dev/null 2>&1 < /dev/null &
+	#chmod 777 /tmp
+	#nohup mysqld --user=$USER > /dev/null 2>&1 < /dev/null &
+	nohup mysqld --user=$USER > /workdir/tmp/mysql.log 2> /workdir/tmp/mysql.err < /dev/null &
 
 %runscript
 	cd /opt/GOMAP/ 
