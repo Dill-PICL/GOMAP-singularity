@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+mkdir -p tmp
+
 if [ -z $GOMAP_LOC ]
 then
     GOMAP_LOC="$PWD"
