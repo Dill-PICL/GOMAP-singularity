@@ -115,7 +115,7 @@ Running GOMAP
        7     aggregate           Y           N           N
     ======= ================== =========== =========== ============
 
-    First four steps seqsim, domain, fanngo, and mixmeth-blast can be run concurrently. This will allow the pipeline to complete faster. Susequent steps mixmeth-preproc, mixmeth and aggregate steps depend on the output from the first three steps.
+    First four steps seqsim, domain, fanngo, and mixmeth-blast can be run concurrently. This will allow the pipeline to complete faster. Subsequent steps mixmeth-preproc, mixmeth and aggregate steps depend on the output of the first four steps.
 
 
     **GOMAP-singularity helper scripts**
@@ -128,7 +128,7 @@ Running GOMAP
 
         #. run-GOMAP-mpi.sh
 
-            This scipt can be used to run GOMAP steps 2 and 4 on a multiple nodes on the SLURM cluster. This uses mpich for parallelization of the domain and mixmeth-blast steps
+            This scipt can be used to run GOMAP steps 2 and 4 on a multiple nodes on the SLURM cluster. This uses mpich for parallelization.          
         
         .. tip :: 
 
@@ -136,9 +136,9 @@ Running GOMAP
         
         .. attention ::
             
-            Steps 1-4 can be run at the same time, because they do not depend on each other. Subsequent steps do depend on each other so they can be run only one step at a time.
+            Steps 1-4 can be run at the same time, because they do not depend on each other. Subsequent steps do depend on each other so they can be run only one step at a time and after the first four are finished.
 
-            ***fanngo** step depends on matlab, and is optional if the step is not run then the annotations will not contain FANN-GO predictions
+            ***fanngo** step depends on matlab, and is optional. If the step is not run then the annotations will not contain FANN-GO predictions.
     
     **The details of how to run the GOMAP steps are below**  
 
@@ -160,7 +160,7 @@ Running GOMAP
 
         .. warning ::
 
-            Slurm job scheduler will be requires to use mpi to work with the scripts provided. This will also require the correct version of the container to be downloaded (condo, bridges, comet)
+            Slurm job scheduler will be required to use mpi to work with the scripts provided. This will also require the correct version of the container to be downloaded (condo, bridges, comet)
         
         .. attention ::
 
@@ -180,6 +180,13 @@ Running GOMAP
 
             #SBATCH --ntasks-per-node=1
             #SBATCH --cpus-per-task=16
+            
+        You may also need to load the mpich module on HPC systems.
+        
+        .. code-block:: bash
+        
+                #On HPC Systems
+                module load mpich
 
         .. code-block:: bash
 
@@ -225,10 +232,14 @@ Running GOMAP
             The mixmeth step sumbits annotation jobs to Argot2.5 webserver. Please wait till you have received the job completion emails before you run the next step
 
     #. aggregate
+    
+        .. attention ::
+
+            Please wait for all your Argot2.5 jobs to finish before running this step. You will get emails from Argot2.5 when your jobs are submitted and when they are finished. You can also check the status of all current jobs from all users `here <http://www.medcomp.medicina.unipd.it/Argot2-5/viewSGE.php>`_.
 
 
         .. code-block:: bash
             
             ./run-GOMAP-SINGLE.sh --step=aggregate --config=test/config.yml
 
-6. Final dataset will be available at ``GOMAP-[basename]/gaf/agg/[basename].aggregate.gaf``. **[basename]** is be defined in the config.yml file that was used
+6. Final dataset will be available at ``GOMAP-[basename]/gaf/agg/[basename].aggregate.gaf``. **[basename]** is defined in the config.yml file that was used
