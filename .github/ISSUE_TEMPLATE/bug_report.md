@@ -1,8 +1,8 @@
 ---
 Name: Bug report
 About: Create a report to help us improve
-labels: bug
-assignees: wkpalan
+Labels: bug
+Assignees: wkpalan
 ---
 
 **Describe the bug**
