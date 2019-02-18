@@ -26,5 +26,4 @@ The first 10 lines of the the intermediate output file that was created last by 
 Add any other context about the problem here.
 
 **Attach the output files**
-Attach the output from GOMAP, both std output  and std error if both are stored in separate files.
-
+Attach the output from GOMAP, both std output and std error if both are stored in separate files.
