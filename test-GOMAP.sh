@@ -17,7 +17,7 @@ fi
 
 MATLAB_LOC=${MATLAB_LOC:-/shared/hpc/matlab/R2017a}
 
-export SINGULARITY_BINDPATH="$PWD/GOMAP-data:/opt/GOMAP/data,$PWD/GOMAP-data/mysql/lib:/var/lib/mysql,$PWD/GOMAP-data/mysql/log:/var/log/mysql,$PWD:/workdir,$tmpdir:/tmpdir,$MATLAB_LOC:/matlab"
+export SINGULARITY_BINDPATH="$PWD/GOMAP:/opt/GOMAP,$PWD/GOMAP-data:/opt/GOMAP/data,$PWD/GOMAP-data/mysql/lib:/var/lib/mysql,$PWD/GOMAP-data/mysql/log:/var/log/mysql,$PWD:/workdir,$tmpdir:/tmpdir,$MATLAB_LOC:/matlab"
 
 ./stop-GOMAP.sh
 
