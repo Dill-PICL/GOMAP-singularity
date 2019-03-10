@@ -4,4 +4,5 @@ then
     sudo rm -r "$instance_name.simg"
 fi
 
-sudo singularity build -i $instance_name.simg singularity/Singularity
+sudo singularity build -i $instance_name.simg singularity/Singularity && \
+sudo chown gokul:gokul $instance_name.simg

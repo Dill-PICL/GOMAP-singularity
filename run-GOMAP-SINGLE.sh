@@ -30,7 +30,7 @@ setup=`echo $@ | grep setup`
 
 if [ -z $tmpdir ]
 then
-    tmpdir=${TMPDIR:-/tmp}
+    tmpdir=${TMPDIR:-$PWD/tmp}
 fi
 
 #chown -R $USER $tmpdir/ && \
@@ -40,10 +40,9 @@ then
     export SINGULARITY_BINDPATH="$GOMAP_DATA_LOC:/opt/GOMAP/data,$GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql,$GOMAP_DATA_LOC/mysql/log:/var/log/mysql,$PWD:/workdir,$tmpdir:/tmpdir"
     echo "Starting GOMAP instance"
     $GOMAP_LOC/stop-GOMAP.sh && \
-    rsync -avu $GOMAP_LOC/GOMAP-data/mysql $tmpdir/ && \
     singularity instance.start   \
         $GOMAP_IMG GOMAP && \
-	sleep 30 && \
+	sleep 10 && \
     singularity run \
         instance://GOMAP $@ && \
     $GOMAP_LOC/stop-GOMAP.sh

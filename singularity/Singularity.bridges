@@ -14,6 +14,7 @@ Branch PSC-Bridges
     export MYSQL_USER=pannzer
     export MYSQL_DATABASE=pannzer
     export MYSQL_ROOT_PASSWORD=mysql 
+    export PYTHONNOUSERSITE="/tmp"
 
 %post
 	echo "Running post"

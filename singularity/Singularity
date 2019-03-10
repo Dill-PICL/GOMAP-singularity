@@ -7,13 +7,14 @@ Version 1.1.0
 Branch non-mpich
 
 %files
+    my.cnf
 
 %environment
     export LC_ALL=C
     export DEBIAN_FRONTEND=noninteractive
     export MYSQL_USER=pannzer
     export MYSQL_DATABASE=pannzer
-    export MYSQL_ROOT_PASSWORD=mysql 
+    export MYSQL_ROOT_PASSWORD=mysql
 
 %post
 	echo "Running post"
@@ -22,14 +23,17 @@ Branch non-mpich
 	git clone --branch=GOMAPv1.1-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	chmod -R 777 /opt/GOMAP/
 	mkdir -p /workdir
-	mkdir -p /tmpdir 
+	mkdir -p /tmpdir
+    chmod -R 777 /tmpdir
+    chmod +t /tmpdir
 	mkdir -p /var/log/mysql
+    mv my.cnf /etc/mysql/
 	
 	echo "Completed Post"  
 
 %startscript
 	chmod 777 /tmp
-	nohup mysqld --user=$USER > /dev/null 2>&1 < /dev/null &
+	nohup mysqld > /workdir/tmp/mysql.log 2> /workdir/tmp/mysql.err < /dev/null &
 
 %runscript
 	cd /opt/GOMAP/ 

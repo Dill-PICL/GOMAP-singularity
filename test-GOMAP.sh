@@ -12,15 +12,28 @@ fi
 
 if [ -z $tmpdir ]
 then
-    tmpdir=${TMPDIR:-/tmp}
+    tmpdir="$PWD/temp"
 fi
 
-MATLAB_LOC=${MATLAB_LOC:-/shared/hpc/matlab/R2017a}
 
-export SINGULARITY_BINDPATH="$PWD/GOMAP:/opt/GOMAP,$PWD/GOMAP-data:/opt/GOMAP/data,$PWD/GOMAP-data/mysql/lib:/var/lib/mysql,$PWD/GOMAP-data/mysql/log:/var/log/mysql,$PWD:/workdir,$tmpdir:/tmpdir,$MATLAB_LOC:/matlab"
+
+export MATLAB_LOC=${MATLAB_LOC:-/shared/hpc/matlab/R2017a}
+export mysql_bind="$PWD/GOMAP-data/mysql/lib:/var/lib/mysql,$tmpdir:/run/mysqld"
+export SINGULARITY_BINDPATH="$PWD/GOMAP:/opt/GOMAP,$PWD/GOMAP-data:/opt/GOMAP/data,$PWD:/workdir,$tmpdir:/tmpdir,$mysql_bind"
+
+echo "$SINGULARITY_BINDPATH"
 
 ./stop-GOMAP.sh
 
+echo "$@"
+
+if [[ $# -eq 1 ]] 
+then
+	singularity instance.start \
+		-W $PWD/tmp \
+		$img_loc $instance_name && \
+		singularity run instance://$instance_name --step=$1 --config=test/config.yml
+else
 singularity instance.start \
 	-W $PWD/tmp \
 	$img_loc $instance_name && \
@@ -31,5 +44,5 @@ singularity instance.start \
 	singularity run instance://$instance_name --step=mixmeth-preproc --config=test/config.yml && \
 	singularity run instance://$instance_name --step=mixmeth --config=test/config.yml && \
 	singularity run instance://$instance_name --step=aggregate --config=test/config.yml
-
-./stop-GOMAP.sh
+fi
+#./stop-GOMAP.sh
