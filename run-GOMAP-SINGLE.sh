@@ -34,7 +34,7 @@ then
     tmpdir=${TMPDIR:-$PWD/tmp}
 fi
 
-$SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
+SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
 
 if [ ! -z "$mixmeth" ]
 then
@@ -57,7 +57,6 @@ then
 else
     export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$GOMAP_DATA_LOC:/opt/GOMAP/data,$PWD:/workdir,$tmpdir:/tmpdir,$MATLAB_LOC:/matlab"
     echo "Running GOMAP $@"
-    echo "using $SLURM_JOB_NUM_NODES for the process"
     singularity run   \
         $GOMAP_IMG $@
 fi
