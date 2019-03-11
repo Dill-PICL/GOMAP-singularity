@@ -4,7 +4,7 @@ From: Dill-PICL/GOMAP-base:bionic
 %labels
 MAINTAINER Kokulapalan Wimalanathan
 Version 1.1.0
-Branch non-mpich
+HPC non-mpich
 
 %files
     my.cnf
@@ -20,7 +20,7 @@ Branch non-mpich
 	echo "Running post"
 	
 	mkdir /opt/GOMAP/
-	git clone --branch=GOMAPv1.1-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
+	git clone --branch=v1.1-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	chmod -R 777 /opt/GOMAP/
 	mkdir -p /workdir
 	mkdir -p /tmpdir
