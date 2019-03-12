@@ -1,17 +1,14 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
+name: Question
+about: Ask a question about GOMAP or GOMAP-singularity
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+**GOMAP-singularity version**
+What version of GOMAP-singularity you are using. e.g. v1.0, v1.1
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+**GOMAP-singularity step questions is related to**
+What is the step the question is releated to? e.g. seqsim, domain
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
-
-**Additional context**
-Add any other context or screenshots about the feature request here.
+**Question**
+Ask you question and please describe with as much details as possible
