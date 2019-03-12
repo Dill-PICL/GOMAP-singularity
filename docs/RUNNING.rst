@@ -15,7 +15,7 @@ Running GOMAP
     .. code-block:: bash
 
         mkdir -p /path/to/GOMAP-singularity/install/location
-        git clone https://github.com/Dill-PICL/GOMAP-singularity.git /path/to/GOMAP-singularity/install/location
+        git clone -b v1.1 https://github.com/Dill-PICL/GOMAP-singularity.git /path/to/GOMAP-singularity/install/location
         cd /path/to/GOMAP-singularity/install/location
         
 

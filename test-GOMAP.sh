@@ -12,7 +12,7 @@ fi
 
 if [ -z $tmpdir ]
 then
-    tmpdir="$PWD/temp"
+    tmpdir=${TMPDIR:-$PWD/tmp}
 fi
 
 
