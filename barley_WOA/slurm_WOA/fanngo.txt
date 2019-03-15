@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Copy/paste this job script into a text file and submit with the command:
+#    sbatch thefilename
+# job standard output will go to the file slurm-%j.out (where %j is the job ID)
+
+#SBATCH --time=07:00:00   # walltime limit (HH:MM:SS)
+#SBATCH --nodes=1   # number of nodes
+#SBATCH --ntasks-per-node=16   # 16 processor core(s) per node 
+#SBATCH --job-name="barley_WOA-fanngo"
+#SBATCH --mail-user=cfy@iastate.edu   # email address
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+#SBATCH --output="barley_WOA-fanngo.out" # job standard output file (%j replaced by job id)
+
+# LOAD MODULES, INSERT CODE, AND RUN YOUR PROGRAMS HERE
+
+cd /work/dillpicl/cfy/GOMAP-singularity-NEW/
+
+module load singularity
+module load matlab
+module load mpich
+
+export GOMAP_LOC="/work/dillpicl/cfy/GOMAP-singularity-NEW/"
+export PATH="$PATH:/work/dillpicl/cfy/GOMAP-singularity-NEW/"
+MATLAB_LOC="/shared/hpc/matlab/R2017a/" 
+
+unset SINGULARITY_LOC
+unset SINGULARITY_TMPDIR
+
+./run-GOMAP-SINGLE.sh --step=fanngo --config=barley_WOA/config.yml

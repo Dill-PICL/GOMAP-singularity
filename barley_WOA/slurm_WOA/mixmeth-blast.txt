@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Copy/paste this job script into a text file and submit with the command:
+#    sbatch thefilename
+
+#SBATCH --time=25:00:00   # walltime limit (HH:MM:SS)
+#SBATCH --nodes=10    #number of nodes
+#SBATCH --ntasks-per-node=1   #number of tasks for the 10 nodes(1 task per node, 10 tasks total)
+#SBATCH --cpus-per-task=16   #number of cpu per node(task) 
+#SBATCH --job-name="barley_WOA-mixmeth-blast"
+#SBATCH --mail-user=cfy@iastate.edu   # email address
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+#SBATCH --output="barley_WOA-mixmeth-blast.out" # job standard output file (%j replaced by job id)
+
+
+# LOAD MODULES, INSERT CODE, AND RUN YOUR PROGRAMS HERE
+
+cd /work/dillpicl/cfy/GOMAP-singularity-NEW/
+
+module load singularity
+module load matlab
+module load mpich
+
+export GOMAP_LOC="/work/dillpicl/cfy/GOMAP-singularity-NEW/"
+export PATH="$PATH:/work/dillpicl/cfy/GOMAP-singularity-NEW/"
+MATLAB_LOC="/shared/hpc/matlab/R2017a/"
+
+unset SINGULARITY_LOC
+unset SINGULARITY_TMPDIR
+
+./run-GOMAP-mpi.sh --step=mixmeth-blast --config=barley_WOA/config.yml

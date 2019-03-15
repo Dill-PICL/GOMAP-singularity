@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Copy/paste this job script into a text file and submit with the command:
+#    sbatch thefilename
+# job standard output will go to the file slurm-%j.out (where %j is the job ID)
+
+#SBATCH --time=00:05:00   # walltime limit (HH:MM:SS)
+#SBATCH --nodes=1   # number of nodes
+#SBATCH --ntasks-per-node=16   # 16 processor core(s) per node 
+#SBATCH --job-name=“reformatInput”
+#SBATCH --mail-user=cfy@iastate.edu   # email address
+#SBATCH --mail-type=BEGIN
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+#SBATCH --output="barley_WOA-reformatInput.out" # job standard output file (%j replaced by job id)
+
+# LOAD MODULES, INSERT CODE, AND RUN YOUR PROGRAMS HERE
+
+cd /work/dillpicl/cfy/GOMAP-singularity-NEW/barley_WOA/
+
+python reformatInput.py --inputFile 160517_Hv_IBSC_PGSB_r1_proteins_HighConf_REPR_annotation.fasta --renameAs 160517_PGSB_Barley_WOA.fa --backUps no

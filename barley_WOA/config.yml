@@ -1,0 +1,18 @@
+#Input section 
+input:
+  #input fasta file name
+  fasta: 160517_PGSB_Barley_WOA-FMT.fa 
+  # output file basename
+  basename: 160517_PGSB_Barley_WOA-FMT
+  #input NCBI taxonomy id
+  taxon: "4513"
+  # Name of the species
+  species: "Hordeum vulgare"
+  # Email is mandatory
+  email: cfy@iastate.edu
+  #Number of CPUs used for tools
+  cpus: 16
+  #Whether openmpi should be used
+  mpi: True
+  #what the name of the temporary directory is
+  tmpdir: "/tmpdir"
