@@ -40,12 +40,12 @@ Running GOMAP
         
         .. literalinclude:: ../run-GOMAP-SINGLE.sh
             :language: bash
-            :lines: 1-8
-            :emphasize-lines: 8
+            :lines: 1-10
+            :emphasize-lines: 10
             :linenos:
 
         .. attention::
-            Line number 8 which is highlighted can be edited to add a tag at the end of the line (e.g. :condo, :bridges, :comet). This would allow images built for different HPC clusters and MPI version to be downloaded. If no tag is used then the image downloaded will have MPI is disabled.
+            Line number 10 which is highlighted can be edited to add a tag at the end of the line (e.g. :condo, :bridges, :comet). This would allow images built for different HPC clusters and MPI version to be downloaded. If no tag is used then the image downloaded will have MPI is disabled.
 
 4. [optional] Test whether the container and the data files are working as intended.
 
