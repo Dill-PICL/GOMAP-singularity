@@ -58,7 +58,7 @@ then
     singularity run   \
         $GOMAP_IMG $@
 else
-    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$GOMAP_DATA_LOC:/opt/GOMAP/data,$PWD:/workdir,$tmpdir:/tmpdir,$MATLAB_LOC:/matlab"
+    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$GOMAP_DATA_LOC:/opt/GOMAP/data,$PWD:/workdir,$tmpdir:/tmpdir"
     echo "Running GOMAP $@"
     singularity run \
         $GOMAP_IMG $@
