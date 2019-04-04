@@ -6,7 +6,7 @@ MAINTAINER Kokulapalan Wimalanathan
 Version 1.1
 HPC Comet
 
-%files
+%files 
 
 %environment
     export LC_ALL=C

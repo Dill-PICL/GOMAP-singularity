@@ -6,7 +6,7 @@ MAINTAINER Kokulapalan Wimalanathan
 Version 1.1
 HPC ISU-condo
 
-%files
+%files 
 
 %environment
     export LC_ALL=C
