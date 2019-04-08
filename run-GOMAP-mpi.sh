@@ -41,7 +41,7 @@ $SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
 
 if [ ! -z "$domain" ] || [ ! -z "$mixmeth_blast" ]
 then
-    export SINGULARITY_BINDPATH=$SINGULARITY_BINDPATH,$GOMAP_DATA_LOC:/opt/GOMAP/data,$PWD:/workdir,$tmpdir:/tmpdir"
+    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$GOMAP_DATA_LOC:/opt/GOMAP/data,$PWD:/workdir,$tmpdir:/tmpdir"
     echo "Running GOMAP $@"
     echo "using $SLURM_JOB_NUM_NODES for the process"
     mpiexec -np $nodes singularity run \
