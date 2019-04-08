@@ -37,7 +37,7 @@ HPC ISU-condo
 	mkdir -p /scratch 
 	mkdir -p /var/log/mysql 
 	
-	echo "Completed Post "
+	echo "Completed Post"
 
 %startscript
 	nohup mysqld --user=$USER > /workdir/tmp/mysql.log 2> /workdir/tmp/mysql.err < /dev/null &

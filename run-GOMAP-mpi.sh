@@ -37,7 +37,7 @@ else
 	fi
 fi
 
-SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
+#SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
 
 if [ ! -z "$domain" ] || [ ! -z "$mixmeth_blast" ]
 then

@@ -36,7 +36,7 @@ fi
 
 echo $tmpdir
 
-SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
+#SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
 
 if [ ! -z "$mixmeth" ]
 then
