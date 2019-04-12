@@ -36,11 +36,11 @@ fi
 
 echo $tmpdir
 
-#SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
+SINGULARITY_BINDPATH="GOMAP_DATA_LOC:/opt/GOMAP/data,$GOMAP_LOC/GOMAP:/opt/GOMAP"
 
 if [ ! -z "$mixmeth" ]
 then
-    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$GOMAP_DATA_LOC:/opt/GOMAP/data,$GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql,$GOMAP_DATA_LOC/mysql/log:/var/log/mysql,$PWD:/workdir,$tmpdir:/tmpdir,$tmpdir:/run/mysqld"
+    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH$GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql,$GOMAP_DATA_LOC/mysql/log:/var/log/mysql,$PWD:/workdir,$tmpdir:/tmpdir,$tmpdir:/run/mysqld"
     echo "$SINGULARITY_BINDPATH"
     echo "Starting GOMAP instance"
     $GOMAP_LOC/stop-GOMAP.sh && \
@@ -52,13 +52,13 @@ then
     $GOMAP_LOC/stop-GOMAP.sh
 elif [ ! -z "$setup" ]
 then
-    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$GOMAP_DATA_LOC:/opt/GOMAP/data,$PWD:/workdir,$tmpdir:/tmpdir"
+    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$PWD:/workdir,$tmpdir:/tmpdir"
     echo "Running GOMAP $@"
     mkdir -p $GOMAP_DATA_LOC
     singularity run   \
         $GOMAP_IMG $@
 else
-    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$GOMAP_DATA_LOC:/opt/GOMAP/data,$PWD:/workdir,$tmpdir:/tmpdir,$MATLAB_LOC:/matlab"
+    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$PWD:/workdir,$tmpdir:/tmpdir,$MATLAB_LOC:/matlab"
     echo "Running GOMAP $@"
     singularity run \
         $GOMAP_IMG $@
