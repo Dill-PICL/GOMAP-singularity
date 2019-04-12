@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
 
 mkdir -p tmp
+mkdir -p GOMAP/data
 
 if [ -z $GOMAP_LOC ]
 then
     GOMAP_LOC="$PWD"
 fi
 
-
-
 GOMAP_IMG="$GOMAP_LOC/GOMAP.simg"
-GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP-data"
+GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP/data"
 
 if [ -z $MATLAB_LOC ]
 then
@@ -36,11 +35,11 @@ fi
 
 echo $tmpdir
 
-SINGULARITY_BINDPATH="GOMAP_DATA_LOC:/opt/GOMAP/data,$GOMAP_LOC/GOMAP:/opt/GOMAP"
+SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
 
 if [ ! -z "$mixmeth" ]
 then
-    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH$GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql,$GOMAP_DATA_LOC/mysql/log:/var/log/mysql,$PWD:/workdir,$tmpdir:/tmpdir,$tmpdir:/run/mysqld"
+    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql,$GOMAP_DATA_LOC/mysql/log:/var/log/mysql,$PWD:/workdir,$tmpdir:/tmpdir,$tmpdir:/run/mysqld"
     echo "$SINGULARITY_BINDPATH"
     echo "Starting GOMAP instance"
     $GOMAP_LOC/stop-GOMAP.sh && \
