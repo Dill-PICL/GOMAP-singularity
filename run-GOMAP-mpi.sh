@@ -7,7 +7,7 @@ then
     GOMAP_LOC="$PWD"
 fi
 GOMAP_IMG="$GOMAP_LOC/GOMAP.simg"
-GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP-data"
+GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP/data"
 
 if [ ! -f "$GOMAP_IMG" ]
 then
@@ -37,11 +37,11 @@ else
 	fi
 fi
 
-#SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
+SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
 
 if [ ! -z "$domain" ] || [ ! -z "$mixmeth_blast" ]
 then
-    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$GOMAP_DATA_LOC:/opt/GOMAP/data,$PWD:/workdir,$tmpdir:/tmpdir"
+    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$PWD:/workdir,$tmpdir:/tmpdir"
     echo "Running GOMAP $@"
     echo "using $SLURM_JOB_NUM_NODES for the process"
     mpiexec -np $nodes singularity run \
