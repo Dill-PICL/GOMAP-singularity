@@ -7,8 +7,6 @@ then
     GOMAP_LOC="$PWD"
 fi
 
-mkdir -p $GOMAP_LOC/GOMAP/data
-
 GOMAP_IMG="$GOMAP_LOC/GOMAP.simg"
 GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP/data"
 
@@ -34,13 +32,11 @@ then
     tmpdir=${TMPDIR:-$PWD/tmp}
 fi
 
-echo $tmpdir
-
-SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
+SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP/data:/opt/GOMAP/data"
 
 if [ ! -z "$mixmeth" ]
 then
-    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql,$GOMAP_DATA_LOC/mysql/log:/var/log/mysql,$PWD:/workdir,$tmpdir:/tmpdir,$tmpdir:/run/mysqld"
+    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$GOMAP_LOC/data/mysql/lib:/var/lib/mysql,$GOMAP_LOC/data/mysql/log:/var/log/mysql,$PWD:/workdir,$tmpdir:/tmpdir,$tmpdir:/run/mysqld"
     echo "Starting GOMAP instance"
     $GOMAP_LOC/stop-GOMAP.sh && \
     singularity instance.start -c  \
@@ -51,6 +47,7 @@ then
     $GOMAP_LOC/stop-GOMAP.sh
 elif [ ! -z "$setup" ]
 then
+    mkdir -p $GOMAP_LOC/GOMAP/data
     export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$PWD:/workdir,$tmpdir:/tmpdir"
     echo "Running GOMAP $@"
     mkdir -p $GOMAP_DATA_LOC
