@@ -28,7 +28,6 @@ args="$@"
 mixmeth=`echo $@ | grep mixmeth | grep -v mixmeth-blast | grep -v mixmeth-preproc`
 mixmeth_blast=`echo $@ | grep mixmeth-blast`
 setup=`echo $@ | grep setup`
-fanngo=`echo $@ | grep fanngo`
 
 if [ -z $tmpdir ]
 then
