@@ -1,19 +1,20 @@
 Bootstrap: shub
-From: Dill-PICL/GOMAP-base:bionic
+From: Dill-PICL/GOMAP-base:xenial
 
 %labels
 MAINTAINER Kokulapalan Wimalanathan
-Version 1.1.0
-Branch PSC-Bridges
+Version 1.1
+HPC Comet
 
-%files
+%files 
 
 %environment
-    export LC_ALL=C 
-    export DEBIAN_FRONTEND=noninteractive
-    export MYSQL_USER=pannzer
+    export LC_ALL=C
+	export DEBIAN_FRONTEND=noninteractive
+	export MYSQL_USER=pannzer
     export MYSQL_DATABASE=pannzer
     export MYSQL_ROOT_PASSWORD=mysql 
+    export PYTHONNOUSERSITE="/tmp"
 
 %post
 	echo "Running post"
@@ -27,14 +28,14 @@ Branch PSC-Bridges
     
 	pip install mpi4py==3.0.0  
 
-	mkdir /opt/GOMAP/
-	git clone --branch=master   https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
-	chmod -R 777 /opt/GOMAP/
-	mkdir -p /workdir
-	mkdir -p /tmpdir
+	mkdir /opt/GOMAP/ 
+	git clone --branch=v1.1-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
+	chmod -R 777 /opt/GOMAP/ 
+	mkdir -p /workdir 
+	mkdir -p /tmpdir 
 	mkdir -p /var/log/mysql
+	mkdir -p /oasis /projects /scratch
 	
-
 	echo "Completed Post"
 
 %startscript

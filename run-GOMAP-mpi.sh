@@ -7,7 +7,7 @@ then
     GOMAP_LOC="$PWD"
 fi
 GOMAP_IMG="$GOMAP_LOC/GOMAP.simg"
-GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP-data"
+GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP/data"
 
 if [ ! -f "$GOMAP_IMG" ]
 then
@@ -16,7 +16,6 @@ then
 fi
 
 args="$@"
-mixmeth=`echo $@ | grep mixmeth | grep -v mixmeth-blast | grep -v mixmeth-preproc`
 domain=`echo $@ | grep domain`
 mixmeth_blast=`echo $@ | grep mixmeth-blast`
 setup=`echo $@ | grep setup`
@@ -38,41 +37,18 @@ else
 	fi
 fi
 
-if [ ! -z "$mixmeth" ]
+SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP/data:/opt/GOMAP/data"
+
+if [ ! -z "$domain" ] || [ ! -z "$mixmeth_blast" ]
 then
-    echo "Starting GOMAP instance"
-    $GOMAP_LOC/stop-GOMAP.sh && \
-    rsync -aq $GOMAP_LOC/GOMAP-data/mysql $tmpdir/ && \
-    singularity instance.start   \
-        --bind $tmpdir/mysql/lib:/var/lib/mysql  \
-        --bind $tmpdir/mysql/log:/var/log/mysql  \
-        --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
-        --bind $PWD:/workdir  \
-        --bind $tmpdir:/tmpdir  \
-        -W $PWD/tmp \
-        $GOMAP_IMG GOMAP && \
-    singularity run \
-        instance://GOMAP $@ &&
-    $GOMAP_LOC/stop-GOMAP.sh
-elif [ ! -z "$setup" ]
-then
+    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$PWD:/workdir,$tmpdir:/tmpdir"
     echo "Running GOMAP $@"
-    mkdir -p $GOMAP_DATA_LOC
-    singularity run   \
-        --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
-        --bind $PWD:/workdir  \
-        --bind $tmpdir:/tmpdir  \
+    echo "using $SLURM_JOB_NUM_NODES for the process"
+    mpiexec -np $nodes singularity run \
         -W $PWD/tmp \
         $GOMAP_IMG $@
 else
-    echo "Running GOMAP $@"
-    echo "using $SLURM_JOB_NUM_NODES for the process"
-    mpiexec -np $nodes singularity run   \
-        --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
-        --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
-        --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
-        --bind $PWD:/workdir  \
-        --bind $tmpdir:/tmpdir  \
-        -W $PWD/tmp \
-        $GOMAP_IMG $@
+    echo "ERROR: run-GOMAP-mpi.sh can only run the steps domain and mixmeth-blast using MPI" >> /dev/stderr
+    echo "ERROR: Please run the other steps using run-GOMAP-SINGLE.sh " >> /dev/stderr
+    exit 1
 fi

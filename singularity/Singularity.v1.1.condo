@@ -3,10 +3,10 @@ From: Dill-PICL/GOMAP-base:bionic
 
 %labels
 MAINTAINER Kokulapalan Wimalanathan
-Version 1.1.0
-Branch ISU-condo
+Version 1.1
+HPC ISU-condo
 
-%files
+%files 
 
 %environment
     export LC_ALL=C
@@ -14,6 +14,7 @@ Branch ISU-condo
     export MYSQL_USER=pannzer
     export MYSQL_DATABASE=pannzer
     export MYSQL_ROOT_PASSWORD=mysql
+    #export PYTHONUSERBASE="/tmpdir"
  
 %post
 	echo "Running post"
@@ -28,7 +29,7 @@ Branch ISU-condo
 	pip install mpi4py==3.0.0
 
 	mkdir /opt/GOMAP/
-	git clone --branch=master https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
+	git clone --branch=v1.1-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	chmod -R 777 /opt/GOMAP/
 	mkdir -p /workdir
 	mkdir -p /tmpdir
@@ -36,7 +37,7 @@ Branch ISU-condo
 	mkdir -p /scratch 
 	mkdir -p /var/log/mysql 
 	
-	echo "Completed Post "
+	echo "Completed Post"
 
 %startscript
 	nohup mysqld --user=$USER > /workdir/tmp/mysql.log 2> /workdir/tmp/mysql.err < /dev/null &
