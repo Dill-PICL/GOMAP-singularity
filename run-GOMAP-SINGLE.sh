@@ -54,7 +54,7 @@ then
     export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$PWD:/workdir,$tmpdir:/tmpdir"
     echo "Running GOMAP $@"
     mkdir -p $GOMAP_DATA_LOC
-    singularity run -c  \
+    singularity run \
         $GOMAP_IMG $@
 else
     export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$PWD:/workdir,$tmpdir:/tmpdir,$MATLAB_LOC:/matlab"
