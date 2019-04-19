@@ -28,11 +28,11 @@ then
     tmpdir=${TMPDIR:-$PWD/tmp}
 fi
 
-SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP/data:/opt/GOMAP/data"
+export SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
 
 if [ ! -z "$mixmeth" ]
 then
-    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$GOMAP_LOC/data/mysql/lib:/var/lib/mysql,$GOMAP_LOC/data/mysql/log:/var/log/mysql,$PWD:/workdir,$tmpdir:/tmpdir,$tmpdir:/run/mysqld"
+    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$GOMAP_LOC/GOMAP/data/mysql/lib:/var/lib/mysql,$GOMAP_LOC/GOMAP/data/mysql/log:/var/log/mysql,$PWD:/workdir,$tmpdir:/tmpdir,$tmpdir:/run/mysqld"
     echo "Starting GOMAP instance"
     $GOMAP_LOC/stop-GOMAP.sh && \
     singularity instance.start -c  \
@@ -50,7 +50,8 @@ then
     singularity run \
         $GOMAP_IMG $@
 else
-    export SINGULARITY_BINDPATH="$GOMAP_DATA_LOC:/opt/GOMAP/data,$PWD:/workdir,$tmpdir:/tmpdir"   
+    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$PWD:/workdir,$tmpdir:/tmpdir"   
+    echo "$SINGULARITY_BINDPATH"
     echo "Running GOMAP $@"
     singularity run -c \
         $GOMAP_IMG $@
