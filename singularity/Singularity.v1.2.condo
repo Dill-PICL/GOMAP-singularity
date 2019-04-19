@@ -29,7 +29,7 @@ HPC ISU-condo
 	pip install mpi4py==3.0.0
 
 	mkdir /opt/GOMAP/
-	git clone --branch=v1.1-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
+	git clone --branch=v1.2-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
 	chmod -R 777 /opt/GOMAP/
 	mkdir -p /workdir
 	mkdir -p /tmpdir
