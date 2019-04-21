@@ -22,9 +22,13 @@ HPC non-mpich
 	git clone --branch=v1.2-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
     mkdir -p /opt/GOMAP/data/
     cd /opt/GOMAP/data && \
-    icd /iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/
-    iget -P data.tar.gz && tar -xvf data.tar.gz && rm data.tar.gz
-    iget -P software.tar.gz && tar -xvf software.tar.gz && software.tar.gz
+    icd /iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/ && \
+    iget -P data.tar.gz && \
+    tar -xvf data.tar.gz && \
+    rm data.tar.gz && \
+    iget -P software.tar.gz && \
+    tar -xvf software.tar.gz && \
+    rm software.tar.gz
     
 	chmod -R 777 /opt/GOMAP/
 	mkdir -p /workdir

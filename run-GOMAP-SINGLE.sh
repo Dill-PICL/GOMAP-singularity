@@ -33,7 +33,7 @@ if [ ! -f $GOMAP_LOC/$MYSQL_IMG ]
 then
     echo "Creating the overlay image for running mysql"
     export SINGULARITY_BINDPATH="$GOMAP_LOC:/workdir"
-    singularity exec irsync -v \
+    singularity exec iget -fP \
         /iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/$MYSQL_IMG.gz \
         /workdir/$MYSQL_IMG.gz && \
         gunzip $GOMAP_LOC/$MYSQL_IMG.gz
