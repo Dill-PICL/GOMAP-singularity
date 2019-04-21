@@ -20,36 +20,17 @@ HPC non-mpich
     mkdir -p /root/.irods && cd /root/.irods/ && wget https://raw.githubusercontent.com/Dill-PICL/GOMAP-singularity/master/irods_environment.json
 	mkdir -p /opt/GOMAP/
 	git clone --branch=v1.2-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
-    mkdir -p /opt/GOMAP/data/ /opt/GOMAP/data/software/
-    irsync -rv i:/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/data/ /opt/GOMAP/data/data/
-    irsync -rv i:/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/software/ /opt/GOMAP/data/software/
-    irsync -rv i:/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/compress_files.txt /opt/GOMAP/data/compress_files.txt
-    irsync -rv i:/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/tar_files.txt /opt/GOMAP/data/software/tar_files.txt    
-    
-    cd /opt/GOMAP/data
-    while read line 
-    do
-        if [ ! -f $line ]
-        then
-            gunzip $line.gz
-        fi
-    done < compress_files.txt
-    
-    while read line
-    do
-        if [ ! -d $line ]
-        then
-            tar -xvf $line.tar.gz && \
-            rm $line.tar.gz
-        fi
-    done < tar_files.txt
+    mkdir -p /opt/GOMAP/data/
+    cd /opt/GOMAP/data && \
+    icd /iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/
+    iget -P data.tar.gz && tar -xvf data.tar.gz && rm data.tar.gz
+    iget -P software.tar.gz && tar -xvf software.tar.gz && software.tar.gz
     
 	chmod -R 777 /opt/GOMAP/
 	mkdir -p /workdir
 	mkdir -p /tmpdir
-	mkdir -p /var/log/mysql
+	#mkdir -p /var/log/mysql
     chmod 777 /var/lib/mysql
-    
 	
 	echo "Completed Post" 
 

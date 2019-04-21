@@ -8,7 +8,7 @@ then
 fi
 
 GOMAP_IMG="$GOMAP_LOC/GOMAP.simg"
-MYSQL_IMG="$GOMAP_LOC/mysql-data.img"
+MYSQL_IMG="mysql-data.img"
 GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP/data"
 
 GOMAP_URL="shub://Dill-PICL/GOMAP-singularity:v1.2"
@@ -29,10 +29,15 @@ then
     tmpdir=${TMPDIR:-$PWD/tmp}
 fi
 
-if [ ! -f $MYSQL_IMG ]
+if [ ! -f $GOMAP_LOC/$MYSQL_IMG ]
 then
     echo "Creating the overlay image for running mysql"
-    singularity image.create -s 13000 $MYSQL_IMG
+    export SINGULARITY_BINDPATH="$GOMAP_LOC:/workdir"
+    singularity exec irsync -v \
+        /iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/$MYSQL_IMG.gz \
+        /workdir/$MYSQL_IMG.gz && \
+        gunzip $GOMAP_LOC/$MYSQL_IMG.gz
+    #singularity image.create -s 13000 $MYSQL_IMG
 fi
 
 if [ ! -z "$mixmeth" ]
