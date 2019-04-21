@@ -23,9 +23,11 @@ HPC non-mpich
     mkdir -p /opt/GOMAP/data/ /opt/GOMAP/data/software/
     irsync -rv i:/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/data/ /opt/GOMAP/data/data/
     irsync -rv i:/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/software/ /opt/GOMAP/data/software/
+    irsync -rv i:/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/compress_files.txt /opt/GOMAP/data/compress_files.txt
+    irsync -rv i:/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/tar_files.txt /opt/GOMAP/data/software/tar_files.txt    
     
     cd /opt/GOMAP/data
-    while read line
+    while read line 
     do
         if [ ! -f $line ]
         then
