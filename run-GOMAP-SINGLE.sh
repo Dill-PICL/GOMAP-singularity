@@ -8,6 +8,7 @@ then
 fi
 
 GOMAP_IMG="$GOMAP_LOC/GOMAP.simg"
+MYSQL_IMG="$GOMAP_LOC/mysql-data.img"
 GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP/data"
 
 GOMAP_URL="shub://Dill-PICL/GOMAP-singularity:v1.2"
@@ -28,31 +29,37 @@ then
     tmpdir=${TMPDIR:-$PWD/tmp}
 fi
 
-export SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
+if [ ! -f $MYSQL_IMG ]
+then
+    echo "Creating the overlay image for running mysql"
+    singularity image.create -s 13000 $MYSQL_IMG
+fi
 
 if [ ! -z "$mixmeth" ]
 then
-    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$GOMAP_LOC/GOMAP/data/mysql/lib:/var/lib/mysql,$GOMAP_LOC/GOMAP/data/mysql/log:/var/log/mysql,$PWD:/workdir,$tmpdir:/tmpdir,$tmpdir:/run/mysqld"
+    export SINGULARITY_BINDPATH="$PWD:/workdir,$tmpdir:/tmpdir,tmp:/run/mysqld"
     echo "Starting GOMAP instance"
     $GOMAP_LOC/stop-GOMAP.sh && \
     singularity instance.start -c  \
+        -o $MYSQL_IMG \
         $GOMAP_IMG GOMAP && \
-	sleep 10 && \
-    singularity run \
-        instance://GOMAP $@ && \
-    $GOMAP_LOC/stop-GOMAP.sh
-elif [ ! -z "$setup" ]
-then
-    mkdir -p $GOMAP_LOC/GOMAP/data
-    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$PWD:/workdir,$tmpdir:/tmpdir"
-    echo "Running GOMAP $@"
-    mkdir -p $GOMAP_DATA_LOC
-    singularity run \
-        $GOMAP_IMG $@
+	sleep 1 && \
+    singularity run  \
+        instance://GOMAP $@ #&& \
+    #$GOMAP_LOC/stop-GOMAP.sh
+#elif [ ! -z "$setup" ]
+#then
+#    mkdir -p $GOMAP_LOC/GOMAP/datals /va
+#    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$PWD:/workdir,$tmpdir:/tmpdir"
+#    echo "Running GOMAP $@"
+#    mkdir -p $GOMAP_DATA_LOC
+#    singularity run \
+#        $GOMAP_IMG $@
 else
     export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$PWD:/workdir,$tmpdir:/tmpdir"   
     echo "$SINGULARITY_BINDPATH"
     echo "Running GOMAP $@"
     singularity run -c \
+        -o $MYSQL_IMG \
         $GOMAP_IMG $@
 fi

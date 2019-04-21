@@ -1,13 +1,10 @@
-Bootstrap: shub
-From: Dill-PICL/GOMAP-base:bionic
+Bootstrap: localimage
+From: GOMAP-base.simg
 
 %labels
 MAINTAINER Kokulapalan Wimalanathan
-Version 1.1.0
+Version 1.2
 HPC non-mpich
-
-%files
-    my.cnf
 
 %environment
     export LC_ALL=C
@@ -18,15 +15,41 @@ HPC non-mpich
 
 %post
 	echo "Running post"
-	mkdir /opt/GOMAP/
+    pwd
+    ls -lh /root
+    mkdir -p /root/.irods && cd /root/.irods/ && wget https://raw.githubusercontent.com/Dill-PICL/GOMAP-singularity/master/irods_environment.json
+	mkdir -p /opt/GOMAP/
 	git clone --branch=v1.2-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
+    mkdir -p /opt/GOMAP/data/ /opt/GOMAP/data/software/
+    irsync -rv i:/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/data/ /opt/GOMAP/data/data/
+    irsync -rv i:/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/software/ /opt/GOMAP/data/software/
+    
+    cd /opt/GOMAP/data
+    while read line
+    do
+        if [ ! -f $line ]
+        then
+            gunzip $line.gz
+        fi
+    done < compress_files.txt
+    
+    while read line
+    do
+        if [ ! -d $line ]
+        then
+            tar -xvf $line.tar.gz && \
+            rm $line.tar.gz
+        fi
+    done < tar_files.txt
+    
 	chmod -R 777 /opt/GOMAP/
 	mkdir -p /workdir
 	mkdir -p /tmpdir
 	mkdir -p /var/log/mysql
-    #mv my.cnf /etc/mysql/
+    chmod 777 /var/lib/mysqlPearson_346
+    
 	
-	echo "Completed Post"  
+	echo "Completed Post"
 
 %startscript
 	chmod 777 /tmp
