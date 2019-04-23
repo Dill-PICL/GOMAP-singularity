@@ -7,12 +7,12 @@ then
     GOMAP_LOC="$PWD"
 fi
 GOMAP_IMG="$GOMAP_LOC/GOMAP.simg"
-GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP/data"
 
 if [ ! -f "$GOMAP_IMG" ]
 then
-    singularity pull --name `basename $GOMAP_IMG` shub://Dill-PICL/GOMAP-singularity:condo
-    mv `basename $GOMAP_IMG` `dirname $GOMAP_IMG`
+    echo "The GOMAP image is missing" > /dev/stderr
+    echo "Please run the setup.sh before running the test" > /dev/stderr
+    exit 1
 fi
 
 args="$@"
@@ -25,17 +25,7 @@ then
     tmpdir=${TMPDIR:-/tmp}
 fi
 
-if [ -z $SLURM_JOB_NUM_NODES ]
-then
-    nodes=1
-else
-	if [ ! -z "$mixmeth_blast" ] || [ ! -z "$domain" ]
-	then
-        nodes=$((SLURM_JOB_NUM_NODES + 1))
-	else
-		nodes=$((SLURM_JOB_NUM_NODES))
-	fi
-fi
+nodes=$((SLURM_JOB_NUM_NODES + 1))
 
 SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
 
