@@ -3,7 +3,7 @@
 Running GOMAP
 =============
 
-1. Install (local) or load (HPC) `Singularity <https://www.sylabs.io/guides/2.6/user-guide/index.html>`_ container (version 2.6.0).
+1. Install (local) or load (HPC) `Singularity <https://www.sylabs.io/guides/2.6/user-guide/index.html>`_ container (version 2.6.x).
 
     .. code-block:: bash
         
@@ -29,26 +29,27 @@ Running GOMAP
             cd /path/to/GOMAP-singularity/install/location
             mkdir -p $HOME/.irods && cp irods_environment.json $HOME/.irods
     
-    2. Run the setup step
+    2. Run setup
 
         .. code-block:: bash
             
-            ./run-GOMAP-SINGLE.sh --config=test/config.yml --step=setup
+            ./setup.sh
 
         .. attention::
-            The pipeline download is large and would require ~150GB of free hard drive space during the **setup**.
-        
-        .. literalinclude:: ../run-GOMAP-SINGLE.sh
-            :language: bash
-            :lines: 20-26
-            :emphasize-lines: 1
-            :linenos:
+            The pipeline download is large and would require ~80GB of free hard drive space during the **setup**.
+
+
 
         .. important::
-            Line number 8 which is highlighted can be edited to add a tag at the end of the line (e.g. :condo, :bridges, :comet).
+            Set the GOMAP_IMG_TYPE variable to download GOMAP-singularity for different HPC systems
+            
             This would allow images built for different HPC clusters and MPI version to be downloaded.
+            
             If no tag is used then the image downloaded will have MPI is disabled.
-            e.g. shub://Dill-PICL/GOMAP-singularity:condo.v1.1
+        
+        .. code-block:: bash
+            
+            export GOMAP_IMG_TYPE="condo" && ./setup.sh
 
 4. [optional] Test whether the container and the data files are working as intended.
 
@@ -78,19 +79,6 @@ Running GOMAP
 
             # Add this to your ~/.bashrc or run the line in the terminal
             export GOMAP_LOC="/path/to/GOMAP-singularity/install/location"
-
-    c. Declare export ``MATLAB_LOC`` environment variable
-
-        .. code-block:: bash
-
-            # Add this to your ~/.bashrc or run the line in the terminal
-            export MATLAB_LOC="/path/to/MATLAB/R201xa/"
-            # An example location is given below. This will change for each cluster
-            export MATLAB_LOC="/usr/local/MATLAB/R2017a/"
-        
-        .. attention ::
-
-            The matlab location is automatically bound by the run-GOMAP-SINGLE.sh script. This is only necessary for running the FANN-GO step. Please check with the cluster to identify if MATLAB is available for use and the exact location MATLAB is installed in.
 
 5. Edit the config file
 
@@ -131,7 +119,7 @@ Running GOMAP
 
         #. run-GOMAP-mpi.sh
 
-            This scipt can be used to run GOMAP steps 2 and 4 on a multiple nodes on the SLURM cluster. This uses mpich for parallelization.          
+            This scipt can be used to run GOMAP steps 2 and 4 on a multiple nodes on the SLURM cluster. This step is parallelized using mpich for parallelization.
         
         .. tip :: 
 
@@ -245,4 +233,4 @@ Running GOMAP
             
             ./run-GOMAP-SINGLE.sh --step=aggregate --config=test/config.yml
 
-6. Final dataset will be available at ``GOMAP-[basename]/gaf/agg/[basename].aggregate.gaf``. **[basename]** is defined in the config.yml file that was used
+6. Final dataset will be available at ``GOMAP-[basename]/gaf/e.agg/[basename].aggregate.gaf``. **[basename]** is defined in the config.yml file that was used
