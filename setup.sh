@@ -7,6 +7,11 @@ then
     GOMAP_LOC="$PWD"
 fi
 
+if [ -z $GOMAP_IMG_TYPE ]
+then
+    GOMAP_IMG_TYPE="condo"
+fi
+
 # Declaring variables for different options
 
 export GOMAP_CYVERSE_URL="i:/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/$GOMAP_IMG_TYPE"

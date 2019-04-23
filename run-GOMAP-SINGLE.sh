@@ -8,15 +8,12 @@ then
 fi
 
 GOMAP_IMG="$GOMAP_LOC/GOMAP.simg"
-MYSQL_IMG="mysql-data.img"
-GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP/data"
-
-GOMAP_URL="shub://Dill-PICL/GOMAP-singularity:v1.2"
 
 if [ ! -f "$GOMAP_IMG" ]
 then
-    singularity pull --name `basename $GOMAP_IMG` "$GOMAP_URL"
-    mv  `basename $GOMAP_IMG` `dirname $GOMAP_IMG`
+    echo "The GOMAP image is missing" > /dev/stderr
+    echo "Please run the setup.sh before running the test" > /dev/stderr
+    exit 1
 fi
 
 args="$@"
