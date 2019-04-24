@@ -40,7 +40,7 @@ Running GOMAP
 
 
         .. important::
-            Set the GOMAP_IMG_TYPE variable to download GOMAP-singularity for different mpich versions, and this is **essential** for running certain steps in parallel in your HPC. Default image downloaded will be built for mpich-3.2.1.
+            Set the GOMAP_IMG_TYPE variable to download GOMAP-singularity for different mpich versions, and this is **essential** for running certain steps in parallel in your HPC. Default image downloaded will be built for mpich-3.2.1. Please submit a issue request on `GitHub <https://github.com/Dill-PICL/GOMAP-singularity/issues>`_
         
         .. code-block:: bash
             
@@ -59,25 +59,20 @@ Running GOMAP
     .. attention::
         This has to be performed from the GOMAP-singularity install location because the test directory location is fixed.
 
-4. Add the necessary variables for the installation
+5. Edit the config file
 
-    a. Add ``/path/to/GOMAP-singularity/install/location`` to your ``$PATH`` variable.
-
-        .. code-block:: bash
-
-            # Add this to your ~/.bashrc
-            export PATH="$PATH:/path/to/GOMAP-singularity/install/location
-
-    b. Declare export ``GOMAP_LOC`` environment variable
+    a. Declare export ``GOMAP_LOC`` environment variable
 
         .. code-block:: bash
 
             # Add this to your ~/.bashrc or run the line in the terminal
-            export GOMAP_LOC="/path/to/GOMAP-singularity/install/location"
+            export GOMAP_LOC="/path/to/GOMAP-singularity/install/location"    
 
-5. Edit the config file
+    b. Download the `config.yml <_static/min-config.yml>`_  file and make necessary changes. Change the highlighted lines to fit your input data
+    
+        .. attention:: 
 
-    Download the `config.yml <_static/min-config.yml>`_  file and make necessary changes. Change the highlighted lines to fit your input data
+            A boilerplate for running GOMAP-singularity on SLURMenvironment has been made available on Github at `GOMAP-boilerplate <https://github.com/Dill-PICL/GOMAP-boilerplate>`_. You can follow instructions there to get to annotating faster.
 
 
     .. literalinclude:: _static/min-config.yml
