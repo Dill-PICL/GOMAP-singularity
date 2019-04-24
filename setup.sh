@@ -14,7 +14,7 @@ fi
 
 # Declaring variables for different options
 
-export GOMAP_CYVERSE_URL="i:/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/$GOMAP_IMG_TYPE"
+export GOMAP_CYVERSE_URL="/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/$GOMAP_IMG_TYPE"
 export CYVERSE_MYSQL="/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/mysql.tar.gz"
 export GOMAP_IMG="GOMAP.simg"
 export ICOMMANDS_IMG="icommands.simg"
