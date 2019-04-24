@@ -39,17 +39,12 @@ Running GOMAP
             The pipeline download is large and would require ~80GB of free hard drive space during the **setup**.
 
 
-
         .. important::
-            Set the GOMAP_IMG_TYPE variable to download GOMAP-singularity for different HPC systems
-            
-            This would allow images built for different HPC clusters and MPI version to be downloaded.
-            
-            If no tag is used then the image downloaded will have MPI is disabled.
+            Set the GOMAP_IMG_TYPE variable to download GOMAP-singularity for different mpich versions, and this is **essential** for running certain steps in parallel in your HPC. Default image downloaded will be built for mpich-3.2.1.
         
         .. code-block:: bash
             
-            export GOMAP_IMG_TYPE="condo" && ./setup.sh
+            export GOMAP_IMG_TYPE="mpich-3.2.1" && ./setup.sh
 
 4. [optional] Test whether the container and the data files are working as intended.
 
@@ -99,7 +94,7 @@ Running GOMAP
     ------- ------------------ ----------- ----------- ------------
        1     seqsim              Y           N           Y
        2     domain              Y           Y           Y
-       3     fanngo*             Y           N           Y
+       3     fanngo             Y           N           Y
        4     mixmeth-blast       Y           Y           Y
        5     mixmeth-preproc     Y           N           N
        6     mixmeth             Y           N           N
@@ -128,8 +123,6 @@ Running GOMAP
         .. attention ::
             
             Steps 1-4 can be run at the same time, because they do not depend on each other. Subsequent steps do depend on each other so they can be run only one step at a time and after the first four are finished.
-
-            ***fanngo** step depends on matlab, and is optional. If the step is not run then the annotations will not contain FANN-GO predictions.
     
     **The details of how to run the GOMAP steps are below**  
 
