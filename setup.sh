@@ -40,15 +40,12 @@ fi
 
 if [ ! -d $GOMAP_LOC/mysql ]
 then
-    singularity exec $GOMAP_LOC/$GOMAP_IMG iget -P $CYVERSE_MYSQL /workdir/mysql.tar.gz && \
+    singularity exec $ICOMMANDS_IMG iget -P $CYVERSE_MYSQL /workdir/mysql.tar.gz && \
     tar -xvf $GOMAP_LOC/mysql.tar.gz && rm -rf $GOMAP_LOC/mysql.tar.gz
 else
     echo "The $GOMAP_LOC/mysql GOMAP_IMG existis" > /dev/stderr
     echo "Delete the directory if you want to download it" /dev/stderr
 fi
-
-singularity exec $GOMAP_LOC/$GOMAP_IMG iget -P $CYVERSE_MYSQL /workdir/mysql.tar.gz && \
-tar -xvf $GOMAP_LOC/mysql.tar.gz && rm -rf $GOMAP_LOC/mysql.tar.gz
     
 
 
