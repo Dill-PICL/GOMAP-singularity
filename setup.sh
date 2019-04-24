@@ -9,7 +9,7 @@ fi
 
 if [ -z $GOMAP_IMG_TYPE ]
 then
-    GOMAP_IMG_TYPE="condo"
+    GOMAP_IMG_TYPE="mpich-3.2.1"
 fi
 
 # Declaring variables for different options
