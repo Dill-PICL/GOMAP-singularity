@@ -40,8 +40,8 @@ Running GOMAP
 
 
         .. important::
-            Set the GOMAP_IMG_TYPE variable to download GOMAP-singularity for different mpich versions, and this is **essential** for running certain steps in parallel in your HPC. Default image downloaded will be built for mpich-3.2.1. Please submit a issue request on `GitHub <https://github.com/Dill-PICL/GOMAP-singularity/issues>`_
-        
+            Set the GOMAP_IMG_TYPE variable to download GOMAP-singularity for different mpich versions, and this is **essential** for running certain steps in parallel in your HPC. Default image downloaded will be built for mpich-3.2.1. Please submit a issue request on `GitHub <https://github.com/Dill-PICL/GOMAP-singularity/issues>`_ if you want the image for a different mpi version or you can download the Singularity files and build the image yourself.
+            
         .. code-block:: bash
             
             export GOMAP_IMG_TYPE="mpich-3.2.1" && ./setup.sh
