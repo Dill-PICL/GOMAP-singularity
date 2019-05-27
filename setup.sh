@@ -14,8 +14,7 @@ fi
 
 # Declaring variables for different options
 
-export GOMAP_CYVERSE_URL="/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/$GOMAP_IMG_TYPE"
-export CYVERSE_MYSQL="/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.2/mysql.tar.gz"
+export GOMAP_CYVERSE_URL="/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.3/$GOMAP_IMG_TYPE"
 export GOMAP_IMG="GOMAP.simg"
 export ICOMMANDS_IMG="icommands.simg"
 export ICOMMANDS_URL="shub://wkpalan/icommands-cyverse:latest"
@@ -37,18 +36,3 @@ else
     echo "The $GOMAP_LOC/$GOMAP_IMG existis" > /dev/stderr
     echo "Delete the image if you want to download it" /dev/stderr
 fi
-
-if [ ! -d $GOMAP_LOC/mysql ]
-then
-    singularity exec $ICOMMANDS_IMG iget -P $CYVERSE_MYSQL /workdir/mysql.tar.gz && \
-    tar -xvf $GOMAP_LOC/mysql.tar.gz && rm -rf $GOMAP_LOC/mysql.tar.gz
-else
-    echo "The $GOMAP_LOC/mysql directory existis" > /dev/stderr
-    echo "Delete the directory if you want to download it" /dev/stderr
-fi
-    
-
-
-
-
-

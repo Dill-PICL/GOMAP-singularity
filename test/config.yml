@@ -11,7 +11,7 @@ input:
   # Email is mandatory
   email: kokulapalan@gmail.com
   #Number of CPUs used for tools
-  cpus: 16
+  cpus: 8
   #Whether openmpi should be used
   mpi: False
   #what the name of the temporary directory is

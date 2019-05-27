@@ -14,7 +14,6 @@ image.py
 instance.py
 tmp.txt
 SBATCH*
-test.sh
 *out
 *err
 tmp
