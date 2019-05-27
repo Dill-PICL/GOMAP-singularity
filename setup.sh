@@ -14,24 +14,12 @@ fi
 
 # Declaring variables for different options
 
-export GOMAP_CYVERSE_URL="/iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.3/$GOMAP_IMG_TYPE"
+export ZENODO_URL="https://sandbox.zenodo.org/record/274851/files/GOMAP.simg?download=1"
 export GOMAP_IMG="GOMAP.simg"
-export ICOMMANDS_IMG="icommands.simg"
-export ICOMMANDS_URL="shub://wkpalan/icommands-cyverse:latest"
-export SINGULARITY_BINDPATH="$GOMAP_LOC:/workdir"
-export IRODS_HOST=data.iplantcollaborative.org
-export IRODS_PORT=1247
-export IRODS_USER_NAME=anonymous
-export IRODS_ZONE_NAME=iplant
-
-if [ ! -f "$ICOMMANDS_IMG" ]
-then
-    singularity pull --name $ICOMMANDS_IMG "$ICOMMANDS_URL"
-fi
 
 if [ ! -f $GOMAP_LOC/$GOMAP_IMG ]
 then
-    singularity exec $ICOMMANDS_IMG iget -P $GOMAP_CYVERSE_URL/$GOMAP_IMG /workdir/$GOMAP_IMG
+    wget $ZENODO_URL -O $GOMAP_LOC/$GOMAP_IMG
 else
     echo "The $GOMAP_LOC/$GOMAP_IMG existis" > /dev/stderr
     echo "Delete the image if you want to download it" /dev/stderr
