@@ -18,7 +18,6 @@ fi
 args="$@"
 domain=`echo $@ | grep domain`
 mixmeth_blast=`echo $@ | grep mixmeth-blast`
-setup=`echo $@ | grep setup`
 
 if [ -z "$tmpdir" ]
 then

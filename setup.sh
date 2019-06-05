@@ -21,6 +21,6 @@ if [ ! -f $GOMAP_LOC/$GOMAP_IMG ]
 then
     wget $ZENODO_URL -O $GOMAP_LOC/$GOMAP_IMG
 else
-    echo "The $GOMAP_LOC/$GOMAP_IMG existis" > /dev/stderr
+    echo "The $GOMAP_LOC/$GOMAP_IMG exists" > /dev/stderr
     echo "Delete the image if you want to download it" /dev/stderr
 fi
