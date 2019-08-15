@@ -32,7 +32,7 @@ then
     echo "Please run the step using $GOMAP_LOC/setup.sh for the setup step" > /dev/stderr
     exit 1
 else
-    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$PWD:/workdir,$tmpdir:/tmpdir"   
+    export SINGULARITY_BINDPATH="$PWD:/workdir,$tmpdir:/tmpdir"   
     echo "$SINGULARITY_BINDPATH"
     echo "Running GOMAP $@"
     singularity run -c \

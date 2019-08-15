@@ -21,7 +21,8 @@ mixmeth_blast=`echo $@ | grep mixmeth-blast`
 
 if [ -z "$tmpdir" ]
 then
-    tmpdir=${TMPDIR:-/tmp}
+    echo $TMPDIR
+    tmpdir=${TMPDIR:-$PWD/tmp}
 fi
 
 nodes=$((SLURM_JOB_NUM_NODES + 1))
@@ -30,7 +31,8 @@ nodes=$((SLURM_JOB_NUM_NODES + 1))
 
 if [ ! -z "$domain" ] || [ ! -z "$mixmeth_blast" ]
 then
-    export SINGULARITY_BINDPATH="$SINGULARITY_BINDPATH,$PWD:/workdir,$tmpdir:/tmpdir"
+    export SINGULARITY_BINDPATH="$PWD:/workdir,$tmpdir:/tmpdir"
+    echo $SINGULARITY_BINDPATH
     echo "Running GOMAP $@"
     echo "using $SLURM_JOB_NUM_NODES for the process"
     mpiexec -np $nodes singularity run \
