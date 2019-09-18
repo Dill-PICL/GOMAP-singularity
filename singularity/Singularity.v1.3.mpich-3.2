@@ -1,0 +1,64 @@
+Bootstrap: shub
+From: Dill-PICL/GOMAP-base:bionic
+
+%labels
+MAINTAINER Kokulapalan Wimalanathan
+Version 1.2
+HPC ISU-condo
+
+%environment
+    export LC_ALL=C
+    export DEBIAN_FRONTEND=noninteractive
+    export MYSQL_USER=pannzer
+    export MYSQL_DATABASE=pannzer
+    export MYSQL_ROOT_PASSWORD=mysql
+    export IRODS_HOST=data.iplantcollaborative.org
+    export IRODS_PORT=1247
+    export IRODS_USER_NAME=anonymous
+    export IRODS_ZONE_NAME=iplant
+ 
+%post
+	echo "Running post"
+    
+    # icommands environment and directory for authorization
+    export IRODS_HOST=data.iplantcollaborative.org
+    export IRODS_PORT=1247
+    export IRODS_USER_NAME=anonymous
+    export IRODS_ZONE_NAME=iplant
+    mkdir -p /root/.irods
+
+    #Installing mpich and python package to use it
+    wget http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz  && \
+    tar -xf  mpich-3.2.tar.gz && \
+    cd mpich-3.2 &&  \
+    ./configure && make -j16 && make install && \
+    
+    cd ..
+	pip install mpi4py==3.0.0
+
+    # Downloading GOMAP code
+	mkdir /opt/GOMAP/
+	git clone --branch=v1.3-dev https://github.com/Dill-PICL/GOMAP.git /opt/GOMAP/
+	chmod -R 777 /opt/GOMAP/
+    
+    #Downloading backed in GOMAP code
+    cd /opt/GOMAP/data && \
+    icd /iplant/home/shared/dillpicl/gomap/GOMAP-data.v1.3/ && \
+    iget -P data.tar.gz && tar -xvf data.tar.gz &&  rm data.tar.gz && \
+    iget -P software.tar.gz && tar -xvf software.tar.gz && rm software.tar.gz
+    chmod 755 software
+    
+    #Making necessary directories
+	mkdir -p /workdir
+	mkdir -p /tmpdir
+	mkdir -p /work
+	mkdir -p /scratch
+	
+	echo "Completed Post"
+
+%startscript
+	chmod 777 /tmp
+
+%runscript
+	cd /opt/GOMAP/ 
+	./gomap.py "$@"
