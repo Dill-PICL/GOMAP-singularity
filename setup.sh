@@ -14,8 +14,8 @@ fi
 
 # Declaring variables for different options
 
-export IMG_URL="http://gomap-data.s3-website.us-east-2.amazonaws.com/GOMAP-1.3/imgs/GOMAP.simg"
-export GOMAP_IMG="GOMAP.simg"
+export IMG_URL="https://gomap-data.s3.us-east-2.amazonaws.com/GOMAP-1.3/imgs/GOMAP.sif"
+export GOMAP_IMG="GOMAP.sif"
 
 if [ ! -f $GOMAP_LOC/$GOMAP_IMG ]
 then

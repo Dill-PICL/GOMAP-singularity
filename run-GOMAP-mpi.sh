@@ -6,7 +6,7 @@ if [ -z $GOMAP_LOC ]
 then
     GOMAP_LOC="$PWD"
 fi
-GOMAP_IMG="$GOMAP_LOC/GOMAP.simg"
+GOMAP_IMG="$GOMAP_LOC/GOMAP.sif"
 
 if [ ! -f "$GOMAP_IMG" ]
 then
