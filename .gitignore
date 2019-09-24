@@ -20,3 +20,4 @@ tmp
 GOMAP-data-old
 mysql
 start-GOMAP.sh
+*.sif
