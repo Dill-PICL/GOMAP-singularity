@@ -14,8 +14,10 @@ image.py
 instance.py
 tmp.txt
 SBATCH*
-test.sh
 *out
 *err
 tmp
 GOMAP-data-old
+mysql
+start-GOMAP.sh
+*.sif

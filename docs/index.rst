@@ -16,7 +16,7 @@ How to use GOMAP-singularity
 ----------------------------
 
 .. toctree:: 
-   :maxdepth: 1
+   :maxdepth: 2
    :numbered:
    
    OVERVIEW

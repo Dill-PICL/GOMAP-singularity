@@ -6,73 +6,40 @@ if [ -z $GOMAP_LOC ]
 then
     GOMAP_LOC="$PWD"
 fi
-GOMAP_IMG="$GOMAP_LOC/GOMAP.simg"
-GOMAP_DATA_LOC="$GOMAP_LOC/GOMAP-data"
+GOMAP_IMG="$GOMAP_LOC/GOMAP.sif"
 
 if [ ! -f "$GOMAP_IMG" ]
 then
-    singularity pull --name `basename $GOMAP_IMG` shub://Dill-PICL/GOMAP-singularity:condo
-    mv `basename $GOMAP_IMG` `dirname $GOMAP_IMG`
+    echo "The GOMAP image is missing" > /dev/stderr
+    echo "Please run the setup.sh before running the test" > /dev/stderr
+    exit 1
 fi
 
 args="$@"
-mixmeth=`echo $@ | grep mixmeth | grep -v mixmeth-blast | grep -v mixmeth-preproc`
 domain=`echo $@ | grep domain`
 mixmeth_blast=`echo $@ | grep mixmeth-blast`
-setup=`echo $@ | grep setup`
 
 if [ -z "$tmpdir" ]
 then
-    tmpdir=${TMPDIR:-/tmp}
+    echo $TMPDIR
+    tmpdir=${TMPDIR:-$PWD/tmp}
 fi
 
-if [ -z $SLURM_JOB_NUM_NODES ]
-then
-    nodes=1
-else
-	if [ ! -z "$mixmeth_blast" ] || [ ! -z "$domain" ]
-	then
-        nodes=$((SLURM_JOB_NUM_NODES + 1))
-	else
-		nodes=$((SLURM_JOB_NUM_NODES))
-	fi
-fi
+nodes=$((SLURM_JOB_NUM_NODES + 1))
 
-if [ ! -z "$mixmeth" ]
+#SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
+
+if [ ! -z "$domain" ] || [ ! -z "$mixmeth_blast" ]
 then
-    echo "Starting GOMAP instance"
-    $GOMAP_LOC/stop-GOMAP.sh && \
-    rsync -aq $GOMAP_LOC/GOMAP-data/mysql $tmpdir/ && \
-    singularity instance.start   \
-        --bind $tmpdir/mysql/lib:/var/lib/mysql  \
-        --bind $tmpdir/mysql/log:/var/log/mysql  \
-        --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
-        --bind $PWD:/workdir  \
-        --bind $tmpdir:/tmpdir  \
-        -W $PWD/tmp \
-        $GOMAP_IMG GOMAP && \
-    singularity run \
-        instance://GOMAP $@ &&
-    $GOMAP_LOC/stop-GOMAP.sh
-elif [ ! -z "$setup" ]
-then
-    echo "Running GOMAP $@"
-    mkdir -p $GOMAP_DATA_LOC
-    singularity run   \
-        --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
-        --bind $PWD:/workdir  \
-        --bind $tmpdir:/tmpdir  \
-        -W $PWD/tmp \
-        $GOMAP_IMG $@
-else
+    export SINGULARITY_BINDPATH="$PWD:/workdir,$tmpdir:/tmpdir"
+    echo $SINGULARITY_BINDPATH
     echo "Running GOMAP $@"
     echo "using $SLURM_JOB_NUM_NODES for the process"
-    mpiexec -np $nodes singularity run   \
-        --bind $GOMAP_DATA_LOC/mysql/lib:/var/lib/mysql  \
-        --bind $GOMAP_DATA_LOC/mysql/log:/var/log/mysql  \
-        --bind $GOMAP_DATA_LOC:/opt/GOMAP/data \
-        --bind $PWD:/workdir  \
-        --bind $tmpdir:/tmpdir  \
+    mpiexec -np $nodes singularity run \
         -W $PWD/tmp \
         $GOMAP_IMG $@
+else
+    echo "ERROR: run-GOMAP-mpi.sh can only run the steps domain and mixmeth-blast using MPI" >> /dev/stderr
+    echo "ERROR: Please run the other steps using run-GOMAP-SINGLE.sh " >> /dev/stderr
+    exit 1
 fi

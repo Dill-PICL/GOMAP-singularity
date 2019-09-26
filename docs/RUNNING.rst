@@ -3,7 +3,7 @@
 Running GOMAP
 =============
 
-1. Install (local) or load (HPC) `Singularity <https://www.sylabs.io/guides/2.6/user-guide/index.html>`_ container (version 2.6.0).
+1. Install (local) or load (HPC) `Singularity <https://www.sylabs.io/guides/2.6/user-guide/index.html>`_ container (version 2.6.x).
 
     .. code-block:: bash
         
@@ -15,37 +15,24 @@ Running GOMAP
     .. code-block:: bash
 
         mkdir -p /path/to/GOMAP-singularity/install/location
-        git clone https://github.com/Dill-PICL/GOMAP-singularity.git /path/to/GOMAP-singularity/install/location
+        git clone -b v1.3 https://github.com/Dill-PICL/GOMAP-singularity.git /path/to/GOMAP-singularity/install/location
         cd /path/to/GOMAP-singularity/install/location
         
 
 3. Run the setup step to make necessary directories and download data files from CyVerse
-
-    1. [Optional] Configure the irods environment
-        The setup step requires the use of icommands and if you have used icommands then no configuration is necessary if not configured  
     
-        .. code-block:: bash
-
-            cd /path/to/GOMAP-singularity/install/location
-            mkdir -p $HOME/.irods && cp irods_environment.json $HOME/.irods
-    
-    2. Run the setup step
+    1. Run setup
 
         .. code-block:: bash
             
-            ./run-GOMAP-SINGLE.sh --config=test/config.yml --step=setup
+            ./setup.sh
 
         .. attention::
-            The pipeline download is large and would require ~150GB of free hard drive space during the **setup**.
-        
-        .. literalinclude:: ../run-GOMAP-SINGLE.sh
-            :language: bash
-            :lines: 1-10
-            :emphasize-lines: 10
-            :linenos:
+            The pipeline download is large and would require ~40GB of free hard drive space during the **setup** step.
 
-        .. attention::
-            Line number 10 which is highlighted can be edited to add a tag at the end of the line (e.g. :condo, :bridges, :comet). This would allow images built for different HPC clusters and MPI version to be downloaded. If no tag is used then the image downloaded will have MPI is disabled.
+
+        .. important::
+            Set the GOMAP_IMG_TYPE variable to download GOMAP-singularity for different mpich versions, and this is **essential** for running parallelized steps in your HPC. Default image downloaded will be built for mpich-3.2.1. Please submit a issue request on `GitHub <https://github.com/Dill-PICL/GOMAP-singularity/issues>`_ if you want the image for a different mpi version or you can download the Singularity files and build the image yourself.
 
 4. [optional] Test whether the container and the data files are working as intended.
 
@@ -55,43 +42,25 @@ Running GOMAP
 
     .. code-block:: bash
         
-        ./test-GOMAP.sh
+        ./test.sh
 
     .. attention::
         This has to be performed from the GOMAP-singularity install location because the test directory location is fixed.
 
-4. Add the necessary variables for the installation
-
-    a. Add ``/path/to/GOMAP-singularity/install/location`` to your ``$PATH`` variable.
-
-        .. code-block:: bash
-
-            # Add this to your ~/.bashrc
-            export PATH="$PATH:/path/to/GOMAP-singularity/install/location
-
-    b. Declare export ``GOMAP_LOC`` environment variable
-
-        .. code-block:: bash
-
-            # Add this to your ~/.bashrc or run the line in the terminal
-            export GOMAP_LOC="/path/to/GOMAP-singularity/install/location"
-
-    c. Declare export ``MATLAB_LOC`` environment variable
-
-        .. code-block:: bash
-
-            # Add this to your ~/.bashrc or run the line in the terminal
-            export MATLAB_LOC="/path/to/MATLAB/R201xa/"
-            # An example location is given below. This will change for each cluster
-            export MATLAB_LOC="/usr/local/MATLAB/R2017a/"
-        
-        .. attention ::
-
-            The matlab location is automatically bound by the run-GOMAP-SINGLE.sh script. This is only necessary for running the FANN-GO step. Please check with the cluster to identify if MATLAB is available for use and the exact location MATLAB is installed in.
-
 5. Edit the config file
 
-    Download the `config.yml <_static/min-config.yml>`_  file and make necessary changes. Change the highlighted lines to fit your input data
+    a. Declare export ``GOMAP_LOC`` environment variable
+
+        .. code-block:: bash
+
+            # Add this to your ~/.bashrc or run the line in the terminal
+            export GOMAP_LOC="/path/to/GOMAP-singularity/install/location"    
+
+    b. Download the `config.yml <_static/min-config.yml>`_  file and make necessary changes. Change the highlighted lines to fit your input data
+    
+        .. attention:: 
+
+            A boilerplate for running GOMAP-singularity on SLURM environment has been made available on Github at `GOMAP-boilerplate <https://github.com/Dill-PICL/GOMAP-boilerplate>`_. You can follow instructions there to get to annotating faster.
 
 
     .. literalinclude:: _static/min-config.yml
@@ -108,7 +77,7 @@ Running GOMAP
     ------- ------------------ ----------- ----------- ------------
        1     seqsim              Y           N           Y
        2     domain              Y           Y           Y
-       3     fanngo*             Y           N           Y
+       3     fanngo             Y           N           Y
        4     mixmeth-blast       Y           Y           Y
        5     mixmeth-preproc     Y           N           N
        6     mixmeth             Y           N           N
@@ -128,7 +97,7 @@ Running GOMAP
 
         #. run-GOMAP-mpi.sh
 
-            This scipt can be used to run GOMAP steps 2 and 4 on a multiple nodes on the SLURM cluster. This uses mpich for parallelization.          
+            This scipt can be used to run GOMAP steps 2 (domain) and 4 (mixmeth-preproc) on a multiple nodes on the SLURM cluster. This step is parallelized using mpich for parallelization.
         
         .. tip :: 
 
@@ -136,9 +105,7 @@ Running GOMAP
         
         .. attention ::
             
-            Steps 1-4 can be run at the same time, because they do not depend on each other. Subsequent steps do depend on each other so they can be run only one step at a time and after the first four are finished.
-
-            ***fanngo** step depends on matlab, and is optional. If the step is not run then the annotations will not contain FANN-GO predictions.
+            Steps 1-4 can be run concurrently, because they do not depend on each other. Subsequent steps do depend on previous output so they can be run only one at a time and after the first four are finished.
     
     **The details of how to run the GOMAP steps are below**  
 
@@ -160,7 +127,7 @@ Running GOMAP
 
         .. warning ::
 
-            Slurm job scheduler will be required to use mpi to work with the scripts provided. This will also require the correct version of the container to be downloaded (condo, bridges, comet)
+            Slurm job scheduler will be required to use mpi to work with the scripts provided. This will also require the correct version of MPI for the container
         
         .. attention ::
 
@@ -175,11 +142,11 @@ Running GOMAP
 
         .. code-block:: bash
 
-            # This can be 
+            # This can be any number of nodes, but 10-20 has been optimal
             #SBATCH -N 10
 
             #SBATCH --ntasks-per-node=1
-            #SBATCH --cpus-per-task=16
+            #SBATCH --cpus-per-task=16 #or the CPU for each node
             
         You may also need to load the mpich module on HPC systems.
         
@@ -187,6 +154,9 @@ Running GOMAP
         
                 #On HPC Systems
                 module load mpich
+
+                #Or it might be packaged as part of MVAPICH
+                module load mvapich
 
         .. code-block:: bash
 
@@ -212,7 +182,7 @@ Running GOMAP
 
             ./run-GOMAP-mpi.sh --step=mixmeth-blast --config=test/config.yml
         
-        The ``--nodes`` and ``--cpus-per-task`` can be optimized based on the cluster
+        The ``--nodes`` and ``--cpus-per-task`` can be optimized based on the cluster for slurm schedulers
 
     #. mixmeth-preproc
 
@@ -242,4 +212,4 @@ Running GOMAP
             
             ./run-GOMAP-SINGLE.sh --step=aggregate --config=test/config.yml
 
-6. Final dataset will be available at ``GOMAP-[basename]/gaf/agg/[basename].aggregate.gaf``. **[basename]** is defined in the config.yml file that was used
+6. Final dataset will be available at ``GOMAP-[basename]/gaf/e.agg/[basename].aggregate.gaf``. **[basename]** is defined in the config.yml file that was used
