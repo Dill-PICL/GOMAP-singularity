@@ -3,7 +3,7 @@
 Running GOMAP
 =============
 
-1. Install (local) or load (HPC) `Singularity <https://www.sylabs.io/guides/2.6/user-guide/index.html>`_ container (version 2.6.x).
+1. Install (local) or load (HPC) `Singularity <https://www.sylabs.io/guides/3.1/user-guide/index.html>`_ container (version 3.1.x).
 
     .. code-block:: bash
         
