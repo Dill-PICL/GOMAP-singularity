@@ -7,11 +7,6 @@ then
     GOMAP_LOC="$PWD"
 fi
 
-if [ -z $GOMAP_IMG_TYPE ]
-then
-    GOMAP_IMG_TYPE="mpich-3.2.1"
-fi
-
 # Declaring variables for different options
 
 export IMG_URL="https://gomap-data.s3.us-east-2.amazonaws.com/GOMAP-1.3.1/imgs/GOMAP.sif"
