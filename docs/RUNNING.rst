@@ -32,7 +32,7 @@ Running GOMAP
 
 
         .. important::
-            Set the GOMAP_IMG_TYPE variable to download GOMAP-singularity for different mpich versions, and this is **essential** for running parallelized steps in your HPC. Default image downloaded will be built for mpich-3.2.1. Please submit a issue request on `GitHub <https://github.com/Dill-PICL/GOMAP-singularity/issues>`_ if you want the image for a different mpi version or you can download the Singularity files and build the image yourself.
+            Default image downloaded will be built for mpich-3.2.1 for parallelization. Please submit a issue request on `GitHub <https://github.com/Dill-PICL/GOMAP-singularity/issues>`_ if you want the image for a different mpi version or you can download the Singularity files and build the image yourself.
 
 4. [optional] Test whether the container and the data files are working as intended.
 
