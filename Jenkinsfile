@@ -13,7 +13,7 @@ pipeline {
                 sh '''
                     singularity --version && \
                     ls -lah && \
-                    azcopy cp https://gomap.blob.core.windows.net/gomap/${IMAGE}/${VERSION}/${IMAGE}.sif > GOMAP.sif && \
+                    azcopy cp https://gomap.blob.core.windows.net/gomap/${IMAGE}/${VERSION}/${IMAGE}.sif > GOMAP.sif
                 '''
             }
         }
