@@ -24,14 +24,14 @@ pipeline {
                     ./test.sh
                 '''
             }
-        }
-        stage('Post') {
-            success {
-                echo 'GOMAP image is successfully tested'
-                sh '''
-                    python3 zenodo_upload.py ${ZENODO_KEY}
-                '''
-            }
+        }        
+    }
+    post { 
+        successful { 
+            echo 'GOMAP image is successful'
+            sh '''
+                python3 zenodo_upload.py ${ZENODO_KEY}
+            '''
         }
     }
 }
