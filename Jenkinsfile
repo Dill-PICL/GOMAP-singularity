@@ -26,8 +26,8 @@ pipeline {
             }
         }
         stage('Post') {
-            steps {
-                echo 'Image Successfully Built'
+            success {
+                echo 'GOMAP image is successfully tested'
                 sh '''
                     python3 zenodo_upload.py ${ZENODO_KEY}
                 '''
