@@ -9,7 +9,6 @@ pipeline {
     
     stages {
         stage('Build') {
-            when { changeset "singularity/*"}
             steps {
                 sh '''
                     singularity --version && \
@@ -19,7 +18,6 @@ pipeline {
             }
         }
         stage('Test') {
-            when { changeset "singularity/*"}
             steps {
                 echo 'Testing..'
                 sh '''
@@ -28,7 +26,6 @@ pipeline {
             }
         }
         stage('Post') {
-            when { changeset "singularity/*"}
             steps {
                 echo 'Image Successfully Built'
                 sh '''
