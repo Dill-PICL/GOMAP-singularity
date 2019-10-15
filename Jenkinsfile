@@ -27,7 +27,7 @@ pipeline {
         }        
     }
     post { 
-        successful { 
+        success { 
             echo 'GOMAP image is successful'
             sh '''
                 python3 zenodo_upload.py ${ZENODO_KEY}
