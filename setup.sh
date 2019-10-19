@@ -9,7 +9,7 @@ fi
 
 # Declaring variables for different options
 
-export IMG_URL="https://gomap.blob.core.windows.net/gomap/GOMAP/1.3.1/GOMAP.sif"
+export IMG_URL="https://zenodo.org/record/2648163/files/GOMAP.sif?download=1"
 export GOMAP_IMG="GOMAP.sif"
 
 if [ ! -f $GOMAP_LOC/$GOMAP_IMG ]
