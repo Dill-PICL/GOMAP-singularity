@@ -13,6 +13,7 @@ pipeline {
                 sh '''
                     singularity --version && \
                     ls -lah && \
+                    mkdir tmp && \
                     azcopy cp https://gomap.blob.core.windows.net/gomap/${IMAGE}/${VERSION}/${IMAGE}.sif > GOMAP.sif
                 '''
             }
@@ -24,7 +25,10 @@ pipeline {
                     ./test.sh
                 '''
             }
-        }        
+        } 
+        stage("Post"){
+            agent 
+        }       
     }
     post { 
         success { 
