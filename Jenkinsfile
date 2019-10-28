@@ -37,7 +37,6 @@ pipeline {
                 . venv/bin/activate
                 pip install -r requirements.txt 
                 make build
-                rsync -ruv  
             '''
         }
     }
