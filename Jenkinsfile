@@ -14,7 +14,7 @@ pipeline {
                     singularity --version && \
                     ls -lah && \
                     mkdir tmp
-                    singularity exec /mnt/${container}/${IMAGE}/${VERSION}/${IMAGE}.sif pwd
+                    singularity exec /mnt/${CONTAINER}/${IMAGE}/${VERSION}/${IMAGE}.sif pwd
                 '''
             }
         }
