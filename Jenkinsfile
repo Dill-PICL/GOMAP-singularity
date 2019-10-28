@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'ubuntu'}
+    agent { label 'master'}
     environment {
         CONTAINER = 'gomap'
         IMAGE = 'GOMAP'
@@ -13,8 +13,8 @@ pipeline {
                 sh '''
                     singularity --version && \
                     ls -lah && \
-                    mkdir tmp && \
-                    azcopy cp https://gomap.blob.core.windows.net/gomap/${IMAGE}/${VERSION}/${IMAGE}.sif > GOMAP.sif
+                    mkdir tmp
+                    singularity exec /mnt/${container}/${IMAGE}/${VERSION}/${IMAGE}.sif pwd
                 '''
             }
         }
@@ -22,19 +22,21 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh '''
-                    ./test.sh
+                    echo ./test.sh
                 '''
             }
         } 
-        stage("Post"){
-            agent 
-        }       
     }
     post { 
         success { 
-            echo 'GOMAP image is successful'
+            echo 'GOMAP image is successfully tested'
             sh '''
-                python3 zenodo_upload.py ${ZENODO_KEY} 
+                #echo python3 zenodo_upload.py ${ZENODO_KEY}
+                cd docs
+                virtualenv -p python3 venv
+                pip install -r requirements.txt 
+                make build
+                rsync -ruv  
             '''
         }
     }

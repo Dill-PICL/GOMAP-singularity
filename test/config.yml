@@ -1,4 +1,4 @@
-#Input section 
+#Input section
 input:
   #input fasta file name
   fasta: test2.fa
@@ -11,7 +11,7 @@ input:
   # Email is mandatory
   email: kokulapalan@gmail.com
   #Number of CPUs used for tools
-  cpus: 16
+  cpus: 1
   #Whether openmpi should be used
   mpi: False
   #what the name of the temporary directory is
@@ -20,4 +20,3 @@ input:
   # These chnunks are too small for annotations when the number of genes exceed 500
   num_seqs: 30
   small_seqs: 30
-
