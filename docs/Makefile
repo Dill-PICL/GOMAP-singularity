@@ -24,4 +24,4 @@ livehtml:
 
 build:
 	@$(SPHINXBUILD) "$(SOURCEDIR)" "$(BUILDDIR)" $(O)
-	rsync -rluv $(BUILDDIR)/ /var/www/gomap.blunderingbioinformatics.org/html/
+	rsync -rluv $(BUILDDIR)/ /var/www/gomap.blunderingbioinformatics.org/html/ 
