@@ -7,6 +7,7 @@ SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = GOMAP-Singularity
 SOURCEDIR     = .
 BUILDDIR      = _build
+RM            = rm -rf
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -22,6 +23,9 @@ help:
 livehtml:
 	sphinx-autobuild $(SPHINXOPTS) . $(BUILDDIR)
 
+clean: 
+	$(rm) /var/www/gomap.blunderingbioinformatics.org/html/*
+
 build:
-	@$(SPHINXBUILD) "$(SOURCEDIR)" "$(BUILDDIR)" $(O)
-	rsync -rluv $(BUILDDIR)/ /var/www/gomap.blunderingbioinformatics.org/html/ 
+	@$(SPHINXBUILD) "$(SOURCEDIR)" "$(BUILDDIR)" $(O)	
+	rsync -rluv $(BUILDDIR)/ /var/www/gomap.blunderingbioinformatics.org/html/
