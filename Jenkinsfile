@@ -34,7 +34,7 @@ pipeline {
                 #echo python3 zenodo_upload.py ${ZENODO_KEY}
                 cd docs
                 virtualenv -p python3 venv
-                ./venv/bin/activate
+                venv/bin/activate
                 pip install -r requirements.txt 
                 make build
                 rsync -ruv  
