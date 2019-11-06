@@ -31,7 +31,7 @@ pipeline {
         success { 
             echo 'GOMAP image is successfully tested'
             sh '''
-                imkdir -p /iplant/home/shared/dillpicl/gomap/${CONTAINER}/${IMAGE}/${VERSION}/ && \
+                imkdir -p /iplant/home/shared/dillpicl/${CONTAINER}/${IMAGE}/${VERSION}/ && \
                 ichmod -r read anonymous /iplant/home/shared/dillpicl/${CONTAINER} && \
                 irsync -v /mnt/${CONTAINER}/${IMAGE}/${VERSION}/${IMAGE}.sif i:/iplant/home/shared/dillpicl/${CONTAINER}/${IMAGE}/${VERSION}/${IMAGE}.sif && \
                 ichmod -r read anonymous /iplant/home/shared/dillpicl/${CONTAINER}
