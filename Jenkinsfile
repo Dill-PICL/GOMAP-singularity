@@ -33,8 +33,9 @@ pipeline {
             sh '''
                 imkdir -p /iplant/home/shared/dillpicl/${CONTAINER}/${IMAGE}/${VERSION}/ && \
                 ichmod -r read anonymous /iplant/home/shared/dillpicl/${CONTAINER} && \
-                irsync -v /mnt/${CONTAINER}/${IMAGE}/${VERSION}/${IMAGE}.sif i:/iplant/home/shared/dillpicl/${CONTAINER}/${IMAGE}/${VERSION}/${IMAGE}.sif && \
-                ichmod -r read anonymous /iplant/home/shared/dillpicl/${CONTAINER}/${IMAGE}/${VERSION}/${IMAGE}.sif
+                icd /iplant/home/shared/dillpicl/${CONTAINER}/${IMAGE}/${VERSION}/ && \
+                iput -PK  /mnt/${CONTAINER}/${IMAGE}/${VERSION}/${IMAGE}.sif && \
+                ichmod -r read anonymous ${IMAGE}.sif
                 cd docs
                 virtualenv -p python3 venv
                 . venv/bin/activate
