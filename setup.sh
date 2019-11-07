@@ -9,6 +9,7 @@ fi
 
 # Declaring variables for different options
 
+export ICOMMANDS_IMG="icommands.sif"
 export IMG_URL="https://zenodo.org/record/2648163/files/GOMAP.sif?download=1"
 export GOMAP_IMG="GOMAP.sif"
 

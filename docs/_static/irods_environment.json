@@ -1,0 +1,6 @@
+{
+    "irods_user_name": "anonymous",
+    "irods_port": 1247,
+    "irods_host": "data.iplantcollaborative.org",
+    "irods_zone_name": "iplant"
+}
