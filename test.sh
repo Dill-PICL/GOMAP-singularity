@@ -34,5 +34,6 @@ else
 	singularity run -c $img_loc --step=mixmeth-blast --config=test/config.yml && \
 	singularity run -c $img_loc --step=mixmeth-preproc --config=test/config.yml && \
 	singularity run -c $img_loc --step=mixmeth --config=test/config.yml && \
+	sleep 300 && \
 	singularity run -c $img_loc --step=aggregate --config=test/config.yml
 fi

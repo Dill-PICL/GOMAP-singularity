@@ -3,7 +3,7 @@ pipeline {
     environment {
         CONTAINER = 'gomap'
         IMAGE = 'GOMAP'
-        VERSION = '1.3.1'
+        VERSION = '1.3.2'
         ZENODO_KEY = credentials('zenodo')
     }
     

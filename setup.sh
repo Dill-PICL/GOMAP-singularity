@@ -10,12 +10,15 @@ fi
 # Declaring variables for different options
 
 export ICOMMANDS_IMG="icommands.sif"
-export IMG_URL="https://zenodo.org/record/2648163/files/GOMAP.sif?download=1"
+#export IMG_URL="https://zenodo.org/record/2648163/files/GOMAP.sif?download=1"
 export GOMAP_IMG="GOMAP.sif"
+export GOMAP_URL="/iplant/home/shared/dillpicl/gomap/GOMAP/1.3.2/$GOMAP_IMG"
 
 if [ ! -f $GOMAP_LOC/$GOMAP_IMG ]
 then
-    wget $IMG_URL -O $GOMAP_LOC/$GOMAP_IMG
+    singularity pull $ICOMMANDS_IMG shub://wkpalan/icommands-cyverse:latest && \
+    singularity run irsync -vP $GOMAP_URL $GOMAP_LOC/$GOMAP_IMG && \
+    rm $ICOMMANDS_IMG
 else
     echo "The $GOMAP_LOC/$GOMAP_IMG exists" > /dev/stderr
     echo "Delete the image if you want to download it" /dev/stderr
