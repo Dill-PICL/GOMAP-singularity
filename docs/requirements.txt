@@ -1,2 +1,5 @@
+sphinx-autobuild==0.7.0
 sphinxcontrib-bibtex==0.4.2
 sphinxcontrib-websupport==1.1.0
+sphinx_rtd_theme
+sphinxcontrib-versioning

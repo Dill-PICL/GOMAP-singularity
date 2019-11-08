@@ -8,4 +8,4 @@
 
 ## How do I use GOMAP-Singularity?
 
-Please check [readthedocs.io](https://gomap-singularity.readthedocs.io/en/latest/) for detailed documentation on how to use the container
+Please check [gomap.blunderingbioinformatics.org](http://gomap.blunderingbioinformatics.org/) for detailed documentation on how to use the container
