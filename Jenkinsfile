@@ -14,7 +14,6 @@ pipeline {
                     singularity --version && \
                     ls -lah && \
                     mkdir tmp
-                    singularity exec /mnt/${CONTAINER}/${IMAGE}/${VERSION}/${IMAGE}.sif pwd
                 '''
             }
         }
@@ -22,7 +21,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh '''
-                    echo ./test.sh
+                    singularity run /mnt/${CONTAINER}/${IMAGE}/${VERSION}/${IMAGE}.sif --help
                 '''
             }
         } 
@@ -40,7 +39,7 @@ pipeline {
                 virtualenv -p python3 venv
                 . venv/bin/activate
                 pip install -r requirements.txt 
-                make clean
+                make clean 
                 make build
             '''
         }
