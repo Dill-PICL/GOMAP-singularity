@@ -15,8 +15,8 @@ export GOMAP_URL="/iplant/home/shared/dillpicl/gomap/GOMAP/1.3.2/$GOMAP_IMG"
 
 if [ ! -f $GOMAP_LOC/$GOMAP_IMG ]
 then
-    singularity pull $ICOMMANDS_IMG shub://wkpalan/icommands-cyverse:latest && \
-    singularity run irsync -vP $GOMAP_URL $GOMAP_LOC/$GOMAP_IMG && \
+    singularity pull -F $ICOMMANDS_IMG shub://wkpalan/icommands-cyverse:latest && \
+    singularity run $ICOMMANDS_IMG irsync -v i:$GOMAP_URL $GOMAP_LOC/$GOMAP_IMG && \
     rm $ICOMMANDS_IMG
 else
     echo "The $GOMAP_LOC/$GOMAP_IMG exists" > /dev/stderr
