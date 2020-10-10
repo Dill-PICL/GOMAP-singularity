@@ -25,6 +25,7 @@ pipeline {
         success { 
             echo 'Documentation is successfully build'
             sh '''
+                cd docs
                 pwd
                 ls
                 make syncDocs
