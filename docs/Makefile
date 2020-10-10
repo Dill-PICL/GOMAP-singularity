@@ -23,11 +23,12 @@ help:
 livehtml:
 	sphinx-autobuild $(SPHINXOPTS) -H 0.0.0.0 . $(BUILDDIR)
 
-clean: 
+clean:
 	$(RM) /var/www/bioinformapping.com/html/gomap/*
 
 build:
 	@$(SPHINXBUILD) "$(SOURCEDIR)" "$(BUILDDIR)" $(O)	
 
-sync:
-	rsync -rluv $(BUILDDIR)/ /var/www/bioinformapping.com/html/gomap/
+syncDocs:
+	rsync -rluv $(BUILDDIR) /var/www/bioinformapping.com/html/gomap/
+
