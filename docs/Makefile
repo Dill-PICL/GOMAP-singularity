@@ -30,4 +30,4 @@ build:
 	@$(SPHINXBUILD) "$(SOURCEDIR)" "$(BUILDDIR)" $(O)	
 
 syncDocs:
-	rsync -rluv $(BUILDDIR) /var/www/bioinformapping.com/html/gomap/
+	rsync -rluv $(BUILDDIR)/ /var/www/bioinformapping.com/html/gomap/
