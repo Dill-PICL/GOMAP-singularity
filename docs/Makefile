@@ -24,8 +24,10 @@ livehtml:
 	sphinx-autobuild $(SPHINXOPTS) -H 0.0.0.0 . $(BUILDDIR)
 
 clean: 
-	$(RM) /var/www/gomap.blunderingbioinformatics.org/html/*
+	$(RM) /var/www/bioinformapping.com/html/gomap/*
 
 build:
 	@$(SPHINXBUILD) "$(SOURCEDIR)" "$(BUILDDIR)" $(O)	
-	rsync -rluv $(BUILDDIR)/ /var/www/gomap.blunderingbioinformatics.org/html/
+
+sync:
+	rsync -rluv $(BUILDDIR)/ /var/www/bioinformapping.com/html/gomap/

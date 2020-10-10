@@ -11,38 +11,23 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                    singularity --version && \
-                    ls -lah && \
-                    mkdir tmp
-                    singularity exec /mnt/${CONTAINER}/${IMAGE}/${VERSION}/${IMAGE}.sif pwd
+                    cd docs
+                    virtualenv -p python3 venv
+                    . venv/bin/activate
+                    pip install -r requirements.txt 
+                    make clean
+                    make build
                 '''
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-                sh '''
-                    echo ./test.sh
-                '''
-            }
-        } 
     }
     post { 
         success { 
-            echo 'GOMAP image is successfully tested'
+            echo 'Documentation is successfully build'
             sh '''
-                imkdir -p /iplant/home/shared/dillpicl/${CONTAINER}/${IMAGE}/${VERSION}/ && \
-                ichmod -r read anonymous /iplant/home/shared/dillpicl/${CONTAINER} && \
-                icd /iplant/home/shared/dillpicl/${CONTAINER}/${IMAGE}/${VERSION}/ && \
-                irsync -sVN1 /mnt/${CONTAINER}/${IMAGE}/${VERSION}/${IMAGE}.sif i:${IMAGE}.sif && \
-                ichmod read anonymous ${IMAGE}.sif
-                cd docs
-                virtualenv -p python3 venv
-                . venv/bin/activate
-                pip install -r requirements.txt 
-                make clean
-                make build
+                make sync
             '''
+            echo 'Documentation is successfully synced'
         }
     }
 }
