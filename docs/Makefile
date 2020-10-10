@@ -31,3 +31,5 @@ build:
 
 syncDocs:
 	rsync -rluv $(BUILDDIR)/ /var/www/bioinformapping.com/html/gomap/
+
+
