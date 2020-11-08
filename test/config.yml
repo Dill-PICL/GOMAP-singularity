@@ -19,4 +19,4 @@ input:
   # These are for testing purposes only. Remove them for running on a genome dataset
   # These chnunks are too small for annotations when the number of genes exceed 500
   num_seqs: 30
-  small_seqs: 30
+  small_seqs: 10

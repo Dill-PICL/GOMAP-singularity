@@ -24,7 +24,7 @@ then
     tmpdir=${TMPDIR:-$PWD/tmp}
 fi
 
-#SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
+SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
 
 if [ ! -z "$setup" ]
 then
@@ -32,7 +32,7 @@ then
     echo "Please run the step using $GOMAP_LOC/setup.sh for the setup step" > /dev/stderr
     exit 1
 else
-    export SINGULARITY_BINDPATH="$PWD:/workdir,$tmpdir:/tmpdir"   
+    export SINGULARITY_BINDPATH="$PWD:/workdir,$tmpdir:/tmpdir,$SINGULARITY_BINDPATH"   
     echo "$SINGULARITY_BINDPATH"
     echo "Running GOMAP $@"
     singularity run -c \

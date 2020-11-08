@@ -17,7 +17,7 @@ then
     tmpdir=${TMPDIR:-$PWD/tmp}
 fi
 
-export SINGULARITY_BINDPATH="$PWD:/workdir,$tmpdir:/tmpdir"
+export SINGULARITY_BINDPATH="$PWD:/workdir,$PWD/tmp:/tmpdir,$PWD/GOMAP:/opt/GOMAP"
 
 echo "$@"
 
@@ -34,6 +34,6 @@ else
 	singularity run -c $img_loc --step=mixmeth-blast --config=test/config.yml && \
 	singularity run -c $img_loc --step=mixmeth-preproc --config=test/config.yml && \
 	singularity run -c $img_loc --step=mixmeth --config=test/config.yml && \
-	sleep 300 && \
+	sleep 30 && \
 	singularity run -c $img_loc --step=aggregate --config=test/config.yml
 fi

@@ -4,3 +4,12 @@
 !.gitignore
 !config.yml
 !0.3_GOMAP-input.fa
+!GOMAP-0.3_GOMAP-input/tmp/mixed-meth/preprocess/blast/temp/0.3_GOMAP-input.2.xml
+!GOMAP-0.3_GOMAP-input/tmp/mixed-meth/preprocess/blast/temp/0.3_GOMAP-input.3.xml
+!GOMAP-0.3_GOMAP-input/tmp/mixed-meth/preprocess/blast/temp/0.3_GOMAP-input.4.xml
+!GOMAP-0.3_GOMAP-input/tmp/mixed-meth/preprocess/blast/temp/0.3_GOMAP-input.5.xml
+!GOMAP-0.3_GOMAP-input/tmp/mixed-meth/preprocess/blast/temp/0.3_GOMAP-input.6.xml
+
+!GOMAP-0.3_GOMAP-input/tmp/domain/iprs/split/0.3_GOMAP-input.2.gff3
+!GOMAP-0.3_GOMAP-input/tmp/domain/iprs/split/0.3_GOMAP-input.2.tsv
+!GOMAP-0.3_GOMAP-input/tmp/domain/iprs/split/0.3_GOMAP-input.2.xml
