@@ -9,6 +9,10 @@ fi
 
 # Declaring variables for different options
 
+export IRODS_HOST="data.cyverse.org"
+export IRODS_PORT="1247"
+export IRODS_USER_NAME="anonymous"
+export IRODS_ZONE_NAME="iplant"
 export ICOMMANDS_IMG="icommands.sif"
 export GOMAP_IMG="GOMAP.sif"
 export GOMAP_URL="/iplant/home/shared/dillpicl/gomap/GOMAP/1.3.2/$GOMAP_IMG"
