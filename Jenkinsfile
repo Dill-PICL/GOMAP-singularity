@@ -25,7 +25,7 @@ pipeline {
                     . venv/bin/activate
                     pip install -r requirements.txt 
                     make clean
-                    make build version=${VERSION} -D release=${VERSION}
+                    make build version=${VERSION} release=${VERSION}
                 '''
             }
         }
