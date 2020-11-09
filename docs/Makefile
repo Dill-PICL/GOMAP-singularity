@@ -21,13 +21,13 @@ help:
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 livehtml:
-	sphinx-autobuild $(SPHINXOPTS) -H 0.0.0.0 . $(BUILDDIR)
+	sphinx-autobuild $(SPHINXOPTS) --host 0.0.0.0 . $(BUILDDIR) -D version=$(version) -D release=$(release)
 
 clean:
 	$(RM) /var/www/bioinformapping.com/html/gomap/*
 
 build:
-	@$(SPHINXBUILD) "$(SOURCEDIR)" "$(BUILDDIR)" $(O)	
+	@$(SPHINXBUILD) "$(SOURCEDIR)" "$(BUILDDIR)" $(O) -D version=$(version) -D release=$(release)
 
 syncDocs:
 	rsync -rluv $(BUILDDIR)/ /var/www/bioinformapping.com/html/gomap/
