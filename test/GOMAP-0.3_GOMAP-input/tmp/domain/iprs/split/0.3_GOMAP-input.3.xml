@@ -1,0 +1,2466 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<protein-matches xmlns="http://www.ebi.ac.uk/interpro/resources/schemas/interproscan5">
+    <protein>
+        <sequence md5="4a6b2e31c03e79d5f44dac4f408064d4">MDAVAFPPPPAPFLDDDLDFGDFTFASAPQPQPQPPTAAFDDDWGDFVASGLGSDAGASAPTDAPAAAPSSSPWEKPRGPLPLSLFGADADDDGQEEEEGPAGPPPMDTAPQCAPSVPSNGSRPADLKDLIAGLYGYQPPHTADAVPQVKAEEDDQGFGDDDWEFTAATGQPAADQDGGGPGHADGFGKIEDISKSLSTDQEDWSSFTSADGKLNHVRLTTDGLGNHESTGEFVRASTYSPANSSAILNLYKGSKRVDDVVIAQGSAESVQSSSDLFSNNEMNSSLETDDNHSSRSTSDCILIEFYQRLREESLTAISRHVKDLRGAQKGSTISDENNKATAMGGDIQEIYDKLKDSSLPEGFFTEEQPWKDIYITELLNCIKEEHLKDFEQEYCLAEKIEGATEDTDIAVELYKLSISTLDLLKLASKEEQGDYVGAWYSMLLSCAQELKHGVALWQEFYHANVCDRVVSEGGHYFIALGEIYRVAQILYLSLQRFKPWVLADPGMLSKMLSCLDSCTYAWTSGLETALKMVIDSSHIDSSLAKALMESIKNITKLEVPNLQKNIPNNEMQCRLTLLPSSLLPGLNLVIWNGGHYFVKVANLWANRISPDPPLLPSNPTSSMNNAATHSQSC</sequence>
+        <xref id="Zm00001d044696"/>
+        <matches>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="271" end="295"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="1" end="165"/>
+                </locations>
+            </mobidblite-match>
+            <panther-match evalue="5.1E-188" familyName="SUBFAMILY NOT NAMED" score="629.6">
+                <signature ac="PTHR35701:SF2" name="SUBFAMILY NOT NAMED">
+                    <models>
+                        <model ac="PTHR35701:SF2" name="SUBFAMILY NOT NAMED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="205" end="618"/>
+                </locations>
+            </panther-match>
+            <panther-match evalue="5.1E-188" familyName="FAMILY NOT NAMED" score="629.6">
+                <signature ac="PTHR35701" name="FAMILY NOT NAMED">
+                    <models>
+                        <model ac="PTHR35701" name="FAMILY NOT NAMED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="205" end="618"/>
+                </locations>
+            </panther-match>
+        </matches>
+    </protein>
+    <protein>
+        <sequence md5="9dcf085a40cbbf8a30c2bbfafb5d4392">MQRRRGHTWAGVGKTAQAAAAHAALFCFTLLLALRVDGRTAYSWWIIFSPLWLFHGIVARGRFSMPAPSLPHGRHWAPCHSIVAAPLLIAFELLLCIYLESIRVRNHPSVDLKIVFLPLLAFEAIILIDNFRMCRALMPGDEESMSDEAIWETLPHFWVSISMVFLIAATTFTLLKLSGDVGALGWWDLFINYGIAECFAFLVCTRWFNPMIHKSPTHGEASSSSAIRYRDWESGLVLPSLEDHEQERLCGLPDIGGHVMKIPLVAFQVLLCMRLEGTPPSARNIPIFALFSPLFILQGAGAFFSLARLVEKVVLLLRNGPVSPNYLTVSSKVRDCFAFLHHGSRLLGWWSIDEGSKEEQARLFYTESTGYNTFCGYPPEVVRKMPKKDLAEEVWRLQAALGEQSEITKCTKQEYERLQNEKVLCRVCYEGEICMVLLPCRHRTLCKSCAEKCKKCPICRVPIEERMPVYDV</sequence>
+        <xref id="Zm00001d013466"/>
+        <matches>
+            <hmmer2-match evalue="0.0055" score="25.9">
+                <signature ac="SM00184" name="ring_2">
+                    <entry ac="IPR001841" desc="Zinc finger, RING-type" name="Znf_RING" type="DOMAIN"/>
+                    <models>
+                        <model ac="SM00184" name="ring_2"/>
+                    </models>
+                    <signature-library-release library="SMART" version="7.1"/>
+                </signature>
+                <locations>
+                    <hmmer2-location score="25.9" evalue="0.0055" hmm-start="1" hmm-end="23" hmm-length="0" start="425" end="459"/>
+                </locations>
+            </hmmer2-match>
+            <hmmer3-match evalue="7.1E-16" score="58.3">
+                <signature ac="G3DSA:1.10.1170.10">
+                    <models>
+                        <model ac="2qfaA00"/>
+                        <model ac="3t6pA01"/>
+                        <model ac="1se0A00"/>
+                        <model ac="1jd5A00"/>
+                        <model ac="1i3oF00"/>
+                        <model ac="3m1dA00"/>
+                        <model ac="4hy4B00"/>
+                        <model ac="2vm5A00"/>
+                        <model ac="1g73D00"/>
+                        <model ac="2vslA00"/>
+                        <model ac="2poiA00"/>
+                    </models>
+                    <signature-library-release library="GENE3D" version="4.1.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="472" env-start="335" score="57.7" evalue="1.0E-15" hmm-start="39" hmm-end="137" hmm-length="0" start="335" end="472"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="3.3E-93" score="311.9">
+                <signature ac="PF10269" desc="Transmembrane Fragile-X-F protein" name="Tmemb_185A">
+                    <entry ac="IPR019396" desc="Transmembrane Fragile-X-F-associated protein" name="TM_Fragile-X-F-assoc" type="FAMILY"/>
+                    <models>
+                        <model ac="PF10269" desc="Transmembrane Fragile-X-F protein" name="Tmemb_185A"/>
+                    </models>
+                    <signature-library-release library="PFAM" version="31.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="297" env-start="34" score="311.3" evalue="4.9E-93" hmm-start="1" hmm-end="247" hmm-length="0" start="34" end="297"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="1.6E-11" score="43.8">
+                <signature ac="PF13920" desc="Zinc finger, C3HC4 type (RING finger)" name="zf-C3HC4_3">
+                    <models>
+                        <model ac="PF13920" desc="Zinc finger, C3HC4 type (RING finger)" name="zf-C3HC4_3"/>
+                    </models>
+                    <signature-library-release library="PFAM" version="31.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="466" env-start="421" score="42.8" evalue="3.3E-11" hmm-start="2" hmm-end="49" hmm-length="0" start="422" end="465"/>
+                </locations>
+            </hmmer3-match>
+            <panther-match evalue="2.9E-272" familyName="TRANSMEMBRANE FRAGILE-X-F-ASSOCIATED PROTEIN" score="905.7">
+                <signature ac="PTHR10044:SF153" name="TRANSMEMBRANE FRAGILE-X-F-ASSOCIATED PROTEIN">
+                    <models>
+                        <model ac="PTHR10044:SF153" name="TRANSMEMBRANE FRAGILE-X-F-ASSOCIATED PROTEIN"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="8" end="471"/>
+                </locations>
+            </panther-match>
+            <panther-match evalue="2.9E-272" familyName="INHIBITOR OF APOPTOSIS" score="905.7">
+                <signature ac="PTHR10044" name="INHIBITOR OF APOPTOSIS">
+                    <models>
+                        <model ac="PTHR10044" name="INHIBITOR OF APOPTOSIS"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="8" end="471"/>
+                </locations>
+            </panther-match>
+            <profilescan-match>
+                <signature ac="PS50089" desc="Zinc finger RING-type profile." name="ZF_RING_2">
+                    <entry ac="IPR001841" desc="Zinc finger, RING-type" name="Znf_RING" type="DOMAIN"/>
+                    <models>
+                        <model ac="PS50089" desc="Zinc finger RING-type profile." name="ZF_RING_2"/>
+                    </models>
+                    <signature-library-release library="PROSITE_PROFILES" version="20.132"/>
+                </signature>
+                <locations>
+                    <profilescan-location score="10.866" start="425" end="460">
+                        <alignment>CRVCYEGEICM--VLLPCRHRtLCKSCAEKC------KKCPICR</alignment>
+                    </profilescan-location>
+                </locations>
+            </profilescan-match>
+            <superfamilyhmmer3-match evalue="1.77E-6">
+                <signature ac="SSF57850" name="RING/U-box">
+                    <models>
+                        <model ac="0053763" name="RING/U-box"/>
+                        <model ac="0049212" name="RING/U-box"/>
+                        <model ac="0050087" name="RING/U-box"/>
+                        <model ac="0046745" name="RING/U-box"/>
+                        <model ac="0035646" name="RING/U-box"/>
+                        <model ac="0047962" name="RING/U-box"/>
+                        <model ac="0050318" name="RING/U-box"/>
+                        <model ac="0047624" name="RING/U-box"/>
+                        <model ac="0050592" name="RING/U-box"/>
+                        <model ac="0050433" name="RING/U-box"/>
+                        <model ac="0052291" name="RING/U-box"/>
+                        <model ac="0053909" name="RING/U-box"/>
+                        <model ac="0053820" name="RING/U-box"/>
+                        <model ac="0047625" name="RING/U-box"/>
+                        <model ac="0047475" name="RING/U-box"/>
+                        <model ac="0046458" name="RING/U-box"/>
+                        <model ac="0054689" name="RING/U-box"/>
+                        <model ac="0053608" name="RING/U-box"/>
+                        <model ac="0041252" name="RING/U-box"/>
+                        <model ac="0054129" name="RING/U-box"/>
+                        <model ac="0052268" name="RING/U-box"/>
+                        <model ac="0050527" name="RING/U-box"/>
+                        <model ac="0043836" name="RING/U-box"/>
+                        <model ac="0050469" name="RING/U-box"/>
+                        <model ac="0053934" name="RING/U-box"/>
+                        <model ac="0046140" name="RING/U-box"/>
+                        <model ac="0037895" name="RING/U-box"/>
+                    </models>
+                    <signature-library-release library="SUPERFAMILY" version="1.75"/>
+                </signature>
+                <locations>
+                    <superfamilyhmmer3-location start="416" end="468"/>
+                </locations>
+            </superfamilyhmmer3-match>
+        </matches>
+    </protein>
+    <protein>
+        <sequence md5="97ee117cff35c084251e78faa934a313">MSLVVKLRYILKLLSAASWVVILPVTYAYTWKNPTGLARAIKSWLGDGQNQPSLYILAVVIYLAPNLLSATLFLFPVIRRALERSNLKVVTFIMWWSQVVLINLKLIQPRLFVGRGMHEGAFSLFKYTMFWVLLLATKLVVSFYVEIKPLVQPTKDIMKEPIRTFKWHEFFPHANNNIGVVIALWAPIILVYFMDTQIWYAIFSTLIGGVYGACRRLGETSEDTREQEKIAARFAQIWNLIITSFREEDLIDDREKDLLLVPYCKDRDMDIIQWPPFLLASKIPIALDMAADSGGKDRDLKKRMKSDPYFTYAIKECYASFKNIIYELVIDSRERGYIQKIFDAVDEHIAEETLIKELNMSNLPTLSKKFIELLDLLIKRLRLLLTVKESAMDVPTNLDARRRISFFANSLFMSMPDAPKVRQMLPFSVLTPYYKEDVLFSSQALAEQNEDGVSILFYLQKIYPDEWKNFLERVHCESEDQLHETEHSEEQLRLWASYRGQTLTRTVRGMMYYRQALVLQASLDMARDDDLMEGFRAADLLSESDESPLLTQCKAIADMKFTYVVSCQQYGIQKRSGDPHAQDILRLMTT</sequence>
+        <xref id="Zm00001d018562"/>
+        <matches>
+            <hmmer3-match evalue="1.6E-53" score="182.0">
+                <signature ac="PF02364" desc="1,3-beta-glucan synthase component" name="Glucan_synthase">
+                    <entry ac="IPR003440" desc="Glycosyl transferase, family 48" name="Glyco_trans_48" type="FAMILY">
+                        <go-xref category="CELLULAR_COMPONENT" db="GO" id="GO:0016020" name="membrane"/>
+                        <go-xref category="CELLULAR_COMPONENT" db="GO" id="GO:0000148" name="1,3-beta-D-glucan synthase complex"/>
+                        <go-xref category="BIOLOGICAL_PROCESS" db="GO" id="GO:0006075" name="(1-&gt;3)-beta-D-glucan biosynthetic process"/>
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0003843" name="1,3-beta-D-glucan synthase activity"/>
+                        <pathway-xref db="MetaCyc" id="PWY-6773" name="1,3-beta-D-glucan biosynthesis"/>
+                        <pathway-xref db="KEGG" id="00500+2.4.1.34" name="Starch and sucrose metabolism"/>
+                    </entry>
+                    <models>
+                        <model ac="PF02364" desc="1,3-beta-glucan synthase component" name="Glucan_synthase"/>
+                    </models>
+                    <signature-library-release library="PFAM" version="31.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="590" env-start="393" score="172.7" evalue="1.0E-50" hmm-start="2" hmm-end="216" hmm-length="0" start="394" end="587"/>
+                </locations>
+            </hmmer3-match>
+            <panther-match evalue="0.0" familyName="LYST-INTERACTING PROTEIN LIP5  DOPAMINE RESPONSIVE PROTEIN DRG-1" score="1192.7">
+                <signature ac="PTHR12741" name="LYST-INTERACTING PROTEIN LIP5  DOPAMINE RESPONSIVE PROTEIN DRG-1">
+                    <models>
+                        <model ac="PTHR12741" name="LYST-INTERACTING PROTEIN LIP5  DOPAMINE RESPONSIVE PROTEIN DRG-1"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="378" end="590"/>
+                </locations>
+            </panther-match>
+            <panther-match evalue="0.0" familyName="SUBFAMILY NOT NAMED" score="1192.7">
+                <signature ac="PTHR12741:SF30" name="SUBFAMILY NOT NAMED">
+                    <models>
+                        <model ac="PTHR12741:SF30" name="SUBFAMILY NOT NAMED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="378" end="590"/>
+                </locations>
+            </panther-match>
+        </matches>
+    </protein>
+    <protein>
+        <sequence md5="092f98599c301c7b2f331d3bd92716ff">MGRCGGGSGAGAGGGALGGCALLTAALVISTLVIQGAGGSKQSHAPAVARKVLLSITNWHPHNYLDDVLHPSQVQDQRLERLGQDAPSFHTGNELPNPHLRQVPAALPSLPVQPYAPHPKISADNPTAAPSFQKIPWCKYYTVSLTSPPLPAIGRRMQSPAASPETAVHPAKHGKDHGTPVSAPSNVSHHHAMPANNTHGKTHGTPVLAPEKRRHHHLPANNSYVKGPAVSPSKSPIIHRKGHGVPVAAPPKEHWSYLPPANRRHHKGSRPAPRKSNNTSAPSHVYPGSPAPAPERLPPSKGKGQGNSAHAPRHPNHYHSPSYSPGSALPPAHPPDAPAFRKPKALAPAPSQSLLPPPTNSYCTAPCSDPLTNSPPGMTCLCVLPIKVELRFGIALYTFFTLVPELAQDIASGVFMNQSQVRVMGANAAPDDPEKTIVFIDLVPLGPKFDNATAFLVFERFCNKQVIINPMDFGKYDVLYVLYQGLPPSPPAASMNNGLSNVNDPSLHPLAADVVNHKERKGRGIIIIIILSSAFAFILCAGAALVVYFKLRNRSHLTEASPVPTKPAGPGSAMLGNRLESRPISASPSFSSSLVAYKGTAKTFNLVEMERATLGFDESRIIGEGGFGRVYEGILEDGERVAIKVLKRDDQQGTREFLAEVEMLSRLHHRNLVKLIGICTEGHSRCLVYELVPNGSVESHLHDKGAARFDWDARLKIALGAARGLAYLHEDSSPRVIHRDFKSSNILLEHDFTPKVSDFGLARTALGEGNEHISTRVMGTFGYVAPEYAMTGHLLVKSDVYSYGVVLLELLTGMKPVDMLRPPGQENLVAWAGSLLTSRDGLESIVDPSLGSSIPFDSIARVAAIASMCVQPEVDQRPFMGEVVQALKLVCDEGSEFNGSTSFSQDLRIQDVEAMSRASGDVDFVDPTLSAELFTSSARYDAMDASGSFRRYSSSGPLRVGRAGLDKERGLSTGSSSEHVGLQRFRIDSE</sequence>
+        <xref id="Zm00001d011700"/>
+        <matches>
+            <hmmer3-match evalue="4.8E-46" score="156.7">
+                <signature ac="G3DSA:1.10.510.10">
+                    <models>
+                        <model ac="4pdpB02"/>
+                        <model ac="2qocA02"/>
+                        <model ac="3fhrA02"/>
+                        <model ac="1zy4A02"/>
+                        <model ac="4i5pA02"/>
+                        <model ac="4btfA02"/>
+                        <model ac="3uqcD02"/>
+                        <model ac="4au8B02"/>
+                        <model ac="3vvhC02"/>
+                        <model ac="3pg1A02"/>
+                        <model ac="4oacA02"/>
+                        <model ac="4e26A02"/>
+                        <model ac="4azsA03"/>
+                        <model ac="4ek4A02"/>
+                        <model ac="4c2vA02"/>
+                        <model ac="3warA01"/>
+                        <model ac="3gniB02"/>
+                        <model ac="4js8A02"/>
+                        <model ac="4fr4A02"/>
+                        <model ac="4i92A02"/>
+                        <model ac="3a7iA02"/>
+                        <model ac="3n9xA02"/>
+                        <model ac="2pziA01"/>
+                        <model ac="4ix3A02"/>
+                        <model ac="4hzrA02"/>
+                        <model ac="1kobA02"/>
+                        <model ac="3vo3A02"/>
+                        <model ac="3alnC02"/>
+                        <model ac="2jamB02"/>
+                        <model ac="3blhA02"/>
+                        <model ac="4aw2A02"/>
+                        <model ac="4jrnA01"/>
+                        <model ac="1x8bA02"/>
+                        <model ac="4bf2A02"/>
+                        <model ac="4fvqA02"/>
+                        <model ac="2eu9A02"/>
+                        <model ac="3zclA02"/>
+                        <model ac="1s9iA02"/>
+                        <model ac="2yexA02"/>
+                        <model ac="2wtkC02"/>
+                        <model ac="3kk8A02"/>
+                        <model ac="3f7wA02"/>
+                        <model ac="4g3fA02"/>
+                        <model ac="2h34A02"/>
+                        <model ac="3p1aA02"/>
+                        <model ac="4rfzA02"/>
+                        <model ac="2rioA02"/>
+                        <model ac="2pmlX02"/>
+                        <model ac="3rgfA02"/>
+                        <model ac="3ugcA02"/>
+                        <model ac="2evaA02"/>
+                        <model ac="4aaaA02"/>
+                        <model ac="3s95A02"/>
+                        <model ac="1wakA02"/>
+                        <model ac="4ct2A02"/>
+                        <model ac="4iirA02"/>
+                        <model ac="3eqcA02"/>
+                        <model ac="3fpqB02"/>
+                        <model ac="3hkoA02"/>
+                        <model ac="4qtaA02"/>
+                        <model ac="3orkA02"/>
+                        <model ac="2a2aA02"/>
+                        <model ac="3fe3A02"/>
+                        <model ac="4m68A02"/>
+                        <model ac="4euuA02"/>
+                        <model ac="2zv2A02"/>
+                        <model ac="2hw6A02"/>
+                        <model ac="3kfaA02"/>
+                        <model ac="3a99A02"/>
+                        <model ac="4hzsA02"/>
+                        <model ac="4b4lA02"/>
+                        <model ac="4mf0B00"/>
+                        <model ac="1zarA03"/>
+                        <model ac="3slsB02"/>
+                        <model ac="4qtcA02"/>
+                        <model ac="1rdqE01"/>
+                        <model ac="4nfnA02"/>
+                        <model ac="1tkiA02"/>
+                        <model ac="3p86A02"/>
+                        <model ac="2qkwB02"/>
+                        <model ac="4g31A02"/>
+                        <model ac="2izrA02"/>
+                        <model ac="4lv5A01"/>
+                        <model ac="2w5aA02"/>
+                        <model ac="3i1aA02"/>
+                        <model ac="1zylA02"/>
+                        <model ac="3fmeA02"/>
+                        <model ac="3repA02"/>
+                        <model ac="4pf4A02"/>
+                        <model ac="3kn6A02"/>
+                        <model ac="3byvA01"/>
+                        <model ac="2weiA02"/>
+                        <model ac="3kvwA03"/>
+                        <model ac="4c59A02"/>
+                        <model ac="2y4iB02"/>
+                        <model ac="2xrwA02"/>
+                        <model ac="1q3dA02"/>
+                        <model ac="2bujA02"/>
+                        <model ac="3qa8A02"/>
+                        <model ac="4im0A02"/>
+                        <model ac="2v62A02"/>
+                        <model ac="3en9A04"/>
+                        <model ac="3hmmA02"/>
+                        <model ac="4f9cA02"/>
+                        <model ac="4gv1A02"/>
+                        <model ac="3c4zA03"/>
+                        <model ac="4f0fA02"/>
+                        <model ac="2nruA02"/>
+                        <model ac="4itjB02"/>
+                        <model ac="4o38B02"/>
+                        <model ac="3c0iA02"/>
+                        <model ac="2ac3A02"/>
+                    </models>
+                    <signature-library-release library="GENE3D" version="4.1.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="884" env-start="679" score="156.2" evalue="6.9E-46" hmm-start="3" hmm-end="148" hmm-length="0" start="679" end="884"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="1.2E-24" score="86.2">
+                <signature ac="G3DSA:3.30.200.20">
+                    <models>
+                        <model ac="4l3jA01"/>
+                        <model ac="3fi8A01"/>
+                        <model ac="3dlsB01"/>
+                        <model ac="3bceB01"/>
+                        <model ac="4ix3A01"/>
+                        <model ac="3uqcB01"/>
+                        <model ac="1wakA01"/>
+                        <model ac="4ianA01"/>
+                        <model ac="4fr4E01"/>
+                        <model ac="3g2fA01"/>
+                        <model ac="4oacA01"/>
+                        <model ac="4i5pA01"/>
+                        <model ac="1ia9A01"/>
+                        <model ac="1kutB01"/>
+                        <model ac="1fmkA03"/>
+                        <model ac="4f0fA01"/>
+                        <model ac="3fhrA01"/>
+                        <model ac="3dxpA01"/>
+                        <model ac="3uc3A01"/>
+                        <model ac="1o6lA02"/>
+                        <model ac="4h05B01"/>
+                        <model ac="3mfrA01"/>
+                        <model ac="2ycfA01"/>
+                        <model ac="2jamA01"/>
+                        <model ac="4twcA01"/>
+                        <model ac="2rioA01"/>
+                        <model ac="4b9dB01"/>
+                        <model ac="3tm0A01"/>
+                        <model ac="2ipxA01"/>
+                        <model ac="4itjB01"/>
+                        <model ac="2jedB01"/>
+                        <model ac="3f3zA01"/>
+                        <model ac="3qa8A01"/>
+                        <model ac="4aw0A01"/>
+                        <model ac="4qtbB01"/>
+                        <model ac="3dv3A01"/>
+                        <model ac="3brbA01"/>
+                        <model ac="3c4zA02"/>
+                        <model ac="4c2vB01"/>
+                        <model ac="3pp0A01"/>
+                        <model ac="2oibA01"/>
+                        <model ac="4gkhB01"/>
+                        <model ac="3q5zA02"/>
+                        <model ac="2vwiD01"/>
+                        <model ac="2dylA01"/>
+                        <model ac="3ugcA01"/>
+                        <model ac="2h34A01"/>
+                        <model ac="2f2uB01"/>
+                        <model ac="3nuaA01"/>
+                        <model ac="1nd4A01"/>
+                        <model ac="4gcjA01"/>
+                        <model ac="4fvqA01"/>
+                        <model ac="2i7qA01"/>
+                        <model ac="4pf4A01"/>
+                        <model ac="3mtlA01"/>
+                        <model ac="4da5A01"/>
+                        <model ac="1x8bA01"/>
+                        <model ac="1q5kA01"/>
+                        <model ac="3warA02"/>
+                        <model ac="1fvrA01"/>
+                        <model ac="2w4oA01"/>
+                        <model ac="3qc4B01"/>
+                        <model ac="3d5vA01"/>
+                        <model ac="2v62A01"/>
+                        <model ac="1nt2A01"/>
+                        <model ac="3skjF00"/>
+                        <model ac="3kmuA01"/>
+                        <model ac="4fnxA01"/>
+                        <model ac="2q83B01"/>
+                        <model ac="3kfaA01"/>
+                        <model ac="4qnyA01"/>
+                        <model ac="1blxA01"/>
+                        <model ac="3orkA01"/>
+                        <model ac="4cqeA01"/>
+                        <model ac="3a99A01"/>
+                        <model ac="4hzrA01"/>
+                        <model ac="4l44A01"/>
+                        <model ac="4eqmA01"/>
+                        <model ac="2jiiA01"/>
+                        <model ac="2x7fC01"/>
+                        <model ac="4ebvA01"/>
+                        <model ac="3f66B01"/>
+                        <model ac="3oy1A01"/>
+                        <model ac="3eqcA01"/>
+                        <model ac="1kobA01"/>
+                        <model ac="3dzoA02"/>
+                        <model ac="3uc4A01"/>
+                        <model ac="3csvA01"/>
+                        <model ac="4qqtA01"/>
+                        <model ac="4hyiA01"/>
+                        <model ac="2fstX01"/>
+                        <model ac="2izrA01"/>
+                        <model ac="3tucA01"/>
+                        <model ac="1zarA02"/>
+                        <model ac="4dfxE02"/>
+                        <model ac="4mq1C01"/>
+                        <model ac="3v5wA03"/>
+                        <model ac="2zv2A01"/>
+                        <model ac="2a19B01"/>
+                        <model ac="4nfnA01"/>
+                        <model ac="3fpqA01"/>
+                        <model ac="3a8xB01"/>
+                        <model ac="3rp9A01"/>
+                        <model ac="3p1aA01"/>
+                        <model ac="2evaA01"/>
+                        <model ac="1tkiA01"/>
+                        <model ac="2i6lA01"/>
+                        <model ac="4czuA01"/>
+                        <model ac="1qpcA01"/>
+                        <model ac="1xjdA01"/>
+                        <model ac="4p2kA01"/>
+                        <model ac="1g8aA01"/>
+                        <model ac="2ppqA01"/>
+                        <model ac="2qolA01"/>
+                        <model ac="3bu3A01"/>
+                        <model ac="4aaaA01"/>
+                        <model ac="2ac3A01"/>
+                        <model ac="3a7fA01"/>
+                        <model ac="2cnqA01"/>
+                        <model ac="4feuF01"/>
+                        <model ac="2pulB01"/>
+                        <model ac="1k9aA03"/>
+                        <model ac="3g0eA01"/>
+                        <model ac="4i93A01"/>
+                        <model ac="2b9hA01"/>
+                        <model ac="3lltA01"/>
+                        <model ac="3gopA01"/>
+                        <model ac="3comB01"/>
+                        <model ac="3rgfA01"/>
+                        <model ac="3vwaA01"/>
+                        <model ac="4f9cA01"/>
+                        <model ac="3kk8A01"/>
+                        <model ac="3ubdA01"/>
+                        <model ac="4u6rA01"/>
+                        <model ac="3i1aA01"/>
+                        <model ac="3mi9A01"/>
+                        <model ac="4fyoA01"/>
+                        <model ac="4c02A01"/>
+                        <model ac="2oo8X01"/>
+                        <model ac="3alnB01"/>
+                        <model ac="3cd8A01"/>
+                        <model ac="2w5aA01"/>
+                        <model ac="3jr1A01"/>
+                        <model ac="2weiA01"/>
+                        <model ac="2wqmA01"/>
+                        <model ac="1t46A01"/>
+                        <model ac="3s95A01"/>
+                        <model ac="2wtkC01"/>
+                        <model ac="4i24B01"/>
+                        <model ac="2qg7B01"/>
+                        <model ac="3uibA01"/>
+                        <model ac="2gqrA01"/>
+                        <model ac="4x0mA01"/>
+                        <model ac="3oz6A01"/>
+                        <model ac="4gyiA02"/>
+                        <model ac="3kn6A01"/>
+                        <model ac="1nw1A01"/>
+                        <model ac="4euuA01"/>
+                        <model ac="2j0iA01"/>
+                        <model ac="2clqA01"/>
+                        <model ac="3f7wA01"/>
+                        <model ac="1phkA01"/>
+                        <model ac="2j51A01"/>
+                        <model ac="4js8A01"/>
+                        <model ac="4at5A01"/>
+                        <model ac="4ks7A01"/>
+                        <model ac="2qkwB01"/>
+                        <model ac="2vwxA01"/>
+                        <model ac="3lffA01"/>
+                        <model ac="2ig7A01"/>
+                        <model ac="1zy4B01"/>
+                        <model ac="4qyyA01"/>
+                        <model ac="4jrnA02"/>
+                        <model ac="1z57A01"/>
+                        <model ac="4o38A01"/>
+                        <model ac="4aw2A01"/>
+                    </models>
+                    <signature-library-release library="GENE3D" version="4.1.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="678" env-start="559" score="85.6" evalue="1.9E-24" hmm-start="46" hmm-end="128" hmm-length="0" start="559" end="678"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="3.9E-49" score="167.2">
+                <signature ac="PF07714" desc="Protein tyrosine kinase" name="Pkinase_Tyr">
+                    <entry ac="IPR001245" desc="Serine-threonine/tyrosine-protein kinase, catalytic domain" name="Ser-Thr/Tyr_kinase_cat_dom" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0004672" name="protein kinase activity"/>
+                        <go-xref category="BIOLOGICAL_PROCESS" db="GO" id="GO:0006468" name="protein phosphorylation"/>
+                    </entry>
+                    <models>
+                        <model ac="PF07714" desc="Protein tyrosine kinase" name="Pkinase_Tyr"/>
+                    </models>
+                    <signature-library-release library="PFAM" version="31.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="887" env-start="616" score="166.4" evalue="6.7E-49" hmm-start="4" hmm-end="260" hmm-length="0" start="619" end="887"/>
+                </locations>
+            </hmmer3-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="156" end="358"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="559" end="578"/>
+                </locations>
+            </mobidblite-match>
+            <panther-match evalue="0.0" familyName="FAMILY NOT NAMED" score="1093.4">
+                <signature ac="PTHR27001" name="FAMILY NOT NAMED">
+                    <models>
+                        <model ac="PTHR27001" name="FAMILY NOT NAMED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="309" end="964"/>
+                </locations>
+            </panther-match>
+            <panther-match evalue="0.0" familyName="PROTEIN KINASE FAMILY PROTEIN" score="1093.4">
+                <signature ac="PTHR27001:SF292" name="PROTEIN KINASE FAMILY PROTEIN">
+                    <models>
+                        <model ac="PTHR27001:SF292" name="PROTEIN KINASE FAMILY PROTEIN"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="309" end="964"/>
+                </locations>
+            </panther-match>
+            <patternscan-match>
+                <signature ac="PS00107" desc="Protein kinases ATP-binding region signature." name="PROTEIN_KINASE_ATP">
+                    <entry ac="IPR017441" desc="Protein kinase, ATP binding site" name="Protein_kinase_ATP_BS" type="BINDING_SITE">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0005524" name="ATP binding"/>
+                    </entry>
+                    <models>
+                        <model ac="PS00107" desc="Protein kinases ATP-binding region signature." name="PROTEIN_KINASE_ATP"/>
+                    </models>
+                    <signature-library-release library="PROSITE_PATTERNS" version="20.132"/>
+                </signature>
+                <locations>
+                    <patternscan-location level="STRONG" start="622" end="644">
+                        <alignment>IGEGGFGRVYeGiledgerVAIK</alignment>
+                    </patternscan-location>
+                </locations>
+            </patternscan-match>
+            <patternscan-match>
+                <signature ac="PS00108" desc="Serine/Threonine protein kinases active-site signature." name="PROTEIN_KINASE_ST">
+                    <entry ac="IPR008271" desc="Serine/threonine-protein kinase, active site" name="Ser/Thr_kinase_AS" type="ACTIVE_SITE">
+                        <go-xref category="BIOLOGICAL_PROCESS" db="GO" id="GO:0006468" name="protein phosphorylation"/>
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0004672" name="protein kinase activity"/>
+                    </entry>
+                    <models>
+                        <model ac="PS00108" desc="Serine/Threonine protein kinases active-site signature." name="PROTEIN_KINASE_ST"/>
+                    </models>
+                    <signature-library-release library="PROSITE_PATTERNS" version="20.132"/>
+                </signature>
+                <locations>
+                    <patternscan-location level="STRONG" start="736" end="748">
+                        <alignment>ViHrDFKssNILL</alignment>
+                    </patternscan-location>
+                </locations>
+            </patternscan-match>
+            <profilescan-match>
+                <signature ac="PS50011" desc="Protein kinase domain profile." name="PROTEIN_KINASE_DOM">
+                    <entry ac="IPR000719" desc="Protein kinase domain" name="Prot_kinase_dom" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0004672" name="protein kinase activity"/>
+                        <go-xref category="BIOLOGICAL_PROCESS" db="GO" id="GO:0006468" name="protein phosphorylation"/>
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0005524" name="ATP binding"/>
+                    </entry>
+                    <models>
+                        <model ac="PS50011" desc="Protein kinase domain profile." name="PROTEIN_KINASE_DOM"/>
+                    </models>
+                    <signature-library-release library="PROSITE_PROFILES" version="20.132"/>
+                </signature>
+                <locations>
+                    <profilescan-location score="38.831" start="616" end="890">
+                        <alignment>FDESRIIGEGGFGRVYEGIL-EDGERVAIKVLKRDD--QQGTREFLAEVEMLSRLHHRNLVKLIGICTEGHSRCLVYELVPNGSVESHLHDKGAArFDWDARLKIALGAARGLAYLHEDsspRVIHRDFKSSNILLEHDFTPKVSDFGLARTAlgEGNEHISTRVMGTFGYVAPEYA--MTGHLLvKSDVYSYGVVLLELLTGMKPVDMLrpPGQENLVAWAGSL----------LtsrdglesivdpslgssipfdSIARVAAIASMCVQPEVDQRPFMGEVVQaLKLV</alignment>
+                    </profilescan-location>
+                </locations>
+            </profilescan-match>
+            <profilescan-match>
+                <signature ac="PS51257" desc="Prokaryotic membrane lipoprotein lipid attachment site profile." name="PROKAR_LIPOPROTEIN">
+                    <models>
+                        <model ac="PS51257" desc="Prokaryotic membrane lipoprotein lipid attachment site profile." name="PROKAR_LIPOPROTEIN"/>
+                    </models>
+                    <signature-library-release library="PROSITE_PROFILES" version="20.132"/>
+                </signature>
+                <locations>
+                    <profilescan-location score="5.0" start="1" end="20">
+                        <alignment>MGRC---------------GGGSGAGAGGGALGGC</alignment>
+                    </profilescan-location>
+                </locations>
+            </profilescan-match>
+            <rpsblast-match>
+                <signature ac="cd14066" desc="STKc_IRAK" name="STKc_IRAK">
+                    <models>
+                        <model ac="cd14066" desc="STKc_IRAK" name="STKc_IRAK"/>
+                    </models>
+                    <signature-library-release library="CDD" version="3.16"/>
+                </signature>
+                <locations>
+                    <rpsblast-location evalue="6.6208E-96" score="301.884" start="622" end="888">
+                        <sites>
+                            <rpsblast-site description="ATP binding site" numLocations="20">
+<site-locations>
+    <site-location residue="G" start="625" end="625"/>
+    <site-location residue="V" start="630" end="630"/>
+    <site-location residue="V" start="673" end="673"/>
+    <site-location residue="D" start="740" end="740"/>
+    <site-location residue="G" start="626" end="626"/>
+    <site-location residue="L" start="691" end="691"/>
+    <site-location residue="K" start="742" end="742"/>
+    <site-location residue="N" start="745" end="745"/>
+    <site-location residue="S" start="696" end="696"/>
+    <site-location residue="S" start="744" end="744"/>
+    <site-location residue="E" start="624" end="624"/>
+    <site-location residue="D" start="758" end="758"/>
+    <site-location residue="G" start="623" end="623"/>
+    <site-location residue="V" start="692" end="692"/>
+    <site-location residue="L" start="747" end="747"/>
+    <site-location residue="E" start="690" end="690"/>
+    <site-location residue="I" start="622" end="622"/>
+    <site-location residue="K" start="644" end="644"/>
+    <site-location residue="Y" start="689" end="689"/>
+    <site-location residue="A" start="642" end="642"/>
+</site-locations>
+                            </rpsblast-site>
+                            <rpsblast-site description="activation loop (A-loop)" numLocations="16">
+<site-locations>
+    <site-location residue="R" start="763" end="763"/>
+    <site-location residue="T" start="764" end="764"/>
+    <site-location residue="T" start="780" end="780"/>
+    <site-location residue="F" start="781" end="781"/>
+    <site-location residue="G" start="779" end="779"/>
+    <site-location residue="L" start="761" end="761"/>
+    <site-location residue="A" start="762" end="762"/>
+    <site-location residue="D" start="758" end="758"/>
+    <site-location residue="M" start="778" end="778"/>
+    <site-location residue="R" start="776" end="776"/>
+    <site-location residue="V" start="777" end="777"/>
+    <site-location residue="F" start="759" end="759"/>
+    <site-location residue="T" start="775" end="775"/>
+    <site-location residue="G" start="760" end="760"/>
+    <site-location residue="S" start="757" end="757"/>
+    <site-location residue="G" start="782" end="782"/>
+</site-locations>
+                            </rpsblast-site>
+                            <rpsblast-site description="active site" numLocations="26">
+<site-locations>
+    <site-location residue="G" start="625" end="625"/>
+    <site-location residue="V" start="630" end="630"/>
+    <site-location residue="V" start="673" end="673"/>
+    <site-location residue="D" start="740" end="740"/>
+    <site-location residue="G" start="626" end="626"/>
+    <site-location residue="K" start="742" end="742"/>
+    <site-location residue="N" start="745" end="745"/>
+    <site-location residue="L" start="761" end="761"/>
+    <site-location residue="S" start="744" end="744"/>
+    <site-location residue="I" start="622" end="622"/>
+    <site-location residue="Y" start="689" end="689"/>
+    <site-location residue="A" start="642" end="642"/>
+    <site-location residue="T" start="780" end="780"/>
+    <site-location residue="L" start="691" end="691"/>
+    <site-location residue="E" start="698" end="698"/>
+    <site-location residue="F" start="781" end="781"/>
+    <site-location residue="G" start="779" end="779"/>
+    <site-location residue="S" start="696" end="696"/>
+    <site-location residue="E" start="624" end="624"/>
+    <site-location residue="D" start="758" end="758"/>
+    <site-location residue="G" start="623" end="623"/>
+    <site-location residue="V" start="692" end="692"/>
+    <site-location residue="L" start="747" end="747"/>
+    <site-location residue="E" start="690" end="690"/>
+    <site-location residue="K" start="644" end="644"/>
+    <site-location residue="G" start="782" end="782"/>
+</site-locations>
+                            </rpsblast-site>
+                            <rpsblast-site description="polypeptide substrate binding site" numLocations="11">
+<site-locations>
+    <site-location residue="D" start="740" end="740"/>
+    <site-location residue="G" start="626" end="626"/>
+    <site-location residue="T" start="780" end="780"/>
+    <site-location residue="K" start="742" end="742"/>
+    <site-location residue="E" start="698" end="698"/>
+    <site-location residue="F" start="781" end="781"/>
+    <site-location residue="G" start="779" end="779"/>
+    <site-location residue="L" start="761" end="761"/>
+    <site-location residue="S" start="696" end="696"/>
+    <site-location residue="S" start="744" end="744"/>
+    <site-location residue="G" start="782" end="782"/>
+</site-locations>
+                            </rpsblast-site>
+                        </sites>
+                    </rpsblast-location>
+                </locations>
+            </rpsblast-match>
+            <superfamilyhmmer3-match evalue="8.75E-80">
+                <signature ac="SSF56112" name="Protein kinase-like (PK-like)">
+                    <entry ac="IPR011009" desc="Protein kinase-like domain" name="Kinase-like_dom" type="DOMAIN"/>
+                    <models>
+                        <model ac="0037668" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0039408" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0035157" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0040180" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0037731" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0054547" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0037572" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0051133" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0053164" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0044407" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0049347" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0044907" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0046180" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0049348" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0041315" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0038940" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0049834" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0041592" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0042315" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0054221" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0043269" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0037369" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0041048" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0051877" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0035615" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0035371" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0039870" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0040727" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0044547" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0039686" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0037803" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0048011" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0049795" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0047332" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0046494" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0036031" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0042354" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0047734" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0044036" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0049538" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0053681" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0054536" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0043658" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0044924" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0039603" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0038659" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0049786" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0046998" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0041710" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0042707" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0041095" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0039145" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0040302" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0041927" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0046210" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0048785" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0046042" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0038477" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0040179" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0034801" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0044090" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0042918" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0052889" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0050905" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0043074" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0038413" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0041719" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0037714" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0050990" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0047088" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0036014" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0054833" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0044203" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0039792" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0040670" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0041767" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0038373" name="Protein kinase-like (PK-like)"/>
+                        <model ac="0048206" name="Protein kinase-like (PK-like)"/>
+                    </models>
+                    <signature-library-release library="SUPERFAMILY" version="1.75"/>
+                </signature>
+                <locations>
+                    <superfamilyhmmer3-location start="598" end="887"/>
+                </locations>
+            </superfamilyhmmer3-match>
+        </matches>
+    </protein>
+    <protein>
+        <sequence md5="80d8b2d1c756e36e9f2c537e802855ed">MSTASGNGNGGSSSSMLYDLYGPNAKPDVVFKEAALNSTLNLQDVQGLVTWVIGDGMLPSWVFVKNKPLIPKVVLLYVPGLDATLYMSHTRLLSSLKELCGNPKPVLASSRMPDERHTIDALLTCRVKRKRDVKTSNESSKPDIDGKLSSLDDLGDIPFPVTYYTLSEKDLEDNGYSFNLPGFVPTVSAPSGSSPHKVLALDCEMCVTKAGFELTRVTLIDIKGLVVLDRLVKPANSIIDYNTRFSGITAEMLADVSTTLQEIQEEFVGLVYKETILVGHSLENDLMALQISHGLIIDTAVLYKYKRGSRCKIALRVLTRKFLGREIQNTGSGHDSVEDAKAALELAILKIKHGPDFGFQPSLSRQKLTSILHESGKKCSLVDDVSVLERYSDTSCNSIAVFCDDDALSRSMKEVKNNKVTFIWTQFSGLISYFHRRAQDPEKLKSCVAEAIALKTCDGKTASKEARSKICPELKEILCGLDKKIKKLYGALPENAMLIVCTGHGDTPLVQRLRKMLHHEEETIDSRETIVQALGDLQAQAEVALCFCCVKR</sequence>
+        <xref id="Zm00001d023710"/>
+        <matches>
+            <hmmer2-match evalue="9.4E-43" score="158.0">
+                <signature ac="SM00479" name="exoiiiendus">
+                    <entry ac="IPR013520" desc="Exonuclease, RNase T/DNA polymerase III" name="Exonuclease_RNaseT/DNA_pol3" type="DOMAIN"/>
+                    <models>
+                        <model ac="SM00479" name="exoiiiendus"/>
+                    </models>
+                    <signature-library-release library="SMART" version="7.1"/>
+                </signature>
+                <locations>
+                    <hmmer2-location score="158.0" evalue="9.4E-43" hmm-start="1" hmm-end="196" hmm-length="0" start="197" end="356"/>
+                </locations>
+            </hmmer2-match>
+            <hmmer3-match evalue="1.1E-30" score="106.1">
+                <signature ac="G3DSA:3.30.420.10">
+                    <entry ac="IPR012337" desc="Ribonuclease H-like domain" name="RNaseH-like_dom" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0003676" name="nucleic acid binding"/>
+                    </entry>
+                    <models>
+                        <model ac="3p1gA00"/>
+                        <model ac="3pv8A01"/>
+                        <model ac="2kfnA01"/>
+                        <model ac="1qhtA02"/>
+                        <model ac="1u04A04"/>
+                        <model ac="4fzxC00"/>
+                        <model ac="4ibnA01"/>
+                        <model ac="2py5A01"/>
+                        <model ac="3cymA01"/>
+                        <model ac="4htuA00"/>
+                        <model ac="2w42B02"/>
+                        <model ac="1vk0A00"/>
+                        <model ac="3cg7B01"/>
+                        <model ac="2d0bA02"/>
+                        <model ac="1yt3A01"/>
+                        <model ac="1uaxA00"/>
+                        <model ac="1w0hA00"/>
+                        <model ac="1s5jA02"/>
+                        <model ac="3vn5A02"/>
+                        <model ac="2qxfA01"/>
+                        <model ac="2lsnA00"/>
+                        <model ac="2etjA00"/>
+                        <model ac="2p51A00"/>
+                        <model ac="4mq3A00"/>
+                        <model ac="2p1jA01"/>
+                        <model ac="4fvmA03"/>
+                        <model ac="3qipA05"/>
+                        <model ac="4bwjA01"/>
+                        <model ac="1cxqA00"/>
+                        <model ac="1jl1A00"/>
+                        <model ac="4g1qA05"/>
+                        <model ac="1ekeB01"/>
+                        <model ac="3l3uA00"/>
+                        <model ac="1x9mA01"/>
+                        <model ac="1wljA00"/>
+                        <model ac="3u3gA00"/>
+                        <model ac="3qioA00"/>
+                        <model ac="3v9wB00"/>
+                        <model ac="1lwcA05"/>
+                        <model ac="1kcfB00"/>
+                        <model ac="2e6mA00"/>
+                        <model ac="3p5jA01"/>
+                        <model ac="3mxjA01"/>
+                        <model ac="1yvuA04"/>
+                        <model ac="2igiB00"/>
+                        <model ac="3iayA03"/>
+                        <model ac="1bcoA01"/>
+                        <model ac="2ehgA00"/>
+                        <model ac="3qexA02"/>
+                        <model ac="2gv9A03"/>
+                        <model ac="2x78A00"/>
+                        <model ac="3oymA03"/>
+                        <model ac="3kksB00"/>
+                        <model ac="2guiA00"/>
+                        <model ac="4ep4A00"/>
+                        <model ac="1q8iA03"/>
+                        <model ac="2qkbA00"/>
+                        <model ac="1hjrA00"/>
+                    </models>
+                    <signature-library-release library="GENE3D" version="4.1.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="358" env-start="186" score="104.5" evalue="3.5E-30" hmm-start="16" hmm-end="194" hmm-length="0" start="186" end="358"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="3.6E-9" score="37.3">
+                <signature ac="PF00929" desc="Exonuclease" name="RNase_T">
+                    <entry ac="IPR013520" desc="Exonuclease, RNase T/DNA polymerase III" name="Exonuclease_RNaseT/DNA_pol3" type="DOMAIN"/>
+                    <models>
+                        <model ac="PF00929" desc="Exonuclease" name="RNase_T"/>
+                    </models>
+                    <signature-library-release library="PFAM" version="31.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="347" env-start="199" score="36.4" evalue="6.7E-9" hmm-start="2" hmm-end="164" hmm-length="0" start="200" end="346"/>
+                </locations>
+            </hmmer3-match>
+            <panther-match evalue="9.0E-92" familyName="EXONUCLEASE" score="311.0">
+                <signature ac="PTHR12801" name="EXONUCLEASE">
+                    <models>
+                        <model ac="PTHR12801" name="EXONUCLEASE"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="191" end="367"/>
+                </locations>
+            </panther-match>
+            <panther-match evalue="9.0E-92" familyName="RNA EXONUCLEASE PQE-1-RELATED" score="311.0">
+                <signature ac="PTHR12801:SF82" name="RNA EXONUCLEASE PQE-1-RELATED">
+                    <models>
+                        <model ac="PTHR12801:SF82" name="RNA EXONUCLEASE PQE-1-RELATED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="191" end="367"/>
+                </locations>
+            </panther-match>
+            <rpsblast-match>
+                <signature ac="cd06145" desc="REX1_like" name="REX1_like">
+                    <entry ac="IPR034922" desc="RNA exonuclease 1-like, exonuclease domain" name="REX1-like_exo" type="DOMAIN"/>
+                    <models>
+                        <model ac="cd06145" desc="REX1_like" name="REX1_like"/>
+                    </models>
+                    <signature-library-release library="CDD" version="3.16"/>
+                </signature>
+                <locations>
+                    <rpsblast-location evalue="3.19729E-81" score="248.554" start="199" end="347">
+                        <sites>
+                            <rpsblast-site description="active site" numLocations="12">
+<site-locations>
+    <site-location residue="M" start="205" end="205"/>
+    <site-location residue="D" start="339" end="339"/>
+    <site-location residue="C" start="203" end="203"/>
+    <site-location residue="S" start="281" end="281"/>
+    <site-location residue="E" start="204" end="204"/>
+    <site-location residue="V" start="207" end="207"/>
+    <site-location residue="D" start="202" end="202"/>
+    <site-location residue="H" start="280" end="280"/>
+    <site-location residue="H" start="334" end="334"/>
+    <site-location residue="E" start="283" end="283"/>
+    <site-location residue="N" start="284" end="284"/>
+    <site-location residue="D" start="285" end="285"/>
+</site-locations>
+                            </rpsblast-site>
+                            <rpsblast-site description="catalytic site" numLocations="5">
+<site-locations>
+    <site-location residue="D" start="339" end="339"/>
+    <site-location residue="E" start="204" end="204"/>
+    <site-location residue="D" start="202" end="202"/>
+    <site-location residue="H" start="334" end="334"/>
+    <site-location residue="D" start="285" end="285"/>
+</site-locations>
+                            </rpsblast-site>
+                            <rpsblast-site description="substrate binding site" numLocations="11">
+<site-locations>
+    <site-location residue="M" start="205" end="205"/>
+    <site-location residue="D" start="339" end="339"/>
+    <site-location residue="C" start="203" end="203"/>
+    <site-location residue="S" start="281" end="281"/>
+    <site-location residue="E" start="204" end="204"/>
+    <site-location residue="V" start="207" end="207"/>
+    <site-location residue="D" start="202" end="202"/>
+    <site-location residue="H" start="280" end="280"/>
+    <site-location residue="H" start="334" end="334"/>
+    <site-location residue="E" start="283" end="283"/>
+    <site-location residue="N" start="284" end="284"/>
+</site-locations>
+                            </rpsblast-site>
+                        </sites>
+                    </rpsblast-location>
+                </locations>
+            </rpsblast-match>
+            <superfamilyhmmer3-match evalue="7.59E-28">
+                <signature ac="SSF53098" name="Ribonuclease H-like">
+                    <entry ac="IPR012337" desc="Ribonuclease H-like domain" name="RNaseH-like_dom" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0003676" name="nucleic acid binding"/>
+                    </entry>
+                    <models>
+                        <model ac="0053000" name="Ribonuclease H-like"/>
+                        <model ac="0054949" name="Ribonuclease H-like"/>
+                        <model ac="0050411" name="Ribonuclease H-like"/>
+                        <model ac="0048225" name="Ribonuclease H-like"/>
+                        <model ac="0047793" name="Ribonuclease H-like"/>
+                        <model ac="0035416" name="Ribonuclease H-like"/>
+                        <model ac="0048905" name="Ribonuclease H-like"/>
+                        <model ac="0046687" name="Ribonuclease H-like"/>
+                        <model ac="0049961" name="Ribonuclease H-like"/>
+                        <model ac="0047446" name="Ribonuclease H-like"/>
+                        <model ac="0041666" name="Ribonuclease H-like"/>
+                        <model ac="0054948" name="Ribonuclease H-like"/>
+                        <model ac="0045815" name="Ribonuclease H-like"/>
+                        <model ac="0048960" name="Ribonuclease H-like"/>
+                        <model ac="0046085" name="Ribonuclease H-like"/>
+                        <model ac="0054856" name="Ribonuclease H-like"/>
+                        <model ac="0047541" name="Ribonuclease H-like"/>
+                        <model ac="0048444" name="Ribonuclease H-like"/>
+                        <model ac="0049562" name="Ribonuclease H-like"/>
+                        <model ac="0051402" name="Ribonuclease H-like"/>
+                        <model ac="0047295" name="Ribonuclease H-like"/>
+                        <model ac="0049035" name="Ribonuclease H-like"/>
+                        <model ac="0041082" name="Ribonuclease H-like"/>
+                        <model ac="0051650" name="Ribonuclease H-like"/>
+                        <model ac="0050330" name="Ribonuclease H-like"/>
+                        <model ac="0053015" name="Ribonuclease H-like"/>
+                        <model ac="0045929" name="Ribonuclease H-like"/>
+                        <model ac="0046649" name="Ribonuclease H-like"/>
+                        <model ac="0049179" name="Ribonuclease H-like"/>
+                        <model ac="0051425" name="Ribonuclease H-like"/>
+                        <model ac="0051245" name="Ribonuclease H-like"/>
+                        <model ac="0046173" name="Ribonuclease H-like"/>
+                        <model ac="0050971" name="Ribonuclease H-like"/>
+                        <model ac="0049844" name="Ribonuclease H-like"/>
+                        <model ac="0036277" name="Ribonuclease H-like"/>
+                        <model ac="0047514" name="Ribonuclease H-like"/>
+                        <model ac="0049624" name="Ribonuclease H-like"/>
+                        <model ac="0046881" name="Ribonuclease H-like"/>
+                        <model ac="0047398" name="Ribonuclease H-like"/>
+                        <model ac="0040018" name="Ribonuclease H-like"/>
+                        <model ac="0044818" name="Ribonuclease H-like"/>
+                        <model ac="0049323" name="Ribonuclease H-like"/>
+                        <model ac="0050648" name="Ribonuclease H-like"/>
+                        <model ac="0037052" name="Ribonuclease H-like"/>
+                        <model ac="0048406" name="Ribonuclease H-like"/>
+                        <model ac="0050187" name="Ribonuclease H-like"/>
+                        <model ac="0052065" name="Ribonuclease H-like"/>
+                        <model ac="0052515" name="Ribonuclease H-like"/>
+                        <model ac="0053802" name="Ribonuclease H-like"/>
+                        <model ac="0049752" name="Ribonuclease H-like"/>
+                        <model ac="0038606" name="Ribonuclease H-like"/>
+                        <model ac="0046055" name="Ribonuclease H-like"/>
+                        <model ac="0051397" name="Ribonuclease H-like"/>
+                        <model ac="0050668" name="Ribonuclease H-like"/>
+                        <model ac="0052620" name="Ribonuclease H-like"/>
+                        <model ac="0054813" name="Ribonuclease H-like"/>
+                        <model ac="0051538" name="Ribonuclease H-like"/>
+                        <model ac="0047617" name="Ribonuclease H-like"/>
+                    </models>
+                    <signature-library-release library="SUPERFAMILY" version="1.75"/>
+                </signature>
+                <locations>
+                    <superfamilyhmmer3-location start="198" end="350"/>
+                </locations>
+            </superfamilyhmmer3-match>
+        </matches>
+    </protein>
+    <protein>
+        <sequence md5="c328c09e7b5c50141505f87f81d1e9ad">MEEDPLIQLVHVWSNAACDNAAASSSVCHAHSPAPASAREGEGDKENLRPEPDVEAEIGHIEAEILRLSSRLHHLRTSQQLQPPKCAEVAPAPETKAAAARPRPRGRSLGPLDIVAAVNPNLLTTDKQQPPRAAQGLKPIKQAPAAARGRGFSLAPLDTVAANPRVPSAAPQRKIQGEGGGAWPTLRPIKEPPVQRRRGVSLGPLEIHHGVGSKPGATVAAARVKPLSNKLGAVREEGQRSKQHAVPARPWPSSNAKHPLDAKQSTVASRAKARSGSMSPSRLRRQSTSKATETRAGNAKATEARGGNATLGDNNVADVLTLKCAVADHNRNVSTGKRPAGSSKVRIVPSRYSLTPGSSLIAAPVTQGKLCKQPLSGSARAASHREEMGAKLTEPSNDELSPESLAKVAELLPRIRTMPPSDESPRDSGCAARRVADLAGKRSFFTAAADDGNPVTPYQARVVELETPETAAAAEA</sequence>
+        <xref id="Zm00001d014495"/>
+        <matches>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="29" end="48"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="379" end="403"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="166" end="189"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="230" end="313"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="77" end="110"/>
+                </locations>
+            </mobidblite-match>
+            <panther-match evalue="4.6E-109" familyName="FAMILY NOT NAMED" score="367.5">
+                <signature ac="PTHR36386" name="FAMILY NOT NAMED">
+                    <models>
+                        <model ac="PTHR36386" name="FAMILY NOT NAMED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="2" end="474"/>
+                </locations>
+            </panther-match>
+        </matches>
+    </protein>
+    <protein>
+        <sequence md5="ec43ef04b305d86e13c5e3267ba4ba77">MPLSRHTVRSEYALGGRDLYRGADQHDPEAVLDGAAMAGLVGVLRQLGDLAEFAAQVFHGLYDEVMSTSARGHGLMLRVQQLEAELPLLEEDSCQRNYLHVVASNRGVDWHPNPRVDHGVVAGGDTPRFIMESVKQCRGPPKLFVLDKYDVGGDGACLKRYTDPSSFRTGSACPTTLLQEGTRDDRRPLRAVEISPNLQNAEIFRSPNAADNFSKLETGSSAGALDEVPTNRRRLKFRQLNGSVFQSFRPLMQNLHEKPSSEERLITGDHSKVHVFMVESPEPGAEERDVMVDTSDNMEKGKLTVRRKRSVSEEALSRSSDARSAGSSRGGYDSELDIYVDALTTMDSEDFSAPESGAREQATEEEEEEQRCNGSVTSAVSNGTRDITKKTKEVKENSKKIASKRSKYVGSMELTASKVGILPRELSEKHAPFSGSLRYMAKQLLELRYDGTQDSELYDVEADGVGRDVKYQEISDHAVEAKESDAVHKILSGSPYDDAGLGKCPQEEINHGQEHDVPPTDSPHDSAPDEGNGFQDSNMAYLVGIITSSSSQEGEGCTSTALHENSSMAVLNHVLEHAQERFGEDLDKEVDVDIHTEAISENTSDKCEDLKEVSIYTEQVNVEDMEEINESDVYALDDERAEYIEQQVVSDGSISSPVSSKQSDDPCWITPLTLADEDDTVACKVVDRPEGDHVILSETFKGIDLPNVVTESVINSKHDMPNNGQYYLHPKATFGQDLCLGSYKIVGENGEVPLCSSTTATTTPELTVNTETKHEFHQAVYQEPSNSFNSSAEVFGDPLAPDSRDDAPSVISSFDWMLNGATQKSFNIFPSHPTNGNAEENGSSEDVPPLPPLPPMQWRTNKIQTGPSPLSAKIGRPPRPKPSVKQQQSEASHVLQENSLHKGLSLQNELVQANISSDHEKNQILNIDFRESHHQEGEEYDAQDSNPFASSEVECLAEVASVKSENLHPLQLPELIVVLEEAWSEFGNIKFMPEQEGKFQLSNGLSVWNDLCTSGLSSQKTSEKPEFFADYKGKEFSFAGSDEVADSEENKPNGAVKHLQNPDLPAQQKDDIHDCDGKVTKFSSALEEDSSQSPTHTVSGPPRYPLLPVTSHDRSMIRKAPTLVQPSSMLADEKNTLLEQIKNKSFNLKPVLAKRPDVMGGPKTNLQVVAILERAHAIRQAVADDDDDDNWSE</sequence>
+        <xref id="Zm00001d028803"/>
+        <matches>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="297" end="331"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="827" end="896"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="1084" end="1104"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="1042" end="1071"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="498" end="536"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="785" end="806"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="346" end="381"/>
+                </locations>
+            </mobidblite-match>
+            <panther-match evalue="0.0" familyName="SUBFAMILY NOT NAMED" score="1896.3">
+                <signature ac="PTHR12902:SF18" name="SUBFAMILY NOT NAMED">
+                    <models>
+                        <model ac="PTHR12902:SF18" name="SUBFAMILY NOT NAMED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="349" end="1193"/>
+                </locations>
+            </panther-match>
+            <panther-match evalue="0.0" familyName="WASP-1" score="1896.3">
+                <signature ac="PTHR12902" name="WASP-1">
+                    <entry ac="IPR028288" desc="SCAR/WAVE family" name="SCAR/WAVE_fam" type="FAMILY">
+                        <go-xref category="BIOLOGICAL_PROCESS" db="GO" id="GO:0030036" name="actin cytoskeleton organization"/>
+                        <go-xref category="CELLULAR_COMPONENT" db="GO" id="GO:0005856" name="cytoskeleton"/>
+                        <pathway-xref db="Reactome" id="R-HSA-4420097" name="VEGFA-VEGFR2 Pathway"/>
+                        <pathway-xref db="Reactome" id="R-HSA-2029482" name="Regulation of actin dynamics for phagocytic cup formation"/>
+                        <pathway-xref db="Reactome" id="R-HSA-5663213" name="RHO GTPases Activate WASPs and WAVEs"/>
+                    </entry>
+                    <models>
+                        <model ac="PTHR12902" name="WASP-1"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="349" end="1193"/>
+                </locations>
+            </panther-match>
+            <profilescan-match>
+                <signature ac="PS51082" desc="WH2 domain profile." name="WH2">
+                    <entry ac="IPR003124" desc="WH2 domain" name="WH2_dom" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0003779" name="actin binding"/>
+                    </entry>
+                    <models>
+                        <model ac="PS51082" desc="WH2 domain profile." name="WH2"/>
+                    </models>
+                    <signature-library-release library="PROSITE_PROFILES" version="20.132"/>
+                </signature>
+                <locations>
+                    <profilescan-location score="7.674" start="1133" end="1151">
+                        <alignment>EKNTLLEQIKN-KSFNLKPV</alignment>
+                    </profilescan-location>
+                </locations>
+            </profilescan-match>
+        </matches>
+    </protein>
+    <protein>
+        <sequence md5="cbfeaf09348a59ad82510f26b5244ce3">MAALARGAAMKGGGDKNKKVAAGGRLLSVVAVGCFLLFVVVVFTLSSRRYATLVLDARDRRGDFHPSQLQGGSHGGGGGEGDLKHLLVAQRSNDDDDKAVTEAELEESGIRGKISINVVGAGGQAEMEEAAPESSAAAAAAADATSNSDDDRARPGDIMTRAAAAASVKQQRQPLCDLSGSRADVCDLTGDIRLNATASEFIVVDPAAADDGPTTAYEIRPYARKGDATSMGRVTAVTVRVRATADAAPRCTVTHAEPAVAFSVGGYTGNLFHDFTDVIVPLYGTAQRYRGDVRLVVTDAGSSSSWWLAKYDAVLRGLSRHPPLHLHLAKAAGEVHCFGHVVLGLRARRELMVEPDPDPDRGRPDGVGMADFARFLRRALSLPRDAPTRPAAASSDDRRKPRLLVVSRRGTRRLLNADAVARVAEEVGFEAVVSELEVSRDAAGVGRLINSFDALVGVHGAGLTNMVFLPPGATVVQIVPWGGLQWIARMDFGDPADAMGLRYIQYEIAVHESSLADKYPRDHEIFTNPTALHKKGFKFLRHTFLIGQDITLDVDRFRVVLLQALRNLTE</sequence>
+        <xref id="Zm00001d040071"/>
+        <matches>
+            <hmmer3-match evalue="1.6E-20" score="74.0">
+                <signature ac="PF04577" desc="Protein of unknown function (DUF563)" name="DUF563">
+                    <entry ac="IPR007657" desc="Glycosyltransferase 61" name="Glycosyltransferase_61" type="FAMILY">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0016757" name="transferase activity, transferring glycosyl groups"/>
+                    </entry>
+                    <models>
+                        <model ac="PF04577" desc="Protein of unknown function (DUF563)" name="DUF563"/>
+                    </models>
+                    <signature-library-release library="PFAM" version="31.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="507" env-start="269" score="73.5" evalue="2.4E-20" hmm-start="61" hmm-end="203" hmm-length="0" start="333" end="504"/>
+                </locations>
+            </hmmer3-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="62" end="83"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="125" end="155"/>
+                </locations>
+            </mobidblite-match>
+            <panther-match evalue="8.6E-241" familyName="SUBFAMILY NOT NAMED" score="802.6">
+                <signature ac="PTHR20961:SF48" name="SUBFAMILY NOT NAMED">
+                    <models>
+                        <model ac="PTHR20961:SF48" name="SUBFAMILY NOT NAMED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="2" end="569"/>
+                </locations>
+            </panther-match>
+            <panther-match evalue="8.6E-241" familyName="GLYCOSYLTRANSFERASE" score="802.6">
+                <signature ac="PTHR20961" name="GLYCOSYLTRANSFERASE">
+                    <entry ac="IPR007657" desc="Glycosyltransferase 61" name="Glycosyltransferase_61" type="FAMILY">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0016757" name="transferase activity, transferring glycosyl groups"/>
+                    </entry>
+                    <models>
+                        <model ac="PTHR20961" name="GLYCOSYLTRANSFERASE"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="2" end="569"/>
+                </locations>
+            </panther-match>
+        </matches>
+    </protein>
+    <protein>
+        <sequence md5="6ead37819520d5917aacfe88624f103d">MAEGETSAEEKRRWTGPPEAQELEETKRRRTGPPEAQELEERLDSLRDKIAAARLVAGSRFGEEQRRSLLQEWLRLASAKLDLDLSGMSEFDRSAEALPWLMPPEEADKRTTHTRQEAQELEERMTCLRLLFEDATDDRILAREELGAAADEFLLRLTTRRQALTREYSRLANLKRPLDLSGMTEADRAAEAERLREEKLQKARQLQDQGDMSGARECEGLARIIDFDVKQGGEYLNSICCVGNIYTFDHTEESPVGPMRFTNRPWQDKMCVNCASINILSVKIACSDIDFPIQVYGTVVARDCIDYKCVYLFRRDNDHCQLISSNEESLILTGPKRGLALWYDADYVQTDLWVKDRQGHCKQFSKGIVRIPGNQVFDKCEPETVSLATRLSTVDVTYDVVECAVEATVAAEVTQGEFYGAMTAHTTRSKRRIVLFDSQVGGDKCHGLIQLMRPVVSVSVMDKLKIFATTAAGVSTGVEVTPRWNGGHEFVLTLGDATICVKVTWSMVDPRL</sequence>
+        <xref id="Zm00001d010149"/>
+        <matches>
+            <coils-match>
+                <signature ac="Coil" name="Coil">
+                    <signature-library-release library="COILS" version="2.2.1"/>
+                </signature>
+                <locations>
+                    <coils-location start="118" end="138"/>
+                </locations>
+            </coils-match>
+            <coils-match>
+                <signature ac="Coil" name="Coil">
+                    <signature-library-release library="COILS" version="2.2.1"/>
+                </signature>
+                <locations>
+                    <coils-location start="36" end="56"/>
+                </locations>
+            </coils-match>
+            <coils-match>
+                <signature ac="Coil" name="Coil">
+                    <signature-library-release library="COILS" version="2.2.1"/>
+                </signature>
+                <locations>
+                    <coils-location start="189" end="209"/>
+                </locations>
+            </coils-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="1" end="38"/>
+                </locations>
+            </mobidblite-match>
+            <panther-match evalue="5.1E-100" familyName="FAMILY NOT NAMED" score="337.7">
+                <signature ac="PTHR33065" name="FAMILY NOT NAMED">
+                    <models>
+                        <model ac="PTHR33065" name="FAMILY NOT NAMED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="169" end="507"/>
+                </locations>
+            </panther-match>
+            <panther-match evalue="5.1E-100" familyName="SUBFAMILY NOT NAMED" score="337.7">
+                <signature ac="PTHR33065:SF36" name="SUBFAMILY NOT NAMED">
+                    <models>
+                        <model ac="PTHR33065:SF36" name="SUBFAMILY NOT NAMED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="169" end="507"/>
+                </locations>
+            </panther-match>
+        </matches>
+    </protein>
+    <protein>
+        <sequence md5="2f174ab0dd0bd281813be226e7348e3a">MEMVLRSQSPLCLRSGPVLIFRPTVAGGGGGTQSLLRTTRFARRRVIRCVVASPGCPNRKSRTASPNVKVAAYSNYAPRLLVESSSKKSEHHDSSRHREETIDTYNGLSGSDAAELTSNRDVEIEVDLQHISEEELPGKVSINASLGEMETVDEAEVEEDKFEVDTSGIVLRNVAVREVDPKDEHNAKDVFVVDSSGTAPDNAAVEEVVDEAEVEEDMVDVDILGLDLNNATIEEIDLMEEALLENFDVDSPGNASSGRTYGGVDELGELPSTSVDCIAINGKRRSLKPKPLPIVRFQEQEQIVLSIVDEEGLIASSCEEGQPVVDYDKQEENSTAFDEQKQLTDDFPEEGISIVHFPEPNNDIVGSSKFLEQKQELDGSYKQDRSTTGLHEQDQSVVSSHGQDKSIVGVPQQIQYNDQSIAGSHRQDQSIAGAPEQIQSVAGYIKPNQSIVGSCKQHELIIPEPKKIESIISYNEIDQSIVGSHKQDKSVVSVPEQIQSIVSHSKPNQSTVDSYRQAESIIGVPEKVQSITSYDKLDQSIVGSLKQDEPIISVPEKIQSIVHYTKPNQSIVGLPKQQQSIVHIVEPKQSIDGFPKQDLSIVGISNEFQTKQLATVGTHDGLLMKGVEAKETSQKTEGDTLQATFNVDNLSQKQEGLTKEADEITIIEKINDEDLVMIEEQKSIAMNEEQTIVTEEDIPMAKVEIGIDKAKFLHLLSEEESSWDENEVGIIEADEQYEVDETSMSTEQDIQESPNDDLDPQALWSMLQELAEKNYSLGNKLFTYPDVLKADSTIDLYFNRDLSAVANEPDVLIKGAFNGWKWRFFTEKLHKSELAGDWWCCKLYIPKQAYRMDFVFFNGHTVYENNNNNDFVIQIESTMDENLFEDFLAEEKQRELENLANEEAERRRQTDEQRRMEEERAADKADRVQAKVEVETKKNKLCNVLGLARAPVDNLWYIEPITTGQEATVRLYYNINSRPLVHSTEIWMHGGYNNWIDGLSFAERLVHHHDKDCDWWFVDVVVPERTYVLDWVFADGPPGSARNYDNNGGHDFHATLPNNMTEEEYWMEEEQRIYTRLQQERREREEAIKRKAERNAKMKAEMKEKTMRMFLVSQKHIVYTEPLEIHAGTTIDVLYNPSNTVLTGKPEVWFRCSFNRWMYPGGVLPPQKMVQAENGSHLKVTVYVPRDAYMMDFVFSESEEGGIYDNRNGLDYHIPVFGSIAKEPPMHIVHIAVEMAPIAKVGGLGDVVTSLSRAVQDLGHNVEVILPKYGCLNLSNVKNLHIHQSFSWGGSEIKVWRGLVEGLCVYFLEPQNGMFGVGYVYGRDDDRRFGFFCRSALEFLLQSGSSPNIIHCHDWSSAPVAWLHKENYAKSSLANARVVFTIHNLEFGAHHIGKAMRYCDKATTVSNTYSKEVSGHGAIVPHLGKFYGILNGIDPDIWDPYNDNFIPVHYTCENVVEGKRAAKRALQQKFGLQQIDVPVVGIVTRLTAQKGIHLIKHAIHRTLERNGQVVLLGSAPDSRIQADFVNLANKLHGVNHGQVRLSLTYDEPLSHLIYAGSDFILVPSIFEPCGLTQLVAMRYGTIPIVRKTGGLFDTVFDVDNDKERARDRGLEPNGFSFDGADSNGVDYALNRQAQAISAWFDARSWFHSLCKRVMEQDWSWNRPALDYIELYRSASKL</sequence>
+        <xref id="Zm00001d000002"/>
+        <matches>
+            <coils-match>
+                <signature ac="Coil" name="Coil">
+                    <signature-library-release library="COILS" version="2.2.1"/>
+                </signature>
+                <locations>
+                    <coils-location start="1067" end="1108"/>
+                </locations>
+            </coils-match>
+            <coils-match>
+                <signature ac="Coil" name="Coil">
+                    <signature-library-release library="COILS" version="2.2.1"/>
+                </signature>
+                <locations>
+                    <coils-location start="1667" end="1677"/>
+                </locations>
+            </coils-match>
+            <coils-match>
+                <signature ac="Coil" name="Coil">
+                    <signature-library-release library="COILS" version="2.2.1"/>
+                </signature>
+                <locations>
+                    <coils-location start="885" end="921"/>
+                </locations>
+            </coils-match>
+            <hmmer2-match evalue="3.0E-59" score="212.8">
+                <signature ac="SM01066" name="CBM_25_3">
+                    <entry ac="IPR005085" desc="Carbohydrate binding module family 25" name="CBM25" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:2001070" name="starch binding"/>
+                    </entry>
+                    <models>
+                        <model ac="SM01066" name="CBM_25_3"/>
+                    </models>
+                    <signature-library-release library="SMART" version="7.1"/>
+                </signature>
+                <locations>
+                    <hmmer2-location score="80.7" evalue="1.8E-19" hmm-start="1" hmm-end="96" hmm-length="0" start="966" end="1057"/>
+                    <hmmer2-location score="75.2" evalue="8.3E-18" hmm-start="1" hmm-end="96" hmm-length="0" start="1128" end="1217"/>
+                    <hmmer2-location score="57.0" evalue="2.4E-12" hmm-start="1" hmm-end="96" hmm-length="0" start="791" end="876"/>
+                </locations>
+            </hmmer2-match>
+            <hmmer3-match evalue="2.1E-50" score="169.1">
+                <signature ac="PF16760" desc="Starch/carbohydrate-binding module (family 53)" name="CBM53">
+                    <entry ac="IPR005085" desc="Carbohydrate binding module family 25" name="CBM25" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:2001070" name="starch binding"/>
+                    </entry>
+                    <models>
+                        <model ac="PF16760" desc="Starch/carbohydrate-binding module (family 53)" name="CBM53"/>
+                    </models>
+                    <signature-library-release library="PFAM" version="31.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="875" env-start="794" score="57.9" evalue="1.1E-15" hmm-start="2" hmm-end="81" hmm-length="0" start="795" end="875"/>
+                    <hmmer3-location env-end="1056" env-start="969" score="59.9" evalue="2.5E-16" hmm-start="1" hmm-end="80" hmm-length="0" start="969" end="1055"/>
+                    <hmmer3-location env-end="1216" env-start="1131" score="60.5" evalue="1.6E-16" hmm-start="2" hmm-end="81" hmm-length="0" start="1132" end="1216"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="4.3E-27" score="94.3">
+                <signature ac="G3DSA:3.40.50.2000">
+                    <models>
+                        <model ac="2o6lB00"/>
+                        <model ac="3wadA02"/>
+                        <model ac="1pswA02"/>
+                        <model ac="2bfwA01"/>
+                        <model ac="2iyfA01"/>
+                        <model ac="3c48B02"/>
+                        <model ac="4nesA02"/>
+                        <model ac="1pswA01"/>
+                        <model ac="3q3eA03"/>
+                        <model ac="4g2tA02"/>
+                        <model ac="4gywA05"/>
+                        <model ac="1uqtA01"/>
+                        <model ac="2iyfB02"/>
+                        <model ac="3tovA01"/>
+                        <model ac="3h4tA02"/>
+                        <model ac="3tovA02"/>
+                        <model ac="2p6pA02"/>
+                        <model ac="1uqtA02"/>
+                        <model ac="2acvA02"/>
+                        <model ac="3s28A04"/>
+                        <model ac="2gt1A02"/>
+                        <model ac="3otiA02"/>
+                        <model ac="2jjmA02"/>
+                        <model ac="4n9wA02"/>
+                        <model ac="1jg7A02"/>
+                        <model ac="3tsaA02"/>
+                        <model ac="2iw1A02"/>
+                        <model ac="2iuyA02"/>
+                        <model ac="3nb0B02"/>
+                        <model ac="4fkzA02"/>
+                        <model ac="1xv5A02"/>
+                        <model ac="1xv5A01"/>
+                        <model ac="2qzsA02"/>
+                        <model ac="4fkzA01"/>
+                        <model ac="2gj4A01"/>
+                        <model ac="3okpA02"/>
+                        <model ac="2vchA02"/>
+                        <model ac="2f9fA00"/>
+                        <model ac="3vueA02"/>
+                        <model ac="3wc4A02"/>
+                        <model ac="1f0kA02"/>
+                        <model ac="2x6qA02"/>
+                        <model ac="3rhzA02"/>
+                        <model ac="2jzcA00"/>
+                        <model ac="2gj4A02"/>
+                        <model ac="1f0kA01"/>
+                        <model ac="4hwgA01"/>
+                        <model ac="3uykA01"/>
+                        <model ac="3t5tB01"/>
+                        <model ac="3h4tA01"/>
+                        <model ac="3qhpA00"/>
+                        <model ac="4l22A01"/>
+                        <model ac="2r60A02"/>
+                        <model ac="2gt1A01"/>
+                        <model ac="3t5tA02"/>
+                        <model ac="1jg7A01"/>
+                        <model ac="2x0dA02"/>
+                        <model ac="4nesA01"/>
+                        <model ac="2hy7A02"/>
+                    </models>
+                    <signature-library-release library="GENE3D" version="4.1.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="1670" env-start="1440" score="94.3" evalue="4.4E-27" hmm-start="1" hmm-end="212" hmm-length="0" start="1440" end="1670"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="1.9E-7" score="30.2">
+                <signature ac="G3DSA:3.40.50.2000">
+                    <models>
+                        <model ac="2o6lB00"/>
+                        <model ac="3wadA02"/>
+                        <model ac="1pswA02"/>
+                        <model ac="2bfwA01"/>
+                        <model ac="2iyfA01"/>
+                        <model ac="3c48B02"/>
+                        <model ac="4nesA02"/>
+                        <model ac="1pswA01"/>
+                        <model ac="3q3eA03"/>
+                        <model ac="4g2tA02"/>
+                        <model ac="4gywA05"/>
+                        <model ac="1uqtA01"/>
+                        <model ac="2iyfB02"/>
+                        <model ac="3tovA01"/>
+                        <model ac="3h4tA02"/>
+                        <model ac="3tovA02"/>
+                        <model ac="2p6pA02"/>
+                        <model ac="1uqtA02"/>
+                        <model ac="2acvA02"/>
+                        <model ac="3s28A04"/>
+                        <model ac="2gt1A02"/>
+                        <model ac="3otiA02"/>
+                        <model ac="2jjmA02"/>
+                        <model ac="4n9wA02"/>
+                        <model ac="1jg7A02"/>
+                        <model ac="3tsaA02"/>
+                        <model ac="2iw1A02"/>
+                        <model ac="2iuyA02"/>
+                        <model ac="3nb0B02"/>
+                        <model ac="4fkzA02"/>
+                        <model ac="1xv5A02"/>
+                        <model ac="1xv5A01"/>
+                        <model ac="2qzsA02"/>
+                        <model ac="4fkzA01"/>
+                        <model ac="2gj4A01"/>
+                        <model ac="3okpA02"/>
+                        <model ac="2vchA02"/>
+                        <model ac="2f9fA00"/>
+                        <model ac="3vueA02"/>
+                        <model ac="3wc4A02"/>
+                        <model ac="1f0kA02"/>
+                        <model ac="2x6qA02"/>
+                        <model ac="3rhzA02"/>
+                        <model ac="2jzcA00"/>
+                        <model ac="2gj4A02"/>
+                        <model ac="1f0kA01"/>
+                        <model ac="4hwgA01"/>
+                        <model ac="3uykA01"/>
+                        <model ac="3t5tB01"/>
+                        <model ac="3h4tA01"/>
+                        <model ac="3qhpA00"/>
+                        <model ac="4l22A01"/>
+                        <model ac="2r60A02"/>
+                        <model ac="2gt1A01"/>
+                        <model ac="3t5tA02"/>
+                        <model ac="1jg7A01"/>
+                        <model ac="2x0dA02"/>
+                        <model ac="4nesA01"/>
+                        <model ac="2hy7A02"/>
+                    </models>
+                    <signature-library-release library="GENE3D" version="4.1.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="1439" env-start="1224" score="26.2" evalue="3.2E-6" hmm-start="17" hmm-end="182" hmm-length="0" start="1224" end="1439"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="2.6E-47" score="161.5">
+                <signature ac="PF08323" desc="Starch synthase catalytic domain" name="Glyco_transf_5">
+                    <entry ac="IPR013534" desc="Starch synthase, catalytic domain" name="Starch_synth_cat_dom" type="DOMAIN">
+                        <pathway-xref db="MetaCyc" id="PWY-622" name="Starch biosynthesis"/>
+                        <pathway-xref db="KEGG" id="00500+2.4.1.21" name="Starch and sucrose metabolism"/>
+                    </entry>
+                    <models>
+                        <model ac="PF08323" desc="Starch synthase catalytic domain" name="Glyco_transf_5"/>
+                    </models>
+                    <signature-library-release library="PFAM" version="31.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="1418" env-start="1227" score="154.6" evalue="3.2E-45" hmm-start="1" hmm-end="230" hmm-length="0" start="1227" end="1414"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="2.0E-37" score="127.2">
+                <signature ac="G3DSA:2.60.40.10">
+                    <entry ac="IPR013783" desc="Immunoglobulin-like fold" name="Ig-like_fold" type="DOMAIN"/>
+                    <models>
+                        <model ac="1z0nA00"/>
+                        <model ac="4kc3B01"/>
+                        <model ac="2cspA01"/>
+                        <model ac="2pn5A07"/>
+                        <model ac="1owwA00"/>
+                        <model ac="1fo0B00"/>
+                        <model ac="4kc3B03"/>
+                        <model ac="4ktyB04"/>
+                        <model ac="1wk0A01"/>
+                        <model ac="2vscA01"/>
+                        <model ac="1mcpH02"/>
+                        <model ac="4go6B02"/>
+                        <model ac="2i24N00"/>
+                        <model ac="3esuF01"/>
+                        <model ac="3h6jA02"/>
+                        <model ac="4oe8A01"/>
+                        <model ac="1je6A02"/>
+                        <model ac="1j8kA00"/>
+                        <model ac="4jy5L01"/>
+                        <model ac="4hbqA01"/>
+                        <model ac="2q8bH01"/>
+                        <model ac="2jjuA01"/>
+                        <model ac="1g1cA00"/>
+                        <model ac="2q3zA04"/>
+                        <model ac="2crmA01"/>
+                        <model ac="1u3zA00"/>
+                        <model ac="1hxmB01"/>
+                        <model ac="1jmxA03"/>
+                        <model ac="2vtfA03"/>
+                        <model ac="1ypzF01"/>
+                        <model ac="3v6oA02"/>
+                        <model ac="2cuhA01"/>
+                        <model ac="4bsjA01"/>
+                        <model ac="3m07A01"/>
+                        <model ac="3butA00"/>
+                        <model ac="1cwvA03"/>
+                        <model ac="1uenA00"/>
+                        <model ac="2kutA01"/>
+                        <model ac="3qjhA01"/>
+                        <model ac="3wdhA02"/>
+                        <model ac="4k94C01"/>
+                        <model ac="4m03A02"/>
+                        <model ac="2o26U01"/>
+                        <model ac="2if7D01"/>
+                        <model ac="4n68A00"/>
+                        <model ac="2vzsA02"/>
+                        <model ac="2hftA02"/>
+                        <model ac="2ed9A01"/>
+                        <model ac="1rhfA02"/>
+                        <model ac="2w0pB00"/>
+                        <model ac="1g0dA03"/>
+                        <model ac="4nzdB02"/>
+                        <model ac="1cfbA01"/>
+                        <model ac="3r8qA01"/>
+                        <model ac="4gmsM02"/>
+                        <model ac="2p45B00"/>
+                        <model ac="3is0X03"/>
+                        <model ac="4cvuA05"/>
+                        <model ac="4gosA00"/>
+                        <model ac="4depC02"/>
+                        <model ac="2wqrA02"/>
+                        <model ac="3wuwG01"/>
+                        <model ac="1nctA00"/>
+                        <model ac="4nn5B02"/>
+                        <model ac="4bzyA02"/>
+                        <model ac="3jz7A02"/>
+                        <model ac="2petA01"/>
+                        <model ac="3t65A01"/>
+                        <model ac="2enyA00"/>
+                        <model ac="1ehxA00"/>
+                        <model ac="2xknA01"/>
+                        <model ac="4m4pA05"/>
+                        <model ac="2lu7A00"/>
+                        <model ac="1mjuH02"/>
+                        <model ac="4buhB01"/>
+                        <model ac="2r39A00"/>
+                        <model ac="3cafA01"/>
+                        <model ac="4aefA02"/>
+                        <model ac="4rwhA00"/>
+                        <model ac="1ulvA03"/>
+                        <model ac="2x41A03"/>
+                        <model ac="4jgjA01"/>
+                        <model ac="2d9qB01"/>
+                        <model ac="2k7qA02"/>
+                        <model ac="3kgrA00"/>
+                        <model ac="1bihA01"/>
+                        <model ac="4frwA02"/>
+                        <model ac="3so5B00"/>
+                        <model ac="1hxmA01"/>
+                        <model ac="3zmrA01"/>
+                        <model ac="1l0qA02"/>
+                        <model ac="4ploB01"/>
+                        <model ac="2oz4A02"/>
+                        <model ac="3teuA00"/>
+                        <model ac="3gm8A02"/>
+                        <model ac="4iihB04"/>
+                        <model ac="3r4dA02"/>
+                        <model ac="1k5nA02"/>
+                        <model ac="3k8kA04"/>
+                        <model ac="3cu7A09"/>
+                        <model ac="4jvuA00"/>
+                        <model ac="1bpvA00"/>
+                        <model ac="4aeeA02"/>
+                        <model ac="1fnfA03"/>
+                        <model ac="1ji1A01"/>
+                        <model ac="4dohE02"/>
+                        <model ac="2rikA01"/>
+                        <model ac="3d2uA02"/>
+                        <model ac="3fn9C04"/>
+                        <model ac="3s98A02"/>
+                        <model ac="3d9aH01"/>
+                        <model ac="2ibgA02"/>
+                        <model ac="4pyhA02"/>
+                        <model ac="1n26A01"/>
+                        <model ac="2rb8A00"/>
+                        <model ac="2y23A02"/>
+                        <model ac="2rikA03"/>
+                        <model ac="4dohB02"/>
+                        <model ac="3e0gA05"/>
+                        <model ac="3besR01"/>
+                        <model ac="1kgcD01"/>
+                        <model ac="3knbB00"/>
+                        <model ac="2h41A00"/>
+                        <model ac="3knbA00"/>
+                        <model ac="4fmkA02"/>
+                        <model ac="2bk8A00"/>
+                        <model ac="2di7A01"/>
+                        <model ac="4im8A02"/>
+                        <model ac="4bfiB01"/>
+                        <model ac="1p7hL02"/>
+                        <model ac="2hazA00"/>
+                        <model ac="4q97A00"/>
+                        <model ac="4i2xE03"/>
+                        <model ac="1fnfA01"/>
+                        <model ac="3qt2B03"/>
+                        <model ac="2b5iB02"/>
+                        <model ac="1sy6A01"/>
+                        <model ac="2atpD00"/>
+                        <model ac="2ic2A00"/>
+                        <model ac="3fl7A05"/>
+                        <model ac="4lsdF00"/>
+                        <model ac="1xt5A00"/>
+                        <model ac="1ogaD02"/>
+                        <model ac="2ee3A00"/>
+                        <model ac="1n26A03"/>
+                        <model ac="3l5iA03"/>
+                        <model ac="3lcyA02"/>
+                        <model ac="3mjgX01"/>
+                        <model ac="3wcyA04"/>
+                        <model ac="3qt2A01"/>
+                        <model ac="2v5yA05"/>
+                        <model ac="2v5mA02"/>
+                        <model ac="4mj2B03"/>
+                        <model ac="2k1mA00"/>
+                        <model ac="2id5D02"/>
+                        <model ac="3c8dA01"/>
+                        <model ac="2kkqA00"/>
+                        <model ac="1dr9A02"/>
+                        <model ac="3bp6A00"/>
+                        <model ac="1cs6A01"/>
+                        <model ac="4h5sA00"/>
+                        <model ac="3q5yA01"/>
+                        <model ac="1ncwH01"/>
+                        <model ac="3f65A02"/>
+                        <model ac="4dzbB01"/>
+                        <model ac="2edyA00"/>
+                        <model ac="2ec8A01"/>
+                        <model ac="3n06B02"/>
+                        <model ac="3edfA01"/>
+                        <model ac="3kptB01"/>
+                        <model ac="3o4oC02"/>
+                        <model ac="4hw6A01"/>
+                        <model ac="4h5sB00"/>
+                        <model ac="2qlvB01"/>
+                        <model ac="4h8wC01"/>
+                        <model ac="2xknB01"/>
+                        <model ac="2o26U03"/>
+                        <model ac="1bihA03"/>
+                        <model ac="4jklA02"/>
+                        <model ac="2nw2A01"/>
+                        <model ac="1iarB02"/>
+                        <model ac="4ra0C01"/>
+                        <model ac="3o3uN03"/>
+                        <model ac="1fhgA00"/>
+                        <model ac="4ay0B02"/>
+                        <model ac="2xzzA00"/>
+                        <model ac="4fxkB03"/>
+                        <model ac="4e9lA01"/>
+                        <model ac="2uzyB03"/>
+                        <model ac="3lafA02"/>
+                        <model ac="3q48A02"/>
+                        <model ac="3qp3A00"/>
+                        <model ac="2dm4A01"/>
+                        <model ac="4kmqA01"/>
+                        <model ac="2dlgA01"/>
+                        <model ac="3p3yA03"/>
+                        <model ac="3bmvA03"/>
+                        <model ac="1wgoA01"/>
+                        <model ac="2vzsA04"/>
+                        <model ac="4eskC00"/>
+                        <model ac="3v8oA01"/>
+                        <model ac="3dbxA02"/>
+                        <model ac="3arxA01"/>
+                        <model ac="3oq3B02"/>
+                        <model ac="2cryA01"/>
+                        <model ac="3oskA00"/>
+                        <model ac="2e6qA00"/>
+                        <model ac="1f97A01"/>
+                        <model ac="1fyhB02"/>
+                        <model ac="3p4lA02"/>
+                        <model ac="4f80A02"/>
+                        <model ac="2dtgE06"/>
+                        <model ac="4gafB02"/>
+                        <model ac="2j8hA01"/>
+                        <model ac="4i0kA02"/>
+                        <model ac="1eerC01"/>
+                        <model ac="2uzxB02"/>
+                        <model ac="3lqmA01"/>
+                        <model ac="3i84B00"/>
+                        <model ac="1wisA01"/>
+                        <model ac="4i0kA01"/>
+                        <model ac="2dleA01"/>
+                        <model ac="2bnuA02"/>
+                        <model ac="1kv3A01"/>
+                        <model ac="3s35X00"/>
+                        <model ac="4eq3A01"/>
+                        <model ac="2edjA00"/>
+                        <model ac="1iamA02"/>
+                        <model ac="1wwcA00"/>
+                        <model ac="3ry4A02"/>
+                        <model ac="4bfgA01"/>
+                        <model ac="2fboJ02"/>
+                        <model ac="2cxkA00"/>
+                        <model ac="2e7cA01"/>
+                        <model ac="3hrpA01"/>
+                        <model ac="2e7mA01"/>
+                        <model ac="1ncnA00"/>
+                        <model ac="1i1rA01"/>
+                        <model ac="2frgP00"/>
+                        <model ac="2wskA01"/>
+                        <model ac="4kdwA00"/>
+                        <model ac="3o4oC03"/>
+                        <model ac="3k3qA00"/>
+                        <model ac="1bf2A01"/>
+                        <model ac="1bquA02"/>
+                        <model ac="3w5mA01"/>
+                        <model ac="1axiB02"/>
+                        <model ac="3o4oB03"/>
+                        <model ac="1cs6A02"/>
+                        <model ac="1y6kR02"/>
+                        <model ac="1gl4B00"/>
+                        <model ac="4exkA03"/>
+                        <model ac="2yrlA01"/>
+                        <model ac="1ogaD01"/>
+                        <model ac="2xotA02"/>
+                        <model ac="1wj3A01"/>
+                        <model ac="2dmkA01"/>
+                        <model ac="1waaC00"/>
+                        <model ac="2cqvA00"/>
+                        <model ac="3ntcH01"/>
+                        <model ac="1ej6A05"/>
+                        <model ac="3u83A02"/>
+                        <model ac="2eo1A00"/>
+                        <model ac="4nobA00"/>
+                        <model ac="1cczA01"/>
+                        <model ac="3pv7A02"/>
+                        <model ac="4j3vA02"/>
+                        <model ac="1w8oA02"/>
+                        <model ac="1xiwA00"/>
+                        <model ac="2w1nA02"/>
+                        <model ac="2e6jA00"/>
+                        <model ac="3it8D02"/>
+                        <model ac="1eajB00"/>
+                        <model ac="2dlhA00"/>
+                        <model ac="3dlqR01"/>
+                        <model ac="1ollA01"/>
+                        <model ac="3mpcA00"/>
+                        <model ac="3og6B02"/>
+                        <model ac="3lohE04"/>
+                        <model ac="2bnuB02"/>
+                        <model ac="2v5yA04"/>
+                        <model ac="2qsvA02"/>
+                        <model ac="3iduB00"/>
+                        <model ac="2g5rA00"/>
+                        <model ac="2iepB02"/>
+                        <model ac="3ojmB02"/>
+                        <model ac="1ex0A03"/>
+                        <model ac="1tdqA01"/>
+                        <model ac="2x1wO01"/>
+                        <model ac="3rpiB01"/>
+                        <model ac="2jllA03"/>
+                        <model ac="3e0gA03"/>
+                        <model ac="3p3yA01"/>
+                        <model ac="2xy2A02"/>
+                        <model ac="2aepL01"/>
+                        <model ac="1kgcE01"/>
+                        <model ac="2gysB04"/>
+                        <model ac="3bpnC02"/>
+                        <model ac="4n5uA00"/>
+                        <model ac="3gbnL02"/>
+                        <model ac="4k3dH01"/>
+                        <model ac="1olzA03"/>
+                        <model ac="1wzlA01"/>
+                        <model ac="3rnkB00"/>
+                        <model ac="2r15A02"/>
+                        <model ac="4nzuL01"/>
+                        <model ac="2bhuA01"/>
+                        <model ac="3s9dD01"/>
+                        <model ac="3l5iA01"/>
+                        <model ac="3ejjX03"/>
+                        <model ac="3f7qA01"/>
+                        <model ac="3alxC02"/>
+                        <model ac="4dohE01"/>
+                        <model ac="1q38A00"/>
+                        <model ac="2edkA00"/>
+                        <model ac="1xiwB00"/>
+                        <model ac="3e0gA01"/>
+                        <model ac="1k3iA03"/>
+                        <model ac="4hwuA00"/>
+                        <model ac="4aeeA01"/>
+                        <model ac="1neuA00"/>
+                        <model ac="3ejjX01"/>
+                        <model ac="1qfhA02"/>
+                        <model ac="4lldB00"/>
+                        <model ac="3es6B00"/>
+                        <model ac="1nkrA01"/>
+                        <model ac="2oz4A01"/>
+                        <model ac="4gs7C02"/>
+                        <model ac="2h32A00"/>
+                        <model ac="3mjgX03"/>
+                        <model ac="3qqnA00"/>
+                        <model ac="1ogaE01"/>
+                        <model ac="2hftA01"/>
+                        <model ac="3r8qA03"/>
+                        <model ac="2yd6A02"/>
+                        <model ac="4fa8A01"/>
+                        <model ac="4jvwD00"/>
+                        <model ac="3q0hB00"/>
+                        <model ac="3cxeC01"/>
+                        <model ac="1r6vA04"/>
+                        <model ac="3lb6C01"/>
+                        <model ac="4jguA00"/>
+                        <model ac="1cidA01"/>
+                        <model ac="2v9rA02"/>
+                        <model ac="1pkoA00"/>
+                        <model ac="2w91A03"/>
+                        <model ac="2z0bE00"/>
+                        <model ac="1ow0A01"/>
+                        <model ac="4jjhA00"/>
+                        <model ac="2xy1A02"/>
+                        <model ac="4grmA01"/>
+                        <model ac="2geeA02"/>
+                        <model ac="2bc4D02"/>
+                        <model ac="1t0pB00"/>
+                        <model ac="1v05A00"/>
+                        <model ac="3utoB01"/>
+                        <model ac="1cs6A04"/>
+                        <model ac="2cpcA01"/>
+                        <model ac="3f8uD03"/>
+                        <model ac="4ei6A01"/>
+                        <model ac="2gysA02"/>
+                        <model ac="2je8B05"/>
+                        <model ac="2xg5A02"/>
+                        <model ac="3orjA02"/>
+                        <model ac="4lldA00"/>
+                        <model ac="2wv3A01"/>
+                        <model ac="1edqA01"/>
+                        <model ac="3hc4H01"/>
+                        <model ac="2gy5A01"/>
+                        <model ac="1ti2B03"/>
+                        <model ac="4bsjA02"/>
+                        <model ac="2pttA00"/>
+                        <model ac="4kc3B02"/>
+                        <model ac="2pttB00"/>
+                        <model ac="3b43A02"/>
+                        <model ac="2dkuA01"/>
+                        <model ac="2bc4A02"/>
+                        <model ac="1x5aA01"/>
+                        <model ac="2je8A02"/>
+                        <model ac="3esuF02"/>
+                        <model ac="3amlA02"/>
+                        <model ac="3khqA00"/>
+                        <model ac="2dibA01"/>
+                        <model ac="2ee2A01"/>
+                        <model ac="1l9nA03"/>
+                        <model ac="1iarB01"/>
+                        <model ac="4aefA01"/>
+                        <model ac="1becA02"/>
+                        <model ac="4nzjA01"/>
+                        <model ac="3bmvA04"/>
+                        <model ac="1cidA02"/>
+                        <model ac="4j7rB01"/>
+                        <model ac="4gnsA02"/>
+                        <model ac="4m4pA04"/>
+                        <model ac="3mj6A01"/>
+                        <model ac="2vzsA05"/>
+                        <model ac="2petA02"/>
+                        <model ac="4oe8A02"/>
+                        <model ac="2c4fT00"/>
+                        <model ac="3o3uN02"/>
+                        <model ac="3shsA01"/>
+                        <model ac="2oz4A03"/>
+                        <model ac="4i3gA04"/>
+                        <model ac="4k94C02"/>
+                        <model ac="3utoA04"/>
+                        <model ac="4cj0A01"/>
+                        <model ac="1mspB00"/>
+                        <model ac="1cfbA02"/>
+                        <model ac="2x44D01"/>
+                        <model ac="2yxmA00"/>
+                        <model ac="1epfA01"/>
+                        <model ac="4l1dC00"/>
+                        <model ac="3m8oH02"/>
+                        <model ac="1cwvA02"/>
+                        <model ac="1vcaA02"/>
+                        <model ac="3r8qA02"/>
+                        <model ac="4md5A02"/>
+                        <model ac="3n1fD00"/>
+                        <model ac="1u2cA01"/>
+                        <model ac="4b41A00"/>
+                        <model ac="1zxqA02"/>
+                        <model ac="2v5mA03"/>
+                        <model ac="2o26U02"/>
+                        <model ac="4aqoA00"/>
+                        <model ac="3obaA04"/>
+                        <model ac="2vn4A02"/>
+                        <model ac="2dltA00"/>
+                        <model ac="4hljA02"/>
+                        <model ac="3og4B01"/>
+                        <model ac="1nkrA02"/>
+                        <model ac="4bfiB02"/>
+                        <model ac="3uzqA02"/>
+                        <model ac="1q72H02"/>
+                        <model ac="2ee6A00"/>
+                        <model ac="1t2jA00"/>
+                        <model ac="1jbjA01"/>
+                        <model ac="4q9bA00"/>
+                        <model ac="3g08A02"/>
+                        <model ac="2pyfA02"/>
+                        <model ac="1m1sA00"/>
+                        <model ac="1bihA04"/>
+                        <model ac="2ifgA02"/>
+                        <model ac="2pndA00"/>
+                        <model ac="3cx2A00"/>
+                        <model ac="4cvuA02"/>
+                        <model ac="2qsqB01"/>
+                        <model ac="4gxvL01"/>
+                        <model ac="3me0A01"/>
+                        <model ac="3s98A03"/>
+                        <model ac="3qbtD00"/>
+                        <model ac="2djuA00"/>
+                        <model ac="4depF01"/>
+                        <model ac="3k0wA01"/>
+                        <model ac="1jmxA04"/>
+                        <model ac="4i2xE02"/>
+                        <model ac="1txkB02"/>
+                        <model ac="1evuA01"/>
+                        <model ac="4dohB01"/>
+                        <model ac="2fgzA02"/>
+                        <model ac="2y23A01"/>
+                        <model ac="1yq2A04"/>
+                        <model ac="3k2mC00"/>
+                        <model ac="1x4zA01"/>
+                        <model ac="2v9tA00"/>
+                        <model ac="4ekxA00"/>
+                        <model ac="1m7xB01"/>
+                        <model ac="1my5A00"/>
+                        <model ac="4g9fD01"/>
+                        <model ac="2ys4A01"/>
+                        <model ac="3e0gA04"/>
+                        <model ac="2yrzA01"/>
+                        <model ac="4fomA02"/>
+                        <model ac="1qr4A01"/>
+                        <model ac="3s98A01"/>
+                        <model ac="2gy5A04"/>
+                        <model ac="1ktkF02"/>
+                        <model ac="2rikA02"/>
+                        <model ac="2zuvA02"/>
+                        <model ac="2dm3A00"/>
+                        <model ac="2b5iC01"/>
+                        <model ac="3p3yA02"/>
+                        <model ac="2uzyB04"/>
+                        <model ac="3pv7A01"/>
+                        <model ac="1cdcA00"/>
+                        <model ac="3of6E00"/>
+                        <model ac="1bihA02"/>
+                        <model ac="3mtrA01"/>
+                        <model ac="2rblA02"/>
+                        <model ac="4ms8C01"/>
+                        <model ac="3p3yA04"/>
+                        <model ac="4ov6F00"/>
+                        <model ac="2a38B01"/>
+                        <model ac="3fruA02"/>
+                        <model ac="1fltX00"/>
+                        <model ac="2c9aA02"/>
+                        <model ac="2yz8A01"/>
+                        <model ac="3lafA03"/>
+                        <model ac="2vsdA00"/>
+                        <model ac="3p73A02"/>
+                        <model ac="2dn7A00"/>
+                        <model ac="2vkwA02"/>
+                        <model ac="2hp4A00"/>
+                        <model ac="4b7lA03"/>
+                        <model ac="1hzhH01"/>
+                        <model ac="1b4rA00"/>
+                        <model ac="3f7pE02"/>
+                        <model ac="3v6oB01"/>
+                        <model ac="2wqrB01"/>
+                        <model ac="3u83A03"/>
+                        <model ac="4md5B02"/>
+                        <model ac="3qt2A02"/>
+                        <model ac="1cd9D01"/>
+                        <model ac="2v5mA01"/>
+                        <model ac="2lqrA00"/>
+                        <model ac="1ncwH02"/>
+                        <model ac="2if7B02"/>
+                        <model ac="3o4oC01"/>
+                        <model ac="1vemA02"/>
+                        <model ac="2zuxA01"/>
+                        <model ac="1mjuL01"/>
+                        <model ac="4lp5A03"/>
+                        <model ac="3obaA02"/>
+                        <model ac="2r2cB00"/>
+                        <model ac="4jkmA02"/>
+                        <model ac="3gfuA01"/>
+                        <model ac="1n26A02"/>
+                        <model ac="2uvfA01"/>
+                        <model ac="2crzA00"/>
+                        <model ac="3u48A03"/>
+                        <model ac="4ay0A01"/>
+                        <model ac="1k85A00"/>
+                        <model ac="4hwnA00"/>
+                        <model ac="3rghA01"/>
+                        <model ac="2cumA00"/>
+                        <model ac="3bwuC02"/>
+                        <model ac="1my7A00"/>
+                        <model ac="2oxgA00"/>
+                        <model ac="4hbqA02"/>
+                        <model ac="2w59A01"/>
+                        <model ac="1pbyA03"/>
+                        <model ac="3iagC03"/>
+                        <model ac="3gzkA01"/>
+                        <model ac="2pkdA00"/>
+                        <model ac="3b4nA01"/>
+                        <model ac="2yuwA01"/>
+                        <model ac="3ry4A01"/>
+                        <model ac="1gxeA00"/>
+                        <model ac="3f8uB02"/>
+                        <model ac="1iamA01"/>
+                        <model ac="4gafB03"/>
+                        <model ac="3r0nA00"/>
+                        <model ac="2or7A00"/>
+                        <model ac="3lqmA02"/>
+                        <model ac="4gafB01"/>
+                        <model ac="3bfoA00"/>
+                        <model ac="2qsvA01"/>
+                        <model ac="3cmgA02"/>
+                        <model ac="3hn3A02"/>
+                        <model ac="2xy1A01"/>
+                        <model ac="1xauA00"/>
+                        <model ac="3hrzB02"/>
+                        <model ac="1axiB01"/>
+                        <model ac="3cmgA04"/>
+                        <model ac="3bgaA04"/>
+                        <model ac="1v8hA00"/>
+                        <model ac="1eerB02"/>
+                        <model ac="1fyhB01"/>
+                        <model ac="1x9qA01"/>
+                        <model ac="1cczA02"/>
+                        <model ac="2v5yA03"/>
+                        <model ac="3oq3B03"/>
+                        <model ac="1j0hA01"/>
+                        <model ac="3dlqR02"/>
+                        <model ac="1uctA01"/>
+                        <model ac="1f97A02"/>
+                        <model ac="1mh5B02"/>
+                        <model ac="3vmnA01"/>
+                        <model ac="1y6kR01"/>
+                        <model ac="1uadC00"/>
+                        <model ac="4lfhG02"/>
+                        <model ac="3lcyA01"/>
+                        <model ac="2wv3A02"/>
+                        <model ac="3zssA01"/>
+                        <model ac="4h8wC02"/>
+                        <model ac="3u83A01"/>
+                        <model ac="4q9cA00"/>
+                        <model ac="2xzcL01"/>
+                        <model ac="3pucA00"/>
+                        <model ac="3bgaA02"/>
+                        <model ac="3lafA01"/>
+                        <model ac="2qhlD00"/>
+                        <model ac="1u2hA00"/>
+                        <model ac="1hkfA00"/>
+                        <model ac="1x5zA01"/>
+                        <model ac="3p4lA01"/>
+                        <model ac="4eq3A02"/>
+                        <model ac="1wfuA01"/>
+                        <model ac="2r15A01"/>
+                        <model ac="2j8hA02"/>
+                        <model ac="3kvqA00"/>
+                        <model ac="1qfhA01"/>
+                        <model ac="1x4xA00"/>
+                        <model ac="3l5iA02"/>
+                        <model ac="2bnuA01"/>
+                        <model ac="2c3vB00"/>
+                        <model ac="1bwmA02"/>
+                        <model ac="3v8oA02"/>
+                        <model ac="2ed7A00"/>
+                        <model ac="3mjgX02"/>
+                        <model ac="3bp6B02"/>
+                        <model ac="3eifA05"/>
+                        <model ac="2x1qA00"/>
+                        <model ac="3n06B01"/>
+                        <model ac="2iepA01"/>
+                        <model ac="3dj9A00"/>
+                        <model ac="3mujA01"/>
+                        <model ac="2dmbA00"/>
+                        <model ac="2gysA01"/>
+                        <model ac="1mexH01"/>
+                        <model ac="1l9mA04"/>
+                        <model ac="2yd9A03"/>
+                        <model ac="3d9aH02"/>
+                        <model ac="2ds4A01"/>
+                        <model ac="1cvrA03"/>
+                        <model ac="1witA00"/>
+                        <model ac="4jzjD02"/>
+                        <model ac="1c7sA04"/>
+                        <model ac="2ekjA00"/>
+                        <model ac="2gysA03"/>
+                        <model ac="2q87C00"/>
+                        <model ac="3nvqA03"/>
+                        <model ac="2nqcA00"/>
+                        <model ac="3gm8A04"/>
+                        <model ac="4jfhE01"/>
+                        <model ac="4unuA00"/>
+                        <model ac="1k5nB00"/>
+                        <model ac="2wanA02"/>
+                        <model ac="1dn0D02"/>
+                        <model ac="3besR02"/>
+                        <model ac="1u58A02"/>
+                        <model ac="3d9aL01"/>
+                        <model ac="1yjdC00"/>
+                        <model ac="1jz7A04"/>
+                        <model ac="1f2qA02"/>
+                        <model ac="2geeA01"/>
+                        <model ac="1z9lA00"/>
+                        <model ac="3bn3B01"/>
+                        <model ac="1tdqA02"/>
+                        <model ac="2v5mA04"/>
+                        <model ac="1cs6A03"/>
+                        <model ac="2gy5A02"/>
+                        <model ac="1rhfA01"/>
+                        <model ac="1f00I01"/>
+                        <model ac="1jz7A02"/>
+                        <model ac="1wfnA01"/>
+                        <model ac="2cr6A01"/>
+                        <model ac="1vcaA01"/>
+                        <model ac="4lfhD02"/>
+                        <model ac="3fawA02"/>
+                        <model ac="4cvuA04"/>
+                        <model ac="1bquA01"/>
+                        <model ac="1smoB00"/>
+                        <model ac="2q3zA03"/>
+                        <model ac="1cd9B02"/>
+                        <model ac="4isvA01"/>
+                        <model ac="1mjuH01"/>
+                        <model ac="2wqrA03"/>
+                        <model ac="3rbsA02"/>
+                        <model ac="2yd6A01"/>
+                        <model ac="2ee9A00"/>
+                        <model ac="1wfoA01"/>
+                        <model ac="1tvdA00"/>
+                        <model ac="3lb6D02"/>
+                        <model ac="2zg2A02"/>
+                        <model ac="1qfoC00"/>
+                        <model ac="1imhC02"/>
+                        <model ac="4hljA01"/>
+                        <model ac="2kpnA01"/>
+                        <model ac="3ejjX02"/>
+                        <model ac="4bfgA02"/>
+                        <model ac="1yq2A02"/>
+                        <model ac="1ut9A01"/>
+                        <model ac="1wicA01"/>
+                        <model ac="3s9dD02"/>
+                        <model ac="2v17L01"/>
+                        <model ac="2dtgE05"/>
+                        <model ac="3zyiA02"/>
+                        <model ac="2je8A04"/>
+                        <model ac="1nezH00"/>
+                        <model ac="3lpwA01"/>
+                        <model ac="1seqH02"/>
+                        <model ac="4mb4A03"/>
+                        <model ac="3noiA00"/>
+                        <model ac="1qg3A02"/>
+                        <model ac="4nzuL02"/>
+                        <model ac="2yuxA01"/>
+                        <model ac="1l6xA02"/>
+                        <model ac="4oe8A03"/>
+                        <model ac="2flbT00"/>
+                        <model ac="3h7lA01"/>
+                        <model ac="3e0gA02"/>
+                        <model ac="1g0dA01"/>
+                        <model ac="2dbjA01"/>
+                        <model ac="2eebA00"/>
+                    </models>
+                    <signature-library-release library="GENE3D" version="4.1.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="883" env-start="787" score="42.8" evalue="3.5E-11" hmm-start="7" hmm-end="90" hmm-length="0" start="787" end="883"/>
+                    <hmmer3-location env-end="1223" env-start="1121" score="45.6" evalue="5.0E-12" hmm-start="7" hmm-end="90" hmm-length="0" start="1121" end="1223"/>
+                    <hmmer3-location env-end="1072" env-start="959" score="36.7" evalue="2.9E-9" hmm-start="6" hmm-end="95" hmm-length="0" start="959" end="1072"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="2.8E-8" score="33.5">
+                <signature ac="PF00534" desc="Glycosyl transferases group 1" name="Glycos_transf_1">
+                    <entry ac="IPR001296" desc="Glycosyl transferase, family 1" name="Glyco_trans_1" type="DOMAIN"/>
+                    <models>
+                        <model ac="PF00534" desc="Glycosyl transferases group 1" name="Glycos_transf_1"/>
+                    </models>
+                    <signature-library-release library="PFAM" version="31.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="1619" env-start="1466" score="32.1" evalue="7.0E-8" hmm-start="15" hmm-end="131" hmm-length="0" start="1477" end="1595"/>
+                </locations>
+            </hmmer3-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="898" end="926"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="375" end="399"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="83" end="118"/>
+                </locations>
+            </mobidblite-match>
+            <panther-match evalue="0.0" familyName="SUBFAMILY NOT NAMED" score="2122.7">
+                <signature ac="PTHR12526:SF457" name="SUBFAMILY NOT NAMED">
+                    <models>
+                        <model ac="PTHR12526:SF457" name="SUBFAMILY NOT NAMED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="679" end="1674"/>
+                </locations>
+            </panther-match>
+            <panther-match evalue="0.0" familyName="GLYCOSYLTRANSFERASE" score="2122.7">
+                <signature ac="PTHR12526" name="GLYCOSYLTRANSFERASE">
+                    <models>
+                        <model ac="PTHR12526" name="GLYCOSYLTRANSFERASE"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="679" end="1674"/>
+                </locations>
+            </panther-match>
+            <profilescan-match>
+                <signature ac="MF_00484" desc="Glycogen synthase [glgA]." name="Glycogen_synth">
+                    <entry ac="IPR011835" desc="Bacterial/plant glycogen synthase" name="GS/SS" type="FAMILY">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0004373" name="glycogen (starch) synthase activity"/>
+                        <pathway-xref db="KEGG" id="00500+2.4.1.21" name="Starch and sucrose metabolism"/>
+                        <pathway-xref db="MetaCyc" id="PWY-622" name="Starch biosynthesis"/>
+                    </entry>
+                    <models>
+                        <model ac="MF_00484" desc="Glycogen synthase [glgA]." name="Glycogen_synth"/>
+                    </models>
+                    <signature-library-release library="HAMAP" version="201701.18"/>
+                </signature>
+                <locations>
+                    <profilescan-location score="32.137" start="1226" end="1674">
+                        <alignment>MHIVHIAVEMAPIAKVGGLGDVVTSLSRAVQDLGHNVEVILPKYGCLNLSNVKNLHIHQSF--SWGGSEIKVWRGLVEGLCVYFLEPQNgMFGV-GYVYGR------DDDRRFGFFCRSALEFL-LQSGSSPNIIHCHDWSSAPVAWLHKENYAKSslaNARVVFTIHNLEFGAHHIGKAMR-----------------------------YCDKATTVSNTYSKEVSG-------HGAIVPHLGKFYGILNGIDPDIWDPYNDNFIPVHYTcENVVEGKRAAKRALQQKFGLQ-QIDVPVVGIVTRLTAQKGIHLIKHAIHRTLERNGQVVLLGSAPdSRIQADFVNLANKLHGVnhgqVRLSLTYDEPLSHLIYAGSDFILVPSIFEPCGLTQLVAMRYGTIPIVRKTGGLFDTVFDVDNDKerardrgLEPNGFSFDGADSNGVDYALNRQAQAISawFDARSWfHSLCKRVMEQDWSWNRPALDYIELYRSA</alignment>
+                    </profilescan-location>
+                </locations>
+            </profilescan-match>
+            <rpsblast-match>
+                <signature ac="cd03791" desc="GT1_Glycogen_synthase_DULL1_like" name="GT1_Glycogen_synthase_DULL1_like">
+                    <models>
+                        <model ac="cd03791" desc="GT1_Glycogen_synthase_DULL1_like" name="GT1_Glycogen_synthase_DULL1_like"/>
+                    </models>
+                    <signature-library-release library="CDD" version="3.16"/>
+                </signature>
+                <locations>
+                    <rpsblast-location evalue="1.9607E-177" score="539.831" start="1227" end="1673">
+                        <sites>
+                            <rpsblast-site description="ADP-binding pocket" numLocations="10">
+<site-locations>
+    <site-location residue="S" start="1550" end="1550"/>
+    <site-location residue="K" start="1240" end="1240"/>
+    <site-location residue="T" start="1484" end="1484"/>
+    <site-location residue="E" start="1567" end="1567"/>
+    <site-location residue="T" start="1572" end="1572"/>
+    <site-location residue="G" start="1243" end="1243"/>
+    <site-location residue="V" start="1483" end="1483"/>
+    <site-location residue="R" start="1485" end="1485"/>
+    <site-location residue="T" start="1544" end="1544"/>
+    <site-location residue="Y" start="1545" end="1545"/>
+</site-locations>
+                            </rpsblast-site>
+                            <rpsblast-site description="homodimer interface" numLocations="6">
+<site-locations>
+    <site-location residue="D" start="1593" end="1593"/>
+    <site-location residue="K" start="1411" end="1411"/>
+    <site-location residue="K" start="1587" end="1587"/>
+    <site-location residue="Y" start="1627" end="1627"/>
+    <site-location residue="F" start="1592" end="1592"/>
+    <site-location residue="V" start="1595" end="1595"/>
+</site-locations>
+                            </rpsblast-site>
+                        </sites>
+                    </rpsblast-location>
+                </locations>
+            </rpsblast-match>
+            <superfamilyhmmer3-match evalue="1.53E-91">
+                <signature ac="SSF53756" name="UDP-Glycosyltransferase/glycogen phosphorylase">
+                    <models>
+                        <model ac="0053131" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0046716" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0046669" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0048983" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0038341" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0051304" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0052623" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0053762" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0046587" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0052533" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0054711" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0048500" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0035835" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0054538" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0051981" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0049238" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0053693" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0044616" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0043452" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0052910" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0048814" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0042392" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0054312" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                        <model ac="0047375" name="UDP-Glycosyltransferase/glycogen phosphorylase"/>
+                    </models>
+                    <signature-library-release library="SUPERFAMILY" version="1.75"/>
+                </signature>
+                <locations>
+                    <superfamilyhmmer3-location start="1224" end="1676"/>
+                </locations>
+            </superfamilyhmmer3-match>
+        </matches>
+    </protein>
+</protein-matches>
