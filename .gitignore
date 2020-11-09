@@ -12,8 +12,8 @@ image.py
 instance.py
 tmp.txt
 SBATCH*
-*out
-*err
+/*.out
+/*.err
 ./tmp/*
 mysql
 start-GOMAP.sh

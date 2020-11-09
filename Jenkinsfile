@@ -3,20 +3,28 @@ pipeline {
     environment {
         CONTAINER = 'gomap'
         IMAGE = 'GOMAP'
-        VERSION = '1.3.2'
-        ZENODO_KEY = credentials('zenodo')
+        VERSION = '1.3.3'
     }
     
     stages {
         stage('Build') {
             steps {
+                when { 
+                anyOf {
+                    changeset "docs/*"
+                }
+                anyof{
+                    branch 'master'
+                    branch 'dev'
+                }
+            }
                 sh '''
                     cd docs
                     virtualenv -p python3 venv
                     . venv/bin/activate
                     pip install -r requirements.txt 
                     make clean
-                    make build
+                    make build -D version=${VERSION} -D release=${VERSION}
                 '''
             }
         }
