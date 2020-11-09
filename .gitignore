@@ -14,7 +14,7 @@ tmp.txt
 SBATCH*
 /*.out
 /*.err
-./tmp/*
+tmp/*
 mysql
 start-GOMAP.sh
 *.sif
