@@ -29,17 +29,33 @@ pipeline {
                 '''
             }
         }
+         stage('Push Artifacts') {
+              when { 
+                anyOf {
+                    changeset "docs/*"
+                    changeset "Jenkinsfile"
+                }
+                anyOf {
+                    branch 'master'
+                    branch 'dev'
+                }
+            }
+            steps{
+                echo 'Documentation is successfully build'
+                sh '''
+                    cd docs
+                    pwd
+                    ls
+                    make syncDocs
+                '''
+                echo 'Documentation is successfully synced'
+            }
+
+         }
     }
     post { 
         success { 
-            echo 'Documentation is successfully build'
-            sh '''
-                cd docs
-                pwd
-                ls
-                make syncDocs
-            '''
-            echo 'Documentation is successfully synced'
+            echo 'Documentation is successfully built and synced'
         }
     }
 }
