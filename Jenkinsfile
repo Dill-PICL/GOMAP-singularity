@@ -50,7 +50,6 @@ pipeline {
                 '''
                 echo 'Documentation is successfully synced'
             }
-
          }
     }
     post { 
