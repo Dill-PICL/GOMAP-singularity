@@ -8,17 +8,17 @@ pipeline {
     
     stages {
         stage('Build') {
-            steps {
-                when { 
-                    anyOf {
-                        changeset "docs/*"
-                        changeset "Jenkinsfile"
-                    }
-                    anyOf {
-                        branch 'master'
-                        branch 'dev'
-                    }
+            when { 
+                anyOf {
+                    changeset "docs/*"
+                    changeset "Jenkinsfile"
                 }
+                anyOf {
+                    branch 'master'
+                    branch 'dev'
+                }
+            }
+            steps {
                 sh '''
                     cd docs
                     virtualenv -p python3 venv
