@@ -3,7 +3,6 @@ temp
 *job
 *vscode
 *.simg
-GOMAP-data
 GOMAP
 hostfile
 mindmap
@@ -16,7 +15,7 @@ tmp.txt
 SBATCH*
 *out
 *err
-tmp
+./tmp
 mysql
 start-GOMAP.sh
 *.sif

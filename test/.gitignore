@@ -1,5 +1,4 @@
-*
-
+!GOMAP-0.3_GOMAP-input
 !GOMAP-0.3_GOMAP-input/tmp/mixed-meth/argot2.5/results/**
 !.gitignore
 !config.yml
@@ -13,3 +12,5 @@
 !GOMAP-0.3_GOMAP-input/tmp/domain/iprs/split/0.3_GOMAP-input.2.gff3
 !GOMAP-0.3_GOMAP-input/tmp/domain/iprs/split/0.3_GOMAP-input.2.tsv
 !GOMAP-0.3_GOMAP-input/tmp/domain/iprs/split/0.3_GOMAP-input.2.xml
+
+*
