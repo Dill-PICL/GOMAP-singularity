@@ -10,14 +10,15 @@ pipeline {
         stage('Build') {
             steps {
                 when { 
-                anyOf {
-                    changeset "docs/*"
+                    anyOf {
+                        changeset "docs/*"
+                        changeset "Jenkinsfile"
+                    }
+                    anyOf {
+                        branch 'master'
+                        branch 'dev'
+                    }
                 }
-                anyof{
-                    branch 'master'
-                    branch 'dev'
-                }
-            }
                 sh '''
                     cd docs
                     virtualenv -p python3 venv
