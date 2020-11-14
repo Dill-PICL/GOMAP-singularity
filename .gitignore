@@ -19,3 +19,4 @@ mysql
 start-GOMAP.sh
 *.sif
 data/*
+/*.log
