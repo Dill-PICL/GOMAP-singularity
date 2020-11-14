@@ -15,10 +15,10 @@ pipeline {
                 }
                 anyOf {
                     branch 'master'
-                    branch 'dev'
                 }
             }
             steps {
+                echo 'Building the documents'
                 sh '''
                     cd docs
                     virtualenv -p python3 venv
@@ -37,7 +37,6 @@ pipeline {
                 }
                 anyOf {
                     branch 'master'
-                    branch 'dev'
                 }
             }
             steps{
