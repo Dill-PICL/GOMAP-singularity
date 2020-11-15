@@ -65,7 +65,7 @@ pipeline {
     }
 }
 
-def checkImageLoc(string filePath){
+def checkImageLoc(String filePath){
     def file = new File(filePath)
     return file.exists()
 }
