@@ -4,7 +4,7 @@ pipeline {
         CONTAINER = 'gomap'
         IMAGE = 'GOMAP'
         VERSION = '1.3.3'
-        FILEPATH="/mnt/gomap/GOMAP/1.3.2/GOMAP.sif"
+        FILEPATH="/mnt/gomap/GOMAP/1.3.3/GOMAP.sif"
     }
     stages {
         stage('Build') {
