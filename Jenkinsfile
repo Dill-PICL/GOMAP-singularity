@@ -67,5 +67,5 @@ pipeline {
 def checkImageLoc(){
     def filePath = "/mnt/gomap/GOMAP/1.3.2/GOMAP.sif"
     def file = new File(filePath)
-    return assert !file.exists()
+    return file.exists()
 }
