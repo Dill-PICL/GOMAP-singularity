@@ -9,9 +9,13 @@ input:
   # Name of the species
   species: "Zea mays"
   # Email is mandatory
-  email: kokul@blunderingbioinformatics.org
+  email: kokul@bioinformapping.com
   #Number of CPUs used for tools
+<<<<<<< HEAD
   cpus: 4
+=======
+  cpus: 8
+>>>>>>> dev
   #Whether openmpi should be used
   mpi: False
   #what the name of the temporary directory is
@@ -19,4 +23,4 @@ input:
   # These are for testing purposes only. Remove them for running on a genome dataset
   # These chnunks are too small for annotations when the number of genes exceed 500
   num_seqs: 30
-  small_seqs: 30
+  small_seqs: 10

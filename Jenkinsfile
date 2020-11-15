@@ -3,13 +3,24 @@ pipeline {
     environment {
         CONTAINER = 'gomap'
         IMAGE = 'GOMAP'
-        VERSION = '1.3.2'
-        testFile = new File("/mnt/gomap/GOMAP/1.3.2/GOMAP.sif")
-        FILECHECK = testFile.exists()
+        VERSION = '1.3.3'
     }
     stages {
         stage('Build') {
+            when { 
+                anyOf {
+                    changeset "docs/*"
+                    changeset "Jenkinsfile"
+                }
+                anyOf {
+                    checkImageLoc()
+                }
+                anyOf {
+                    branch 'master'
+                }
+            }
             steps {
+                echo 'Building the documents'
                 sh '''
                     echo ${FILECHECK}
                     cd docs
@@ -17,21 +28,44 @@ pipeline {
                     . venv/bin/activate
                     pip install -r requirements.txt 
                     make clean
-                    make build
+                    make build version=${VERSION} release=${VERSION}
                 '''
             }
         }
+         stage('Push Artifacts') {
+              when { 
+                anyOf {
+                    changeset "docs/*"
+                    changeset "Jenkinsfile"
+                }
+                anyOf {
+                    branch 'master'
+                }
+                anyOf {
+                    checkImageLoc()
+                }
+            }
+            steps{
+                echo 'Documentation is successfully build'
+                sh '''
+                    cd docs
+                    pwd
+                    ls
+                    make syncDocs
+                '''
+                echo 'Documentation is successfully synced'
+            }
+         }
     }
     post { 
         success { 
-            echo 'Documentation is successfully build'
-            sh '''
-                cd docs
-                pwd
-                ls
-                make syncDocs
-            '''
-            echo 'Documentation is successfully synced'
+            echo 'Documentation is successfully built and synced'
         }
     }
+}
+
+def checkImageLoc(){
+    def filePath = "/mnt/gomap/GOMAP/1.3.2/GOMAP.sif"
+    def file = new File(filePath)
+    return assert !file.exists()
 }

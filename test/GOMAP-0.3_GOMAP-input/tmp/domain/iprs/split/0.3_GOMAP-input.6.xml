@@ -1,0 +1,1453 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<protein-matches xmlns="http://www.ebi.ac.uk/interpro/resources/schemas/interproscan5">
+    <protein>
+        <sequence md5="98e6cca98facc0f8086f59b54f92c525">MARCRGTAESLCQGRLDLDDDKFGAMCTAAFGCLQEWPDLGAMCGANLGVPATAGNGNESSCSGSGGFRKRKPDAYDLDATGDANDMSKRPRGKRLSGLSEIVAPGKGKQERPKAGTKKKAEAASAAAAAAAVAGHKTDYIHVRARRGQATDSHSLAERVRRERISERMRYLQELVPGCSKVTGKAGMLDEIINYVQSLQKQVEFLSMKIAASNPVVSFDIVEDLFGRQLKQSRRSPAAALPAMAVPAGQLEPSCLQMSHVPQMHPSAAANSTGFGLDMVVNNPYAPAGASCPVSVSVAAGPSTTEPCLNVNGTAAWDIGSRNLFSGFVAQFQSVESE</sequence>
+        <xref id="Zm00014a023559"/>
+        <matches>
+            <hmmer2-match evalue="4.8E-9" score="46.1">
+                <signature ac="SM00353" name="finulus">
+                    <entry ac="IPR011598" desc="Myc-type, basic helix-loop-helix (bHLH) domain" name="bHLH_dom" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0046983" name="protein dimerization activity"/>
+                    </entry>
+                    <models>
+                        <model ac="SM00353" name="finulus"/>
+                    </models>
+                    <signature-library-release library="SMART" version="7.1"/>
+                </signature>
+                <locations>
+                    <hmmer2-location score="46.1" evalue="4.8E-9" hmm-start="1" hmm-end="61" hmm-length="0" start="155" end="205"/>
+                </locations>
+            </hmmer2-match>
+            <hmmer3-match evalue="8.1E-7" score="28.8">
+                <signature ac="PF00010" desc="Helix-loop-helix DNA-binding domain" name="HLH">
+                    <entry ac="IPR011598" desc="Myc-type, basic helix-loop-helix (bHLH) domain" name="bHLH_dom" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0046983" name="protein dimerization activity"/>
+                    </entry>
+                    <models>
+                        <model ac="PF00010" desc="Helix-loop-helix DNA-binding domain" name="HLH"/>
+                    </models>
+                    <signature-library-release library="PFAM" version="31.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="200" env-start="151" score="27.9" evalue="1.6E-6" hmm-start="4" hmm-end="55" hmm-length="0" start="153" end="200"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="2.1E-22" score="78.4">
+                <signature ac="G3DSA:4.10.280.10">
+                    <entry ac="IPR011598" desc="Myc-type, basic helix-loop-helix (bHLH) domain" name="bHLH_dom" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0046983" name="protein dimerization activity"/>
+                    </entry>
+                    <models>
+                        <model ac="1a0aA00"/>
+                        <model ac="2mh3A00"/>
+                        <model ac="4f3lA01"/>
+                        <model ac="3u5vA01"/>
+                        <model ac="4h10B00"/>
+                        <model ac="1nlwE00"/>
+                        <model ac="1mdyA00"/>
+                        <model ac="1uklC00"/>
+                        <model ac="1am9B00"/>
+                        <model ac="2lfhA00"/>
+                        <model ac="4athA00"/>
+                        <model ac="1nlwD00"/>
+                        <model ac="4atiB00"/>
+                        <model ac="2ypaB00"/>
+                        <model ac="4f3lB01"/>
+                    </models>
+                    <signature-library-release library="GENE3D" version="4.1.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="212" env-start="136" score="77.4" evalue="4.3E-22" hmm-start="10" hmm-end="78" hmm-length="0" start="136" end="212"/>
+                </locations>
+            </hmmer3-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="55" end="120"/>
+                </locations>
+            </mobidblite-match>
+            <panther-match evalue="9.0E-162" familyName="STEROL REGULATORY ELEMENT-BINDING PROTEIN" score="540.8">
+                <signature ac="PTHR12565" name="STEROL REGULATORY ELEMENT-BINDING PROTEIN">
+                    <models>
+                        <model ac="PTHR12565" name="STEROL REGULATORY ELEMENT-BINDING PROTEIN"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="6" end="338"/>
+                </locations>
+            </panther-match>
+            <panther-match evalue="9.0E-162" familyName="SUBFAMILY NOT NAMED" score="540.8">
+                <signature ac="PTHR12565:SF223" name="SUBFAMILY NOT NAMED">
+                    <models>
+                        <model ac="PTHR12565:SF223" name="SUBFAMILY NOT NAMED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="6" end="338"/>
+                </locations>
+            </panther-match>
+            <profilescan-match>
+                <signature ac="PS51257" desc="Prokaryotic membrane lipoprotein lipid attachment site profile." name="PROKAR_LIPOPROTEIN">
+                    <models>
+                        <model ac="PS51257" desc="Prokaryotic membrane lipoprotein lipid attachment site profile." name="PROKAR_LIPOPROTEIN"/>
+                    </models>
+                    <signature-library-release library="PROSITE_PROFILES" version="20.132"/>
+                </signature>
+                <locations>
+                    <profilescan-location score="6.0" start="1" end="33">
+                        <alignment>MARC--RGTAESLCQGRLDLDDDKFGAMCTAAFGC</alignment>
+                    </profilescan-location>
+                </locations>
+            </profilescan-match>
+            <profilescan-match>
+                <signature ac="PS50888" desc="Myc-type, basic helix-loop-helix (bHLH) domain profile." name="BHLH">
+                    <entry ac="IPR011598" desc="Myc-type, basic helix-loop-helix (bHLH) domain" name="bHLH_dom" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0046983" name="protein dimerization activity"/>
+                    </entry>
+                    <models>
+                        <model ac="PS50888" desc="Myc-type, basic helix-loop-helix (bHLH) domain profile." name="BHLH"/>
+                    </models>
+                    <signature-library-release library="PROSITE_PROFILES" version="20.132"/>
+                </signature>
+                <locations>
+                    <profilescan-location score="15.491" start="149" end="199">
+                        <alignment>QATDSHSLAERVRRERISERMRYLQELVPGCS--KVTGKAGMLDEIINYVQSL</alignment>
+                    </profilescan-location>
+                </locations>
+            </profilescan-match>
+            <rpsblast-match>
+                <signature ac="cd00083" desc="HLH" name="HLH">
+                    <entry ac="IPR011598" desc="Myc-type, basic helix-loop-helix (bHLH) domain" name="bHLH_dom" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0046983" name="protein dimerization activity"/>
+                    </entry>
+                    <models>
+                        <model ac="cd00083" desc="HLH" name="HLH"/>
+                    </models>
+                    <signature-library-release library="CDD" version="3.16"/>
+                </signature>
+                <locations>
+                    <rpsblast-location evalue="1.06758E-10" score="54.5275" start="147" end="204">
+                        <sites>
+                            <rpsblast-site description="E-box/N-box specificity site" numLocations="1">
+<site-locations>
+    <site-location residue="E" start="158" end="158"/>
+</site-locations>
+                            </rpsblast-site>
+                            <rpsblast-site description="DNA binding region" numLocations="8">
+<site-locations>
+    <site-location residue="E" start="158" end="158"/>
+    <site-location residue="A" start="150" end="150"/>
+    <site-location residue="R" start="161" end="161"/>
+    <site-location residue="T" start="151" end="151"/>
+    <site-location residue="G" start="184" end="184"/>
+    <site-location residue="R" start="159" end="159"/>
+    <site-location residue="A" start="157" end="157"/>
+    <site-location residue="K" start="185" end="185"/>
+</site-locations>
+                            </rpsblast-site>
+                            <rpsblast-site description="dimerization interface" numLocations="14">
+<site-locations>
+    <site-location residue="Q" start="200" end="200"/>
+    <site-location residue="R" start="164" end="164"/>
+    <site-location residue="Y" start="195" end="195"/>
+    <site-location residue="I" start="193" end="193"/>
+    <site-location residue="A" start="186" end="186"/>
+    <site-location residue="V" start="203" end="203"/>
+    <site-location residue="R" start="168" end="168"/>
+    <site-location residue="I" start="165" end="165"/>
+    <site-location residue="V" start="196" end="196"/>
+    <site-location residue="L" start="189" end="189"/>
+    <site-location residue="M" start="169" end="169"/>
+    <site-location residue="Y" start="171" end="171"/>
+    <site-location residue="L" start="172" end="172"/>
+    <site-location residue="Q" start="202" end="202"/>
+</site-locations>
+                            </rpsblast-site>
+                        </sites>
+                    </rpsblast-location>
+                </locations>
+            </rpsblast-match>
+            <superfamilyhmmer3-match evalue="1.83E-16">
+                <signature ac="SSF47459" name="HLH, helix-loop-helix DNA-binding domain">
+                    <entry ac="IPR011598" desc="Myc-type, basic helix-loop-helix (bHLH) domain" name="bHLH_dom" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0046983" name="protein dimerization activity"/>
+                    </entry>
+                    <models>
+                        <model ac="0034803" name="HLH, helix-loop-helix DNA-binding domain"/>
+                        <model ac="0041437" name="HLH, helix-loop-helix DNA-binding domain"/>
+                        <model ac="0043065" name="HLH, helix-loop-helix DNA-binding domain"/>
+                        <model ac="0035112" name="HLH, helix-loop-helix DNA-binding domain"/>
+                        <model ac="0038629" name="HLH, helix-loop-helix DNA-binding domain"/>
+                        <model ac="0041452" name="HLH, helix-loop-helix DNA-binding domain"/>
+                        <model ac="0044409" name="HLH, helix-loop-helix DNA-binding domain"/>
+                        <model ac="0035113" name="HLH, helix-loop-helix DNA-binding domain"/>
+                        <model ac="0035101" name="HLH, helix-loop-helix DNA-binding domain"/>
+                        <model ac="0040898" name="HLH, helix-loop-helix DNA-binding domain"/>
+                    </models>
+                    <signature-library-release library="SUPERFAMILY" version="1.75"/>
+                </signature>
+                <locations>
+                    <superfamilyhmmer3-location start="147" end="214"/>
+                </locations>
+            </superfamilyhmmer3-match>
+        </matches>
+    </protein>
+    <protein>
+        <sequence md5="8f09462759670edb8d3c21c99fec7d1d">MEKGAGTRRRRLVERGSDRLAFITGQTRSLSCDPIPDSPLRSQFEGGTRDDGFSERNQLQKSEPSDLVPGFQDPGTRQGVKARTLSYDALVPEFERAGGRQENNASTLSYEDELFRKFKMGSAVPEIQPVNQTPLHTHDQETVSNNIIHAGVSKNTSHDGVSKNTSHDEVASVQPSREAEMRPRSAPPSQSTQADNSGWSVETLMELLDFTPQEITKAISATESNRFVASVVIAFLVVLSNWGLDIGGAITRVLVGTRPLLFLIVTNITIVFTLLMENKDPNVRSRPVGVNLGSADSLGQMLEIGLLLQKALGALLIDCSVCAVIMICFLGF</sequence>
+        <xref id="Zm00014a027427"/>
+        <matches>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="152" end="197"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="25" end="79"/>
+                </locations>
+            </mobidblite-match>
+            <panther-match evalue="4.7E-113" familyName="SUBFAMILY NOT NAMED" score="380.2">
+                <signature ac="PTHR35469:SF4" name="SUBFAMILY NOT NAMED">
+                    <models>
+                        <model ac="PTHR35469:SF4" name="SUBFAMILY NOT NAMED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="1" end="332"/>
+                </locations>
+            </panther-match>
+            <panther-match evalue="4.7E-113" familyName="FAMILY NOT NAMED" score="380.2">
+                <signature ac="PTHR35469" name="FAMILY NOT NAMED">
+                    <models>
+                        <model ac="PTHR35469" name="FAMILY NOT NAMED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="1" end="332"/>
+                </locations>
+            </panther-match>
+        </matches>
+    </protein>
+    <protein>
+        <sequence md5="dcfeb5ce7fe39caa4bcb470daaba1733">MAEEDVQPLVCDNGTGMVKAGFAGDDAPRAVFPSIVGRPRHTGVMVGMGQKDAYVGDEAQSKRGILTLKYPIEHGIVGNWDDMEKIWHHTFYNELRVAPEEHPILLTEAPLNPKANREKMTQIMFETFNCPAMYVAIQAVLSLYASGRTTGIVLDSGDGVSHTVPIYEGYTLPHAILRLDLAGRDLTDNLMKILTERGYSFTTTAEREIVRDIKEKLAYVALDYEQELETARTSSSVEKSYELPDGQVITIGAERFRCPEVLFQPSFIGMESAGIHEATYNSIMKCDVDIRKDLYGNVVLSGGSTMFPGIGDRMSKEITALAPSSMKVKVVAPPERKYSVWIGGSILASLSTFQQMWISKEEYDESGPGIVHMKCF</sequence>
+        <xref id="Zm00014a027420"/>
+        <matches>
+            <fingerprints-match evalue="5.5E-56" graphscan="III.III">
+                <signature ac="PR00190" desc="Actin signature" name="ACTIN">
+                    <entry ac="IPR004000" desc="Actin family" name="Actin" type="FAMILY"/>
+                    <models>
+                        <model ac="PR00190" desc="Actin signature" name="ACTIN"/>
+                    </models>
+                    <signature-library-release library="PRINTS" version="42.0"/>
+                </signature>
+                <locations>
+                    <fingerprints-location motifNumber="7" pvalue="5.54E-11" score="84.94" start="237" end="253"/>
+                    <fingerprints-location motifNumber="3" pvalue="3.44E-15" score="91.54" start="62" end="84"/>
+                    <fingerprints-location motifNumber="2" pvalue="4.25E-7" score="89.2" start="50" end="61"/>
+                    <fingerprints-location motifNumber="5" pvalue="3.41E-9" score="97.31" start="116" end="129"/>
+                    <fingerprints-location motifNumber="1" pvalue="1.84E-7" score="96.55" start="27" end="36"/>
+                    <fingerprints-location motifNumber="6" pvalue="1.22E-15" score="96.3" start="141" end="160"/>
+                </locations>
+            </fingerprints-match>
+            <hmmer2-match evalue="4.2E-238" score="807.0">
+                <signature ac="SM00268" name="actin_3">
+                    <entry ac="IPR004000" desc="Actin family" name="Actin" type="FAMILY"/>
+                    <models>
+                        <model ac="SM00268" name="actin_3"/>
+                    </models>
+                    <signature-library-release library="SMART" version="7.1"/>
+                </signature>
+                <locations>
+                    <hmmer2-location score="807.0" evalue="4.2E-238" hmm-start="1" hmm-end="487" hmm-length="0" start="6" end="376"/>
+                </locations>
+            </hmmer2-match>
+            <hmmer3-match evalue="7.9E-42" score="140.5">
+                <signature ac="G3DSA:3.30.420.40">
+                    <models>
+                        <model ac="4h0pB02"/>
+                        <model ac="1woqA02"/>
+                        <model ac="2ychA03"/>
+                        <model ac="4cbuA01"/>
+                        <model ac="3sk3A02"/>
+                        <model ac="1u6zA01"/>
+                        <model ac="1k8kB01"/>
+                        <model ac="3i8bA02"/>
+                        <model ac="3venA01"/>
+                        <model ac="3js6A02"/>
+                        <model ac="4czgA02"/>
+                        <model ac="4db3A01"/>
+                        <model ac="2gupA02"/>
+                        <model ac="4gniA03"/>
+                        <model ac="4htlA02"/>
+                        <model ac="2q2rA01"/>
+                        <model ac="1z05A02"/>
+                        <model ac="4jneA01"/>
+                        <model ac="2yhwA01"/>
+                        <model ac="4a2bA01"/>
+                        <model ac="2itmB02"/>
+                        <model ac="3ohrA01"/>
+                        <model ac="2nrhB01"/>
+                        <model ac="4ijaB02"/>
+                        <model ac="2itmA01"/>
+                        <model ac="3i33A03"/>
+                        <model ac="3bexA01"/>
+                        <model ac="2fxuA01"/>
+                        <model ac="4bc3A02"/>
+                        <model ac="1woqA01"/>
+                        <model ac="2ap1A02"/>
+                        <model ac="2e2oA01"/>
+                        <model ac="3qdkA02"/>
+                        <model ac="3cetB01"/>
+                        <model ac="2ch5B02"/>
+                        <model ac="3r8eA01"/>
+                        <model ac="2v7yA01"/>
+                        <model ac="4i6mB01"/>
+                        <model ac="3d2fA01"/>
+                        <model ac="4fo0A04"/>
+                        <model ac="2zgyA01"/>
+                        <model ac="4jd2B01"/>
+                        <model ac="2ch5A01"/>
+                        <model ac="3ll3B02"/>
+                        <model ac="3h1qA02"/>
+                        <model ac="3hz6A01"/>
+                        <model ac="1k8kA03"/>
+                        <model ac="2uytA02"/>
+                        <model ac="3h6eA03"/>
+                        <model ac="4jneA02"/>
+                        <model ac="1z05A03"/>
+                        <model ac="3ohrA02"/>
+                        <model ac="4bgbA02"/>
+                        <model ac="3qb0A01"/>
+                        <model ac="3zeuA02"/>
+                        <model ac="3qb0A02"/>
+                        <model ac="3ifrB02"/>
+                        <model ac="3vglA02"/>
+                        <model ac="3mdqA01"/>
+                        <model ac="3zeuA01"/>
+                        <model ac="3ifrA01"/>
+                        <model ac="4ehuA01"/>
+                        <model ac="3hi0A01"/>
+                        <model ac="4ijnB01"/>
+                        <model ac="2h3gX02"/>
+                        <model ac="4mo4A01"/>
+                        <model ac="2p9uB01"/>
+                        <model ac="1sazA01"/>
+                        <model ac="3hz6A02"/>
+                        <model ac="4ehuA02"/>
+                        <model ac="1sazA02"/>
+                        <model ac="2uytA01"/>
+                        <model ac="3cerC01"/>
+                        <model ac="4i6mA02"/>
+                        <model ac="4h0oA02"/>
+                        <model ac="1sz2B01"/>
+                        <model ac="3vpzA01"/>
+                        <model ac="4e1jD02"/>
+                        <model ac="2hoeA02"/>
+                        <model ac="1zc6A02"/>
+                        <model ac="3h46O01"/>
+                        <model ac="3lm2A01"/>
+                        <model ac="3o08A02"/>
+                        <model ac="4fo0A01"/>
+                        <model ac="2qm1A02"/>
+                        <model ac="1zc6B01"/>
+                        <model ac="3mcpA01"/>
+                        <model ac="2qm1B01"/>
+                        <model ac="1zbsA02"/>
+                        <model ac="3vglA01"/>
+                        <model ac="3d2fA03"/>
+                        <model ac="4ijaA03"/>
+                        <model ac="3i33A01"/>
+                        <model ac="2zgyA02"/>
+                        <model ac="4am6A01"/>
+                        <model ac="3htvA01"/>
+                        <model ac="2d0oA04"/>
+                        <model ac="3ll3B01"/>
+                        <model ac="3htvA02"/>
+                        <model ac="3f9mA02"/>
+                        <model ac="2aa4A02"/>
+                        <model ac="2fsjA02"/>
+                        <model ac="2f9wA01"/>
+                        <model ac="4i6mA01"/>
+                        <model ac="4htlA01"/>
+                        <model ac="3weeB02"/>
+                        <model ac="2aa4A01"/>
+                        <model ac="3r8eA02"/>
+                        <model ac="4a2bA03"/>
+                        <model ac="4i6mB02"/>
+                        <model ac="2nrhB02"/>
+                        <model ac="2yhwA02"/>
+                        <model ac="2d0oA01"/>
+                        <model ac="4czgA01"/>
+                        <model ac="2hoeA03"/>
+                        <model ac="2w40A01"/>
+                        <model ac="4b1yB02"/>
+                        <model ac="1qz5A01"/>
+                        <model ac="2yhxA02"/>
+                        <model ac="3h1qB01"/>
+                        <model ac="2ychA01"/>
+                        <model ac="4mo4A02"/>
+                        <model ac="1zbsA01"/>
+                        <model ac="2e2oA02"/>
+                        <model ac="3qdkB01"/>
+                        <model ac="2a6aA01"/>
+                        <model ac="1t6cA01"/>
+                    </models>
+                    <signature-library-release library="GENE3D" version="4.1.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="196" env-start="165" score="49.1" evalue="2.5E-13" hmm-start="1" hmm-end="60" hmm-length="0" start="165" end="196"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="4.7E-36" score="122.2">
+                <signature ac="G3DSA:3.90.640.10">
+                    <models>
+                        <model ac="1k8kA04"/>
+                        <model ac="4a2aA04"/>
+                        <model ac="4jneA03"/>
+                        <model ac="4gniA04"/>
+                        <model ac="4czlA03"/>
+                        <model ac="4b1yB03"/>
+                        <model ac="3i33A04"/>
+                    </models>
+                    <signature-library-release library="GENE3D" version="4.1.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="256" env-start="197" score="121.4" evalue="8.2E-36" hmm-start="1" hmm-end="89" hmm-length="0" start="197" end="256"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="5.9E-148" score="492.7">
+                <signature ac="PF00022" desc="Actin" name="Actin">
+                    <entry ac="IPR004000" desc="Actin family" name="Actin" type="FAMILY"/>
+                    <models>
+                        <model ac="PF00022" desc="Actin" name="Actin"/>
+                    </models>
+                    <signature-library-release library="PFAM" version="31.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="376" env-start="3" score="491.0" evalue="1.9E-147" hmm-start="2" hmm-end="407" hmm-length="0" start="4" end="376"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="6.0E-64" score="214.0">
+                <signature ac="G3DSA:3.30.420.40">
+                    <models>
+                        <model ac="4h0pB02"/>
+                        <model ac="1woqA02"/>
+                        <model ac="2ychA03"/>
+                        <model ac="4cbuA01"/>
+                        <model ac="3sk3A02"/>
+                        <model ac="1u6zA01"/>
+                        <model ac="1k8kB01"/>
+                        <model ac="3i8bA02"/>
+                        <model ac="3venA01"/>
+                        <model ac="3js6A02"/>
+                        <model ac="4czgA02"/>
+                        <model ac="4db3A01"/>
+                        <model ac="2gupA02"/>
+                        <model ac="4gniA03"/>
+                        <model ac="4htlA02"/>
+                        <model ac="2q2rA01"/>
+                        <model ac="1z05A02"/>
+                        <model ac="4jneA01"/>
+                        <model ac="2yhwA01"/>
+                        <model ac="4a2bA01"/>
+                        <model ac="2itmB02"/>
+                        <model ac="3ohrA01"/>
+                        <model ac="2nrhB01"/>
+                        <model ac="4ijaB02"/>
+                        <model ac="2itmA01"/>
+                        <model ac="3i33A03"/>
+                        <model ac="3bexA01"/>
+                        <model ac="2fxuA01"/>
+                        <model ac="4bc3A02"/>
+                        <model ac="1woqA01"/>
+                        <model ac="2ap1A02"/>
+                        <model ac="2e2oA01"/>
+                        <model ac="3qdkA02"/>
+                        <model ac="3cetB01"/>
+                        <model ac="2ch5B02"/>
+                        <model ac="3r8eA01"/>
+                        <model ac="2v7yA01"/>
+                        <model ac="4i6mB01"/>
+                        <model ac="3d2fA01"/>
+                        <model ac="4fo0A04"/>
+                        <model ac="2zgyA01"/>
+                        <model ac="4jd2B01"/>
+                        <model ac="2ch5A01"/>
+                        <model ac="3ll3B02"/>
+                        <model ac="3h1qA02"/>
+                        <model ac="3hz6A01"/>
+                        <model ac="1k8kA03"/>
+                        <model ac="2uytA02"/>
+                        <model ac="3h6eA03"/>
+                        <model ac="4jneA02"/>
+                        <model ac="1z05A03"/>
+                        <model ac="3ohrA02"/>
+                        <model ac="4bgbA02"/>
+                        <model ac="3qb0A01"/>
+                        <model ac="3zeuA02"/>
+                        <model ac="3qb0A02"/>
+                        <model ac="3ifrB02"/>
+                        <model ac="3vglA02"/>
+                        <model ac="3mdqA01"/>
+                        <model ac="3zeuA01"/>
+                        <model ac="3ifrA01"/>
+                        <model ac="4ehuA01"/>
+                        <model ac="3hi0A01"/>
+                        <model ac="4ijnB01"/>
+                        <model ac="2h3gX02"/>
+                        <model ac="4mo4A01"/>
+                        <model ac="2p9uB01"/>
+                        <model ac="1sazA01"/>
+                        <model ac="3hz6A02"/>
+                        <model ac="4ehuA02"/>
+                        <model ac="1sazA02"/>
+                        <model ac="2uytA01"/>
+                        <model ac="3cerC01"/>
+                        <model ac="4i6mA02"/>
+                        <model ac="4h0oA02"/>
+                        <model ac="1sz2B01"/>
+                        <model ac="3vpzA01"/>
+                        <model ac="4e1jD02"/>
+                        <model ac="2hoeA02"/>
+                        <model ac="1zc6A02"/>
+                        <model ac="3h46O01"/>
+                        <model ac="3lm2A01"/>
+                        <model ac="3o08A02"/>
+                        <model ac="4fo0A01"/>
+                        <model ac="2qm1A02"/>
+                        <model ac="1zc6B01"/>
+                        <model ac="3mcpA01"/>
+                        <model ac="2qm1B01"/>
+                        <model ac="1zbsA02"/>
+                        <model ac="3vglA01"/>
+                        <model ac="3d2fA03"/>
+                        <model ac="4ijaA03"/>
+                        <model ac="3i33A01"/>
+                        <model ac="2zgyA02"/>
+                        <model ac="4am6A01"/>
+                        <model ac="3htvA01"/>
+                        <model ac="2d0oA04"/>
+                        <model ac="3ll3B01"/>
+                        <model ac="3htvA02"/>
+                        <model ac="3f9mA02"/>
+                        <model ac="2aa4A02"/>
+                        <model ac="2fsjA02"/>
+                        <model ac="2f9wA01"/>
+                        <model ac="4i6mA01"/>
+                        <model ac="4htlA01"/>
+                        <model ac="3weeB02"/>
+                        <model ac="2aa4A01"/>
+                        <model ac="3r8eA02"/>
+                        <model ac="4a2bA03"/>
+                        <model ac="4i6mB02"/>
+                        <model ac="2nrhB02"/>
+                        <model ac="2yhwA02"/>
+                        <model ac="2d0oA01"/>
+                        <model ac="4czgA01"/>
+                        <model ac="2hoeA03"/>
+                        <model ac="2w40A01"/>
+                        <model ac="4b1yB02"/>
+                        <model ac="1qz5A01"/>
+                        <model ac="2yhxA02"/>
+                        <model ac="3h1qB01"/>
+                        <model ac="2ychA01"/>
+                        <model ac="4mo4A02"/>
+                        <model ac="1zbsA01"/>
+                        <model ac="2e2oA02"/>
+                        <model ac="3qdkB01"/>
+                        <model ac="2a6aA01"/>
+                        <model ac="1t6cA01"/>
+                    </models>
+                    <signature-library-release library="GENE3D" version="4.1.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="374" env-start="257" score="138.1" evalue="1.3E-40" hmm-start="31" hmm-end="164" hmm-length="0" start="257" end="374"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="3.5E-101" score="335.6">
+                <signature ac="G3DSA:3.30.420.40">
+                    <models>
+                        <model ac="4h0pB02"/>
+                        <model ac="1woqA02"/>
+                        <model ac="2ychA03"/>
+                        <model ac="4cbuA01"/>
+                        <model ac="3sk3A02"/>
+                        <model ac="1u6zA01"/>
+                        <model ac="1k8kB01"/>
+                        <model ac="3i8bA02"/>
+                        <model ac="3venA01"/>
+                        <model ac="3js6A02"/>
+                        <model ac="4czgA02"/>
+                        <model ac="4db3A01"/>
+                        <model ac="2gupA02"/>
+                        <model ac="4gniA03"/>
+                        <model ac="4htlA02"/>
+                        <model ac="2q2rA01"/>
+                        <model ac="1z05A02"/>
+                        <model ac="4jneA01"/>
+                        <model ac="2yhwA01"/>
+                        <model ac="4a2bA01"/>
+                        <model ac="2itmB02"/>
+                        <model ac="3ohrA01"/>
+                        <model ac="2nrhB01"/>
+                        <model ac="4ijaB02"/>
+                        <model ac="2itmA01"/>
+                        <model ac="3i33A03"/>
+                        <model ac="3bexA01"/>
+                        <model ac="2fxuA01"/>
+                        <model ac="4bc3A02"/>
+                        <model ac="1woqA01"/>
+                        <model ac="2ap1A02"/>
+                        <model ac="2e2oA01"/>
+                        <model ac="3qdkA02"/>
+                        <model ac="3cetB01"/>
+                        <model ac="2ch5B02"/>
+                        <model ac="3r8eA01"/>
+                        <model ac="2v7yA01"/>
+                        <model ac="4i6mB01"/>
+                        <model ac="3d2fA01"/>
+                        <model ac="4fo0A04"/>
+                        <model ac="2zgyA01"/>
+                        <model ac="4jd2B01"/>
+                        <model ac="2ch5A01"/>
+                        <model ac="3ll3B02"/>
+                        <model ac="3h1qA02"/>
+                        <model ac="3hz6A01"/>
+                        <model ac="1k8kA03"/>
+                        <model ac="2uytA02"/>
+                        <model ac="3h6eA03"/>
+                        <model ac="4jneA02"/>
+                        <model ac="1z05A03"/>
+                        <model ac="3ohrA02"/>
+                        <model ac="4bgbA02"/>
+                        <model ac="3qb0A01"/>
+                        <model ac="3zeuA02"/>
+                        <model ac="3qb0A02"/>
+                        <model ac="3ifrB02"/>
+                        <model ac="3vglA02"/>
+                        <model ac="3mdqA01"/>
+                        <model ac="3zeuA01"/>
+                        <model ac="3ifrA01"/>
+                        <model ac="4ehuA01"/>
+                        <model ac="3hi0A01"/>
+                        <model ac="4ijnB01"/>
+                        <model ac="2h3gX02"/>
+                        <model ac="4mo4A01"/>
+                        <model ac="2p9uB01"/>
+                        <model ac="1sazA01"/>
+                        <model ac="3hz6A02"/>
+                        <model ac="4ehuA02"/>
+                        <model ac="1sazA02"/>
+                        <model ac="2uytA01"/>
+                        <model ac="3cerC01"/>
+                        <model ac="4i6mA02"/>
+                        <model ac="4h0oA02"/>
+                        <model ac="1sz2B01"/>
+                        <model ac="3vpzA01"/>
+                        <model ac="4e1jD02"/>
+                        <model ac="2hoeA02"/>
+                        <model ac="1zc6A02"/>
+                        <model ac="3h46O01"/>
+                        <model ac="3lm2A01"/>
+                        <model ac="3o08A02"/>
+                        <model ac="4fo0A01"/>
+                        <model ac="2qm1A02"/>
+                        <model ac="1zc6B01"/>
+                        <model ac="3mcpA01"/>
+                        <model ac="2qm1B01"/>
+                        <model ac="1zbsA02"/>
+                        <model ac="3vglA01"/>
+                        <model ac="3d2fA03"/>
+                        <model ac="4ijaA03"/>
+                        <model ac="3i33A01"/>
+                        <model ac="2zgyA02"/>
+                        <model ac="4am6A01"/>
+                        <model ac="3htvA01"/>
+                        <model ac="2d0oA04"/>
+                        <model ac="3ll3B01"/>
+                        <model ac="3htvA02"/>
+                        <model ac="3f9mA02"/>
+                        <model ac="2aa4A02"/>
+                        <model ac="2fsjA02"/>
+                        <model ac="2f9wA01"/>
+                        <model ac="4i6mA01"/>
+                        <model ac="4htlA01"/>
+                        <model ac="3weeB02"/>
+                        <model ac="2aa4A01"/>
+                        <model ac="3r8eA02"/>
+                        <model ac="4a2bA03"/>
+                        <model ac="4i6mB02"/>
+                        <model ac="2nrhB02"/>
+                        <model ac="2yhwA02"/>
+                        <model ac="2d0oA01"/>
+                        <model ac="4czgA01"/>
+                        <model ac="2hoeA03"/>
+                        <model ac="2w40A01"/>
+                        <model ac="4b1yB02"/>
+                        <model ac="1qz5A01"/>
+                        <model ac="2yhxA02"/>
+                        <model ac="3h1qB01"/>
+                        <model ac="2ychA01"/>
+                        <model ac="4mo4A02"/>
+                        <model ac="1zbsA01"/>
+                        <model ac="2e2oA02"/>
+                        <model ac="3qdkB01"/>
+                        <model ac="2a6aA01"/>
+                        <model ac="1t6cA01"/>
+                    </models>
+                    <signature-library-release library="GENE3D" version="4.1.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="164" env-start="1" score="270.9" evalue="2.4E-81" hmm-start="1" hmm-end="174" hmm-length="0" start="1" end="164"/>
+                </locations>
+            </hmmer3-match>
+            <panther-match evalue="1.1E-272" familyName="BETA-ACTIN-LIKE PROTEIN 3-RELATED" score="909.5">
+                <signature ac="PTHR11937:SF347" name="BETA-ACTIN-LIKE PROTEIN 3-RELATED">
+                    <models>
+                        <model ac="PTHR11937:SF347" name="BETA-ACTIN-LIKE PROTEIN 3-RELATED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="9" end="375"/>
+                </locations>
+            </panther-match>
+            <panther-match evalue="1.1E-272" familyName="ACTIN" score="909.5">
+                <signature ac="PTHR11937" name="ACTIN">
+                    <entry ac="IPR004000" desc="Actin family" name="Actin" type="FAMILY"/>
+                    <models>
+                        <model ac="PTHR11937" name="ACTIN"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="9" end="375"/>
+                </locations>
+            </panther-match>
+            <patternscan-match>
+                <signature ac="PS00432" desc="Actins signature 2." name="ACTINS_2">
+                    <entry ac="IPR004001" desc="Actin, conserved site" name="Actin_CS" type="CONSERVED_SITE"/>
+                    <models>
+                        <model ac="PS00432" desc="Actins signature 2." name="ACTINS_2"/>
+                    </models>
+                    <signature-library-release library="PROSITE_PATTERNS" version="20.132"/>
+                </signature>
+                <locations>
+                    <patternscan-location level="STRONG" start="357" end="365">
+                        <alignment>WISKeEYDE</alignment>
+                    </patternscan-location>
+                </locations>
+            </patternscan-match>
+            <patternscan-match>
+                <signature ac="PS00406" desc="Actins signature 1." name="ACTINS_1">
+                    <entry ac="IPR004001" desc="Actin, conserved site" name="Actin_CS" type="CONSERVED_SITE"/>
+                    <models>
+                        <model ac="PS00406" desc="Actins signature 1." name="ACTINS_1"/>
+                    </models>
+                    <signature-library-release library="PROSITE_PATTERNS" version="20.132"/>
+                </signature>
+                <locations>
+                    <patternscan-location level="STRONG" start="54" end="64">
+                        <alignment>YVGDEAQsKRG</alignment>
+                    </patternscan-location>
+                </locations>
+            </patternscan-match>
+            <patternscan-match>
+                <signature ac="PS01132" desc="Actins and actin-related proteins signature." name="ACTINS_ACT_LIKE">
+                    <entry ac="IPR020902" desc="Actin/actin-like conserved site" name="Actin/actin-like_CS" type="CONSERVED_SITE"/>
+                    <models>
+                        <model ac="PS01132" desc="Actins and actin-related proteins signature." name="ACTINS_ACT_LIKE"/>
+                    </models>
+                    <signature-library-release library="PROSITE_PATTERNS" version="20.132"/>
+                </signature>
+                <locations>
+                    <patternscan-location level="STRONG" start="105" end="117">
+                        <alignment>LLTEApLNPkaNR</alignment>
+                    </patternscan-location>
+                </locations>
+            </patternscan-match>
+            <rpsblast-match>
+                <signature ac="cd00012" desc="NBD_sugar-kinase_HSP70_actin" name="NBD_sugar-kinase_HSP70_actin">
+                    <models>
+                        <model ac="cd00012" desc="NBD_sugar-kinase_HSP70_actin" name="NBD_sugar-kinase_HSP70_actin"/>
+                    </models>
+                    <signature-library-release library="CDD" version="3.16"/>
+                </signature>
+                <locations>
+                    <rpsblast-location evalue="3.45288E-18" score="79.5551" start="9" end="182">
+                        <sites>
+                            <rpsblast-site description="nucleotide binding site" numLocations="11">
+<site-locations>
+    <site-location residue="N" start="13" end="13"/>
+    <site-location residue="D" start="158" end="158"/>
+    <site-location residue="D" start="155" end="155"/>
+    <site-location residue="D" start="12" end="12"/>
+    <site-location residue="S" start="156" end="156"/>
+    <site-location residue="T" start="15" end="15"/>
+    <site-location residue="M" start="17" end="17"/>
+    <site-location residue="K" start="19" end="19"/>
+    <site-location residue="G" start="157" end="157"/>
+    <site-location residue="Q" start="138" end="138"/>
+    <site-location residue="G" start="14" end="14"/>
+</site-locations>
+                            </rpsblast-site>
+                        </sites>
+                    </rpsblast-location>
+                </locations>
+            </rpsblast-match>
+            <superfamilyhmmer3-match evalue="1.21E-97">
+                <signature ac="SSF53067" name="Actin-like ATPase domain">
+                    <models>
+                        <model ac="0046347" name="Actin-like ATPase domain"/>
+                        <model ac="0046348" name="Actin-like ATPase domain"/>
+                        <model ac="0052960" name="Actin-like ATPase domain"/>
+                        <model ac="0051731" name="Actin-like ATPase domain"/>
+                        <model ac="0050788" name="Actin-like ATPase domain"/>
+                        <model ac="0053028" name="Actin-like ATPase domain"/>
+                        <model ac="0052961" name="Actin-like ATPase domain"/>
+                        <model ac="0046053" name="Actin-like ATPase domain"/>
+                        <model ac="0053029" name="Actin-like ATPase domain"/>
+                        <model ac="0039964" name="Actin-like ATPase domain"/>
+                        <model ac="0051732" name="Actin-like ATPase domain"/>
+                        <model ac="0052751" name="Actin-like ATPase domain"/>
+                        <model ac="0046239" name="Actin-like ATPase domain"/>
+                        <model ac="0051971" name="Actin-like ATPase domain"/>
+                        <model ac="0039007" name="Actin-like ATPase domain"/>
+                        <model ac="0052947" name="Actin-like ATPase domain"/>
+                        <model ac="0039962" name="Actin-like ATPase domain"/>
+                        <model ac="0037166" name="Actin-like ATPase domain"/>
+                        <model ac="0054102" name="Actin-like ATPase domain"/>
+                        <model ac="0051661" name="Actin-like ATPase domain"/>
+                        <model ac="0049352" name="Actin-like ATPase domain"/>
+                        <model ac="0035722" name="Actin-like ATPase domain"/>
+                        <model ac="0051662" name="Actin-like ATPase domain"/>
+                        <model ac="0054103" name="Actin-like ATPase domain"/>
+                        <model ac="0051508" name="Actin-like ATPase domain"/>
+                        <model ac="0050050" name="Actin-like ATPase domain"/>
+                        <model ac="0049807" name="Actin-like ATPase domain"/>
+                        <model ac="0049551" name="Actin-like ATPase domain"/>
+                        <model ac="0052360" name="Actin-like ATPase domain"/>
+                        <model ac="0046015" name="Actin-like ATPase domain"/>
+                        <model ac="0046011" name="Actin-like ATPase domain"/>
+                        <model ac="0046238" name="Actin-like ATPase domain"/>
+                        <model ac="0051509" name="Actin-like ATPase domain"/>
+                        <model ac="0041902" name="Actin-like ATPase domain"/>
+                        <model ac="0051457" name="Actin-like ATPase domain"/>
+                        <model ac="0036203" name="Actin-like ATPase domain"/>
+                        <model ac="0051970" name="Actin-like ATPase domain"/>
+                        <model ac="0051549" name="Actin-like ATPase domain"/>
+                        <model ac="0045934" name="Actin-like ATPase domain"/>
+                        <model ac="0038006" name="Actin-like ATPase domain"/>
+                        <model ac="0038604" name="Actin-like ATPase domain"/>
+                        <model ac="0039478" name="Actin-like ATPase domain"/>
+                        <model ac="0039963" name="Actin-like ATPase domain"/>
+                        <model ac="0050911" name="Actin-like ATPase domain"/>
+                        <model ac="0045070" name="Actin-like ATPase domain"/>
+                        <model ac="0053211" name="Actin-like ATPase domain"/>
+                        <model ac="0053898" name="Actin-like ATPase domain"/>
+                        <model ac="0052627" name="Actin-like ATPase domain"/>
+                        <model ac="0051804" name="Actin-like ATPase domain"/>
+                        <model ac="0050670" name="Actin-like ATPase domain"/>
+                        <model ac="0052626" name="Actin-like ATPase domain"/>
+                        <model ac="0035530" name="Actin-like ATPase domain"/>
+                        <model ac="0051545" name="Actin-like ATPase domain"/>
+                        <model ac="0051710" name="Actin-like ATPase domain"/>
+                        <model ac="0050671" name="Actin-like ATPase domain"/>
+                        <model ac="0051805" name="Actin-like ATPase domain"/>
+                        <model ac="0035476" name="Actin-like ATPase domain"/>
+                        <model ac="0049498" name="Actin-like ATPase domain"/>
+                        <model ac="0052165" name="Actin-like ATPase domain"/>
+                        <model ac="0036764" name="Actin-like ATPase domain"/>
+                        <model ac="0048238" name="Actin-like ATPase domain"/>
+                        <model ac="0045955" name="Actin-like ATPase domain"/>
+                        <model ac="0054100" name="Actin-like ATPase domain"/>
+                        <model ac="0051548" name="Actin-like ATPase domain"/>
+                        <model ac="0049108" name="Actin-like ATPase domain"/>
+                        <model ac="0047559" name="Actin-like ATPase domain"/>
+                        <model ac="0049353" name="Actin-like ATPase domain"/>
+                        <model ac="0053210" name="Actin-like ATPase domain"/>
+                        <model ac="0035531" name="Actin-like ATPase domain"/>
+                        <model ac="0047359" name="Actin-like ATPase domain"/>
+                        <model ac="0046240" name="Actin-like ATPase domain"/>
+                        <model ac="0048323" name="Actin-like ATPase domain"/>
+                        <model ac="0048592" name="Actin-like ATPase domain"/>
+                        <model ac="0050912" name="Actin-like ATPase domain"/>
+                        <model ac="0051456" name="Actin-like ATPase domain"/>
+                        <model ac="0049552" name="Actin-like ATPase domain"/>
+                        <model ac="0048322" name="Actin-like ATPase domain"/>
+                        <model ac="0046054" name="Actin-like ATPase domain"/>
+                        <model ac="0050049" name="Actin-like ATPase domain"/>
+                        <model ac="0051709" name="Actin-like ATPase domain"/>
+                        <model ac="0049808" name="Actin-like ATPase domain"/>
+                        <model ac="0052359" name="Actin-like ATPase domain"/>
+                        <model ac="0048237" name="Actin-like ATPase domain"/>
+                        <model ac="0038007" name="Actin-like ATPase domain"/>
+                        <model ac="0035529" name="Actin-like ATPase domain"/>
+                        <model ac="0050789" name="Actin-like ATPase domain"/>
+                        <model ac="0035709" name="Actin-like ATPase domain"/>
+                        <model ac="0047192" name="Actin-like ATPase domain"/>
+                        <model ac="0052948" name="Actin-like ATPase domain"/>
+                        <model ac="0045198" name="Actin-like ATPase domain"/>
+                        <model ac="0052166" name="Actin-like ATPase domain"/>
+                        <model ac="0036765" name="Actin-like ATPase domain"/>
+                        <model ac="0037167" name="Actin-like ATPase domain"/>
+                        <model ac="0054101" name="Actin-like ATPase domain"/>
+                        <model ac="0047243" name="Actin-like ATPase domain"/>
+                        <model ac="0049109" name="Actin-like ATPase domain"/>
+                        <model ac="0051254" name="Actin-like ATPase domain"/>
+                        <model ac="0052752" name="Actin-like ATPase domain"/>
+                        <model ac="0051544" name="Actin-like ATPase domain"/>
+                    </models>
+                    <signature-library-release library="SUPERFAMILY" version="1.75"/>
+                </signature>
+                <locations>
+                    <superfamilyhmmer3-location start="148" end="376"/>
+                </locations>
+            </superfamilyhmmer3-match>
+            <superfamilyhmmer3-match evalue="2.59E-65">
+                <signature ac="SSF53067" name="Actin-like ATPase domain">
+                    <models>
+                        <model ac="0046347" name="Actin-like ATPase domain"/>
+                        <model ac="0046348" name="Actin-like ATPase domain"/>
+                        <model ac="0052960" name="Actin-like ATPase domain"/>
+                        <model ac="0051731" name="Actin-like ATPase domain"/>
+                        <model ac="0050788" name="Actin-like ATPase domain"/>
+                        <model ac="0053028" name="Actin-like ATPase domain"/>
+                        <model ac="0052961" name="Actin-like ATPase domain"/>
+                        <model ac="0046053" name="Actin-like ATPase domain"/>
+                        <model ac="0053029" name="Actin-like ATPase domain"/>
+                        <model ac="0039964" name="Actin-like ATPase domain"/>
+                        <model ac="0051732" name="Actin-like ATPase domain"/>
+                        <model ac="0052751" name="Actin-like ATPase domain"/>
+                        <model ac="0046239" name="Actin-like ATPase domain"/>
+                        <model ac="0051971" name="Actin-like ATPase domain"/>
+                        <model ac="0039007" name="Actin-like ATPase domain"/>
+                        <model ac="0052947" name="Actin-like ATPase domain"/>
+                        <model ac="0039962" name="Actin-like ATPase domain"/>
+                        <model ac="0037166" name="Actin-like ATPase domain"/>
+                        <model ac="0054102" name="Actin-like ATPase domain"/>
+                        <model ac="0051661" name="Actin-like ATPase domain"/>
+                        <model ac="0049352" name="Actin-like ATPase domain"/>
+                        <model ac="0035722" name="Actin-like ATPase domain"/>
+                        <model ac="0051662" name="Actin-like ATPase domain"/>
+                        <model ac="0054103" name="Actin-like ATPase domain"/>
+                        <model ac="0051508" name="Actin-like ATPase domain"/>
+                        <model ac="0050050" name="Actin-like ATPase domain"/>
+                        <model ac="0049807" name="Actin-like ATPase domain"/>
+                        <model ac="0049551" name="Actin-like ATPase domain"/>
+                        <model ac="0052360" name="Actin-like ATPase domain"/>
+                        <model ac="0046015" name="Actin-like ATPase domain"/>
+                        <model ac="0046011" name="Actin-like ATPase domain"/>
+                        <model ac="0046238" name="Actin-like ATPase domain"/>
+                        <model ac="0051509" name="Actin-like ATPase domain"/>
+                        <model ac="0041902" name="Actin-like ATPase domain"/>
+                        <model ac="0051457" name="Actin-like ATPase domain"/>
+                        <model ac="0036203" name="Actin-like ATPase domain"/>
+                        <model ac="0051970" name="Actin-like ATPase domain"/>
+                        <model ac="0051549" name="Actin-like ATPase domain"/>
+                        <model ac="0045934" name="Actin-like ATPase domain"/>
+                        <model ac="0038006" name="Actin-like ATPase domain"/>
+                        <model ac="0038604" name="Actin-like ATPase domain"/>
+                        <model ac="0039478" name="Actin-like ATPase domain"/>
+                        <model ac="0039963" name="Actin-like ATPase domain"/>
+                        <model ac="0050911" name="Actin-like ATPase domain"/>
+                        <model ac="0045070" name="Actin-like ATPase domain"/>
+                        <model ac="0053211" name="Actin-like ATPase domain"/>
+                        <model ac="0053898" name="Actin-like ATPase domain"/>
+                        <model ac="0052627" name="Actin-like ATPase domain"/>
+                        <model ac="0051804" name="Actin-like ATPase domain"/>
+                        <model ac="0050670" name="Actin-like ATPase domain"/>
+                        <model ac="0052626" name="Actin-like ATPase domain"/>
+                        <model ac="0035530" name="Actin-like ATPase domain"/>
+                        <model ac="0051545" name="Actin-like ATPase domain"/>
+                        <model ac="0051710" name="Actin-like ATPase domain"/>
+                        <model ac="0050671" name="Actin-like ATPase domain"/>
+                        <model ac="0051805" name="Actin-like ATPase domain"/>
+                        <model ac="0035476" name="Actin-like ATPase domain"/>
+                        <model ac="0049498" name="Actin-like ATPase domain"/>
+                        <model ac="0052165" name="Actin-like ATPase domain"/>
+                        <model ac="0036764" name="Actin-like ATPase domain"/>
+                        <model ac="0048238" name="Actin-like ATPase domain"/>
+                        <model ac="0045955" name="Actin-like ATPase domain"/>
+                        <model ac="0054100" name="Actin-like ATPase domain"/>
+                        <model ac="0051548" name="Actin-like ATPase domain"/>
+                        <model ac="0049108" name="Actin-like ATPase domain"/>
+                        <model ac="0047559" name="Actin-like ATPase domain"/>
+                        <model ac="0049353" name="Actin-like ATPase domain"/>
+                        <model ac="0053210" name="Actin-like ATPase domain"/>
+                        <model ac="0035531" name="Actin-like ATPase domain"/>
+                        <model ac="0047359" name="Actin-like ATPase domain"/>
+                        <model ac="0046240" name="Actin-like ATPase domain"/>
+                        <model ac="0048323" name="Actin-like ATPase domain"/>
+                        <model ac="0048592" name="Actin-like ATPase domain"/>
+                        <model ac="0050912" name="Actin-like ATPase domain"/>
+                        <model ac="0051456" name="Actin-like ATPase domain"/>
+                        <model ac="0049552" name="Actin-like ATPase domain"/>
+                        <model ac="0048322" name="Actin-like ATPase domain"/>
+                        <model ac="0046054" name="Actin-like ATPase domain"/>
+                        <model ac="0050049" name="Actin-like ATPase domain"/>
+                        <model ac="0051709" name="Actin-like ATPase domain"/>
+                        <model ac="0049808" name="Actin-like ATPase domain"/>
+                        <model ac="0052359" name="Actin-like ATPase domain"/>
+                        <model ac="0048237" name="Actin-like ATPase domain"/>
+                        <model ac="0038007" name="Actin-like ATPase domain"/>
+                        <model ac="0035529" name="Actin-like ATPase domain"/>
+                        <model ac="0050789" name="Actin-like ATPase domain"/>
+                        <model ac="0035709" name="Actin-like ATPase domain"/>
+                        <model ac="0047192" name="Actin-like ATPase domain"/>
+                        <model ac="0052948" name="Actin-like ATPase domain"/>
+                        <model ac="0045198" name="Actin-like ATPase domain"/>
+                        <model ac="0052166" name="Actin-like ATPase domain"/>
+                        <model ac="0036765" name="Actin-like ATPase domain"/>
+                        <model ac="0037167" name="Actin-like ATPase domain"/>
+                        <model ac="0054101" name="Actin-like ATPase domain"/>
+                        <model ac="0047243" name="Actin-like ATPase domain"/>
+                        <model ac="0049109" name="Actin-like ATPase domain"/>
+                        <model ac="0051254" name="Actin-like ATPase domain"/>
+                        <model ac="0052752" name="Actin-like ATPase domain"/>
+                        <model ac="0051544" name="Actin-like ATPase domain"/>
+                    </models>
+                    <signature-library-release library="SUPERFAMILY" version="1.75"/>
+                </signature>
+                <locations>
+                    <superfamilyhmmer3-location start="5" end="154"/>
+                </locations>
+            </superfamilyhmmer3-match>
+        </matches>
+    </protein>
+    <protein>
+        <sequence md5="391ced82e4cf61e26c70c818b2ee02bb">MISPERSSSQSPRSQAVAGAPFLWISVMDPVKMGTGVQAYISYRVITKTNLPEFEGPEKIVIRRYSDFEWLHDRLAERYKGVFIPPLPEKNAVEKFRFSKEFIELRRQALDLFVNRIASHPELKQSDVLRTFLQADEEIMDRARSYETGIFKKPSDFLQMFKDVQSKVSDVVLGKEKPVEESTPEYEKLKSYIFELEIHLAEAQKQAYRLVKRHRELGQSLADFGKAIKLLGSCEGDLMEKVFSEVGSKSEMLSIKLQREADNLLFNFEEPLKDYVRALQSIKATMLDRANAFRQHFDLDQERKYKELNLEKLKFMNPEKYAEAESEFRGASCCNFPLRNSLHSLVDELKADSEEATKKFEHIVRLMNEELSRFQEQKTADIGLAFHEFAKGQAKLAKDIADAWRSVLPKLEACSTS</sequence>
+        <xref id="Zm00014a027426"/>
+        <matches>
+            <hmmer2-match evalue="1.3E-26" score="104.5">
+                <signature ac="SM00312" name="PX_2">
+                    <entry ac="IPR001683" desc="Phox homologous domain" name="Phox" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0035091" name="phosphatidylinositol binding"/>
+                    </entry>
+                    <models>
+                        <model ac="SM00312" name="PX_2"/>
+                    </models>
+                    <signature-library-release library="SMART" version="7.1"/>
+                </signature>
+                <locations>
+                    <hmmer2-location score="104.5" evalue="1.3E-26" hmm-start="1" hmm-end="142" hmm-length="0" start="19" end="136"/>
+                </locations>
+            </hmmer2-match>
+            <hmmer3-match evalue="4.8E-25" score="87.6">
+                <signature ac="PF00787" desc="PX domain" name="PX">
+                    <entry ac="IPR001683" desc="Phox homologous domain" name="Phox" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0035091" name="phosphatidylinositol binding"/>
+                    </entry>
+                    <models>
+                        <model ac="PF00787" desc="PX domain" name="PX"/>
+                    </models>
+                    <signature-library-release library="PFAM" version="31.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="136" env-start="20" score="85.9" evalue="1.7E-24" hmm-start="6" hmm-end="112" hmm-length="0" start="25" end="135"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="1.4E-29" score="102.9">
+                <signature ac="G3DSA:1.20.1270.60">
+                    <models>
+                        <model ac="3dytA02"/>
+                        <model ac="2d1lB00"/>
+                        <model ac="3cazB00"/>
+                        <model ac="1i4dA00"/>
+                        <model ac="2yktA00"/>
+                        <model ac="2q12A00"/>
+                        <model ac="4atmA00"/>
+                        <model ac="1zwwA00"/>
+                        <model ac="2c08A00"/>
+                        <model ac="3ok8A00"/>
+                    </models>
+                    <signature-library-release library="GENE3D" version="4.1.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="414" env-start="186" score="102.0" evalue="2.7E-29" hmm-start="3" hmm-end="190" hmm-length="0" start="186" end="414"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="2.2E-18" score="66.6">
+                <signature ac="PF09325" desc="Vps5 C terminal like" name="Vps5">
+                    <entry ac="IPR015404" desc="Sorting nexin Vps5-like, C-terminal" name="Vps5_C" type="DOMAIN"/>
+                    <models>
+                        <model ac="PF09325" desc="Vps5 C terminal like" name="Vps5"/>
+                    </models>
+                    <signature-library-release library="PFAM" version="31.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="332" env-start="157" score="50.9" evalue="1.4E-13" hmm-start="10" hmm-end="173" hmm-length="0" start="166" end="329"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="9.4E-31" score="105.9">
+                <signature ac="G3DSA:3.30.1520.10">
+                    <entry ac="IPR001683" desc="Phox homologous domain" name="Phox" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0035091" name="phosphatidylinositol binding"/>
+                    </entry>
+                    <models>
+                        <model ac="2ettA00"/>
+                        <model ac="4ikbB00"/>
+                        <model ac="2wweA01"/>
+                        <model ac="3p0cA00"/>
+                        <model ac="1h6hA00"/>
+                        <model ac="2ar5A00"/>
+                        <model ac="1kq6A00"/>
+                        <model ac="1xteA00"/>
+                        <model ac="1kmdA00"/>
+                        <model ac="3iq2A00"/>
+                        <model ac="2v14A00"/>
+                        <model ac="4bgjA00"/>
+                        <model ac="2v6vA00"/>
+                        <model ac="2i4kA00"/>
+                        <model ac="4hasA00"/>
+                        <model ac="3dytA01"/>
+                        <model ac="2l73A00"/>
+                        <model ac="1ocsA00"/>
+                        <model ac="3luiC00"/>
+                    </models>
+                    <signature-library-release library="GENE3D" version="4.1.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="151" env-start="13" score="105.9" evalue="9.4E-31" hmm-start="19" hmm-end="130" hmm-length="0" start="13" end="151"/>
+                </locations>
+            </hmmer3-match>
+            <panther-match evalue="9.7E-200" familyName="SORTING NEXIN" score="665.9">
+                <signature ac="PTHR10555" name="SORTING NEXIN">
+                    <models>
+                        <model ac="PTHR10555" name="SORTING NEXIN"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="1" end="414"/>
+                </locations>
+            </panther-match>
+            <panther-match evalue="9.7E-200" familyName="SORTING NEXIN 1" score="665.9">
+                <signature ac="PTHR10555:SF174" name="SORTING NEXIN 1">
+                    <entry ac="IPR033241" desc="Sorting nexin 1, plant" name="SNX1_plant" type="FAMILY">
+                        <go-xref category="BIOLOGICAL_PROCESS" db="GO" id="GO:0007034" name="vacuolar transport"/>
+                        <go-xref category="CELLULAR_COMPONENT" db="GO" id="GO:0030904" name="retromer complex"/>
+                        <go-xref category="BIOLOGICAL_PROCESS" db="GO" id="GO:0048364" name="root development"/>
+                        <go-xref category="BIOLOGICAL_PROCESS" db="GO" id="GO:0010252" name="auxin homeostasis"/>
+                    </entry>
+                    <models>
+                        <model ac="PTHR10555:SF174" name="SORTING NEXIN 1"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="1" end="414"/>
+                </locations>
+            </panther-match>
+            <profilescan-match>
+                <signature ac="PS50195" desc="PX domain profile." name="PX">
+                    <entry ac="IPR001683" desc="Phox homologous domain" name="Phox" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0035091" name="phosphatidylinositol binding"/>
+                    </entry>
+                    <models>
+                        <model ac="PS50195" desc="PX domain profile." name="PX"/>
+                    </models>
+                    <signature-library-release library="PROSITE_PROFILES" version="20.132"/>
+                </signature>
+                <locations>
+                    <profilescan-location score="20.405" start="21" end="140">
+                        <alignment>PFLWISVMDPVKMGTGVQAYISYRVITKTNLPefeGPEKIVIRRYSDFEWLHDRLAERYKGVFIPPLPEKNAVEKFrFSKEFIELRRQALDLFVNRIASHPELKQSDVLRTFLQADEEIM</alignment>
+                    </profilescan-location>
+                </locations>
+            </profilescan-match>
+            <rpsblast-match>
+                <signature ac="cd06859" desc="PX_SNX1_2_like" name="PX_SNX1_2_like">
+                    <models>
+                        <model ac="cd06859" desc="PX_SNX1_2_like" name="PX_SNX1_2_like"/>
+                    </models>
+                    <signature-library-release library="CDD" version="3.16"/>
+                </signature>
+                <locations>
+                    <rpsblast-location evalue="5.88474E-61" score="190.868" start="25" end="136">
+                        <sites>
+                            <rpsblast-site description="phosphoinositide binding site" numLocations="4">
+<site-locations>
+    <site-location residue="R" start="64" end="64"/>
+    <site-location residue="S" start="66" end="66"/>
+    <site-location residue="R" start="106" end="106"/>
+    <site-location residue="Y" start="65" end="65"/>
+</site-locations>
+                            </rpsblast-site>
+                        </sites>
+                    </rpsblast-location>
+                </locations>
+            </rpsblast-match>
+            <rpsblast-match>
+                <signature ac="cd07596" desc="BAR_SNX" name="BAR_SNX">
+                    <models>
+                        <model ac="cd07596" desc="BAR_SNX" name="BAR_SNX"/>
+                    </models>
+                    <signature-library-release library="CDD" version="3.16"/>
+                </signature>
+                <locations>
+                    <rpsblast-location evalue="1.62683E-48" score="162.525" start="181" end="409">
+                        <sites>
+                            <rpsblast-site description="dimer interface" numLocations="43">
+<site-locations>
+    <site-location residue="K" start="391" end="391"/>
+    <site-location residue="A" start="203" end="203"/>
+    <site-location residue="T" start="379" end="379"/>
+    <site-location residue="W" start="404" end="404"/>
+    <site-location residue="Q" start="206" end="206"/>
+    <site-location residue="S" start="372" end="372"/>
+    <site-location residue="V" start="407" end="407"/>
+    <site-location residue="Q" start="375" end="375"/>
+    <site-location residue="E" start="202" end="202"/>
+    <site-location residue="L" start="196" end="196"/>
+    <site-location residue="E" start="235" end="235"/>
+    <site-location residue="H" start="387" end="387"/>
+    <site-location residue="R" start="213" end="213"/>
+    <site-location residue="A" start="394" end="394"/>
+    <site-location residue="R" start="405" end="405"/>
+    <site-location residue="L" start="210" end="210"/>
+    <site-location residue="A" start="227" end="227"/>
+    <site-location residue="L" start="231" end="231"/>
+    <site-location residue="L" start="200" end="200"/>
+    <site-location residue="H" start="199" end="199"/>
+    <site-location residue="L" start="221" end="221"/>
+    <site-location residue="G" start="383" end="383"/>
+    <site-location residue="L" start="230" end="230"/>
+    <site-location residue="E" start="195" end="195"/>
+    <site-location residue="A" start="397" end="397"/>
+    <site-location residue="F" start="224" end="224"/>
+    <site-location residue="E" start="376" end="376"/>
+    <site-location residue="A" start="401" end="401"/>
+    <site-location residue="Q" start="393" end="393"/>
+    <site-location residue="R" start="209" end="209"/>
+    <site-location residue="A" start="390" end="390"/>
+    <site-location residue="C" start="234" end="234"/>
+    <site-location residue="F" start="386" end="386"/>
+    <site-location residue="I" start="400" end="400"/>
+    <site-location residue="K" start="378" end="378"/>
+    <site-location residue="S" start="220" end="220"/>
+    <site-location residue="L" start="408" end="408"/>
+    <site-location residue="Y" start="192" end="192"/>
+    <site-location residue="F" start="389" end="389"/>
+    <site-location residue="D" start="223" end="223"/>
+    <site-location residue="S" start="250" end="250"/>
+    <site-location residue="K" start="398" end="398"/>
+    <site-location residue="A" start="380" end="380"/>
+</site-locations>
+                            </rpsblast-site>
+                        </sites>
+                    </rpsblast-location>
+                </locations>
+            </rpsblast-match>
+            <superfamilyhmmer3-match evalue="8.89E-7">
+                <signature ac="SSF103657" name="BAR/IMD domain-like">
+                    <entry ac="IPR027267" desc="Arfaptin homology (AH) domain/BAR domain" name="AH/BAR-dom" type="DOMAIN"/>
+                    <models>
+                        <model ac="0053888" name="BAR/IMD domain-like"/>
+                        <model ac="0047298" name="BAR/IMD domain-like"/>
+                        <model ac="0049984" name="BAR/IMD domain-like"/>
+                        <model ac="0052378" name="BAR/IMD domain-like"/>
+                        <model ac="0050766" name="BAR/IMD domain-like"/>
+                        <model ac="0053884" name="BAR/IMD domain-like"/>
+                        <model ac="0051188" name="BAR/IMD domain-like"/>
+                        <model ac="0053885" name="BAR/IMD domain-like"/>
+                    </models>
+                    <signature-library-release library="SUPERFAMILY" version="1.75"/>
+                </signature>
+                <locations>
+                    <superfamilyhmmer3-location start="184" end="413"/>
+                </locations>
+            </superfamilyhmmer3-match>
+            <superfamilyhmmer3-match evalue="3.01E-34">
+                <signature ac="SSF64268" name="PX domain">
+                    <entry ac="IPR001683" desc="Phox homologous domain" name="Phox" type="DOMAIN">
+                        <go-xref category="MOLECULAR_FUNCTION" db="GO" id="GO:0035091" name="phosphatidylinositol binding"/>
+                    </entry>
+                    <models>
+                        <model ac="0038437" name="PX domain"/>
+                        <model ac="0040149" name="PX domain"/>
+                        <model ac="0047856" name="PX domain"/>
+                        <model ac="0041789" name="PX domain"/>
+                        <model ac="0051101" name="PX domain"/>
+                    </models>
+                    <signature-library-release library="SUPERFAMILY" version="1.75"/>
+                </signature>
+                <locations>
+                    <superfamilyhmmer3-location start="21" end="137"/>
+                </locations>
+            </superfamilyhmmer3-match>
+        </matches>
+    </protein>
+    <protein>
+        <sequence md5="08ddeb3d5b11ed81330343c733bc1f26">MDPANSSAGAELDDASEWRTRALGGTEYSWLRAVPGGTGTTLLALRLSRGDAAEAGLHSLRDAHPVLRARLRTSSPSGPTLAFPDPAPPFLLAPIPAPGSAPDFHALLEHELNRNPWADDPASSDDAPVLFATLYELPAATGGAALFVRIHTVACDRSAASALARELVALLAGAGGEEPDPEDAAAEAGLEARIPQRDTWKPFWARGLDMVGYSINGLRTSTLPFVETGTERSTQMLRLGLGLDETTRLLDACKENGVRLCSAVAAATMLAARQSKPLESGQQETYSVVTLINCRKFLEPVLEDRNVGFFYSAITNTHTIHGGEGLWELAKRCHDSYTSAKSNKKHLTDINDLNFLMCRAIENPQLTTAGALRTALVSVFEDPVVADVAELQSKAGVEDCVCCATVHGIGPSIGVFDSIKDGKLDWACVYPSPLHSRKQVQEIFDKVKQILRHAAAAEENFEDCT</sequence>
+        <xref id="Zm00014a027425"/>
+        <matches>
+            <hmmer3-match evalue="1.0E-5" score="24.5">
+                <signature ac="PF07247" desc="Alcohol acetyltransferase" name="AATase">
+                    <entry ac="IPR010828" desc="Alcohol acetyltransferase/N-acetyltransferase" name="Atf2/Sli1-like" type="FAMILY"/>
+                    <models>
+                        <model ac="PF07247" desc="Alcohol acetyltransferase" name="AATase"/>
+                    </models>
+                    <signature-library-release library="PFAM" version="31.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="360" env-start="220" score="24.0" evalue="1.4E-5" hmm-start="257" hmm-end="378" hmm-length="0" start="242" end="352"/>
+                </locations>
+            </hmmer3-match>
+            <hmmer3-match evalue="7.4E-11" score="41.7">
+                <signature ac="G3DSA:3.30.559.10">
+                    <models>
+                        <model ac="1sczA00"/>
+                        <model ac="2bghA01"/>
+                        <model ac="3maeA00"/>
+                        <model ac="2e1vA01"/>
+                        <model ac="3claA00"/>
+                        <model ac="1xmcB03"/>
+                        <model ac="2i9dA00"/>
+                        <model ac="2e1vA02"/>
+                        <model ac="4g22A02"/>
+                        <model ac="2rkvA01"/>
+                        <model ac="4g22B01"/>
+                        <model ac="3l60A01"/>
+                        <model ac="2bghA02"/>
+                        <model ac="2rkvA02"/>
+                        <model ac="4n72B00"/>
+                        <model ac="2ii3A01"/>
+                    </models>
+                    <signature-library-release library="GENE3D" version="4.1.0"/>
+                </signature>
+                <locations>
+                    <hmmer3-location env-end="209" env-start="24" score="41.1" evalue="1.1E-10" hmm-start="59" hmm-end="189" hmm-length="0" start="24" end="209"/>
+                </locations>
+            </hmmer3-match>
+            <panther-match evalue="2.5E-175" familyName="FAMILY NOT NAMED" score="585.9">
+                <signature ac="PTHR34375" name="FAMILY NOT NAMED">
+                    <models>
+                        <model ac="PTHR34375" name="FAMILY NOT NAMED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="13" end="464"/>
+                </locations>
+            </panther-match>
+            <superfamilyhmmer3-match evalue="1.56E-6">
+                <signature ac="SSF52777" name="CoA-dependent acyltransferases">
+                    <models>
+                        <model ac="0047936" name="CoA-dependent acyltransferases"/>
+                        <model ac="0048911" name="CoA-dependent acyltransferases"/>
+                        <model ac="0041459" name="CoA-dependent acyltransferases"/>
+                        <model ac="0041319" name="CoA-dependent acyltransferases"/>
+                        <model ac="0042636" name="CoA-dependent acyltransferases"/>
+                        <model ac="0036871" name="CoA-dependent acyltransferases"/>
+                        <model ac="0051016" name="CoA-dependent acyltransferases"/>
+                        <model ac="0042637" name="CoA-dependent acyltransferases"/>
+                        <model ac="0041458" name="CoA-dependent acyltransferases"/>
+                        <model ac="0042676" name="CoA-dependent acyltransferases"/>
+                        <model ac="0051015" name="CoA-dependent acyltransferases"/>
+                        <model ac="0045500" name="CoA-dependent acyltransferases"/>
+                        <model ac="0035361" name="CoA-dependent acyltransferases"/>
+                        <model ac="0049362" name="CoA-dependent acyltransferases"/>
+                        <model ac="0047935" name="CoA-dependent acyltransferases"/>
+                        <model ac="0041485" name="CoA-dependent acyltransferases"/>
+                        <model ac="0041318" name="CoA-dependent acyltransferases"/>
+                    </models>
+                    <signature-library-release library="SUPERFAMILY" version="1.75"/>
+                </signature>
+                <locations>
+                    <superfamilyhmmer3-location start="51" end="179"/>
+                </locations>
+            </superfamilyhmmer3-match>
+            <superfamilyhmmer3-match evalue="1.02E-20">
+                <signature ac="SSF52777" name="CoA-dependent acyltransferases">
+                    <models>
+                        <model ac="0047936" name="CoA-dependent acyltransferases"/>
+                        <model ac="0048911" name="CoA-dependent acyltransferases"/>
+                        <model ac="0041459" name="CoA-dependent acyltransferases"/>
+                        <model ac="0041319" name="CoA-dependent acyltransferases"/>
+                        <model ac="0042636" name="CoA-dependent acyltransferases"/>
+                        <model ac="0036871" name="CoA-dependent acyltransferases"/>
+                        <model ac="0051016" name="CoA-dependent acyltransferases"/>
+                        <model ac="0042637" name="CoA-dependent acyltransferases"/>
+                        <model ac="0041458" name="CoA-dependent acyltransferases"/>
+                        <model ac="0042676" name="CoA-dependent acyltransferases"/>
+                        <model ac="0051015" name="CoA-dependent acyltransferases"/>
+                        <model ac="0045500" name="CoA-dependent acyltransferases"/>
+                        <model ac="0035361" name="CoA-dependent acyltransferases"/>
+                        <model ac="0049362" name="CoA-dependent acyltransferases"/>
+                        <model ac="0047935" name="CoA-dependent acyltransferases"/>
+                        <model ac="0041485" name="CoA-dependent acyltransferases"/>
+                        <model ac="0041318" name="CoA-dependent acyltransferases"/>
+                    </models>
+                    <signature-library-release library="SUPERFAMILY" version="1.75"/>
+                </signature>
+                <locations>
+                    <superfamilyhmmer3-location start="218" end="456"/>
+                </locations>
+            </superfamilyhmmer3-match>
+        </matches>
+    </protein>
+    <protein>
+        <sequence md5="ea5cfa3e676a300a4ac6b9f0dec76c9d">MPQVDLVCGASGAGAGAGDRKVSCETVIAGGSGDASPPRMWMPPPPLPDPDFPPDSITIPIGDDAAFSELNPMYERDDSTKGSTNPKSAAAAVANPTVAAKTRSNSTRAGAAGGAPPPPAAGTTFFGLPARIRPAFSRRRPSQSQGRILRDKRAGGEVEPRSPKVSCIGKVLSDRERHGRRRGWWHGVAAMFRCDGCARVARGASRNMAALEDDGVEQQQQQAGVAGMRRFKSGRRAASWGDEALAAAAVGDEDEGMEMQMPDSQDAEPWSRVPRPVI</sequence>
+        <xref id="Zm00014a027424"/>
+        <matches>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="1" end="20"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="28" end="163"/>
+                </locations>
+            </mobidblite-match>
+            <mobidblite-match>
+                <signature ac="mobidb-lite" desc="consensus disorder prediction" name="disorder_prediction">
+                    <signature-library-release library="MOBIDB_LITE" version="1.0"/>
+                </signature>
+                <locations>
+                    <mobidblite-location start="252" end="278"/>
+                </locations>
+            </mobidblite-match>
+            <panther-match evalue="8.9E-92" familyName="SUBFAMILY NOT NAMED" score="309.5">
+                <signature ac="PTHR34120:SF5" name="SUBFAMILY NOT NAMED">
+                    <models>
+                        <model ac="PTHR34120:SF5" name="SUBFAMILY NOT NAMED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="1" end="260"/>
+                </locations>
+            </panther-match>
+            <panther-match evalue="8.9E-92" familyName="FAMILY NOT NAMED" score="309.5">
+                <signature ac="PTHR34120" name="FAMILY NOT NAMED">
+                    <models>
+                        <model ac="PTHR34120" name="FAMILY NOT NAMED"/>
+                    </models>
+                    <signature-library-release library="PANTHER" version="11.1"/>
+                </signature>
+                <locations>
+                    <panther-location start="1" end="260"/>
+                </locations>
+            </panther-match>
+        </matches>
+    </protein>
+</protein-matches>

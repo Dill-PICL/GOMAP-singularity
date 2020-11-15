@@ -17,7 +17,7 @@ then
     tmpdir=${TMPDIR:-$PWD/tmp}
 fi
 
-export SINGULARITY_BINDPATH="$PWD:/workdir,$tmpdir:/tmpdir"
+export SINGULARITY_BINDPATH="$PWD:/workdir,$PWD/tmp:/tmpdir,$PWD/GOMAP:/opt/GOMAP"
 
 echo "$@"
 

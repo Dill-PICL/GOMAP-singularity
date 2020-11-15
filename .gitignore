@@ -1,10 +1,8 @@
-temp
 *workspace
 *job
 *vscode
 *.simg
-GOMAP-data
-GOMAP
+GOMAP/
 hostfile
 mindmap
 *.ipynb*
@@ -14,11 +12,14 @@ image.py
 instance.py
 tmp.txt
 SBATCH*
-*out
-*err
-tmp
-GOMAP-data-old
+/*.out
+/*.err
+tmp/*
 mysql
 start-GOMAP.sh
 *.sif
+<<<<<<< HEAD
 data/
+=======
+data/*
+>>>>>>> dev
