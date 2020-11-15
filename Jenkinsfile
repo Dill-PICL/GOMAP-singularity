@@ -4,8 +4,10 @@ pipeline {
         CONTAINER = 'gomap'
         IMAGE = 'GOMAP'
         VERSION = '1.3.2'
+        testFile = new File("/mnt/gomap/GOMAP/1.3.2/GOMAP.sif")
+        FILECHECK = testFile.exists()
     }
-    
+        println(testFile.exists())
     stages {
         stage('Build') {
             steps {
