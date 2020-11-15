@@ -13,7 +13,7 @@ pipeline {
                     changeset "Jenkinsfile"
                 }
                 anyOf {
-                    checkImageLoc()
+                    checkImageLoc() == 'true'
                 }
                 anyOf {
                     branch 'master'
@@ -42,7 +42,7 @@ pipeline {
                     branch 'master'
                 }
                 anyOf {
-                    checkImageLoc()
+                    checkImageLoc() == 'true'
                 }
             }
             steps{
