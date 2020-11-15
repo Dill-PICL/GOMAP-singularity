@@ -4,6 +4,7 @@ pipeline {
         CONTAINER = 'gomap'
         IMAGE = 'GOMAP'
         VERSION = '1.3.3'
+        FILEPATH="/mnt/gomap/GOMAP/1.3.2/GOMAP.sif"
     }
     stages {
         stage('Build') {
@@ -13,7 +14,7 @@ pipeline {
                     changeset "Jenkinsfile"
                 }
                 anyOf {
-                     expression { checkImageLoc() }
+                     expression { checkImageLoc(FILEPATH) }
                 }
                 anyOf {
                     branch 'master'
@@ -42,7 +43,7 @@ pipeline {
                     branch 'master'
                 }
                 anyOf {
-                    expression { checkImageLoc() }
+                    expression { checkImageLoc(FILEPATH) }
                 }
             }
             steps{
@@ -64,8 +65,7 @@ pipeline {
     }
 }
 
-def checkImageLoc(){
-    def filePath = "/mnt/gomap/GOMAP/1.3.2/GOMAP.sif"
+def checkImageLoc(string filePath){
     def file = new File(filePath)
     return file.exists()
 }
