@@ -7,11 +7,11 @@ pipeline {
         testFile = new File("/mnt/gomap/GOMAP/1.3.2/GOMAP.sif")
         FILECHECK = testFile.exists()
     }
-        println(testFile.exists())
     stages {
         stage('Build') {
             steps {
                 sh '''
+                    echo ${FILECHECK}
                     cd docs
                     virtualenv -p python3 venv
                     . venv/bin/activate
