@@ -29,7 +29,7 @@ nodes=$((SLURM_JOB_NUM_NODES + 1))
 
 if [ ! -z "$domain" ] || [ ! -z "$mixmeth_blast" ]
 then
-    export SINGULARITY_BINDPATH="$PWD:/workdir,$tmpdir:/tmpdir"
+    export SINGULARITY_BINDPATH="$PWD:/workdir,$tmpdir:/tmpdir,$SINGULARITY_BINDPATH"
     echo $SINGULARITY_BINDPATH
     echo "Running GOMAP $@"
     echo "using $SLURM_JOB_NUM_NODES for the process"

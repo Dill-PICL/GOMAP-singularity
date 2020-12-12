@@ -15,12 +15,13 @@ export IRODS_USER_NAME="anonymous"
 export IRODS_ZONE_NAME="iplant"
 export ICOMMANDS_IMG="icommands.sif"
 export GOMAP_IMG="GOMAP.sif"
-export GOMAP_URL="/iplant/home/shared/dillpicl/gomap/GOMAP/v1.3.3/$GOMAP_IMG"
+export GOMAP_VERSION="v1.3.3."
+export GOMAP_URL="/iplant/home/shared/dillpicl/gomap/GOMAP/$GOMAP_VERSION/$GOMAP_IMG"
 
 if [ ! -f $GOMAP_LOC/$GOMAP_IMG ]
 then
     singularity pull -F $ICOMMANDS_IMG shub://wkpalan/icommands-cyverse:latest && \
-    singularity run $ICOMMANDS_IMG irsync -v i:$GOMAP_URL $GOMAP_LOC/$GOMAP_IMG && \
+    singularity run $ICOMMANDS_IMG iget -PvT $GOMAP_URL $GOMAP_LOC/$GOMAP_IMG && \
     rm $ICOMMANDS_IMG
 else
     echo "The $GOMAP_LOC/$GOMAP_IMG exists" > /dev/stderr
