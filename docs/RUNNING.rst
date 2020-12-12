@@ -3,12 +3,14 @@
 Running GOMAP
 =============
 
-1. Install (local) or load (HPC) `Singularity <https://www.sylabs.io/guides/3.1/user-guide/index.html>`_ container (version 3.x).
+1. Install (local) or load (HPC) `Singularity <https://www.sylabs.io/guides/3.1/user-guide/index.html>`_ container (version 3.5.2).
 
     .. code-block:: bash
         
         #On HPC Systems
         module load singularity
+        # Sometimes specific version has to be loaded as 
+        module load singularity/3.5.2
 
 2. Clone the git repository
 
