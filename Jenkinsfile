@@ -19,6 +19,7 @@ pipeline {
             steps {
                 echo 'Building the documents'
                 sh '''
+                    git fetch
                     echo ${FILECHECK}
                     cd docs
                     virtualenv -p python3 venv
