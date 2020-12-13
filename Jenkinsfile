@@ -25,7 +25,8 @@ pipeline {
                     . venv/bin/activate
                     pip install -r requirements.txt 
                     make clean
-                    make buildmult                '''
+                    make buildmult
+                    '''
             }
         }
          stage('Push Artifacts') {
@@ -45,6 +46,7 @@ pipeline {
                     pwd
                     ls
                     make syncDocs
+                    chmod -r a+rwx /var/www/bioinformapping.com/html/gomap/
                 '''
                 echo 'Documentation is successfully synced'
             }
