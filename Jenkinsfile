@@ -26,7 +26,7 @@ pipeline {
                     . venv/bin/activate
                     pip install -r requirements.txt 
                     make clean
-                    make buildmult
+                    make build
                     '''
             }
         }
