@@ -19,8 +19,7 @@ Running GOMAP
         mkdir -p /path/to/GOMAP-singularity/install/location
         git clone https://github.com/Dill-PICL/GOMAP-singularity.git /path/to/GOMAP-singularity/install/location 
         git checkout v1.3.4
-        cd /path/to/GOMAP-singularity/install/location
-        
+        cd /path/to/GOMAP-singularity/install/location        
 
 3. Run the setup step to make necessary directories and download data files from CyVerse
     
