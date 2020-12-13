@@ -30,7 +30,7 @@ buildmult:
 	sphinx-multiversion $(O) "$(SOURCEDIR)" "$(BUILDDIR)" 
 
 build:
-	@$(SPHINXBUILD) "$(SOURCEDIR)" "$(BUILDDIR)" $(O) -D version=$(version) -D release=$(release)
+	@$(SPHINXBUILD) "$(SOURCEDIR)" "$(BUILDDIR)" $(O)
 
 syncDocs:
 	rsync -rluv $(BUILDDIR)/ /var/www/bioinformapping.com/html/gomap/
