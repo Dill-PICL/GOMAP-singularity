@@ -34,4 +34,4 @@ build:
 
 syncDocs:
 	rsync -rluv $(BUILDDIR)/ /var/www/bioinformapping.com/html/gomap/
-	
+	chmod -r a+rwx /var/www/bioinformapping.com/html/gomap/
