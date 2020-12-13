@@ -18,7 +18,7 @@ Running GOMAP
 
         mkdir -p /path/to/GOMAP-singularity/install/location
         git clone https://github.com/Dill-PICL/GOMAP-singularity.git /path/to/GOMAP-singularity/install/location 
-        git checkout v1.3.2
+        git checkout v1.3.4
         cd /path/to/GOMAP-singularity/install/location
         
 

@@ -15,7 +15,7 @@ export IRODS_USER_NAME="anonymous"
 export IRODS_ZONE_NAME="iplant"
 export ICOMMANDS_IMG="icommands.sif"
 export GOMAP_IMG="GOMAP.sif"
-export GOMAP_VERSION="v1.3.3."
+export GOMAP_VERSION="v1.3.4"
 export GOMAP_URL="/iplant/home/shared/dillpicl/gomap/GOMAP/$GOMAP_VERSION/$GOMAP_IMG"
 
 if [ ! -f $GOMAP_LOC/$GOMAP_IMG ]
