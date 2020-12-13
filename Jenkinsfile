@@ -25,8 +25,7 @@ pipeline {
                     . venv/bin/activate
                     pip install -r requirements.txt 
                     make clean
-                    make build version=${VERSION} release=${VERSION}
-                '''
+                    make buildmult                '''
             }
         }
          stage('Push Artifacts') {

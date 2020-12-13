@@ -26,6 +26,9 @@ livehtml:
 clean:
 	$(RM) /var/www/bioinformapping.com/html/gomap/*
 
+buildmult:
+	sphinx-multiversion $(O) "$(SOURCEDIR)" "$(BUILDDIR)" 
+
 build:
 	@$(SPHINXBUILD) "$(SOURCEDIR)" "$(BUILDDIR)" $(O) -D version=$(version) -D release=$(release)
 
