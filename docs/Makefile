@@ -28,6 +28,8 @@ clean:
 
 buildmult:
 	sphinx-multiversion $(O) "$(SOURCEDIR)" "$(BUILDDIR)" 
+	cp "index.page" "$(BUILDDIR)/index.html"
+
 
 build:
 	@$(SPHINXBUILD) "$(SOURCEDIR)" "$(BUILDDIR)" $(O)

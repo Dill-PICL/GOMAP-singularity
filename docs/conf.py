@@ -32,6 +32,7 @@
 extensions = [
     'sphinxcontrib.bibtex',
     "sphinx_multiversion",
+    #'sphinxcontrib.googleanalytics'
     ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -111,7 +112,6 @@ html_sidebars = {
     '**': [
         'relations.html',  # needs 'show_related': True theme option to display
         'searchbox.html',
-        'versioning.html',
     ]
 }
 
@@ -166,3 +166,9 @@ texinfo_documents = [
      author, 'GOMAP-Singularity', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+googleanalytics_id = "UA-141536290-1"
+
+smv_prefer_remote_refs = True
+
+smv_branch_whitelist = r'master'
