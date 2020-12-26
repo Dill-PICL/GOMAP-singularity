@@ -20,3 +20,4 @@ start-GOMAP.sh
 *.sif
 data/*
 /*.log
+data/

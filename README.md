@@ -8,4 +8,4 @@
 
 ## How do I use GOMAP-Singularity?
 
-Please check [bioinformapping.com/gomap](http://bioinformapping.com/gomap/) for detailed documentation on how to use the container
+Please check [bioinformapping.com/gomap](http://bioinformapping.com/gomap/) for detailed documentation on how to use the container.
