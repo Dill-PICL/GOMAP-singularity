@@ -3,9 +3,8 @@ pipeline {
     environment {
         CONTAINER = 'gomap'
         IMAGE = 'GOMAP'
-        VERSION = '1.3.4'
+        VERSION = 'v1.3.4'
     }
-    
     stages {
         stage('Build') {
             when { 
@@ -20,13 +19,15 @@ pipeline {
             steps {
                 echo 'Building the documents'
                 sh '''
+                    git fetch
+                    echo ${FILECHECK}
                     cd docs
                     virtualenv -p python3 venv
                     . venv/bin/activate
                     pip install -r requirements.txt 
                     make clean
-                    make build version=${VERSION} release=${VERSION}
-                '''
+                    make buildmult
+                    '''
             }
         }
          stage('Push Artifacts') {

@@ -3,12 +3,14 @@
 Running GOMAP
 =============
 
-1. Install (local) or load (HPC) `Singularity <https://www.sylabs.io/guides/3.1/user-guide/index.html>`_ container (version 3.x).
+1. Install (local) or load (HPC) `Singularity <https://www.sylabs.io/guides/3.1/user-guide/index.html>`_ container (version 3.5.2).
 
     .. code-block:: bash
         
         #On HPC Systems
         module load singularity
+        # Sometimes specific version has to be loaded as 
+        module load singularity/3.5.2
 
 2. Clone the git repository
 
@@ -16,9 +18,8 @@ Running GOMAP
 
         mkdir -p /path/to/GOMAP-singularity/install/location
         git clone https://github.com/Dill-PICL/GOMAP-singularity.git /path/to/GOMAP-singularity/install/location 
-        git checkout v1.3.2
-        cd /path/to/GOMAP-singularity/install/location
-        
+        git checkout v1.3.4
+        cd /path/to/GOMAP-singularity/install/location        
 
 3. Run the setup step to make necessary directories and download data files from CyVerse
     
