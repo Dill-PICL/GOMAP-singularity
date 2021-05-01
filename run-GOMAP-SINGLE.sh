@@ -24,8 +24,6 @@ then
     tmpdir=${TMPDIR:-$PWD/tmp}
 fi
 
-SINGULARITY_BINDPATH="$GOMAP_LOC/GOMAP:/opt/GOMAP"
-
 if [ ! -z "$setup" ]
 then
     echo "The setup has been moved from this script to is own script" > /dev/stderr
