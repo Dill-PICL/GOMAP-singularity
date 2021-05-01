@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             when { 
                 anyOf {
-                    changeset "docs/*"
+                    changeset "docs/**"
                     changeset "Jenkinsfile"
                 }
                 anyOf {
@@ -33,7 +33,7 @@ pipeline {
          stage('Push Artifacts') {
               when { 
                 anyOf {
-                    changeset "docs/*"
+                    changeset "docs/**"
                     changeset "Jenkinsfile"
                 }
                 anyOf {
