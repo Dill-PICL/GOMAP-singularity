@@ -7,6 +7,8 @@ then
     GOMAP_LOC="$PWD"
 fi
 
+export SINGULARITY_BINDPATH="$PWD:$PWD,$SINGULARITY_BINDPATH"
+
 # Declaring variables for different options
 export IRODS_HOST="data.cyverse.org"
 export IRODS_PORT="1247"
@@ -36,8 +38,8 @@ then
         singularity pull -F $ICOMMANDS_IMG shub://wkpalan/icommands-cyverse:latest
     fi
     #Downloading GOMAP Image
-    singularity run $ICOMMANDS_IMG iget -PvT $GOMAP_URL $GOMAP_LOC/$GOMAP_IMG && \
-    rm $ICOMMANDS_IMG
+    singularity run -c $ICOMMANDS_IMG iget -PVT $GOMAP_URL $GOMAP_LOC/$GOMAP_IMG #&& \
+    #rm $ICOMMANDS_IMG
 else
     echo "The $GOMAP_LOC/$GOMAP_IMG exists" > /dev/stderr
     echo "Delete the image if you want to download it again" > /dev/stderr
