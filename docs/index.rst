@@ -16,12 +16,14 @@ How to use GOMAP-singularity
 ----------------------------
 
 .. toctree:: 
-   :maxdepth: 2
+   :maxdepth: 1
    :numbered:
    
    OVERVIEW
+   REQUIREMENTS
    RUNNING
-..   #REQUIREMENTS
+
+   
 ..   #INSTALL
 ..   #RUN
 ..   CONFIG

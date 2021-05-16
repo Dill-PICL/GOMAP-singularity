@@ -18,8 +18,6 @@ tmp/*
 mysql
 start-GOMAP.sh
 *.sif
-<<<<<<< HEAD
-data/
-=======
 data/*
->>>>>>> dev
+/*.log
+data/

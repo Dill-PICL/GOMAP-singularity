@@ -35,6 +35,8 @@ extensions = [
     #'sphinxcontrib.googleanalytics'
     ]
 
+bibtex_bibfiles = ["_static/main.bib"]
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -171,4 +173,4 @@ googleanalytics_id = "UA-141536290-1"
 
 smv_prefer_remote_refs = True
 
-smv_branch_whitelist = r'master'
+# smv_branch_whitelist = r'master'

@@ -3,13 +3,13 @@ pipeline {
     environment {
         CONTAINER = 'gomap'
         IMAGE = 'GOMAP'
-        VERSION = 'v1.3.4'
+        VERSION = 'v1.3.5'
     }
     stages {
         stage('Build') {
             when { 
                 anyOf {
-                    changeset "docs/*"
+                    changeset "docs/**"
                     changeset "Jenkinsfile"
                 }
                 anyOf {
@@ -33,7 +33,7 @@ pipeline {
          stage('Push Artifacts') {
               when { 
                 anyOf {
-                    changeset "docs/*"
+                    changeset "docs/**"
                     changeset "Jenkinsfile"
                 }
                 anyOf {
