@@ -19,8 +19,6 @@ export GOMAP_IMG="GOMAP.sif"
 export GOMAP_VERSION="v1.3.5"
 export GOMAP_URL="/iplant/home/shared/dillpicl/gomap/GOMAP/$GOMAP_VERSION/$GOMAP_IMG"
 
-rm icommands.sif
-
 if [ ! -f $GOMAP_LOC/$GOMAP_IMG ]
 then
     # Making the irods directory and copying files if they don't exist    
