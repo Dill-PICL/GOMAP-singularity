@@ -19,12 +19,7 @@ export GOMAP_IMG="GOMAP.sif"
 export GOMAP_VERSION="v1.3.5"
 export GOMAP_URL="/iplant/home/shared/dillpicl/gomap/GOMAP/$GOMAP_VERSION/$GOMAP_IMG"
 
-
-
-if [ ! -f $ICOMMANDS_IMG ]
-then
-    singularity pull -F $ICOMMANDS_IMG shub://wkpalan/icommands-cyverse:latest
-elif [ ! -f $GOMAP_LOC/$GOMAP_IMG ]
+if [ ! -f $GOMAP_LOC/$GOMAP_IMG ]
 then
     # Making the irods directory and copying files if they don't exist    
     if [ ! -f "~/.irods/irods_environmnt.json" ]
@@ -38,7 +33,7 @@ then
         singularity pull -F $ICOMMANDS_IMG shub://wkpalan/icommands-cyverse:latest
     fi
     #Downloading GOMAP Image
-    singularity run -c $ICOMMANDS_IMG iget -PVT $GOMAP_URL $GOMAP_LOC/$GOMAP_IMG #&& \
+    singularity run $ICOMMANDS_IMG iget -PT $GOMAP_URL $GOMAP_LOC/$GOMAP_IMG #&& \
     #rm $ICOMMANDS_IMG
 else
     echo "The $GOMAP_LOC/$GOMAP_IMG exists" > /dev/stderr
