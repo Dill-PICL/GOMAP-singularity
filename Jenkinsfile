@@ -3,7 +3,7 @@ pipeline {
     environment {
         CONTAINER = 'gomap'
         IMAGE = 'GOMAP'
-        VERSION = 'v1.3.5'
+        VERSION = 'v1.3.6'
     }
     stages {
         stage('Build') {
