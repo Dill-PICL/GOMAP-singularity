@@ -1,3 +1,21 @@
+# Release v1.3.7
+
+## Bug fixes
+
+* Removed the exceedingly large `big_split` parameter that caused some issues with `Argot2.5`
+
+## Enhancements
+
+* Changes the hmmscan to hmmsearch for the mixed-method step
+* Added a step to copy the uniprot database to the /tmpdir to make sure the blast CPU performance is increased
+
+
+# Release v1.3.5
+~~~~
+## Bug fixes
+
+* This update fixes some issues with running GNU Octave within singularity when the contain all parameter is used for running the container. This was brought up by @huh688 in the original repo.
+
 # Release v1.3.4
 
 ## Bug fixes
