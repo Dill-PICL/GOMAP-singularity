@@ -1,3 +1,14 @@
+# Release v1.3.8
+
+## Bug fixes
+
+* Updated the Argot2.5 submission script based on the PR [here](https://github.com/Dill-PICL/GOMAP/pull/10) 
+* Fixed the issue with mpi4py not working in v1.3.7
+
+## Enhancements
+
+* Increased the BUFFER size to make the tmp file copy sync to be faster
+* Decreased dependence on Singularity to uncompress large files in the container duing processing to speed thing up
 # Release v1.3.7
 
 ## Bug fixes
