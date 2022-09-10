@@ -11,7 +11,7 @@ input:
   # Email is mandatory
   email: kokul@bioinformapping.com
   #Number of CPUs used for tools
-  cpus: 60
+  cpus: 30
   #Whether openmpi should be used
   mpi: False
   #what the name of the temporary directory is
