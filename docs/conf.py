@@ -81,6 +81,7 @@ exclude_patterns = [
     '.ipynb_checkpoints', 'venv'
 ]
 
+
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
 
