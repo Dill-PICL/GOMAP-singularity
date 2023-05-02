@@ -35,6 +35,7 @@ extensions = [
     #'sphinxcontrib.googleanalytics'
     ]
 
+
 bibtex_bibfiles = ["_static/main.bib"]
 
 # Add any paths that contain templates here, relative to this directory.
