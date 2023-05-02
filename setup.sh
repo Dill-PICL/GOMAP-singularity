@@ -33,7 +33,9 @@ then
         singularity pull -F $ICOMMANDS_IMG shub://wkpalan/icommands-cyverse:latest
     fi
     #Downloading GOMAP Image
-    singularity run $ICOMMANDS_IMG iget -PT $GOMAP_URL $GOMAP_LOC/$GOMAP_IMG #&& \
+    cmd="singularity run $ICOMMANDS_IMG iget -PT $GOMAP_URL $GOMAP_LOC/$GOMAP_IMG" #&& \
+    echo $cmd
+    eval $cmd
     #rm $ICOMMANDS_IMG
 else
     echo "The $GOMAP_LOC/$GOMAP_IMG exists" > /dev/stderr
