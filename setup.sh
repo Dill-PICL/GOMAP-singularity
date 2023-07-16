@@ -30,7 +30,7 @@ then
     #Downloading icommands image if it doesn't exist.
     if [ ! -f $ICOMMANDS_IMG ]
     then
-        singularity pull -F $ICOMMANDS_IMG shub://wkpalan/icommands-cyverse:latest
+        singularity pull -F $ICOMMANDS_IMG docker://quay.io/wkpalan/icommands
     fi
     #Downloading GOMAP Image
     cmd="singularity run $ICOMMANDS_IMG iget -PT $GOMAP_URL $GOMAP_LOC/$GOMAP_IMG" 
